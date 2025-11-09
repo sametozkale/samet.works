@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QBD8DZ6W9Y"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-QBD8DZ6W9Y");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+    <style>
+      html {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .project-image {
+        transition: transform 0.3s ease;
+      }
+      .project-card:hover .project-image {
+        transform: scale(1.02);
+      }
+      a:hover {
+        color: #0089FF !important;
+      }
+      .book-call-button:hover {
+        color: white !important;
+      }
+      .book-call-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12px;
+        height: 32px;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        background-color: #0089FF;
+        border: 1px solid #0089FF;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .availability-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #166534;
+        background-color: transparent;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+      }
+      .availability-badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #10b981;
+      }
+      .service-card {
+        padding: 20px;
+        background-color: #fafafa;
+        border: none;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+      }
+      .service-card:hover {
+        background-color: #f5f5f5;
+        transform: translateY(-1px);
+      }
+      .selections-slider-container:hover .selections-slider-btn {
+        display: flex !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+      .selections-slider-btn:hover {
+        background: rgba(255, 255, 255, 1) !important;
+        border-color: #cbd5e1 !important;
+      }
+      .selections-dot:hover {
+        background: #cbd5e1 !important;
+      }
+      .selections-dot.active {
+        background: #94a3b8 !important;
+        width: 24px !important;
+      }
+      .link-with-logo {
+        position: relative;
+        display: inline;
+      }
+      .link-logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        border-radius: 2px;
+      }
+      .link-with-logo:hover .link-logo {
+        opacity: 1;
+      }
+      .link-with-logo a {
+        transition: padding-left 0.2s ease;
+        padding-left: 0;
+      }
+      .link-with-logo:hover a {
+        padding-left: 20px;
+      }
+    </style>
+    <title>Samet Özkale — Product Designer & Entrepreneur</title>
+    <link
+      rel="icon"
+      href="https://sametozkale.com/public/assets/favicon.png"
+      type="favicon"
+    />
+    <meta
+      name="description"
+      content="Samet Özkale is a product designer and entrepreneur with 9+ years of experience building AI agents, SaaS products, and leading cross-functional teams."
+    />
+    <meta
+      property="og:title"
+      content="Samet Özkale — Product Designer & Entrepreneur"
+    />
+    <meta
+      property="og:description"
+      content="Product Designer and entrepreneur with 9+ years of experience in building AI agents, SaaS web products, and driving impactful changes."
+    />
+    <meta
+      property="og:image"
+      content="https://sametozkale.com/public/assets/og.jpg"
+    />
+    <meta property="og:url" content="https://sametozkale.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Samet Özkale — Product Designer & Entrepreneur"
+    />
+    <meta
+      name="twitter:description"
+      content="Product Designer and entrepreneur with 9+ years of experience in building AI agents, SaaS web products, and driving impactful changes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sametozkale.com/public/assets/og.jpg"
+    />
+  </head>
+  <body>
+    <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
+      <!-- Info Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 96px;">
+        <h1 class="text-2xl sm:text-3xl text-slate-900 font-medium mb-8" style="font-size: 20px;">
+          Samet Özkale
+        </h1>
+        <p class="text-base leading-relaxed" style="color: #777;">
+          I'm a senior product designer and entrepreneur with 9+ years of experience in building AI agents, SaaS products, and leading cross-functional teams. I exercise transparent leadership, empower others, and make data-informed decisions.
+        </p>
+        <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
+          Currently building something new at
+          <span class="link-with-logo">
+            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo" />
+            <a
+              href="https://mues.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-slate-500"
+              >Mues AI</a
+            >
+          </span>
+          as Co-founder, AI & Design Lead, working on agentic AI cursor technology that transforms user interactions with software products.
+        </p>
+        <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
+          Also sharing insights through my newsletter
+          <span class="link-with-logo">
+            <img src="https://substackcdn.com/image/fetch/$s_!C67Q!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa75a6a16-503b-442f-b0b1-3421007b8ccc_600x600.png" alt="AI for Product Power" class="link-logo" />
+            <a
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-slate-500"
+              >AI for Product Power</a
+            >
+          </span>, helping over 3300 product managers and executives.
+        </p>
+        <div style="margin-top: 24px;">
+          <a 
+            href="https://cal.com/sametozkale/meetwithme" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="book-call-button"
+          >
+            Meet with me
+          </a>
+        </div>
+      </div>
+
+      <!-- Selections Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 64px;">
+        <h2 class="text-xl sm:text-2xl text-slate-900 font-medium" style="margin-bottom: 24px;">Selections</h2>
+        <div class="selections-slider-container" style="position: relative; overflow: hidden; border-radius: 16px;">
+          <div class="selections-slider-wrapper" style="display: flex; transition: transform 0.5s ease;">
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/mues-aiThumbnail.jpg"
+                alt="Selection 1"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/roadmapeThumbnail.jpg"
+                alt="Selection 2"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/producterThumbnail.jpg"
+                alt="Selection 3"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/heyboosterThumbnail.jpg"
+                alt="Selection 4"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/mues-aiThumbnail.jpg"
+                alt="Selection 5"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/roadmapeThumbnail.jpg"
+                alt="Selection 6"
+              />
+            </div>
+            <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
+              <img
+                class="border border-gray-200 selections-slider-image"
+                style="border-radius: 16px; width: 100%; height: auto; display: block; object-fit: cover; aspect-ratio: 16/9;"
+                src="public/assets/producterThumbnail.jpg"
+                alt="Selection 7"
+              />
+            </div>
+          </div>
+          <button class="selections-slider-btn selections-slider-prev" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.9); border: 1px solid #e5e7eb; border-radius: 50%; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="selections-slider-btn selections-slider-next" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.9); border: 1px solid #e5e7eb; border-radius: 50%; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="selections-slider-dots" style="display: flex; justify-content: center; gap: 6px; margin-top: 16px;">
+            <button class="selections-dot active" data-slide="0" style="width: 24px; height: 6px; border-radius: 3px; border: none; background: #94a3b8; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 1"></button>
+            <button class="selections-dot" data-slide="1" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 2"></button>
+            <button class="selections-dot" data-slide="2" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 3"></button>
+            <button class="selections-dot" data-slide="3" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 4"></button>
+            <button class="selections-dot" data-slide="4" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 5"></button>
+            <button class="selections-dot" data-slide="5" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 6"></button>
+            <button class="selections-dot" data-slide="6" style="width: 6px; height: 6px; border-radius: 3px; border: none; background: #e2e8f0; cursor: pointer; transition: all 0.3s ease; padding: 0;" aria-label="Slide 7"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 64px;">
+        <h2 class="text-xl sm:text-2xl text-slate-900 font-medium mb-8">Experience</h2>
+      </div>
+
+      <!-- Projects Section -->
+      <div style="display: flex; flex-direction: column; gap: 64px;">
+        <div class="prose project-card mx-auto max-w-prose">
+          <a
+            href="/mues-ai"
+            class="inline-block w-full no-underline text-inherit"
+          >
+            <h2 class="text-lg sm:text-xl text-slate-900 font-medium" style="margin-bottom: 12px;">
+              Co-founder (Design Lead) at Mues AI
+            </h2>
+            <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+              Built the first agentic AI cursor for human software interaction. Led product strategy and design for agentic AI cursor technology that transforms user interaction with software applications. Created domain-specific AI agents capable of performing complex user actions.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed" style="margin-bottom: 12px;">
+              Sep 2025 – Oct 2025
+            </p>
+            <img
+              class="project-image border border-gray-200"
+              style="border-radius: 16px; margin-top: 0;"
+              src="public/assets/mues-ai/Mues 1.png"
+              alt="Mues AI"
+            />
+          </a>
+        </div>
+
+        <div class="prose project-card mx-auto max-w-prose">
+          <a
+            href="/roadmape"
+            class="inline-block w-full no-underline text-inherit"
+          >
+            <h2 class="text-lg sm:text-xl text-slate-900 font-medium" style="margin-bottom: 12px;">
+              Roadmape
+            </h2>
+            <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+              Co-founder & Product & Design Lead. Pivoted from Producter to Roadmape. Designed intuitive user interfaces and seamless user experiences for complex product management workflows.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed" style="margin-bottom: 12px;">
+              Sep 2023 – Sep 2024
+            </p>
+            <img
+              class="project-image border border-gray-200"
+              style="border-radius: 16px; margin-top: 0;"
+              src="public/assets/roadmapeThumbnail.jpg"
+              alt="Roadmape"
+            />
+          </a>
+        </div>
+
+        <div class="prose project-card mx-auto max-w-prose">
+          <a
+            href="/producter"
+            class="inline-block w-full no-underline text-inherit"
+          >
+            <h2 class="text-lg sm:text-xl text-slate-900 font-medium" style="margin-bottom: 12px;">
+              Producter
+            </h2>
+            <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+              Co-founder & Product & Design Lead. Designed and implemented features for feedback collection, task management, product updates, documentation, and roadmap management. Achieved 3500+ users from 18 different time zones, won Best UI/UX Design and Rising Star Awards, and raised $350,000 pre-seed round.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed" style="margin-bottom: 12px;">
+              Jan 2022 – Sep 2023
+            </p>
+            <img
+              class="project-image border border-gray-200"
+              style="border-radius: 16px; margin-top: 0;"
+              src="public/assets/producterThumbnail.jpg"
+              alt="Producter"
+            />
+          </a>
+        </div>
+
+        <div class="prose project-card mx-auto max-w-prose">
+          <a
+            href="/heybooster"
+            class="inline-block w-full no-underline text-inherit"
+          >
+            <h2 class="text-lg sm:text-xl text-slate-900 font-medium" style="margin-bottom: 12px;">
+              Heybooster
+            </h2>
+            <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+              Product & Design Advisor. Provided strategic product and design guidance to enhance user experience and drive product growth. Collaborated with stakeholders to align design solutions with business objectives. Mentored design and product teams, and contributed to the overall product vision.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed" style="margin-bottom: 12px;">
+              May 2024 – Jan 2025
+            </p>
+            <img
+              class="project-image border border-gray-200"
+              style="border-radius: 16px; margin-top: 0;"
+              src="public/assets/heyboosterThumbnail.jpg"
+              alt="Heybooster"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 64px; margin-bottom: 96px;">
+        <h2 class="text-xl sm:text-2xl text-slate-900 font-medium mb-8">Services</h2>
+        <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+          My designs seamlessly blend aesthetics with functionality, ensuring not only captivating visuals but also flawless performance.
+        </p>
+        <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 12px;">
+          With expertise in UI/UX design and product strategy, I create solutions that enhance user engagement and drive product success, always prioritizing the end-user's needs and experiences.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px;">
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">Product Design</h3>
+          </div>
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">Web & Mobile Apps</h3>
+          </div>
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">Websites</h3>
+          </div>
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">Product Management</h3>
+          </div>
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">Brand Design</h3>
+          </div>
+          <div class="service-card">
+            <h3 class="text-base font-medium text-slate-900">AI Strategy</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mx-auto max-w-prose py-16" style="margin-top: 64px;">
+        <div class="mb-12" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h3 class="text-lg font-medium text-slate-900 mb-3">Samet Özkale</h3>
+            <p class="text-sm leading-relaxed" style="color: #777;">
+              Product Designer & Entrepreneur
+            </p>
+            <p class="text-sm leading-relaxed mt-2" style="color: #777;">
+              Creating meaningful and purpose-driven products and designs.
+            </p>
+          </div>
+          <a 
+            href="https://cal.com/sametozkale/meetwithme" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="book-call-button"
+            style="flex-shrink: 0;"
+          >
+            Work with me
+          </a>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 60px; margin-bottom: 48px;">
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-top: 48px; margin-bottom: 12px;">Work</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="/mues-ai" class="text-sm transition-colors" style="color: #777;">Mues AI</a>
+              </li>
+              <li>
+                <a href="/roadmape" class="text-sm transition-colors" style="color: #777;">Roadmape</a>
+              </li>
+              <li>
+                <a href="/producter" class="text-sm transition-colors" style="color: #777;">Producter</a>
+              </li>
+              <li>
+                <a href="/heybooster" class="text-sm transition-colors" style="color: #777;">Heybooster</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-top: 48px; margin-bottom: 12px;">Connect</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="mailto:ozkalesamet@gmail.com" class="text-sm transition-colors" style="color: #777;">Email</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/sametozkale" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://x.com/sametozkale" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">X / Twitter</a>
+              </li>
+              <li>
+                <a href="https://layers.to/samet" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Portfolio</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-top: 48px; margin-bottom: 12px;">Resources</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Newsletter</a>
+              </li>
+              <li>
+                <a href="/cv.md" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">CV</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-top: 48px; margin-bottom: 12px;">About</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="https://cal.com/sametozkale/meetwithme" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Work with me</a>
+              </li>
+              <li>
+                <a href="mailto:ozkalesamet@gmail.com" class="text-sm transition-colors" style="color: #777;">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-8 border-t border-gray-200">
+          <p class="text-sm" style="color: #777;">© Samet Özkale 2025 · Made with love.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scroll position restoration -->
+    <script>
+      // Save scroll position when navigating away
+      window.addEventListener('beforeunload', () => {
+        sessionStorage.setItem('homeScrollPosition', window.scrollY);
+      });
+
+      // Restore scroll position when returning to page
+      window.addEventListener('load', () => {
+        const savedPosition = sessionStorage.getItem('homeScrollPosition');
+        if (savedPosition) {
+          // Small delay to ensure page is fully loaded
+          setTimeout(() => {
+            window.scrollTo(0, parseInt(savedPosition));
+          }, 100);
+        }
+      });
+
+      // Save scroll position when clicking on project links
+      document.querySelectorAll('a[href^="/"]').forEach(link => {
+        link.addEventListener('click', () => {
+          sessionStorage.setItem('homeScrollPosition', window.scrollY);
+        });
+      });
+
+      // Selections Slider
+      (function() {
+        const wrapper = document.querySelector('.selections-slider-wrapper');
+        const slides = document.querySelectorAll('.selections-slide');
+        const prevBtn = document.querySelector('.selections-slider-prev');
+        const nextBtn = document.querySelector('.selections-slider-next');
+        const dots = document.querySelectorAll('.selections-dot');
+        
+        if (!wrapper || slides.length === 0) return;
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        let autoSlideInterval = null;
+        
+        function goToSlide(index) {
+          currentSlide = index;
+          updateSlider();
+        }
+        
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        }
+        
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        }
+        
+        function startAutoSlide() {
+          stopAutoSlide();
+          autoSlideInterval = setInterval(() => {
+            nextSlide();
+          }, 2000);
+        }
+        
+        function stopAutoSlide() {
+          if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = null;
+          }
+        }
+        
+        function updateSlider() {
+          const translateX = -currentSlide * 100;
+          wrapper.style.transform = `translateX(${translateX}%)`;
+          
+          // Update dots
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.add('active');
+              dot.style.width = '24px';
+              dot.style.background = '#94a3b8';
+            } else {
+              dot.classList.remove('active');
+              dot.style.width = '6px';
+              dot.style.background = '#e2e8f0';
+            }
+          });
+          
+          // Update button states (buttons are hidden by default, shown on hover)
+          if (prevBtn) {
+            prevBtn.style.opacity = '1';
+            prevBtn.style.pointerEvents = 'auto';
+          }
+          if (nextBtn) {
+            nextBtn.style.opacity = '1';
+            nextBtn.style.pointerEvents = 'auto';
+          }
+        }
+        
+        if (prevBtn) {
+          prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            stopAutoSlide();
+            prevSlide();
+            startAutoSlide();
+          });
+        }
+        
+        if (nextBtn) {
+          nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            stopAutoSlide();
+            nextSlide();
+            startAutoSlide();
+          });
+        }
+        
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            stopAutoSlide();
+            goToSlide(index);
+            startAutoSlide();
+          });
+        });
+        
+        // Pause auto-slide on hover
+        const container = document.querySelector('.selections-slider-container');
+        if (container) {
+          container.addEventListener('mouseenter', stopAutoSlide);
+          container.addEventListener('mouseleave', startAutoSlide);
+        }
+        
+        // Initialize
+        updateSlider();
+        startAutoSlide();
+      })();
+    </script>
+  </body>
+</html>

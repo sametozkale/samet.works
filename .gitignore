@@ -2,7 +2,6 @@
 node_modules/
 
 # Tailwind CSS output
-output.css
 
 # Logs
 npm-debug.log*

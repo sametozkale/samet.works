@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/output.css" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+      }
+      html {
+        font-family: "Inter", sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Runde', sans-serif;
+      }
+      body {
+        background-color: #ffffff;
+        color: #1e293b;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 96px auto;
+        padding: 0 24px;
+      }
+      h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 48px;
+        color: #0f172a;
+      }
+      .form-group {
+        margin-bottom: 24px;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #334155;
+      }
+      input[type="url"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+        font-family: "Inter", sans-serif;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: #1e293b;
+        box-sizing: border-box;
+      }
+      input[type="url"]:focus,
+      input[type="password"]:focus,
+      select:focus {
+        outline: none;
+        border-color: #0089FF;
+        box-shadow: 0 0 0 3px rgba(0, 137, 255, 0.1);
+      }
+      button {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Open Runde', sans-serif;
+        color: white;
+        background-color: #0089FF;
+        border: 1px solid #0089FF;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      button:hover {
+        background-color: #0070d9;
+      }
+      button:disabled {
+        background-color: #94a3b8;
+        border-color: #94a3b8;
+        cursor: not-allowed;
+      }
+      .message {
+        margin-top: 24px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        display: none;
+      }
+      .message.success {
+        background-color: #dcfce7;
+        color: #166534;
+        border: 1px solid #86efac;
+        display: block;
+      }
+      .message.error {
+        background-color: #fee2e2;
+        color: #991b1b;
+        border: 1px solid #fca5a5;
+        display: block;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 24px;
+        color: #0089FF;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .login-container {
+        text-align: center;
+      }
+      .login-container p {
+        color: #64748b;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        .container {
+          margin: 48px auto;
+        }
+        h1 {
+          font-size: 24px;
+          margin-bottom: 32px;
+        }
+        button {
+          border-radius: 16px;
+        }
+      }
+    </style>
+    <title>CMS - Resources Management</title>
+    <link rel="icon" href="/assets/favicon.png" type="favicon" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Password Screen -->
+      <div id="login-screen" class="login-container">
+        <h1>CMS Access</h1>
+        <p>Enter password to access the CMS</p>
+        
+        <form id="login-form">
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+              required
+              autocomplete="off"
+            />
+          </div>
+          
+          <button type="submit" id="login-btn">Access CMS</button>
+        </form>
+        
+        <div id="login-message" class="message"></div>
+      </div>
+
+      <!-- CMS Screen (hidden by default) -->
+      <div id="cms-screen" class="hidden">
+        <a href="/resources" class="back-link">← Back to Resources</a>
+        <h1>Add New Resource</h1>
+        
+        <form id="resource-form">
+          <div class="form-group">
+            <label for="url">URL</label>
+            <input
+              type="url"
+              id="url"
+              name="url"
+              placeholder="https://example.com"
+              required
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="category">Section</label>
+            <select id="category" name="category" required>
+              <option value="">Select a section</option>
+              <option value="design">Design</option>
+              <option value="development">Development</option>
+              <option value="reading">Reading</option>
+            </select>
+          </div>
+          
+          <button type="submit" id="submit-btn">Add Resource</button>
+        </form>
+        
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+
+    <script>
+      const CMS_PASSWORD = '123456789';
+      
+      // Check if already authenticated in this session
+      if (sessionStorage.getItem('cms_authenticated') === 'true') {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('cms-screen').classList.remove('hidden');
+      }
+
+      // Login form handling
+      const loginForm = document.getElementById('login-form');
+      const loginMessage = document.getElementById('login-message');
+
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const password = document.getElementById('password').value;
+        
+        if (password === CMS_PASSWORD) {
+          sessionStorage.setItem('cms_authenticated', 'true');
+          document.getElementById('login-screen').classList.add('hidden');
+          document.getElementById('cms-screen').classList.remove('hidden');
+        } else {
+          loginMessage.textContent = 'Incorrect password';
+          loginMessage.className = 'message error';
+          loginMessage.style.display = 'block';
+          document.getElementById('password').value = '';
+        }
+      });
+
+      // CMS form handling
+      const form = document.getElementById('resource-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const messageDiv = document.getElementById('message');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const url = document.getElementById('url').value.trim();
+        const category = document.getElementById('category').value;
+        
+        // Validate inputs
+        if (!url || !category) {
+          showMessage('Please fill in all fields', 'error');
+          return;
+        }
+
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Adding...';
+
+        try {
+          const response = await fetch('/api/resources', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ url, category }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            showMessage('Resource added successfully!', 'success');
+            form.reset();
+            // Redirect to resources page after 1.5 seconds
+            setTimeout(() => {
+              window.location.href = '/resources';
+            }, 1500);
+          } else {
+            showMessage(data.error || 'Failed to add resource', 'error');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          showMessage('An error occurred. Please try again.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Add Resource';
+        }
+      });
+
+      function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = `message ${type}`;
+        messageDiv.style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>

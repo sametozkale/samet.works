@@ -1,0 +1,346 @@
+[
+  {
+    "id": 1,
+    "url": "https://oklch.fyi",
+    "title": "OKLCH",
+    "description": "Explore color as we see it. Discover how the OKLCH color model works. Learn, experiment and create more consistent and perceptually uniform color palettes.",
+    "category": "design",
+    "favicon": "https://oklch.fyi/favicon.ico"
+  },
+  {
+    "id": 2,
+    "url": "https://vercel.com/design/guidelines",
+    "title": "Vercel Design Guidelines",
+    "description": "A living, non-exhaustive list of interface decisions covering interactions, animations, layout, content, forms, and performance.",
+    "category": "design",
+    "favicon": "https://vercel.com/favicon.ico"
+  },
+  {
+    "id": 3,
+    "url": "https://github.com/shadcn-ui/shadcn-prose",
+    "title": "shadcn-prose",
+    "description": "A drop-in replacement for @tailwindcss/typography, designed for use with shadcn/ui. Includes headings, paragraphs, lists and more.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 4,
+    "url": "https://github.com/colinhacks/anchor",
+    "title": "Anchors for Tailwind CSS",
+    "description": "A plugin that brings declarative support for the CSS Anchor Positioning API to Tailwind, allowing you to define and position elements relative to custom anchors.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 5,
+    "url": "https://github.com/larsenwork/postcss-easing-gradients",
+    "title": "PostCSS Easing Gradients",
+    "description": "PostCSS plugin to create smooth linear-gradients that approximate easing functions.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 6,
+    "url": "https://usehooks-ts.com",
+    "title": "usehooks-ts",
+    "description": "React hook library, ready to use, written in Typescript.",
+    "category": "development",
+    "favicon": "https://usehooks-ts.com/favicon.ico"
+  },
+  {
+    "id": 7,
+    "url": "https://dndkit.com",
+    "title": "dnd kit",
+    "description": "A modular, lightweight, performant, accessible and extensible drag & drop toolkit for React.",
+    "category": "development",
+    "favicon": "https://dndkit.com/favicon.ico"
+  },
+  {
+    "id": 8,
+    "url": "https://biomejs.dev",
+    "title": "Biome",
+    "description": "Format, lint, and more in a fraction of a second.",
+    "category": "development",
+    "favicon": "https://biomejs.dev/favicon.ico"
+  },
+  {
+    "id": 9,
+    "url": "https://authjs.dev",
+    "title": "Auth.js",
+    "description": "Authentication for the Web. Free and open source.",
+    "category": "development",
+    "favicon": "https://authjs.dev/favicon.ico"
+  },
+  {
+    "id": 10,
+    "url": "https://github.com/tailwindlabs/tailwindcss-signals",
+    "title": "Signals for Tailwind",
+    "description": "Simplifies styling based on ancestor state via style queries.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 11,
+    "url": "https://platejs.org",
+    "title": "Plate",
+    "description": "A set of beautifully-designed, customizable plugins and components to help you build your rich-text editor.",
+    "category": "development",
+    "favicon": "https://platejs.org/favicon.ico"
+  },
+  {
+    "id": 12,
+    "url": "https://sdk.vercel.ai",
+    "title": "AI SDK",
+    "description": "The AI Toolkit for TypeScript, from the creators of Next.js.",
+    "category": "development",
+    "favicon": "https://vercel.com/favicon.ico"
+  },
+  {
+    "id": 13,
+    "url": "https://rombo.design",
+    "title": "Rombo",
+    "description": "Animation library for Tailwind CSS Library.",
+    "category": "development",
+    "favicon": "https://rombo.design/favicon.ico"
+  },
+  {
+    "id": 14,
+    "url": "https://github.com/rpearce/react-medium-image-zoom",
+    "title": "react-medium-image-zoom",
+    "description": "Accessible medium.com-style image zoom for React.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 15,
+    "url": "https://monicon.dev",
+    "title": "Monicon",
+    "description": "Monicon is a icon library for Modern Frameworks.",
+    "category": "development",
+    "favicon": "https://monicon.dev/favicon.ico"
+  },
+  {
+    "id": 16,
+    "url": "https://flags.dev",
+    "title": "Flags SDK",
+    "description": "A free, open-source library for using feature flags in Next.js and SvelteKit.",
+    "category": "development",
+    "favicon": "https://flags.dev/favicon.ico"
+  },
+  {
+    "id": 17,
+    "url": "https://reactflow.dev",
+    "title": "React Flow",
+    "description": "Highly customizable React library for workflow builders, no-code apps, image processing, visualizers.",
+    "category": "development",
+    "favicon": "https://reactflow.dev/favicon.ico"
+  },
+  {
+    "id": 18,
+    "url": "https://www.react-grab.com/",
+    "title": "React Grab",
+    "description": "A React component library for building interactive and draggable interfaces.",
+    "category": "development",
+    "favicon": "https://www.react-grab.com/favicon.ico"
+  },
+  {
+    "id": 19,
+    "url": "https://lucide.dev",
+    "title": "Lucide Icons",
+    "description": "Beautiful & consistent icon toolkit made by the community.",
+    "category": "development",
+    "favicon": "https://lucide.dev/favicon.ico"
+  },
+  {
+    "id": 20,
+    "url": "https://nuqs.47ng.com",
+    "title": "nuqs",
+    "description": "Type-safe search params state management for React.",
+    "category": "development",
+    "favicon": "https://nuqs.47ng.com/favicon.ico"
+  },
+  {
+    "id": 21,
+    "url": "https://nivo.rocks",
+    "title": "Nivo",
+    "description": "Supercharged React dataviz components.",
+    "category": "development",
+    "favicon": "https://nivo.rocks/favicon.ico"
+  },
+  {
+    "id": 22,
+    "url": "https://next-intl.dev",
+    "title": "next-intl",
+    "description": "Internationalization (i18n) for Next.js.",
+    "category": "development",
+    "favicon": "https://next-intl.dev/favicon.ico"
+  },
+  {
+    "id": 23,
+    "url": "https://cva.style",
+    "title": "Class Variance Authority",
+    "description": "Class Variance Authority.",
+    "category": "development",
+    "favicon": "https://cva.style/favicon.ico"
+  },
+  {
+    "id": 24,
+    "url": "https://roughjs.com",
+    "title": "Rough.js",
+    "description": "A light weight javascript library that lets you draw graphics with a hand-drawn, sketchy, appearance.",
+    "category": "development",
+    "favicon": "https://roughjs.com/favicon.ico"
+  },
+  {
+    "id": 25,
+    "url": "https://rosen-charts.com",
+    "title": "Rosen Charts",
+    "description": "The first fully RSC-compatible charting library and copy-paste capability.",
+    "category": "development",
+    "favicon": "https://rosen-charts.com/favicon.ico"
+  },
+  {
+    "id": 26,
+    "url": "https://tiptap.dev",
+    "title": "Tiptap",
+    "description": "Tiptap is a suite of content editing & real time collaboration tools.",
+    "category": "development",
+    "favicon": "https://tiptap.dev/favicon.ico"
+  },
+  {
+    "id": 27,
+    "url": "https://env.t3.gg",
+    "title": "env.t3.gg",
+    "description": "The documentation you want, effortlessly.",
+    "category": "development",
+    "favicon": "https://env.t3.gg/favicon.ico"
+  },
+  {
+    "id": 28,
+    "url": "https://input-otp.vercel.app",
+    "title": "input-otp",
+    "description": "Stop wasting time building OTP inputs.",
+    "category": "development",
+    "favicon": "https://vercel.com/favicon.ico"
+  },
+  {
+    "id": 29,
+    "url": "https://fluid.tailwindcss.com",
+    "title": "Fluid for Tailwind CSS",
+    "description": "Build better responsive designs in less code.",
+    "category": "development",
+    "favicon": "https://tailwindcss.com/favicon.ico"
+  },
+  {
+    "id": 30,
+    "url": "https://github.com/vercel/next-video",
+    "title": "Next.js video embedding",
+    "description": "Solves the hard problems with embedding, storing, streaming, and customizing video.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 31,
+    "url": "https://next-safe-action.dev",
+    "title": "next-safe-action",
+    "description": "Type safe and validated Server Actions for Next.js projects.",
+    "category": "development",
+    "favicon": "https://next-safe-action.dev/favicon.ico"
+  },
+  {
+    "id": 32,
+    "url": "https://sonner.emilkowal.ski",
+    "title": "Sonner notifications",
+    "description": "An opinionated toast component for React.",
+    "category": "development",
+    "favicon": "https://sonner.emilkowal.ski/favicon.ico"
+  },
+  {
+    "id": 33,
+    "url": "https://vaul.emilkowal.ski",
+    "title": "Vaul",
+    "description": "Drawer component for React.",
+    "category": "development",
+    "favicon": "https://vaul.emilkowal.ski/favicon.ico"
+  },
+  {
+    "id": 34,
+    "url": "https://extractcolors.com",
+    "title": "Extract Colors",
+    "description": "Extract color palettes from images.",
+    "category": "development",
+    "favicon": "https://extractcolors.com/favicon.ico"
+  },
+  {
+    "id": 35,
+    "url": "https://roughnotation.com",
+    "title": "Rough Notation",
+    "description": "A small JavaScript library to create and animate annotations on a web page.",
+    "category": "development",
+    "favicon": "https://roughnotation.com/favicon.ico"
+  },
+  {
+    "id": 36,
+    "url": "https://github.com/stackblitz/use-stick-to-bottom",
+    "title": "use-stick-to-bottom",
+    "description": "A React hook for auto-scrolling to the latest message in AI chat apps.",
+    "category": "development",
+    "favicon": "https://github.com/favicon.ico"
+  },
+  {
+    "id": 37,
+    "url": "https://ai-2027.com",
+    "title": "AI 2027",
+    "description": "We predict that the impact of superhuman AI over the next decade will be enormous, exceeding that of the Industrial Revolution.",
+    "category": "reading",
+    "favicon": "https://ai-2027.com/favicon.png"
+  },
+  {
+    "id": 38,
+    "url": "https://newsletter.posthog.com/p/how-startups-lose-their-edge",
+    "title": "How startups lose their edge",
+    "description": "A firsthand account of how \"playing not to lose\" can accidentally kill your startup.",
+    "category": "reading",
+    "favicon": "https://posthog.com/favicon.ico"
+  },
+  {
+    "id": 39,
+    "url": "https://amasad.me/keep-winning",
+    "title": "Keep Winning",
+    "description": "Thoughts on maintaining momentum and staying ahead in competitive environments.",
+    "category": "reading",
+    "favicon": "https://amasad.me/favicon.ico"
+  },
+  {
+    "id": 40,
+    "url": "https://bukinoshita.com/thoughts/on-principles",
+    "title": "On Principles",
+    "description": "Notes on the things that stay true — in work, in craft, in time, in life.",
+    "category": "reading",
+    "favicon": "https://bukinoshita.com/favicon.ico"
+  },
+  {
+    "id": 41,
+    "url": "https://www.thewayofcode.com/",
+    "title": "The Way of Code",
+    "description": "A collection of resources and insights about coding, development, and technology.",
+    "category": "reading",
+    "favicon": "https://www.thewayofcode.com/favicon.ico"
+  },
+  {
+    "id": 42,
+    "url": "https://www.makingsoftware.com/",
+    "title": "Making Software",
+    "description": "Resources and insights about software development, engineering practices, and building better products.",
+    "category": "reading",
+    "favicon": "https://www.makingsoftware.com/favicon.ico"
+  },
+  {
+    "id": 43,
+    "url": "https://productpower.substack.com/",
+    "title": "Productpower",
+    "description": "A resource from productpower.substack.com",
+    "category": "reading",
+    "favicon": "https://productpower.substack.com/favicon.ico"
+  }
+]

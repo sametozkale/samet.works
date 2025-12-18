@@ -70,12 +70,12 @@ app.post("/api/resources", async (req, res) => {
 
     // Extract domain from URL for favicon and title
     const urlObj = new URL(url);
-    const domain = urlObj.hostname;
-    const favicon = `${urlObj.protocol}//${domain}/favicon.ico`;
+    const domain = urlObj.hostname.replace(/^www\./, '');
+    // Use Google's favicon service for reliable favicon fetching
+    const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
     
     // Generate title from domain (remove www. and capitalize)
-    let title = domain.replace(/^www\./, "");
-    title = title.split(".")[0];
+    let title = domain.split(".")[0];
     title = title.charAt(0).toUpperCase() + title.slice(1);
 
     // Create new resource

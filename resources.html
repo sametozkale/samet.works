@@ -590,15 +590,46 @@
               resourceItem.setAttribute('data-category', resource.category);
               
               const faviconImg = document.createElement('img');
-              faviconImg.src = resource.favicon;
               faviconImg.alt = resource.title;
               faviconImg.className = 'resource-favicon';
-              faviconImg.onerror = function() {
-                // Try alternative favicon path
-                const urlObj = new URL(resource.url);
-                this.src = `${urlObj.protocol}//${urlObj.hostname}/favicon.png`;
-                this.onerror = null;
+              
+              // Function to get domain from URL
+              const getDomain = (url) => {
+                try {
+                  return new URL(url).hostname.replace(/^www\./, '');
+                } catch {
+                  return '';
+                }
               };
+              
+              // Try multiple favicon sources with fallbacks
+              const domain = getDomain(resource.url);
+              let attempts = 0;
+              const maxAttempts = 3;
+              
+              const tryFavicon = (src) => {
+                faviconImg.src = src;
+              };
+              
+              faviconImg.onerror = function() {
+                attempts++;
+                const urlObj = new URL(resource.url);
+                
+                if (attempts === 1) {
+                  // Try favicon.png
+                  tryFavicon(`${urlObj.protocol}//${urlObj.hostname}/favicon.png`);
+                } else if (attempts === 2 && domain) {
+                  // Use Google's favicon service as fallback
+                  tryFavicon(`https://www.google.com/s2/favicons?domain=${domain}&sz=32`);
+                } else {
+                  // Final fallback: use a data URI for a simple default icon
+                  this.onerror = null;
+                  this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23979797"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+                }
+              };
+              
+              // Start with the stored favicon
+              tryFavicon(resource.favicon);
               
               const resourceContent = document.createElement('div');
               resourceContent.className = 'resource-content';

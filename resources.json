@@ -5,7 +5,7 @@
     "title": "OKLCH",
     "description": "Explore color as we see it. Discover how the OKLCH color model works. Learn, experiment and create more consistent and perceptually uniform color palettes.",
     "category": "design",
-    "favicon": "https://oklch.fyi/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=oklch.fyi&sz=32"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "title": "Vercel Design Guidelines",
     "description": "A living, non-exhaustive list of interface decisions covering interactions, animations, layout, content, forms, and performance.",
     "category": "design",
-    "favicon": "https://vercel.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=32"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "title": "shadcn-prose",
     "description": "A drop-in replacement for @tailwindcss/typography, designed for use with shadcn/ui. Includes headings, paragraphs, lists and more.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "title": "Anchors for Tailwind CSS",
     "description": "A plugin that brings declarative support for the CSS Anchor Positioning API to Tailwind, allowing you to define and position elements relative to custom anchors.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "title": "PostCSS Easing Gradients",
     "description": "PostCSS plugin to create smooth linear-gradients that approximate easing functions.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "title": "usehooks-ts",
     "description": "React hook library, ready to use, written in Typescript.",
     "category": "development",
-    "favicon": "https://usehooks-ts.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=usehooks-ts.com&sz=32"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "title": "dnd kit",
     "description": "A modular, lightweight, performant, accessible and extensible drag & drop toolkit for React.",
     "category": "development",
-    "favicon": "https://dndkit.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=dndkit.com&sz=32"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "title": "Biome",
     "description": "Format, lint, and more in a fraction of a second.",
     "category": "development",
-    "favicon": "https://biomejs.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=biomejs.dev&sz=32"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "title": "Auth.js",
     "description": "Authentication for the Web. Free and open source.",
     "category": "development",
-    "favicon": "https://authjs.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=authjs.dev&sz=32"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "title": "Signals for Tailwind",
     "description": "Simplifies styling based on ancestor state via style queries.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "title": "Plate",
     "description": "A set of beautifully-designed, customizable plugins and components to help you build your rich-text editor.",
     "category": "development",
-    "favicon": "https://platejs.org/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=platejs.org&sz=32"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "title": "AI SDK",
     "description": "The AI Toolkit for TypeScript, from the creators of Next.js.",
     "category": "development",
-    "favicon": "https://vercel.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=sdk.vercel.ai&sz=32"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "title": "Rombo",
     "description": "Animation library for Tailwind CSS Library.",
     "category": "development",
-    "favicon": "https://rombo.design/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=rombo.design&sz=32"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "title": "react-medium-image-zoom",
     "description": "Accessible medium.com-style image zoom for React.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "title": "Monicon",
     "description": "Monicon is a icon library for Modern Frameworks.",
     "category": "development",
-    "favicon": "https://monicon.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=monicon.dev&sz=32"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "title": "Flags SDK",
     "description": "A free, open-source library for using feature flags in Next.js and SvelteKit.",
     "category": "development",
-    "favicon": "https://flags.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=flags.dev&sz=32"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "title": "React Flow",
     "description": "Highly customizable React library for workflow builders, no-code apps, image processing, visualizers.",
     "category": "development",
-    "favicon": "https://reactflow.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=reactflow.dev&sz=32"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "title": "React Grab",
     "description": "A React component library for building interactive and draggable interfaces.",
     "category": "development",
-    "favicon": "https://www.react-grab.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=react-grab.com&sz=32"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "title": "Lucide Icons",
     "description": "Beautiful & consistent icon toolkit made by the community.",
     "category": "development",
-    "favicon": "https://lucide.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=lucide.dev&sz=32"
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "title": "nuqs",
     "description": "Type-safe search params state management for React.",
     "category": "development",
-    "favicon": "https://nuqs.47ng.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=nuqs.47ng.com&sz=32"
   },
   {
     "id": 21,
@@ -165,7 +165,7 @@
     "title": "Nivo",
     "description": "Supercharged React dataviz components.",
     "category": "development",
-    "favicon": "https://nivo.rocks/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=nivo.rocks&sz=32"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "title": "next-intl",
     "description": "Internationalization (i18n) for Next.js.",
     "category": "development",
-    "favicon": "https://next-intl.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=next-intl.dev&sz=32"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "title": "Class Variance Authority",
     "description": "Class Variance Authority.",
     "category": "development",
-    "favicon": "https://cva.style/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=cva.style&sz=32"
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "title": "Rough.js",
     "description": "A light weight javascript library that lets you draw graphics with a hand-drawn, sketchy, appearance.",
     "category": "development",
-    "favicon": "https://roughjs.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=roughjs.com&sz=32"
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "title": "Rosen Charts",
     "description": "The first fully RSC-compatible charting library and copy-paste capability.",
     "category": "development",
-    "favicon": "https://rosen-charts.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=rosen-charts.com&sz=32"
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "title": "Tiptap",
     "description": "Tiptap is a suite of content editing & real time collaboration tools.",
     "category": "development",
-    "favicon": "https://tiptap.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=tiptap.dev&sz=32"
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "title": "env.t3.gg",
     "description": "The documentation you want, effortlessly.",
     "category": "development",
-    "favicon": "https://env.t3.gg/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=env.t3.gg&sz=32"
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "title": "input-otp",
     "description": "Stop wasting time building OTP inputs.",
     "category": "development",
-    "favicon": "https://vercel.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=input-otp.vercel.app&sz=32"
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@
     "title": "Fluid for Tailwind CSS",
     "description": "Build better responsive designs in less code.",
     "category": "development",
-    "favicon": "https://tailwindcss.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=fluid.tailwindcss.com&sz=32"
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@
     "title": "Next.js video embedding",
     "description": "Solves the hard problems with embedding, storing, streaming, and customizing video.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 31,
@@ -245,7 +245,7 @@
     "title": "next-safe-action",
     "description": "Type safe and validated Server Actions for Next.js projects.",
     "category": "development",
-    "favicon": "https://next-safe-action.dev/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=next-safe-action.dev&sz=32"
   },
   {
     "id": 32,
@@ -253,7 +253,7 @@
     "title": "Sonner notifications",
     "description": "An opinionated toast component for React.",
     "category": "development",
-    "favicon": "https://sonner.emilkowal.ski/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=sonner.emilkowal.ski&sz=32"
   },
   {
     "id": 33,
@@ -261,7 +261,7 @@
     "title": "Vaul",
     "description": "Drawer component for React.",
     "category": "development",
-    "favicon": "https://vaul.emilkowal.ski/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=vaul.emilkowal.ski&sz=32"
   },
   {
     "id": 34,
@@ -269,7 +269,7 @@
     "title": "Extract Colors",
     "description": "Extract color palettes from images.",
     "category": "development",
-    "favicon": "https://extractcolors.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=extractcolors.com&sz=32"
   },
   {
     "id": 35,
@@ -277,7 +277,7 @@
     "title": "Rough Notation",
     "description": "A small JavaScript library to create and animate annotations on a web page.",
     "category": "development",
-    "favicon": "https://roughnotation.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=roughnotation.com&sz=32"
   },
   {
     "id": 36,
@@ -285,7 +285,7 @@
     "title": "use-stick-to-bottom",
     "description": "A React hook for auto-scrolling to the latest message in AI chat apps.",
     "category": "development",
-    "favicon": "https://github.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 37,
@@ -293,7 +293,7 @@
     "title": "AI 2027",
     "description": "We predict that the impact of superhuman AI over the next decade will be enormous, exceeding that of the Industrial Revolution.",
     "category": "reading",
-    "favicon": "https://ai-2027.com/favicon.png"
+    "favicon": "https://www.google.com/s2/favicons?domain=ai-2027.com&sz=32"
   },
   {
     "id": 38,
@@ -301,7 +301,7 @@
     "title": "How startups lose their edge",
     "description": "A firsthand account of how \"playing not to lose\" can accidentally kill your startup.",
     "category": "reading",
-    "favicon": "https://posthog.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=newsletter.posthog.com&sz=32"
   },
   {
     "id": 39,
@@ -309,7 +309,7 @@
     "title": "Keep Winning",
     "description": "Thoughts on maintaining momentum and staying ahead in competitive environments.",
     "category": "reading",
-    "favicon": "https://amasad.me/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=amasad.me&sz=32"
   },
   {
     "id": 40,
@@ -317,7 +317,7 @@
     "title": "On Principles",
     "description": "Notes on the things that stay true — in work, in craft, in time, in life.",
     "category": "reading",
-    "favicon": "https://bukinoshita.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=bukinoshita.com&sz=32"
   },
   {
     "id": 41,
@@ -325,7 +325,7 @@
     "title": "The Way of Code",
     "description": "A collection of resources and insights about coding, development, and technology.",
     "category": "reading",
-    "favicon": "https://www.thewayofcode.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=thewayofcode.com&sz=32"
   },
   {
     "id": 42,
@@ -333,14 +333,6 @@
     "title": "Making Software",
     "description": "Resources and insights about software development, engineering practices, and building better products.",
     "category": "reading",
-    "favicon": "https://www.makingsoftware.com/favicon.ico"
-  },
-  {
-    "id": 43,
-    "url": "https://productpower.substack.com/",
-    "title": "Productpower",
-    "description": "A resource from productpower.substack.com",
-    "category": "reading",
-    "favicon": "https://productpower.substack.com/favicon.ico"
+    "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=32"
   }
 ]

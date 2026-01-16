@@ -558,7 +558,7 @@
             <h4 class="text-sm font-medium text-slate-900" style="margin-bottom: 12px;">Connect</h4>
             <ul class="space-y-3">
               <li>
-                <a href="https://layers.to/samet" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Portfolio</a>
+                <a href="/portfolio" class="text-sm transition-colors" style="color: #777;">Portfolio</a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/sametozkale" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">LinkedIn</a>
@@ -574,7 +574,7 @@
         </div>
         
         <div class="pt-8 border-t border-gray-200">
-          <p class="text-sm" style="color: #777;">© Samet Özkale 2025 · Made with love.</p>
+          <p class="text-sm" style="color: #777;">Made with love © Samet Özkale 2026</p>
         </div>
       </footer>
     </div>
@@ -597,13 +597,13 @@
         </span>
         <span class="nav-text">About</span>
       </a>
-      <a href="/photos" class="bottom-nav-item" data-page="photos">
+      <a href="/portfolio" class="bottom-nav-item" data-page="portfolio">
         <span class="bottom-nav-icon">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="0" width="14" height="14" rx="4" fill="currentColor"/>
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
           </svg>
         </span>
-        <span class="nav-text">Photos</span>
+        <span class="nav-text">Portfolio</span>
       </a>
       <a href="/resources" class="bottom-nav-item" data-page="resources">
         <span class="bottom-nav-icon">
@@ -620,6 +620,14 @@
           </svg>
         </span>
         <span class="nav-text">Books</span>
+      </a>
+      <a href="/photos" class="bottom-nav-item" data-page="photos">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Photos</span>
       </a>
     </nav>
 
@@ -645,13 +653,16 @@
           } else if (currentPath === '/about' && page === 'about') {
             isActive = true;
             item.classList.add('active');
-          } else if (currentPath === '/photos' && page === 'photos') {
+          } else if (currentPath === '/portfolio' && page === 'portfolio') {
             isActive = true;
             item.classList.add('active');
           } else if (currentPath === '/resources' && page === 'resources') {
             isActive = true;
             item.classList.add('active');
           } else if (currentPath === '/books' && page === 'books') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/photos' && page === 'photos') {
             isActive = true;
             item.classList.add('active');
           }

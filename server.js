@@ -232,6 +232,10 @@ app.get("/ai-glossary", (req, res) => {
   res.sendFile(path.join(__dirname, "ai-glossary.html"));
 });
 
+app.get("/portfolio", (req, res) => {
+  res.sendFile(path.join(__dirname, "portfolio.html"));
+});
+
 app.get("/cms", (req, res) => {
   res.sendFile(path.join(__dirname, "cms.html"));
 });

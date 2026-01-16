@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RLW0QHN7S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4RLW0QHN7S');
+    </script>
+    <!-- Hotjar Tracking Code for samet.works -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:6588466,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/output.css" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Open Runde';
+        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-style: normal;
+      }
+      html {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Open Runde', sans-serif;
+      }
+      a:hover {
+        color: #0089FF !important;
+      }
+      .book-call-button:hover {
+        color: white !important;
+      }
+      @media (max-width: 640px) {
+        button,
+        .book-call-button {
+          border-radius: 16px !important;
+        }
+        .w-full.border,
+        video.border {
+          border-radius: 12px !important;
+        }
+      }
+      .book-call-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 12px;
+        height: 32px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Open Runde', sans-serif;
+        color: white;
+        background-color: #0089FF;
+        border: 1px solid #0089FF;
+        border-radius: 24px;
+        corner-shape: squircle;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      button {
+        font-family: 'Open Runde', sans-serif;
+      }
+      .bottom-nav {
+        position: fixed;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 999px;
+        padding: 3px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
+      }
+      .bottom-nav-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #777;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Open Runde', sans-serif;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+        transform: scale(1);
+        opacity: 0.8;
+        transform-origin: center;
+      }
+      .bottom-nav-item:first-child {
+        transform-origin: left center;
+      }
+      .bottom-nav-item:last-child {
+        transform-origin: right center;
+      }
+      .bottom-nav-item svg {
+        color: #ddd;
+        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .bottom-nav-item:hover {
+        background: #f5f5f5;
+        color: #0089FF;
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      .bottom-nav-item:first-child:hover {
+        transform: scale(1.05);
+        transform-origin: left center;
+      }
+      .bottom-nav-item:last-child:hover {
+        transform: scale(1.05);
+        transform-origin: right center;
+      }
+      .bottom-nav-item:hover svg {
+        color: #0089FF;
+      }
+      .bottom-nav-item:hover .nav-text {
+        display: inline;
+        animation: fadeIn 0.3s ease;
+        font-size: 14px;
+        transform: scale(1);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateX(-4px) scale(1);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+      }
+      .bottom-nav-item.active {
+        background: #f5f5f5;
+        color: #0089FF;
+        transform: scale(1);
+        opacity: 1;
+      }
+      .bottom-nav-item.active svg {
+        color: #0089FF;
+      }
+      .bottom-nav-item.active .nav-text {
+        display: inline;
+        font-size: 14px;
+      }
+      .bottom-nav-item .nav-text {
+        display: none;
+        font-size: 14px;
+      }
+      .bottom-nav-icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @media (max-width: 640px) {
+        .bottom-nav {
+          gap: 1px;
+          padding: 3px;
+        }
+        .bottom-nav-item {
+          padding: 6px 8px;
+          font-size: 12px;
+        }
+        .bottom-nav-item .nav-text {
+          font-size: 12px;
+        }
+        .bottom-nav-item:hover .nav-text {
+          font-size: 12px;
+        }
+        .bottom-nav-item.active .nav-text {
+          font-size: 12px;
+        }
+      }
+      .category-filter {
+        display: flex;
+        gap: 4px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+      }
+      .category-btn {
+        background: none;
+        border: none;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #777;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-family: 'Open Runde', sans-serif;
+        border-radius: 999px;
+      }
+      .category-btn:hover {
+        background: #f7f7f7;
+        color: #000;
+      }
+      .category-btn.active {
+        color: #0089FF;
+        font-weight: 500;
+        background: #f7f7f7;
+      }
+      .portfolio-images {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 32px;
+      }
+      .portfolio-images img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        border: 1px solid #F4F4F4;
+        display: block;
+      }
+      .portfolio-item {
+        display: none;
+      }
+      .portfolio-item.show {
+        display: block;
+      }
+      @media (max-width: 640px) {
+        .portfolio-images img {
+          border-radius: 12px;
+        }
+        .category-filter {
+          gap: 12px;
+        }
+      }
+      
+      /* Footer Responsive Styles */
+      @media (max-width: 768px) {
+        .footer-header {
+          flex-direction: column;
+          align-items: flex-start !important;
+        }
+        .footer-columns {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 32px 24px !important;
+        }
+      }
+      @media (max-width: 480px) {
+        .footer-columns {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+        footer {
+          padding-top: 48px !important;
+          padding-bottom: 48px !important;
+        }
+        .footer-header {
+          margin-bottom: 32px !important;
+        }
+        .footer-columns {
+          margin-bottom: 32px !important;
+        }
+      }
+    </style>
+    <title>Portfolio - Samet Özkale</title>
+    <link
+      rel="icon"
+      href="/assets/favicon.png"
+      type="favicon"
+    />
+    <meta
+      name="description"
+      content="A collection of design and product work showcasing innovative solutions and creative projects."
+    />
+    <meta
+      property="og:title"
+      content="Portfolio - Samet Özkale"
+    />
+    <meta
+      property="og:description"
+      content="A collection of design and product work showcasing innovative solutions and creative projects."
+    />
+    <meta
+      property="og:image"
+      content="https://samet.works/assets/og.jpg"
+    />
+    <meta property="og:url" content="https://samet.works/portfolio" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
+      <!-- Header Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 96px;">
+        <h1 class="text-2xl sm:text-3xl text-slate-900 font-medium mb-8" style="font-size: 20px;">
+          Portfolio
+        </h1>
+        <p class="text-base leading-relaxed" style="color: #777;">
+          A collection of design and product work showcasing innovative solutions and creative projects.
+        </p>
+
+        <!-- Category Filter -->
+        <div class="category-filter">
+          <button class="category-btn active" data-category="design">Design</button>
+          <button class="category-btn" data-category="component">Component</button>
+          <button class="category-btn" data-category="website">Website</button>
+          <button class="category-btn" data-category="logo">Logo</button>
+        </div>
+      </div>
+
+      <!-- Portfolio Images -->
+      <div class="prose mx-auto max-w-prose">
+        <div class="portfolio-images">
+          <div class="portfolio-item" data-category="logo">
+            <img src="/assets/portfolio/Mues AI Logo.png" alt="Mues AI Logo" />
+          </div>
+          <div class="portfolio-item" data-category="logo">
+            <img src="/assets/portfolio/Producter Logo.png" alt="Producter Logo" />
+          </div>
+          <div class="portfolio-item" data-category="logo">
+            <img src="/assets/portfolio/Roadmape Logo.png" alt="Roadmape Logo" />
+          </div>
+          <div class="portfolio-item" data-category="logo">
+            <img src="/assets/portfolio/Fussionary Logo.png" alt="Fussionary Logo" />
+          </div>
+          <div class="portfolio-item" data-category="logo">
+            <img src="/assets/portfolio/Oberyon Logo.png" alt="Oberyon Logo" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-1.png" alt="Website work 1" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-2.png" alt="Website work 2" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-3.png" alt="Website work 3" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-4.png" alt="Website work 4" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-5.png" alt="Website work 5" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-6.png" alt="Website work 6" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-7.png" alt="Website work 7" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-8.png" alt="Website work 8" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-9.png" alt="Website work 9" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-10.png" alt="Website work 10" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-11.png" alt="Website work 11" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-12.png" alt="Website work 12" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-13.png" alt="Website work 13" />
+          </div>
+          <div class="portfolio-item" data-category="website">
+            <img src="/assets/portfolio/W-14.png" alt="Website work 14" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-1.png" alt="Component work 1" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-2.png" alt="Component work 2" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-3.png" alt="Component work 3" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-4.png" alt="Component work 4" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-5.png" alt="Component work 5" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-6.png" alt="Component work 6" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-7.png" alt="Component work 7" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-8.png" alt="Component work 8" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-9.png" alt="Component work 9" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-10.png" alt="Component work 10" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-11.png" alt="Component work 11" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-12.png" alt="Component work 12" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-13.png" alt="Component work 13" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-14.png" alt="Component work 14" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-15.png" alt="Component work 15" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-16.png" alt="Component work 16" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-17.png" alt="Component work 17" />
+          </div>
+          <div class="portfolio-item" data-category="component">
+            <img src="/assets/portfolio/C-18.png" alt="Component work 18" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-1.png" alt="Design work 1" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-2.png" alt="Design work 2" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-3.png" alt="Design work 3" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-4.png" alt="Design work 4" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-5.png" alt="Design work 5" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-6.png" alt="Design work 6" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-7.png" alt="Design work 7" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-8.png" alt="Design work 8" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-9.png" alt="Design work 9" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-10.png" alt="Design work 10" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-11.png" alt="Design work 11" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-12.png" alt="Design work 12" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-13.png" alt="Design work 13" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-14.png" alt="Design work 14" />
+          </div>
+          <div class="portfolio-item" data-category="design">
+            <img src="/assets/portfolio/D-15.png" alt="Design work 15" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="mx-auto max-w-prose py-16" style="margin-top: 96px;">
+        <div class="footer-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; margin-bottom: 48px;">
+          <div>
+            <h3 class="text-lg font-medium text-slate-900 mb-3">Samet Özkale</h3>
+            <p class="text-sm leading-relaxed" style="color: #777;">
+              AI Product & Design Manager
+            </p>
+            <p class="text-sm leading-relaxed mt-2" style="color: #777;">
+              Crafting visionary, user-focused solutions and inspire change.
+            </p>
+          </div>
+          <a 
+            href="https://cal.com/sametozkale/meetwithme" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="book-call-button"
+            style="flex-shrink: 0;"
+          >
+            Work with me
+          </a>
+        </div>
+        
+        <div class="footer-columns" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px 32px; margin-bottom: 48px;">
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-bottom: 12px;">Work</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="/mues-ai" class="text-sm transition-colors" style="color: #777;">Mues AI</a>
+              </li>
+              <li>
+                <a href="/roadmape" class="text-sm transition-colors" style="color: #777;">Roadmape</a>
+              </li>
+              <li>
+                <a href="/producter" class="text-sm transition-colors" style="color: #777;">Producter</a>
+              </li>
+              <li>
+                <a href="/heybooster" class="text-sm transition-colors" style="color: #777;">Heybooster</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-bottom: 12px;">About</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="/about" class="text-sm transition-colors" style="color: #777;">About</a>
+              </li>
+              <li>
+                <a href="https://cal.com/sametozkale/meetwithme" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Work with me</a>
+              </li>
+              <li>
+                <a href="https://www.oberyon.com/" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Oberyon Studio</a>
+              </li>
+              <li>
+                <a href="https://drive.google.com/file/d/1ScjkI1QqfMZQdJushEa5p6No8kUb-rEq/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Resume</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-bottom: 12px;">Resources</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="/resources" class="text-sm transition-colors" style="color: #777;">Resources</a>
+              </li>
+              <li>
+                <a href="/photos" class="text-sm transition-colors" style="color: #777;">Photos</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">Newsletter</a>
+              </li>
+              <li>
+                <a href="/books" class="text-sm transition-colors" style="color: #777;">Books</a>
+              </li>
+              <li>
+                <a href="/ai-glossary" class="text-sm transition-colors" style="color: #777;">AI Glossary</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-sm font-medium text-slate-900" style="margin-bottom: 12px;">Connect</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="/portfolio" class="text-sm transition-colors" style="color: #777;">Portfolio</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/sametozkale" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://x.com/sametozkale" target="_blank" rel="noopener noreferrer" class="text-sm transition-colors" style="color: #777;">X / Twitter</a>
+              </li>
+              <li>
+                <a href="mailto:ozkalesamet@gmail.com" class="text-sm transition-colors" style="color: #777;">Email</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-8 border-t border-gray-200">
+          <p class="text-sm" style="color: #777;">Made with love © Samet Özkale 2026</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="/" class="bottom-nav-item" data-page="home">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="14" height="14" rx="4" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Home</span>
+      </a>
+      <a href="/about" class="bottom-nav-item" data-page="about">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">About</span>
+      </a>
+      <a href="/portfolio" class="bottom-nav-item active" data-page="portfolio">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="14" height="14" rx="4" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Portfolio</span>
+      </a>
+      <a href="/resources" class="bottom-nav-item" data-page="resources">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Resources</span>
+      </a>
+      <a href="/books" class="bottom-nav-item" data-page="books">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Books</span>
+      </a>
+      <a href="/photos" class="bottom-nav-item" data-page="photos">
+        <span class="bottom-nav-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7" cy="7" r="7" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="nav-text">Photos</span>
+      </a>
+    </nav>
+
+    <script>
+      // Portfolio category filter
+      (function() {
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        // Initialize: show only design items by default
+        portfolioItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          if (itemCategory === 'design') {
+            item.classList.add('show');
+          }
+        });
+
+        categoryBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            // Update active button
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter portfolio items
+            const category = btn.getAttribute('data-category');
+            
+            portfolioItems.forEach(item => {
+              item.classList.remove('show');
+              const itemCategory = item.getAttribute('data-category');
+              
+              if (itemCategory === category) {
+                item.classList.add('show');
+              }
+            });
+          });
+        });
+      })();
+
+      // Set active page based on current URL and update icons
+      (function() {
+        const currentPath = window.location.pathname;
+        const navItems = document.querySelectorAll('.bottom-nav-item');
+        
+        navItems.forEach(item => {
+          const href = item.getAttribute('href');
+          const page = item.getAttribute('data-page');
+          const iconSpan = item.querySelector('.bottom-nav-icon');
+          
+          // Remove active class from all items
+          item.classList.remove('active');
+          
+          // Determine if this item is active
+          let isActive = false;
+          if (currentPath === '/' && page === 'home') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/about' && page === 'about') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/portfolio' && page === 'portfolio') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/resources' && page === 'resources') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/books' && page === 'books') {
+            isActive = true;
+            item.classList.add('active');
+          } else if (currentPath === '/photos' && page === 'photos') {
+            isActive = true;
+            item.classList.add('active');
+          }
+          
+          // Update icon: square for active, circle for inactive
+          if (iconSpan) {
+            if (isActive) {
+              iconSpan.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="14" height="14" rx="4" fill="currentColor"/></svg>';
+            } else {
+              iconSpan.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7" cy="7" r="7" fill="currentColor"/></svg>';
+            }
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+

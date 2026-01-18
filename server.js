@@ -88,8 +88,8 @@ app.post("/api/resources", async (req, res) => {
       return res.status(400).json({ error: "URL and category are required" });
     }
 
-    if (!["design", "development", "reading"].includes(category)) {
-      return res.status(400).json({ error: "Category must be design, development, or reading" });
+    if (!["design", "development", "vibe-coding", "reading"].includes(category)) {
+      return res.status(400).json({ error: "Category must be design, development, vibe-coding, or reading" });
     }
 
     // Validate URL format

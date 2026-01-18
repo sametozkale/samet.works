@@ -12,16 +12,8 @@
     "url": "https://vercel.com/design/guidelines",
     "title": "Vercel Design Guidelines",
     "description": "A living, non-exhaustive list of interface decisions covering interactions, animations, layout, content, forms, and performance.",
-    "category": "design",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=32"
-  },
-  {
-    "id": 3,
-    "url": "https://github.com/shadcn-ui/shadcn-prose",
-    "title": "shadcn-prose",
-    "description": "A drop-in replacement for @tailwindcss/typography, designed for use with shadcn/ui. Includes headings, paragraphs, lists and more.",
-    "category": "development",
-    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
     "id": 4,
@@ -36,7 +28,7 @@
     "url": "https://github.com/larsenwork/postcss-easing-gradients",
     "title": "PostCSS Easing Gradients",
     "description": "PostCSS plugin to create smooth linear-gradients that approximate easing functions.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
   },
   {
@@ -100,7 +92,7 @@
     "url": "https://rombo.design",
     "title": "Rombo",
     "description": "Animation library for Tailwind CSS Library.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=rombo.design&sz=32"
   },
   {
@@ -120,19 +112,11 @@
     "favicon": "https://www.google.com/s2/favicons?domain=monicon.dev&sz=32"
   },
   {
-    "id": 16,
-    "url": "https://flags.dev",
-    "title": "Flags SDK",
-    "description": "A free, open-source library for using feature flags in Next.js and SvelteKit.",
-    "category": "development",
-    "favicon": "https://www.google.com/s2/favicons?domain=flags.dev&sz=32"
-  },
-  {
     "id": 17,
     "url": "https://reactflow.dev",
     "title": "React Flow",
     "description": "Highly customizable React library for workflow builders, no-code apps, image processing, visualizers.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=reactflow.dev&sz=32"
   },
   {
@@ -140,7 +124,7 @@
     "url": "https://www.react-grab.com/",
     "title": "React Grab",
     "description": "A React component library for building interactive and draggable interfaces.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=react-grab.com&sz=32"
   },
   {
@@ -164,7 +148,7 @@
     "url": "https://nivo.rocks",
     "title": "Nivo",
     "description": "Supercharged React dataviz components.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=nivo.rocks&sz=32"
   },
   {
@@ -188,7 +172,7 @@
     "url": "https://roughjs.com",
     "title": "Rough.js",
     "description": "A light weight javascript library that lets you draw graphics with a hand-drawn, sketchy, appearance.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=roughjs.com&sz=32"
   },
   {
@@ -196,7 +180,7 @@
     "url": "https://rosen-charts.com",
     "title": "Rosen Charts",
     "description": "The first fully RSC-compatible charting library and copy-paste capability.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=rosen-charts.com&sz=32"
   },
   {
@@ -228,7 +212,7 @@
     "url": "https://fluid.tailwindcss.com",
     "title": "Fluid for Tailwind CSS",
     "description": "Build better responsive designs in less code.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=fluid.tailwindcss.com&sz=32"
   },
   {
@@ -264,19 +248,11 @@
     "favicon": "https://www.google.com/s2/favicons?domain=vaul.emilkowal.ski&sz=32"
   },
   {
-    "id": 34,
-    "url": "https://extractcolors.com",
-    "title": "Extract Colors",
-    "description": "Extract color palettes from images.",
-    "category": "development",
-    "favicon": "https://www.google.com/s2/favicons?domain=extractcolors.com&sz=32"
-  },
-  {
     "id": 35,
     "url": "https://roughnotation.com",
     "title": "Rough Notation",
     "description": "A small JavaScript library to create and animate annotations on a web page.",
-    "category": "development",
+    "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=roughnotation.com&sz=32"
   },
   {

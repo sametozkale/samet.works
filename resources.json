@@ -176,14 +176,6 @@
     "favicon": "https://www.google.com/s2/favicons?domain=roughjs.com&sz=32"
   },
   {
-    "id": 25,
-    "url": "https://rosen-charts.com",
-    "title": "Rosen Charts",
-    "description": "The first fully RSC-compatible charting library and copy-paste capability.",
-    "category": "vibe-coding",
-    "favicon": "https://www.google.com/s2/favicons?domain=rosen-charts.com&sz=32"
-  },
-  {
     "id": 26,
     "url": "https://tiptap.dev",
     "title": "Tiptap",
@@ -198,22 +190,6 @@
     "description": "The documentation you want, effortlessly.",
     "category": "development",
     "favicon": "https://www.google.com/s2/favicons?domain=env.t3.gg&sz=32"
-  },
-  {
-    "id": 28,
-    "url": "https://input-otp.vercel.app",
-    "title": "input-otp",
-    "description": "Stop wasting time building OTP inputs.",
-    "category": "development",
-    "favicon": "https://www.google.com/s2/favicons?domain=input-otp.vercel.app&sz=32"
-  },
-  {
-    "id": 29,
-    "url": "https://fluid.tailwindcss.com",
-    "title": "Fluid for Tailwind CSS",
-    "description": "Build better responsive designs in less code.",
-    "category": "vibe-coding",
-    "favicon": "https://www.google.com/s2/favicons?domain=fluid.tailwindcss.com&sz=32"
   },
   {
     "id": 30,
@@ -310,5 +286,53 @@
     "description": "Resources and insights about software development, engineering practices, and building better products.",
     "category": "reading",
     "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=32"
+  },
+  {
+    "id": 43,
+    "url": "https://www.userinterface.wiki/",
+    "title": "User Interface Wiki",
+    "description": "A comprehensive wiki for user interface design patterns, components, and best practices.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=userinterface.wiki&sz=32"
+  },
+  {
+    "id": 44,
+    "url": "https://joshpuckett.me/bloom",
+    "title": "Bloom",
+    "description": "An iOS inspired pull down menu for the web, built with React and Framer Motion.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=joshpuckett.me&sz=32"
+  },
+  {
+    "id": 45,
+    "url": "https://fant.io/react/",
+    "title": "Fant React",
+    "description": "React components and utilities for building modern web applications.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=fant.io&sz=32"
+  },
+  {
+    "id": 46,
+    "url": "https://www.ui-skills.com/",
+    "title": "UI Skills",
+    "description": "Opinionated constraints for building better interfaces with agents. A set of rules and guidelines for AI-assisted UI development.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui-skills.com&sz=32"
+  },
+  {
+    "id": 47,
+    "url": "https://x.com/thedankoe/status/2010751592346030461",
+    "title": "How to fix your entire life in 1 day",
+    "description": "Insights and thoughts on entrepreneurship, business, and personal development.",
+    "category": "reading",
+    "favicon": "https://www.google.com/s2/favicons?domain=x.com&sz=32"
+  },
+  {
+    "id": 48,
+    "url": "https://www.better-auth.com/",
+    "title": "Better Auth",
+    "description": "The most comprehensive authentication framework for TypeScript. Framework agnostic with support for email/password, OAuth, 2FA, multi-tenant organizations, and a rich plugin ecosystem.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=better-auth.com&sz=32"
   }
 ]

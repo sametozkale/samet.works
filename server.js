@@ -16,7 +16,11 @@ const { google } = require("googleapis");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const STORAGE_FILE = path.join(__dirname, "lastVisitor.json");
-const RESOURCES_FILE = path.join(__dirname, "resources.json");
+// Use /tmp for Lambda environments (read-only filesystem), otherwise use __dirname
+const isLambda = __dirname.startsWith('/var/task') || process.env.LAMBDA_TASK_ROOT;
+const RESOURCES_FILE = isLambda 
+  ? path.join('/tmp', 'resources.json') 
+  : path.join(__dirname, "resources.json");
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
@@ -25,11 +29,48 @@ app.use(express.json());
 // API ROUTES - Must be registered FIRST
 // ============================================
 
+// Helper function to read resources file (handles Lambda read-only filesystem)
+async function readResourcesFile() {
+  const sourceFile = path.join(__dirname, "resources.json");
+  
+  // If using /tmp (Lambda), check if file exists there, otherwise copy from source
+  if (isLambda) {
+    try {
+      // Try reading from /tmp first
+      const data = await fs.readFile(RESOURCES_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      // /tmp file doesn't exist, try to copy from source
+      try {
+        const sourceData = await fs.readFile(sourceFile, "utf8");
+        await fs.writeFile(RESOURCES_FILE, sourceData, "utf8");
+        return JSON.parse(sourceData);
+      } catch (copyErr) {
+        // Source file also doesn't exist or can't be read, return empty array
+        console.log("Could not read or copy resources file, using empty array");
+        return [];
+      }
+    }
+  } else {
+    // Normal environment, read from __dirname
+    try {
+      const data = await fs.readFile(RESOURCES_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      return [];
+    }
+  }
+  return [];
+}
+
 // Resources API - GET all resources
 app.get("/api/resources", async (req, res) => {
   try {
-    const data = await fs.readFile(RESOURCES_FILE, "utf8");
-    const resources = JSON.parse(data);
+    const resources = await readResourcesFile();
     res.json(resources);
   } catch (err) {
     console.error("Error reading resources:", err.message);
@@ -58,21 +99,11 @@ app.post("/api/resources", async (req, res) => {
       return res.status(400).json({ error: "Invalid URL format" });
     }
 
-    // Read existing resources
-    let resources = [];
-    try {
-      const data = await fs.readFile(RESOURCES_FILE, "utf8");
-      if (data && data.trim()) {
-        resources = JSON.parse(data);
-        // Ensure resources is an array
-        if (!Array.isArray(resources)) {
-          console.warn("Resources file does not contain an array, resetting to empty array");
-          resources = [];
-        }
-      }
-    } catch (err) {
-      // File doesn't exist or is empty, start with empty array
-      console.log("Resources file read error (will use empty array):", err.message);
+    // Read existing resources using helper function
+    let resources = await readResourcesFile();
+    // Ensure resources is an array
+    if (!Array.isArray(resources)) {
+      console.warn("Resources file does not contain an array, resetting to empty array");
       resources = [];
     }
 

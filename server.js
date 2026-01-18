@@ -62,9 +62,17 @@ app.post("/api/resources", async (req, res) => {
     let resources = [];
     try {
       const data = await fs.readFile(RESOURCES_FILE, "utf8");
-      resources = JSON.parse(data);
+      if (data && data.trim()) {
+        resources = JSON.parse(data);
+        // Ensure resources is an array
+        if (!Array.isArray(resources)) {
+          console.warn("Resources file does not contain an array, resetting to empty array");
+          resources = [];
+        }
+      }
     } catch (err) {
       // File doesn't exist or is empty, start with empty array
+      console.log("Resources file read error (will use empty array):", err.message);
       resources = [];
     }
 
@@ -92,12 +100,19 @@ app.post("/api/resources", async (req, res) => {
     resources.push(newResource);
 
     // Write back to file
-    await fs.writeFile(RESOURCES_FILE, JSON.stringify(resources, null, 2), "utf8");
+    try {
+      await fs.writeFile(RESOURCES_FILE, JSON.stringify(resources, null, 2), "utf8");
+      console.log("Resource added successfully:", newResource.id);
+    } catch (writeError) {
+      console.error("Error writing resources file:", writeError);
+      throw new Error(`Failed to write file: ${writeError.message}`);
+    }
 
     res.json({ success: true, resource: newResource });
   } catch (error) {
-    console.error("Error adding resource:", error);
-    res.status(500).json({ error: "Failed to add resource" });
+    console.error("Error adding resource:", error.message);
+    console.error("Error stack:", error.stack);
+    res.status(500).json({ error: `Failed to add resource: ${error.message}` });
   }
 });
 

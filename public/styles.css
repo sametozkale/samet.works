@@ -125,9 +125,9 @@ a:hover {
 }
 
 .show-more-button:hover {
-  background-color: #f5f5f5;
-  border-color: #d1d5db;
   color: #333 !important;
+  background-color: rgba(238, 238, 238, 1) !important;
+  border-color: rgba(238, 238, 238, 1) !important;
 }
 
 .glossary-button:hover {

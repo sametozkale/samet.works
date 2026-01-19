@@ -22,359 +22,25 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
-        font-weight: 600;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
-        font-weight: 700;
-        font-style: normal;
-      }
-      html {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .project-image {
-        transition: transform 0.3s ease;
-      }
-      .project-card:hover .project-image {
-        transform: scale(1.02);
-      }
-      .project-badge {
-        opacity: 0;
-        transition: opacity 0.2s ease;
-      }
-      .project-card:hover .project-badge {
-        opacity: 1;
-      }
-      a:hover {
-        color: #0089FF !important;
-      }
-      .book-call-button:hover {
-        color: white !important;
-      }
-      .book-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: white;
-        background-color: #0089FF;
-        border: 1px solid #0089FF;
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      .portfolio-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: #333;
-        background-color: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(238, 238, 238, 1);
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-        margin-left: 4px;
-      }
-      .portfolio-button:hover {
-        background-color: #f5f5f5;
-        border-color: #d1d5db;
-        color: #333 !important;
-      }
-      button {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .availability-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 4px 12px;
-        font-size: 12px;
-        font-weight: 500;
-        color: #166534;
-        background-color: transparent;
-        border: 1px solid #e5e7eb;
-        border-radius: 6px;
-      }
-      .availability-badge-dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: #10b981;
-      }
-      .service-card {
-        padding: 20px;
-        background-color: #fafafa;
-        border: none;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-      }
-      .service-card:hover {
-        background-color: #f5f5f5;
-        transform: translateY(-1px);
-      }
-      .selections-slider-container:hover .selections-slider-btn {
-        display: flex !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-      }
-      .selections-slider-btn:hover {
-        background: rgba(255, 255, 255, 0.85) !important;
-        border-color: rgba(229, 231, 235, 0.7) !important;
-      }
-      .selections-slider-btn:hover svg path {
-        opacity: 0.9 !important;
-      }
-      .selections-dot:hover {
-        background: #cbd5e1 !important;
-      }
-      .selections-dot.active {
-        background: #dddddd !important;
-        width: 24px !important;
-      }
-      .link-with-logo {
-        position: relative;
-        display: inline;
-      }
-      .link-logo {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-        pointer-events: none;
-        border-radius: 2px;
-      }
-      .link-with-logo:hover .link-logo {
-        opacity: 1;
-      }
-      .link-with-logo a {
-        transition: padding-left 0.2s ease;
-        padding-left: 0;
-      }
-      .link-with-logo:hover a {
-        padding-left: 20px;
-      }
-      .bottom-nav {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 999px;
-        padding: 3px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-      }
-      .bottom-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: #777;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        white-space: nowrap;
-        transform: scale(1);
-        opacity: 0.8;
-        transform-origin: center;
-      }
-      .bottom-nav-item:first-child {
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child {
-        transform-origin: right center;
-      }
-      .bottom-nav-item svg {
-        color: #ddd;
-        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .bottom-nav-item:hover {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      .bottom-nav-item:first-child:hover {
-        transform: scale(1.05);
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child:hover {
-        transform: scale(1.05);
-        transform-origin: right center;
-      }
-      .bottom-nav-item:hover svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item:hover .nav-text {
-        display: inline;
-        animation: fadeIn 0.3s ease;
-        font-size: 14px;
-        transform: scale(1);
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateX(-4px) scale(1);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
-      }
-      .bottom-nav-item.active {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1);
-        opacity: 1;
-      }
-      .bottom-nav-item.active svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item.active .nav-text {
-        display: inline;
-        font-size: 14px;
-      }
-      .bottom-nav-item .nav-text {
-        display: none;
-        font-size: 14px;
-      }
-      .bottom-nav-icon {
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      @media (max-width: 640px) {
-        .bottom-nav {
-          gap: 1px;
-          padding: 3px;
-        }
-        .bottom-nav-item {
-          padding: 6px 8px;
-          font-size: 12px;
-        }
-        .bottom-nav-item .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item:hover .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item.active .nav-text {
-          font-size: 12px;
-        }
-      }
-      
-      /* Footer Responsive Styles */
-      @media (max-width: 768px) {
-        .footer-header {
-          flex-direction: column;
-          align-items: flex-start !important;
-        }
-        .footer-columns {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 32px 24px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-columns {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-        footer {
-          padding-top: 48px !important;
-          padding-bottom: 48px !important;
-        }
-        .footer-header {
-          margin-bottom: 32px !important;
-        }
-        .footer-columns {
-          margin-bottom: 32px !important;
-        }
-      }
-      .email-input:focus {
-        border-color: #0089FF;
-      }
-      .glossary-button:hover {
-        background-color: #0077e6 !important;
-        border-color: #0077e6 !important;
-      }
-      .glossary-button:active {
-        transform: scale(0.98);
-      }
-      @media (max-width: 640px) {
-        .email-form {
-          max-width: 100% !important;
-        }
-        .email-form > div {
-          flex-direction: column !important;
-          align-items: stretch !important;
-        }
-        .email-form .glossary-button,
-        .email-form .email-input {
-          width: 100% !important;
-        }
-        button,
-        .book-call-button {
-          border-radius: 16px !important;
-        }
-        .w-full.border,
-        video.border {
-          border-radius: 12px !important;
-        }
-      }
-    </style>
     <title>Samet Özkale — AI Product & Design Manager</title>
     <link
       rel="icon"
@@ -413,7 +79,8 @@
       name="twitter:image"
       content="https://samet.works/assets/og.jpg"
     />
-  </head>
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
   <body>
     <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Info Section -->
@@ -427,7 +94,7 @@
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
           Currently exploring new opportunities, previously built something new at
           <span class="link-with-logo">
-            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo" />
+            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo"  loading="lazy" decoding="async" />
             <a
               href="https://mues.ai"
               target="_blank"
@@ -441,7 +108,7 @@
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
           Also sharing insights through my newsletter
           <span class="link-with-logo">
-            <img src="https://substackcdn.com/image/fetch/$s_!C67Q!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa75a6a16-503b-442f-b0b1-3421007b8ccc_600x600.png" alt="AI for Product Power" class="link-logo" />
+            <img src="https://substackcdn.com/image/fetch/$s_!C67Q!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa75a6a16-503b-442f-b0b1-3421007b8ccc_600x600.png" alt="AI for Product Power" class="link-logo"  loading="lazy" decoding="async" />
             <a
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720"
               target="_blank"
@@ -480,7 +147,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-1.png"
                 alt="Design 1"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -488,7 +155,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-2.png"
                 alt="Design 2"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -496,7 +163,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-3.png"
                 alt="Design 3"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -504,7 +171,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-4.png"
                 alt="Design 4"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -512,7 +179,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-5.png"
                 alt="Design 5"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -520,7 +187,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-6.png"
                 alt="Design 6"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -528,7 +195,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-7.png"
                 alt="Design 7"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -536,7 +203,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-8.png"
                 alt="Design 8"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -544,7 +211,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-9.png"
                 alt="Design 9"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -552,7 +219,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-10.png"
                 alt="Design 10"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -560,7 +227,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-11.png"
                 alt="Design 11"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -568,7 +235,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-12.png"
                 alt="Design 12"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -576,7 +243,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-13.png"
                 alt="Design 13"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -584,7 +251,7 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-14.png"
                 alt="Design 14"
-              />
+               loading="lazy" decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -592,16 +259,16 @@
                 style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
                 src="/assets/portfolio/D-15.png"
                 alt="Design 15"
-              />
+               loading="lazy" decoding="async" />
             </div>
           </div>
-          <button class="selections-slider-btn selections-slider-prev" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(229, 231, 235, 0.5); border-radius: 50%; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Previous">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="selections-slider-btn selections-slider-prev" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(229, 231, 235, 0.5); border-radius: 50%; width: 32px; height: 32px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Previous">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
             </svg>
           </button>
-          <button class="selections-slider-btn selections-slider-next" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(229, 231, 235, 0.5); border-radius: 50%; width: 40px; height: 40px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Next">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button class="selections-slider-btn selections-slider-next" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(229, 231, 235, 0.5); border-radius: 50%; width: 32px; height: 32px; display: none; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s ease; opacity: 0; pointer-events: none;" aria-label="Next">
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
             </svg>
           </button>
@@ -652,7 +319,7 @@
               style="border-color: #F4F4F4; border-radius: 16px; margin-top: 0;"
               src="/assets/mues-ai/Mues 1.png"
               alt="Mues AI"
-            />
+             loading="lazy" decoding="async" />
           </a>
         </div>
 
@@ -676,7 +343,7 @@
               style="border-color: #F4F4F4; border-radius: 16px; margin-top: 0;"
               src="/assets/roadmape/Roadmape 1.png"
               alt="Roadmape"
-            />
+             loading="lazy" decoding="async" />
           </a>
         </div>
 
@@ -700,7 +367,7 @@
               style="border-color: #F4F4F4; border-radius: 16px; margin-top: 0;"
               src="/assets/producter/Producter 1.png"
               alt="Producter"
-            />
+             loading="lazy" decoding="async" />
           </a>
         </div>
 
@@ -724,7 +391,7 @@
               style="border-color: #F4F4F4; border-radius: 16px; margin-top: 0;"
               src="/assets/heybooster/Heybooster 1.png"
               alt="Heybooster"
-            />
+             loading="lazy" decoding="async" />
           </a>
         </div>
       </div>
@@ -769,35 +436,24 @@
         </div>
       </div>
 
-      <!-- AI Glossary Email Callout -->
-      <div class="prose mx-auto max-w-prose" style="margin-top: 64px; margin-bottom: 96px;">
-        <div class="email-callout" style="background: #fafafa; border: 1px solid #eeeeee; border-radius: 16px; padding: 32px; text-align: center;">
-          <h2 class="text-xl sm:text-2xl text-slate-900 font-medium mb-4">AI Glossary</h2>
-          <p class="text-base leading-relaxed mb-6" style="color: #777;">
-            Enter your email to access an interactive guide to understanding<br>the core concepts behind artificial intelligence.
-          </p>
-          <div class="email-form" style="display: flex; flex-direction: column; gap: 12px; max-width: 500px; margin: 0 auto;">
-            <div style="display: flex; gap: 8px; align-items: flex-start;">
-              <div style="flex: 1; display: flex; flex-direction: column;">
-                <input
-                  type="email"
-                  id="glossary-email"
-                  placeholder="your@email.com"
-                  style="padding: 10px 16px; border: 1px solid #eeeeee; border-radius: 12px; font-size: 14px; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s ease; width: 100%;"
-                  class="email-input"
-                />
-                <div id="email-error" style="color: #dc2626; font-size: 13px; text-align: left; display: none; margin-top: 4px;"></div>
-              </div>
-              <button
-                id="go-to-glossary-btn"
-                style="padding: 10px 16px; background-color: #0089FF; color: white; border: 1px solid #0089FF; border-radius: 24px; corner-shape: squircle; font-size: 14px; font-weight: 500; font-family: 'Open Runde', sans-serif; cursor: pointer; transition: all 0.2s ease; white-space: nowrap; flex-shrink: 0;"
-                class="glossary-button"
-              >
-                Go to AI Glossary
-              </button>
-            </div>
-          </div>
+      <!-- Writings Section -->
+      <div class="prose mx-auto max-w-prose" style="margin-top: 96px; margin-bottom: 96px;">
+        <h2 class="text-xl sm:text-2xl text-slate-900 font-medium mb-4">Writings</h2>
+        <p class="text-base leading-relaxed" style="color: #777; margin-bottom: 16px;">
+          My recent writings on AI, product design, and product management.
+        </p>
+        
+        <div id="writings-container" style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 12px;">
+          <!-- Writings will be dynamically inserted here -->
         </div>
+        
+        <button
+          id="show-more-writings-btn"
+          style="display: none;"
+          class="show-more-button"
+        >
+          Show more
+        </button>
       </div>
 
       <!-- Footer -->
@@ -1141,83 +797,104 @@
         });
       })();
 
-      // Email validation and redirect for AI Glossary
+      // Writings Section
       (function() {
-        const emailInput = document.getElementById('glossary-email');
-        const goToGlossaryBtn = document.getElementById('go-to-glossary-btn');
-        const errorDiv = document.getElementById('email-error');
+        const writingsContainer = document.getElementById('writings-container');
+        const showMoreBtn = document.getElementById('show-more-writings-btn');
+        let allWritings = [];
+        let visibleCount = 5;
+        const increment = 10;
 
-        function validateEmail(email) {
-          // Basic format check: contains @ and .
-          return email.includes('@') && email.includes('.');
+        function createWritingElement(writing) {
+          const writingDiv = document.createElement('div');
+          writingDiv.className = 'writing-item';
+          writingDiv.style.cssText = 'padding: 10px 0; transition: all 0.2s ease; cursor: pointer;';
+          
+          const linkElement = document.createElement('a');
+          linkElement.href = writing.url;
+          linkElement.target = '_blank';
+          linkElement.rel = 'noopener noreferrer';
+          linkElement.style.cssText = 'color: inherit; text-decoration: none; transition: color 0.2s ease; pointer-events: none;';
+          linkElement.textContent = writing.title;
+          
+          const h3Element = document.createElement('h3');
+          h3Element.className = 'text-base font-medium text-slate-900';
+          h3Element.style.cssText = 'margin: 0; font-size: 14px;';
+          h3Element.appendChild(linkElement);
+          
+          writingDiv.appendChild(h3Element);
+
+          // Make the entire div clickable
+          writingDiv.addEventListener('click', function() {
+            window.open(writing.url, '_blank', 'noopener,noreferrer');
+          });
+
+          writingDiv.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#fafafa';
+            this.style.paddingLeft = '12px';
+            this.style.paddingRight = '12px';
+            this.style.marginLeft = '-12px';
+            this.style.marginRight = '-12px';
+            this.style.borderRadius = '12px';
+            linkElement.style.color = '#0089FF';
+          });
+          writingDiv.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = 'transparent';
+            this.style.paddingLeft = '0';
+            this.style.paddingRight = '0';
+            this.style.marginLeft = '0';
+            this.style.marginRight = '0';
+            this.style.borderRadius = '0';
+            linkElement.style.color = 'inherit';
+          });
+
+          return writingDiv;
         }
 
-        function showError(message) {
-          errorDiv.textContent = message;
-          errorDiv.style.display = 'block';
-          emailInput.style.borderColor = '#dc2626';
-        }
+        function renderWritings() {
+          writingsContainer.innerHTML = '';
+          const writingsToShow = allWritings.slice(0, visibleCount);
+          
+          writingsToShow.forEach(writing => {
+            const writingElement = createWritingElement(writing);
+            writingsContainer.appendChild(writingElement);
+          });
 
-        function hideError() {
-          errorDiv.style.display = 'none';
-          emailInput.style.borderColor = '#eeeeee';
-        }
-
-        goToGlossaryBtn.addEventListener('click', async function() {
-          const email = emailInput.value.trim();
-
-          if (!email) {
-            showError('Please enter your email address');
-            return;
+          // Show/hide "Show more" button
+          if (visibleCount < allWritings.length) {
+            showMoreBtn.style.display = 'block';
+          } else {
+            showMoreBtn.style.display = 'none';
           }
+        }
 
-          if (!validateEmail(email)) {
-            showError('Please enter a valid email address');
-            return;
-          }
+        showMoreBtn.addEventListener('click', function() {
+          visibleCount = Math.min(visibleCount + increment, allWritings.length);
+          renderWritings();
+        });
 
-          hideError();
-
+        // Load writings from API
+        async function loadWritings() {
           try {
-            // Submit email to server
-            const response = await fetch('/api/submit-email', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ email: email }),
-            });
-
-            if (response.ok) {
-              // Redirect to AI Glossary
-              window.location.href = '/ai-glossary';
-            } else {
-              // Even if server fails, allow access (graceful degradation)
-              window.location.href = '/ai-glossary';
+            const response = await fetch('/api/writings');
+            if (!response.ok) {
+              throw new Error('Failed to fetch writings');
             }
+            allWritings = await response.json();
+            visibleCount = 5; // Reset to initial count
+            renderWritings();
           } catch (error) {
-            console.error('Error submitting email:', error);
-            // Allow access even if API fails
-            window.location.href = '/ai-glossary';
+            console.error('Error loading writings:', error);
+            // Fallback: show empty state or error message
+            writingsContainer.innerHTML = '<p style="color: #777;">Unable to load writings at this time.</p>';
           }
-        });
+        }
 
-        // Allow Enter key to submit
-        emailInput.addEventListener('keypress', function(e) {
-          if (e.key === 'Enter') {
-            goToGlossaryBtn.click();
-          }
-        });
-
-        // Clear error on input
-        emailInput.addEventListener('input', function() {
-          if (errorDiv.style.display === 'block') {
-            hideError();
-          }
-        });
+        // Initialize
+        loadWritings();
       })();
     </script>
-    <script src="/hyper-text.js"></script>
-    <script src="/typing-animation.js"></script>
+    <script src="/hyper-text.js" defer></script>
+    <script src="/typing-animation.js" defer></script>
   </body>
 </html>

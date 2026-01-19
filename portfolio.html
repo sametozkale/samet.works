@@ -22,282 +22,26 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+        <link rel="preload" href="/assets/fonts/OpenRunde-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
-        font-weight: 600;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
-        font-weight: 700;
-        font-style: normal;
-      }
-      html {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Runde', sans-serif;
-      }
-      a:hover {
-        color: #0089FF !important;
-      }
-      .book-call-button:hover {
-        color: white !important;
-      }
-      @media (max-width: 640px) {
-        button,
-        .book-call-button {
-          border-radius: 16px !important;
-        }
-        .w-full.border,
-        video.border {
-          border-radius: 12px !important;
-        }
-      }
-      .book-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: white;
-        background-color: #0089FF;
-        border: 1px solid #0089FF;
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      button {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .bottom-nav {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 999px;
-        padding: 3px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-      }
-      .bottom-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: #777;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        white-space: nowrap;
-        transform: scale(1);
-        opacity: 0.8;
-        transform-origin: center;
-      }
-      .bottom-nav-item:first-child {
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child {
-        transform-origin: right center;
-      }
-      .bottom-nav-item svg {
-        color: #ddd;
-        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .bottom-nav-item:hover {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      .bottom-nav-item:first-child:hover {
-        transform: scale(1.05);
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child:hover {
-        transform: scale(1.05);
-        transform-origin: right center;
-      }
-      .bottom-nav-item:hover svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item:hover .nav-text {
-        display: inline;
-        animation: fadeIn 0.3s ease;
-        font-size: 14px;
-        transform: scale(1);
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateX(-4px) scale(1);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
-      }
-      .bottom-nav-item.active {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1);
-        opacity: 1;
-      }
-      .bottom-nav-item.active svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item.active .nav-text {
-        display: inline;
-        font-size: 14px;
-      }
-      .bottom-nav-item .nav-text {
-        display: none;
-        font-size: 14px;
-      }
-      .bottom-nav-icon {
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      @media (max-width: 640px) {
-        .bottom-nav {
-          gap: 1px;
-          padding: 3px;
-        }
-        .bottom-nav-item {
-          padding: 6px 8px;
-          font-size: 12px;
-        }
-        .bottom-nav-item .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item:hover .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item.active .nav-text {
-          font-size: 12px;
-        }
-      }
-      .category-filter {
-        display: flex;
-        gap: 4px;
-        margin-top: 32px;
-        margin-bottom: 32px;
-        flex-wrap: wrap;
-      }
-      .category-btn {
-        background: none;
-        border: none;
-        padding: 6px 12px;
-        font-size: 14px;
-        color: #777;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-family: 'Open Runde', sans-serif;
-        border-radius: 999px;
-      }
-      .category-btn:hover {
-        background: #f7f7f7;
-        color: #000;
-      }
-      .category-btn.active {
-        color: #0089FF;
-        font-weight: 500;
-        background: #f7f7f7;
-      }
-      .portfolio-images {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        margin-top: 32px;
-      }
-      .portfolio-images img {
-        width: 100%;
-        height: auto;
-        border-radius: 16px;
-        border: 1px solid #F4F4F4;
-        display: block;
-      }
-      .portfolio-item {
-        display: none;
-      }
-      .portfolio-item.show {
-        display: block;
-      }
-      @media (max-width: 640px) {
-        .portfolio-images img {
-          border-radius: 12px;
-        }
-        .category-filter {
-          gap: 12px;
-        }
-      }
-      
-      /* Footer Responsive Styles */
-      @media (max-width: 768px) {
-        .footer-header {
-          flex-direction: column;
-          align-items: flex-start !important;
-        }
-        .footer-columns {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 32px 24px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-columns {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-        footer {
-          padding-top: 48px !important;
-          padding-bottom: 48px !important;
-        }
-        .footer-header {
-          margin-bottom: 32px !important;
-        }
-        .footer-columns {
-          margin-bottom: 32px !important;
-        }
-      }
-    </style>
+    
     <title>Portfolio - Samet Özkale</title>
     <link
       rel="icon"
@@ -322,7 +66,8 @@
     />
     <meta property="og:url" content="https://samet.works/portfolio" />
     <meta property="og:type" content="website" />
-  </head>
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
   <body>
     <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Header Section -->
@@ -347,160 +92,160 @@
       <div class="prose mx-auto max-w-prose">
         <div class="portfolio-images">
           <div class="portfolio-item" data-category="logo">
-            <img src="/assets/portfolio/Mues AI Logo.png" alt="Mues AI Logo" />
+            <img src="/assets/portfolio/Mues AI Logo.png" alt="Mues AI Logo"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="logo">
-            <img src="/assets/portfolio/Producter Logo.png" alt="Producter Logo" />
+            <img src="/assets/portfolio/Producter Logo.png" alt="Producter Logo"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="logo">
-            <img src="/assets/portfolio/Roadmape Logo.png" alt="Roadmape Logo" />
+            <img src="/assets/portfolio/Roadmape Logo.png" alt="Roadmape Logo"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="logo">
-            <img src="/assets/portfolio/Fussionary Logo.png" alt="Fussionary Logo" />
+            <img src="/assets/portfolio/Fussionary Logo.png" alt="Fussionary Logo"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="logo">
-            <img src="/assets/portfolio/Oberyon Logo.png" alt="Oberyon Logo" />
+            <img src="/assets/portfolio/Oberyon Logo.png" alt="Oberyon Logo"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-1.png" alt="Website work 1" />
+            <img src="/assets/portfolio/W-1.png" alt="Website work 1"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-2.png" alt="Website work 2" />
+            <img src="/assets/portfolio/W-2.png" alt="Website work 2"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-3.png" alt="Website work 3" />
+            <img src="/assets/portfolio/W-3.png" alt="Website work 3"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-4.png" alt="Website work 4" />
+            <img src="/assets/portfolio/W-4.png" alt="Website work 4"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-5.png" alt="Website work 5" />
+            <img src="/assets/portfolio/W-5.png" alt="Website work 5"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-6.png" alt="Website work 6" />
+            <img src="/assets/portfolio/W-6.png" alt="Website work 6"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-7.png" alt="Website work 7" />
+            <img src="/assets/portfolio/W-7.png" alt="Website work 7"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-8.png" alt="Website work 8" />
+            <img src="/assets/portfolio/W-8.png" alt="Website work 8"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-9.png" alt="Website work 9" />
+            <img src="/assets/portfolio/W-9.png" alt="Website work 9"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-10.png" alt="Website work 10" />
+            <img src="/assets/portfolio/W-10.png" alt="Website work 10"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-11.png" alt="Website work 11" />
+            <img src="/assets/portfolio/W-11.png" alt="Website work 11"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-12.png" alt="Website work 12" />
+            <img src="/assets/portfolio/W-12.png" alt="Website work 12"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-13.png" alt="Website work 13" />
+            <img src="/assets/portfolio/W-13.png" alt="Website work 13"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="website">
-            <img src="/assets/portfolio/W-14.png" alt="Website work 14" />
+            <img src="/assets/portfolio/W-14.png" alt="Website work 14"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-1.png" alt="Component work 1" />
+            <img src="/assets/portfolio/C-1.png" alt="Component work 1"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-2.png" alt="Component work 2" />
+            <img src="/assets/portfolio/C-2.png" alt="Component work 2"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-3.png" alt="Component work 3" />
+            <img src="/assets/portfolio/C-3.png" alt="Component work 3"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-4.png" alt="Component work 4" />
+            <img src="/assets/portfolio/C-4.png" alt="Component work 4"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-5.png" alt="Component work 5" />
+            <img src="/assets/portfolio/C-5.png" alt="Component work 5"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-6.png" alt="Component work 6" />
+            <img src="/assets/portfolio/C-6.png" alt="Component work 6"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-7.png" alt="Component work 7" />
+            <img src="/assets/portfolio/C-7.png" alt="Component work 7"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-8.png" alt="Component work 8" />
+            <img src="/assets/portfolio/C-8.png" alt="Component work 8"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-9.png" alt="Component work 9" />
+            <img src="/assets/portfolio/C-9.png" alt="Component work 9"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-10.png" alt="Component work 10" />
+            <img src="/assets/portfolio/C-10.png" alt="Component work 10"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-11.png" alt="Component work 11" />
+            <img src="/assets/portfolio/C-11.png" alt="Component work 11"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-12.png" alt="Component work 12" />
+            <img src="/assets/portfolio/C-12.png" alt="Component work 12"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-13.png" alt="Component work 13" />
+            <img src="/assets/portfolio/C-13.png" alt="Component work 13"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-14.png" alt="Component work 14" />
+            <img src="/assets/portfolio/C-14.png" alt="Component work 14"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-15.png" alt="Component work 15" />
+            <img src="/assets/portfolio/C-15.png" alt="Component work 15"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-16.png" alt="Component work 16" />
+            <img src="/assets/portfolio/C-16.png" alt="Component work 16"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-17.png" alt="Component work 17" />
+            <img src="/assets/portfolio/C-17.png" alt="Component work 17"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="component">
-            <img src="/assets/portfolio/C-18.png" alt="Component work 18" />
+            <img src="/assets/portfolio/C-18.png" alt="Component work 18"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-1.png" alt="Design work 1" />
+            <img src="/assets/portfolio/D-1.png" alt="Design work 1"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-2.png" alt="Design work 2" />
+            <img src="/assets/portfolio/D-2.png" alt="Design work 2"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-3.png" alt="Design work 3" />
+            <img src="/assets/portfolio/D-3.png" alt="Design work 3"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-4.png" alt="Design work 4" />
+            <img src="/assets/portfolio/D-4.png" alt="Design work 4"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-5.png" alt="Design work 5" />
+            <img src="/assets/portfolio/D-5.png" alt="Design work 5"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-6.png" alt="Design work 6" />
+            <img src="/assets/portfolio/D-6.png" alt="Design work 6"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-7.png" alt="Design work 7" />
+            <img src="/assets/portfolio/D-7.png" alt="Design work 7"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-8.png" alt="Design work 8" />
+            <img src="/assets/portfolio/D-8.png" alt="Design work 8"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-9.png" alt="Design work 9" />
+            <img src="/assets/portfolio/D-9.png" alt="Design work 9"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-10.png" alt="Design work 10" />
+            <img src="/assets/portfolio/D-10.png" alt="Design work 10"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-11.png" alt="Design work 11" />
+            <img src="/assets/portfolio/D-11.png" alt="Design work 11"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-12.png" alt="Design work 12" />
+            <img src="/assets/portfolio/D-12.png" alt="Design work 12"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-13.png" alt="Design work 13" />
+            <img src="/assets/portfolio/D-13.png" alt="Design work 13"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-14.png" alt="Design work 14" />
+            <img src="/assets/portfolio/D-14.png" alt="Design work 14"  loading="lazy" decoding="async" />
           </div>
           <div class="portfolio-item" data-category="design">
-            <img src="/assets/portfolio/D-15.png" alt="Design work 15" />
+            <img src="/assets/portfolio/D-15.png" alt="Design work 15"  loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -744,8 +489,8 @@
         });
       })();
     </script>
-    <script src="/hyper-text.js"></script>
-    <script src="/typing-animation.js"></script>
+    <script src="/hyper-text.js" defer></script>
+    <script src="/typing-animation.js" defer></script>
   </body>
 </html>
 

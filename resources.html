@@ -22,314 +22,26 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+        <link rel="preload" href="/assets/fonts/OpenRunde-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
-        font-weight: 600;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
-        font-weight: 700;
-        font-style: normal;
-      }
-      html {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Runde', sans-serif;
-      }
-      a:hover {
-        color: #0089FF !important;
-      }
-      .book-call-button:hover {
-        color: white !important;
-      }
-      @media (max-width: 640px) {
-        button,
-        .book-call-button {
-          border-radius: 16px !important;
-        }
-        .w-full.border,
-        video.border {
-          border-radius: 12px !important;
-        }
-      }
-      .book-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: white;
-        background-color: #0089FF;
-        border: 1px solid #0089FF;
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      button {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .bottom-nav {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 999px;
-        padding: 3px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-      }
-      .bottom-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: #777;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        white-space: nowrap;
-        transform: scale(1);
-        opacity: 0.8;
-        transform-origin: center;
-      }
-      .bottom-nav-item:first-child {
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child {
-        transform-origin: right center;
-      }
-      .bottom-nav-item svg {
-        color: #ddd;
-        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .bottom-nav-item:hover {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      .bottom-nav-item:first-child:hover {
-        transform: scale(1.05);
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child:hover {
-        transform: scale(1.05);
-        transform-origin: right center;
-      }
-      .bottom-nav-item:hover svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item:hover .nav-text {
-        display: inline;
-        animation: fadeIn 0.3s ease;
-        font-size: 14px;
-        transform: scale(1);
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateX(-4px) scale(1);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
-      }
-      .bottom-nav-item.active {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1);
-        opacity: 1;
-      }
-      .bottom-nav-item.active svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item.active .nav-text {
-        display: inline;
-        font-size: 14px;
-      }
-      .bottom-nav-item .nav-text {
-        display: none;
-        font-size: 14px;
-      }
-      .bottom-nav-icon {
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .category-filter {
-        display: flex;
-        gap: 4px;
-        margin-top: 32px;
-        margin-bottom: 32px;
-        flex-wrap: wrap;
-      }
-      .category-btn {
-        background: none;
-        border: none;
-        padding: 6px 12px;
-        font-size: 14px;
-        color: #777;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        font-family: 'Open Runde', sans-serif;
-        border-radius: 999px;
-      }
-      .category-btn:hover {
-        background: #f7f7f7;
-        color: #000;
-      }
-      .category-btn.active {
-        color: #0089FF;
-        font-weight: 500;
-        background: #f7f7f7;
-      }
-      .resources-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 8px;
-        margin-top: 32px;
-      }
-      .resource-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px;
-        text-decoration: none;
-        color: inherit;
-        transition: background-color 0.2s ease;
-        border-radius: 8px;
-      }
-      .resource-item:hover {
-        background-color: #f7f7f7;
-      }
-      .resource-favicon {
-        width: 20px;
-        height: 20px;
-        border-radius: 4px;
-        flex-shrink: 0;
-        margin-top: 2px;
-        object-fit: contain;
-        background: #f5f5f5;
-      }
-      .resource-favicon[src=""],
-      .resource-favicon:not([src]) {
-        display: none;
-      }
-      .resource-content {
-        flex: 1;
-        min-width: 0;
-      }
-      .resource-title {
-        font-size: 14px;
-        font-weight: 500;
-        color: #000;
-        margin-bottom: 4px;
-        line-height: 1.4;
-      }
-      .resource-description {
-        font-size: 13px;
-        color: #777;
-        line-height: 1.4;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      @media (max-width: 640px) {
-        .bottom-nav {
-          gap: 1px;
-          padding: 3px;
-        }
-        .bottom-nav-item {
-          padding: 6px 8px;
-          font-size: 12px;
-        }
-        .bottom-nav-item .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item:hover .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item.active .nav-text {
-          font-size: 12px;
-        }
-        .resources-grid {
-          grid-template-columns: 1fr;
-        }
-        .category-filter {
-          gap: 12px;
-        }
-      }
-      
-      /* Footer Responsive Styles */
-      @media (max-width: 768px) {
-        .footer-header {
-          flex-direction: column;
-          align-items: flex-start !important;
-        }
-        .footer-columns {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 32px 24px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-columns {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-        footer {
-          padding-top: 48px !important;
-          padding-bottom: 48px !important;
-        }
-        .footer-header {
-          margin-bottom: 32px !important;
-        }
-        .footer-columns {
-          margin-bottom: 32px !important;
-        }
-      }
-    </style>
+    
     <title>Resources - Samet Özkale</title>
     <link
       rel="icon"
@@ -354,7 +66,8 @@
     />
     <meta property="og:url" content="https://samet.works/resources" />
     <meta property="og:type" content="website" />
-  </head>
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
   <body>
     <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Header Section -->
@@ -744,8 +457,8 @@
         });
       })();
     </script>
-    <script src="/hyper-text.js"></script>
-    <script src="/typing-animation.js"></script>
+    <script src="/hyper-text.js" defer></script>
+    <script src="/typing-animation.js" defer></script>
   </body>
 </html>
 

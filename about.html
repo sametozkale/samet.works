@@ -22,290 +22,25 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+        <link rel="preload" href="/assets/fonts/OpenRunde-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
-        font-weight: 600;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
-        font-weight: 700;
-        font-style: normal;
-      }
-      html {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Runde', sans-serif;
-      }
-      a:hover {
-        color: #0089FF !important;
-      }
-      .book-call-button:hover {
-        color: white !important;
-      }
-      @media (max-width: 640px) {
-        button,
-        .book-call-button {
-          border-radius: 16px !important;
-        }
-        .w-full.border,
-        video.border {
-          border-radius: 12px !important;
-        }
-      }
-      .book-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: white;
-        background-color: #0089FF;
-        border: 1px solid #0089FF;
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      button {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .link-with-logo {
-        position: relative;
-        display: inline;
-      }
-      .link-logo {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-        opacity: 0;
-        transition: opacity 0.2s ease;
-        pointer-events: none;
-        border-radius: 2px;
-      }
-      .link-with-logo:hover .link-logo {
-        opacity: 1;
-      }
-      .link-with-logo a {
-        transition: padding-left 0.2s ease;
-        padding-left: 0;
-      }
-      .link-with-logo:hover a {
-        padding-left: 20px;
-      }
-      .timeline {
-        margin-top: 0;
-      }
-      .timeline-item {
-        display: flex;
-        gap: 24px;
-        margin-bottom: 16px;
-        align-items: baseline;
-        padding: 0;
-      }
-      .timeline-date {
-        font-size: 14px;
-        color: #979797;
-        min-width: 90px;
-        font-variant-numeric: tabular-nums;
-        font-family: "Chivo Mono", monospace;
-        font-weight: 300;
-        line-height: 1.6;
-        flex-shrink: 0;
-      }
-      .timeline-content {
-        flex: 1;
-        font-size: 14px;
-        color: #777;
-        line-height: 1.6;
-      }
-      @media (max-width: 640px) {
-        .timeline-item {
-          flex-direction: column;
-          gap: 4px;
-          margin-bottom: 20px;
-        }
-        .timeline-date {
-          min-width: auto;
-        }
-      }
-      .bottom-nav {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 999px;
-        padding: 3px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-      }
-      .bottom-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: #777;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        white-space: nowrap;
-        transform: scale(1);
-        opacity: 0.8;
-        transform-origin: center;
-      }
-      .bottom-nav-item:first-child {
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child {
-        transform-origin: right center;
-      }
-      .bottom-nav-item svg {
-        color: #ddd;
-        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .bottom-nav-item:hover {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      .bottom-nav-item:first-child:hover {
-        transform: scale(1.05);
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child:hover {
-        transform: scale(1.05);
-        transform-origin: right center;
-      }
-      .bottom-nav-item:hover svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item:hover .nav-text {
-        display: inline;
-        animation: fadeIn 0.3s ease;
-        font-size: 14px;
-        transform: scale(1);
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateX(-4px) scale(1);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
-      }
-      .bottom-nav-item.active {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1);
-        opacity: 1;
-      }
-      .bottom-nav-item.active svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item.active .nav-text {
-        display: inline;
-        font-size: 14px;
-      }
-      .bottom-nav-item .nav-text {
-        display: none;
-        font-size: 14px;
-      }
-      .bottom-nav-icon {
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      @media (max-width: 640px) {
-        .bottom-nav {
-          gap: 1px;
-          padding: 3px;
-        }
-        .bottom-nav-item {
-          padding: 6px 8px;
-          font-size: 12px;
-        }
-        .bottom-nav-item .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item:hover .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item.active .nav-text {
-          font-size: 12px;
-        }
-      }
-      
-      /* Footer Responsive Styles */
-      @media (max-width: 768px) {
-        .footer-header {
-          flex-direction: column;
-          align-items: flex-start !important;
-        }
-        .footer-columns {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 32px 24px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-columns {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-        footer {
-          padding-top: 48px !important;
-          padding-bottom: 48px !important;
-        }
-        .footer-header {
-          margin-bottom: 32px !important;
-        }
-        .footer-columns {
-          margin-bottom: 32px !important;
-        }
-      }
-    </style>
     <title>About - Samet Özkale</title>
     <link
       rel="icon"
@@ -330,7 +65,8 @@
     />
     <meta property="og:url" content="https://samet.works/about" />
     <meta property="og:type" content="website" />
-  </head>
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
   <body>
     <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Info Section -->
@@ -350,7 +86,7 @@
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
           Today, I'm applying these lessons at
           <span class="link-with-logo">
-            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo" />
+            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo"  loading="lazy" decoding="async" />
             <a
               href="https://mues.ai"
               target="_blank"
@@ -367,7 +103,7 @@
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
           If you're looking for someone who can bridge design, product strategy, and AI (someone who thinks deeply but executes quickly), I'd love to explore how we can work together. You can find me sharing thoughts on
           <span class="link-with-logo">
-            <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" class="link-logo" />
+            <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" class="link-logo"  loading="lazy" decoding="async" />
             <a
               href="https://www.linkedin.com/in/sametozkale"
               target="_blank"
@@ -378,7 +114,7 @@
           </span>
           and
           <span class="link-with-logo">
-            <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X / Twitter" class="link-logo" />
+            <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X / Twitter" class="link-logo"  loading="lazy" decoding="async" />
             <a
               href="https://x.com/sametozkale"
               target="_blank"
@@ -678,8 +414,8 @@
         });
       })();
     </script>
-    <script src="/hyper-text.js"></script>
-    <script src="/typing-animation.js"></script>
+    <script src="/hyper-text.js" defer></script>
+    <script src="/typing-animation.js" defer></script>
   </body>
 </html>
 

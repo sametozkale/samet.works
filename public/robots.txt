@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://samet.works/sitemap.xml
+
+# LLMs.txt for AI models
+# LLMs.txt: https://samet.works/llms.txt
+
+# Disallow CMS and admin pages
+Disallow: /cms

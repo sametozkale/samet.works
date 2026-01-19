@@ -22,304 +22,26 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://static.hotjar.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+        <link rel="preload" href="/assets/fonts/OpenRunde-Regular.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Medium.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
+<link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
-    <style>
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
-        font-weight: 400;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
-        font-weight: 500;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
-        font-weight: 600;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: 'Open Runde';
-        src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
-        font-weight: 700;
-        font-style: normal;
-      }
-      html {
-        font-family: "Inter", sans-serif;
-        scroll-behavior: smooth;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Open Runde', sans-serif;
-      }
-      a:hover {
-        color: #0089FF !important;
-      }
-      .book-call-button:hover {
-        color: white !important;
-      }
-      @media (max-width: 640px) {
-        button,
-        .book-call-button {
-          border-radius: 16px !important;
-        }
-        .w-full.border,
-        video.border {
-          border-radius: 12px !important;
-        }
-      }
-      .book-call-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 12px;
-        height: 32px;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        color: white;
-        background-color: #0089FF;
-        border: 1px solid #0089FF;
-        border-radius: 24px;
-        corner-shape: squircle;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      button {
-        font-family: 'Open Runde', sans-serif;
-      }
-      .bottom-nav {
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        align-items: center;
-        gap: 1px;
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 999px;
-        padding: 3px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        z-index: 1000;
-      }
-      .bottom-nav-item {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 8px 12px;
-        border-radius: 999px;
-        text-decoration: none;
-        color: #777;
-        font-size: 14px;
-        font-weight: 500;
-        font-family: 'Open Runde', sans-serif;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        white-space: nowrap;
-        transform: scale(1);
-        opacity: 0.8;
-        transform-origin: center;
-      }
-      .bottom-nav-item:first-child {
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child {
-        transform-origin: right center;
-      }
-      .bottom-nav-item svg {
-        color: #ddd;
-        transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .bottom-nav-item:hover {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1.05);
-        opacity: 1;
-      }
-      .bottom-nav-item:first-child:hover {
-        transform: scale(1.05);
-        transform-origin: left center;
-      }
-      .bottom-nav-item:last-child:hover {
-        transform: scale(1.05);
-        transform-origin: right center;
-      }
-      .bottom-nav-item:hover svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item:hover .nav-text {
-        display: inline;
-        animation: fadeIn 0.3s ease;
-        font-size: 14px;
-        transform: scale(1);
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateX(-4px) scale(1);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0) scale(1);
-        }
-      }
-      .bottom-nav-item.active {
-        background: #f5f5f5;
-        color: #0089FF;
-        transform: scale(1);
-        opacity: 1;
-      }
-      .bottom-nav-item.active svg {
-        color: #0089FF;
-      }
-      .bottom-nav-item.active .nav-text {
-        display: inline;
-        font-size: 14px;
-      }
-      .bottom-nav-item .nav-text {
-        display: none;
-        font-size: 14px;
-      }
-      .bottom-nav-icon {
-        width: 16px;
-        height: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .books-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 24px 16px;
-        margin-top: 48px;
-        width: 100%;
-      }
-      @media (min-width: 1200px) {
-        .books-grid {
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        }
-      }
-      .book-item {
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        color: inherit;
-        pointer-events: none;
-        cursor: default;
-        transition: transform 0.2s ease;
-      }
-      .book-cover {
-        width: 100%;
-        aspect-ratio: 2/3;
-        object-fit: contain;
-        border-radius: 10px;
-        margin-bottom: 16px;
-        background: #f5f5f5;
-      }
-      .book-title {
-        font-size: 14px;
-        font-weight: 500;
-        color: #000;
-        margin-bottom: 6px;
-        line-height: 1.5;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .book-author {
-        font-size: 13px;
-        color: #777;
-        line-height: 1.4;
-      }
-      .book-staff-pick {
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 500;
-        color: #0089FF;
-        margin-top: 4px;
-      }
-      @media (max-width: 768px) {
-        .books-grid {
-          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-          gap: 24px 16px;
-        }
-      }
-      @media (max-width: 640px) {
-        .bottom-nav {
-          gap: 1px;
-          padding: 3px;
-        }
-        .bottom-nav-item {
-          padding: 6px 8px;
-          font-size: 12px;
-        }
-        .bottom-nav-item .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item:hover .nav-text {
-          font-size: 12px;
-        }
-        .bottom-nav-item.active .nav-text {
-          font-size: 12px;
-        }
-        .books-grid {
-          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-          gap: 24px 12px;
-          margin-top: 40px;
-        }
-        .book-title {
-          font-size: 13px;
-        }
-        .book-author {
-          font-size: 12px;
-        }
-      }
-      @media (max-width: 480px) {
-        .books-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 20px 12px;
-        }
-      }
-      
-      /* Footer Responsive Styles */
-      @media (max-width: 768px) {
-        .footer-header {
-          flex-direction: column;
-          align-items: flex-start !important;
-        }
-        .footer-columns {
-          grid-template-columns: repeat(2, 1fr) !important;
-          gap: 32px 24px !important;
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-columns {
-          grid-template-columns: 1fr !important;
-          gap: 32px !important;
-        }
-        footer {
-          padding-top: 48px !important;
-          padding-bottom: 48px !important;
-        }
-        .footer-header {
-          margin-bottom: 32px !important;
-        }
-        .footer-columns {
-          margin-bottom: 32px !important;
-        }
-      }
-    </style>
+    
     <title>Books - Samet Özkale</title>
     <link
       rel="icon"
@@ -344,7 +66,8 @@
     />
     <meta property="og:url" content="https://samet.works/books" />
     <meta property="og:type" content="website" />
-  </head>
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+</head>
   <body>
     <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Header Section -->
@@ -359,152 +82,152 @@
         <!-- Books Grid -->
         <div class="books-grid">
           <div class="book-item">
-            <img src="https://assets.curated.supply/PRH_The%20Creative%20Act_%20A%20Way%20of%20Being%20by%20Rick%20Rubin.webp" alt="The Creative Act: A Way of Being" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/PRH_The%20Creative%20Act_%20A%20Way%20of%20Being%20by%20Rick%20Rubin.webp" alt="The Creative Act: A Way of Being" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Creative Act: A Way of Being</div>
             <div class="book-author">Rick Rubin</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_Dieter%20Rams_%20The%20Complete%20Works.webp" alt="Dieter Rams: The Complete Works" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_Dieter%20Rams_%20The%20Complete%20Works.webp" alt="Dieter Rams: The Complete Works" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Dieter Rams: The Complete Works</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="/assets/The Prophet.webp" alt="The Prophet" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="/assets/The Prophet.webp" alt="The Prophet" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Prophet</div>
             <div class="book-author">Kahlil Gibran</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_Virgil%20Abloh.%20Nike.%20ICONS.webp" alt="Virgil Abloh. Nike. ICONS" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_Virgil%20Abloh.%20Nike.%20ICONS.webp" alt="Virgil Abloh. Nike. ICONS" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Virgil Abloh. Nike. ICONS</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_The%20Design%20Book.webp" alt="The Design Book" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_The%20Design%20Book.webp" alt="The Design Book" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Design Book</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_Ferrari:%20Art%20Edition.webp" alt="Ferrari: Art Edition" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_Ferrari:%20Art%20Edition.webp" alt="Ferrari: Art Edition" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Ferrari: Art Edition</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Verlag%20Niggli%20AG_Grid%20Systems%20in%20Graphic%20Design.webp" alt="Grid Systems in Graphic Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Verlag%20Niggli%20AG_Grid%20Systems%20in%20Graphic%20Design.webp" alt="Grid Systems in Graphic Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Grid Systems in Graphic Design</div>
             <div class="book-author">Verlag Niggli AG</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_Braun:%20Designed%20to%20Keep.webp" alt="Braun: Designed to Keep" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_Braun:%20Designed%20to%20Keep.webp" alt="Braun: Designed to Keep" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Braun: Designed to Keep</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_Design%20of%20the%2020th%20Century.webp" alt="Design of the 20th Century" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_Design%20of%20the%2020th%20Century.webp" alt="Design of the 20th Century" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Design of the 20th Century</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_Logo%20Beginnings.webp" alt="Logo Beginnings" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_Logo%20Beginnings.webp" alt="Logo Beginnings" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Logo Beginnings</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_Naoto%20Fukasawa:%20Embodiment.webp" alt="Naoto Fukasawa: Embodiment" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_Naoto%20Fukasawa:%20Embodiment.webp" alt="Naoto Fukasawa: Embodiment" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Naoto Fukasawa: Embodiment</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Lars%20Müller%20Publishers_Helvetica%20Forever.webp" alt="Helvetica Forever" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Lars%20Müller%20Publishers_Helvetica%20Forever.webp" alt="Helvetica Forever" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Helvetica Forever</div>
             <div class="book-author">Lars Müller Publishers</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_Dieter%20Rams:%20As%20Little%20Design%20as%20Possible.webp" alt="Dieter Rams: As Little Design as Possible" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_Dieter%20Rams:%20As%20Little%20Design%20as%20Possible.webp" alt="Dieter Rams: As Little Design as Possible" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Dieter Rams: As Little Design as Possible</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Vitra_Atlas%20of%20Furniture%20Design.webp" alt="Atlas of Furniture Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Vitra_Atlas%20of%20Furniture%20Design.webp" alt="Atlas of Furniture Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Atlas of Furniture Design</div>
             <div class="book-author">Vitra</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_The%20Package%20Design%20Book.webp" alt="The Package Design Book" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_The%20Package%20Design%20Book.webp" alt="The Package Design Book" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Package Design Book</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Stripe%20Press_The%20Making%20of%20Prince%20of%20Persia.webp" alt="The Making of Prince of Persia" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Stripe%20Press_The%20Making%20of%20Prince%20of%20Persia.webp" alt="The Making of Prince of Persia" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Making of Prince of Persia</div>
             <div class="book-author">Stripe Press</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/The%20Steve%20Jobs%20Archive_Make%20Something%20Wonderful.webp" alt="Make Something Wonderful" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/The%20Steve%20Jobs%20Archive_Make%20Something%20Wonderful.webp" alt="Make Something Wonderful" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Make Something Wonderful</div>
             <div class="book-author">The Steve Jobs Archive</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Gestalten_The%20Monocle%20Guide%20to%20Good%20Business.webp" alt="The Monocle Guide to Good Business" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Gestalten_The%20Monocle%20Guide%20to%20Good%20Business.webp" alt="The Monocle Guide to Good Business" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Monocle Guide to Good Business</div>
             <div class="book-author">Gestalten</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Penguin%20Random%20House_The%20Interior%20Design%20Handbook.webp" alt="The Interior Design Handbook" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Penguin%20Random%20House_The%20Interior%20Design%20Handbook.webp" alt="The Interior Design Handbook" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Interior Design Handbook</div>
             <div class="book-author">Penguin Random House</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Thames%20%26%20Hudson_Japanese%20Design%20Since%201945:%20A%20Complete%20Sourcebook.webp" alt="Japanese Design Since 1945: A Complete Sourcebook" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Thames%20%26%20Hudson_Japanese%20Design%20Since%201945:%20A%20Complete%20Sourcebook.webp" alt="Japanese Design Since 1945: A Complete Sourcebook" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Japanese Design Since 1945: A Complete Sourcebook</div>
             <div class="book-author">Thames & Hudson</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Gestalten_Soft%20Minimal:%20Norm%20Architects.webp" alt="Soft Minimal: Norm Architects" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Gestalten_Soft%20Minimal:%20Norm%20Architects.webp" alt="Soft Minimal: Norm Architects" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Soft Minimal: Norm Architects</div>
             <div class="book-author">Gestalten</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Lars%20Müller%20Publishers_Designing%20Design.webp" alt="Designing Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Lars%20Müller%20Publishers_Designing%20Design.webp" alt="Designing Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Designing Design</div>
             <div class="book-author">Lars Müller Publishers</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Gestalten_Dieter%20Rams.%20Less%20But%20Better.webp" alt="Dieter Rams. Less But Better" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Gestalten_Dieter%20Rams.%20Less%20But%20Better.webp" alt="Dieter Rams. Less But Better" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Dieter Rams. Less But Better</div>
             <div class="book-author">Gestalten</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Phaidon_Herman%20Miller:%20A%20Way%20of%20Living.webp" alt="Herman Miller: A Way of Living" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Phaidon_Herman%20Miller:%20A%20Way%20of%20Living.webp" alt="Herman Miller: A Way of Living" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Herman Miller: A Way of Living</div>
             <div class="book-author">Phaidon</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Taschen_Bauhaus.%20Updated%20Edition.webp" alt="Bauhaus. Updated Edition" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Taschen_Bauhaus.%20Updated%20Edition.webp" alt="Bauhaus. Updated Edition" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Bauhaus. Updated Edition</div>
             <div class="book-author">Taschen</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Standards%20Manual_NASA%20Graphics%20Standards%20Manual.webp" alt="NASA Graphics Standards Manual" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Standards%20Manual_NASA%20Graphics%20Standards%20Manual.webp" alt="NASA Graphics Standards Manual" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">NASA Graphics Standards Manual</div>
             <div class="book-author">Standards Manual</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Gestalten_The%20Monocle%20Guide%20to%20Better%20Living.webp" alt="The Monocle Guide to Better Living" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Gestalten_The%20Monocle%20Guide%20to%20Better%20Living.webp" alt="The Monocle Guide to Better Living" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Monocle Guide to Better Living</div>
             <div class="book-author">Gestalten</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Simon%20%26%20Schuster_Steve%20Jobs%20by%20Walter%20Isaacson.webp" alt="Steve Jobs by Walter Isaacson" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Simon%20%26%20Schuster_Steve%20Jobs%20by%20Walter%20Isaacson.webp" alt="Steve Jobs by Walter Isaacson" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Steve Jobs by Walter Isaacson</div>
             <div class="book-author">Simon & Schuster</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Thames%20%26%20Hudson_Pentagram:%20Living%20by%20Design.webp" alt="Pentagram: Living by Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Thames%20%26%20Hudson_Pentagram:%20Living%20by%20Design.webp" alt="Pentagram: Living by Design" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">Pentagram: Living by Design</div>
             <div class="book-author">Thames & Hudson</div>
           </div>
           <div class="book-item">
-            <img src="https://assets.curated.supply/Penguin%20Random%20House_The%20Art%20of%20Noticing.webp" alt="The Art of Noticing" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'" />
+            <img src="https://assets.curated.supply/Penguin%20Random%20House_The%20Art%20of%20Noticing.webp" alt="The Art of Noticing" class="book-cover" onerror="this.src='https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop'"  loading="lazy" decoding="async" />
             <div class="book-title">The Art of Noticing</div>
             <div class="book-author">Penguin Random House</div>
           </div>
@@ -759,8 +482,8 @@
         });
       })();
     </script>
-    <script src="/hyper-text.js"></script>
-    <script src="/typing-animation.js"></script>
+    <script src="/hyper-text.js" defer></script>
+    <script src="/typing-animation.js" defer></script>
   </body>
 </html>
 

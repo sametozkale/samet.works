@@ -1,0 +1,45 @@
+/* Open Runde Font Faces with font-display: swap for performance */
+@font-face {
+  font-family: 'Open Runde';
+  src: url('/assets/fonts/OpenRunde-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde';
+  src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde';
+  src: url('/assets/fonts/OpenRunde-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Runde';
+  src: url('/assets/fonts/OpenRunde-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Runde', sans-serif;
+}
+
+button {
+  font-family: 'Open Runde', sans-serif;
+}

@@ -8,19 +8,44 @@
 
 require("dotenv").config();
 const express = require("express");
+const compression = require("compression");
 const fs = require("fs").promises;
 const path = require("path");
 const { google } = require("googleapis");
 // Node.js 18+ has built-in fetch, no need for node-fetch
 
+// Try to load cheerio if available, otherwise use fallback
+let cheerio;
+try {
+  cheerio = require("cheerio");
+} catch (e) {
+  console.log("Cheerio not installed. Install with: npm install cheerio");
+}
+
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Compression middleware (gzip/brotli)
+app.use(compression({
+  level: 6, // Compression level (1-9, 6 is a good balance)
+  filter: (req, res) => {
+    // Don't compress if client doesn't support it
+    if (req.headers['x-no-compression']) {
+      return false;
+    }
+    // Use compression for all text-based content
+    return compression.filter(req, res);
+  }
+}));
 const STORAGE_FILE = path.join(__dirname, "lastVisitor.json");
 // Use /tmp for Lambda environments (read-only filesystem), otherwise use __dirname
 const isLambda = __dirname.startsWith('/var/task') || process.env.LAMBDA_TASK_ROOT;
 const RESOURCES_FILE = isLambda 
   ? path.join('/tmp', 'resources.json') 
   : path.join(__dirname, "resources.json");
+const WRITINGS_FILE = isLambda 
+  ? path.join('/tmp', 'writings.json') 
+  : path.join(__dirname, "writings.json");
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
@@ -57,6 +82,44 @@ async function readResourcesFile() {
     // Normal environment, read from __dirname
     try {
       const data = await fs.readFile(RESOURCES_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      return [];
+    }
+  }
+  return [];
+}
+
+// Helper function to read writings file (handles Lambda read-only filesystem)
+async function readWritingsFile() {
+  const sourceFile = path.join(__dirname, "writings.json");
+  
+  // If using /tmp (Lambda), check if file exists there, otherwise copy from source
+  if (isLambda) {
+    try {
+      // Try reading from /tmp first
+      const data = await fs.readFile(WRITINGS_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      // /tmp file doesn't exist, try to copy from source
+      try {
+        const sourceData = await fs.readFile(sourceFile, "utf8");
+        await fs.writeFile(WRITINGS_FILE, sourceData, "utf8");
+        return JSON.parse(sourceData);
+      } catch (copyErr) {
+        // Source file also doesn't exist or can't be read, return empty array
+        console.log("Could not read or copy writings file, using empty array");
+        return [];
+      }
+    }
+  } else {
+    // Normal environment, read from __dirname
+    try {
+      const data = await fs.readFile(WRITINGS_FILE, "utf8");
       if (data && data.trim()) {
         return JSON.parse(data);
       }
@@ -176,6 +239,28 @@ app.get("/api/last-location", async (req, res) => {
   }
 });
 
+// Writings API - GET all writings from JSON file
+app.get("/api/writings", async (req, res) => {
+  try {
+    const writings = await readWritingsFile();
+    
+    // Sort by date descending (most recent first)
+    const sortedWritings = [...writings].sort((a, b) => {
+      const dateA = new Date(a.date || '1970-01-01');
+      const dateB = new Date(b.date || '1970-01-01');
+      return dateB - dateA;
+    });
+    
+    // Return only title and url (remove date field)
+    const writingsToReturn = sortedWritings.map(({ title, url }) => ({ title, url }));
+    
+    res.json(writingsToReturn);
+  } catch (error) {
+    console.error("Error in /api/writings:", error);
+    res.status(500).json({ error: "Failed to load writings" });
+  }
+});
+
 // Email submission API
 app.post("/api/submit-email", async (req, res) => {
   try {
@@ -286,6 +371,24 @@ app.get("/cms", (req, res) => {
   res.sendFile(path.join(__dirname, "cms.html"));
 });
 
+// Sitemap route
+app.get("/sitemap.xml", (req, res) => {
+  res.setHeader('Content-Type', 'application/xml');
+  res.sendFile(path.join(__dirname, "public", "sitemap.xml"));
+});
+
+// Robots.txt route
+app.get("/robots.txt", (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.sendFile(path.join(__dirname, "public", "robots.txt"));
+});
+
+// LLMs.txt route (before static files to ensure proper content-type)
+app.get("/llms.txt", (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.sendFile(path.join(__dirname, "public", "llms.txt"));
+});
+
 // Legacy routes for backward compatibility
 app.get("/paradox", (req, res) => {
   res.sendFile(path.join(__dirname, "mues-ai.html"));
@@ -307,7 +410,32 @@ app.get("/personal", (req, res) => {
 // STATIC FILES - Serve from public directory ONLY
 // ============================================
 
-app.use(express.static(path.join(__dirname, "public")));
+// Static file serving with cache headers
+app.use(express.static(path.join(__dirname, "public"), {
+  maxAge: '1y', // Cache static assets for 1 year
+  etag: true, // Enable ETag support
+  lastModified: true, // Enable Last-Modified headers
+  setHeaders: (res, filePath) => {
+    // Set appropriate cache headers based on file type
+    if (filePath.endsWith('.html')) {
+      // HTML files should not be cached aggressively
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    } else if (filePath.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/)) {
+      // Images can be cached for a long time
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (filePath.match(/\.(css|js)$/)) {
+      // CSS and JS files can be cached
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (filePath.match(/\.(woff|woff2|otf|ttf|eot)$/)) {
+      // Font files can be cached for a long time
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (filePath.match(/\.(txt|xml)$/)) {
+      // Text and XML files (sitemap, robots, llms.txt)
+      res.setHeader('Content-Type', filePath.endsWith('.xml') ? 'application/xml' : 'text/plain; charset=utf-8');
+      res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 1 day
+    }
+  }
+}));
 
 // ============================================
 // 404 HANDLER - Catch all unmatched routes

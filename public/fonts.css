@@ -1,3 +1,6 @@
+/* Display font for conversion modal keywords */
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
 /* Open Runde Font Faces with font-display: swap for performance */
 @font-face {
   font-family: 'Open Runde';

@@ -93,11 +93,26 @@
 
     var modal = createModal();
     document.body.appendChild(modal);
+    var showTimeoutId = null;
+    var dismissed = false;
 
     var closeBtn = modal.querySelector('.conversion-modal-close');
     function dismiss() {
+      dismissed = true;
+      if (showTimeoutId != null) {
+        clearTimeout(showTimeoutId);
+        showTimeoutId = null;
+      }
       hideModal(modal);
       document.removeEventListener('keydown', onKeydown);
+      document.removeEventListener('beforeunload', clearOnUnload);
+    }
+
+    function clearOnUnload() {
+      if (showTimeoutId != null) {
+        clearTimeout(showTimeoutId);
+        showTimeoutId = null;
+      }
     }
 
     closeBtn.addEventListener('click', dismiss);
@@ -108,11 +123,13 @@
       }
     }
     document.addEventListener('keydown', onKeydown);
+    document.addEventListener('beforeunload', clearOnUnload);
 
     var useShortDelay = isForceShowRequested();
     var remainingMs = getRemainingDelayMs(useShortDelay);
-    setTimeout(function () {
-      if (!document.body.contains(modal)) document.body.appendChild(modal);
+    showTimeoutId = setTimeout(function () {
+      showTimeoutId = null;
+      if (dismissed || !document.body.contains(modal)) return;
       showModal(modal);
     }, remainingMs);
   }

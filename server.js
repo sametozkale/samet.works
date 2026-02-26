@@ -14,14 +14,6 @@ const path = require("path");
 const { google } = require("googleapis");
 // Node.js 18+ has built-in fetch, no need for node-fetch
 
-// Try to load cheerio if available, otherwise use fallback
-let cheerio;
-try {
-  cheerio = require("cheerio");
-} catch (e) {
-  console.log("Cheerio not installed. Install with: npm install cheerio");
-}
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -133,6 +125,7 @@ async function readWritingsFile() {
 // Resources API - GET all resources
 app.get("/api/resources", async (req, res) => {
   try {
+    res.setHeader("Cache-Control", "public, max-age=300");
     const resources = await readResourcesFile();
     res.json(resources);
   } catch (err) {
@@ -242,6 +235,7 @@ app.get("/api/last-location", async (req, res) => {
 // Writings API - GET all writings from JSON file
 app.get("/api/writings", async (req, res) => {
   try {
+    res.setHeader("Cache-Control", "public, max-age=300");
     const writings = await readWritingsFile();
     
     // Sort by date descending (most recent first)

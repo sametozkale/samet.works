@@ -441,11 +441,8 @@
           } else if (currentPath === '/photos' && page === 'photos') {
             isActive = true;
             item.classList.add('active');
-          } else if (currentPath === '/books' && page === 'books') {
-            isActive = true;
-            item.classList.add('active');
           }
-          
+
           // Update icon: square for active, circle for inactive
           if (iconSpan) {
             if (isActive) {

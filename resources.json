@@ -334,5 +334,45 @@
     "description": "The most comprehensive authentication framework for TypeScript. Framework agnostic with support for email/password, OAuth, 2FA, multi-tenant organizations, and a rich plugin ecosystem.",
     "category": "development",
     "favicon": "https://www.google.com/s2/favicons?domain=better-auth.com&sz=32"
+  },
+  {
+    "id": 49,
+    "url": "https://skills.sh/",
+    "title": "Skills",
+    "description": "The Open Agent Skills Ecosystem. Reusable capabilities for AI agents. Install with a single command to enhance agents with procedural knowledge.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=skills.sh&sz=32"
+  },
+  {
+    "id": 50,
+    "url": "https://context7.com/",
+    "title": "Context7",
+    "description": "Up-to-date documentation for LLMs and AI code editors. Keep your docs in sync for Claude, Cursor, and other agents.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=context7.com&sz=32"
+  },
+  {
+    "id": 51,
+    "url": "https://agentation.dev/",
+    "title": "Agentation",
+    "description": "Point at bugs. Let AI fix them. UI annotations turned into structured context for Claude Code, Cursor, and other AI tools.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=agentation.dev&sz=32"
+  },
+  {
+    "id": 52,
+    "url": "https://julian.digital/2025/03/27/the-case-against-conversational-interfaces/",
+    "title": "The case against conversational interfaces",
+    "description": "Why conversational UI is unlikely to replace existing computing paradigms — and how AI can augment them instead.",
+    "category": "reading",
+    "favicon": "https://www.google.com/s2/favicons?domain=julian.digital&sz=32"
+  },
+  {
+    "id": 53,
+    "url": "https://nervegna.substack.com/p/claude-code-for-designers-a-practical",
+    "title": "Claude Code for Designers: A Practical Guide",
+    "description": "A step-by-step guide to designing and shipping with Claude Code and Get Shit Done. For designers who want to build without fighting the stack.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=substack.com&sz=32"
   }
 ]

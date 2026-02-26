@@ -144,10 +144,12 @@
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
                 class="border selections-slider-image"
-                style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block;"
+                style="border-color: #F4F4F4; border-radius: 16px; width: 100%; height: auto; display: block; aspect-ratio: 16/10;"
                 src="/assets/portfolio/D-1.png"
                 alt="Design 1"
-               loading="lazy" decoding="async" />
+                fetchpriority="high"
+                loading="eager"
+                decoding="async" />
             </div>
             <div class="selections-slide" style="flex: 0 0 100%; min-width: 0;">
               <img
@@ -695,7 +697,17 @@
         let currentSlide = 0;
         const totalSlides = slides.length;
         let autoSlideInterval = null;
-        
+        let isPageVisible = true;
+
+        document.addEventListener('visibilitychange', function() {
+          isPageVisible = !document.hidden;
+          if (document.hidden) {
+            stopAutoSlide();
+          } else {
+            startAutoSlide();
+          }
+        });
+
         function goToSlide(index) {
           currentSlide = index;
           updateSlider();
@@ -713,8 +725,9 @@
         
         function startAutoSlide() {
           stopAutoSlide();
+          if (!isPageVisible) return;
           autoSlideInterval = setInterval(() => {
-            nextSlide();
+            if (isPageVisible) nextSlide();
           }, 2000);
         }
         
@@ -804,7 +817,18 @@
         const scrollSpeed = 0.3; // pixels per frame
         let isPaused = false;
         let animationFrameId = null;
-        
+        let isPageVisible = true;
+
+        document.addEventListener('visibilitychange', function() {
+          isPageVisible = !document.hidden;
+          if (document.hidden && animationFrameId != null) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+          } else if (!document.hidden && animationFrameId == null && wrapper) {
+            animationFrameId = requestAnimationFrame(scroll);
+          }
+        });
+
         // Calculate the width of one set of logos
         const firstSetLogos = Array.from(logoItems).slice(0, 8);
         const logoSetWidth = firstSetLogos.reduce((sum, item) => {
@@ -812,6 +836,7 @@
         }, 0);
         
         function scroll() {
+          if (!isPageVisible) return;
           if (!isPaused) {
             scrollPosition += scrollSpeed;
             // Reset position when we've scrolled one full set
@@ -1032,7 +1057,6 @@
             renderWritings();
           } catch (error) {
             console.error('Error loading writings:', error);
-            // Fallback: show empty state or error message
             writingsContainer.innerHTML = '<p style="color: #777;">Unable to load writings at this time.</p>';
           }
         }

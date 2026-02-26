@@ -88,7 +88,7 @@ a:hover {
   font-family: 'Open Runde', sans-serif;
   color: #333;
   background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(238, 238, 238, 1);
+  border: 1px solid #F4F4F4;
   border-radius: 24px;
   corner-shape: squircle;
   cursor: pointer;
@@ -100,6 +100,27 @@ a:hover {
   background-color: #f5f5f5;
   border-color: #d1d5db;
   color: #333 !important;
+}
+
+/* Portfolio "Next" button in portfolio page */
+#portfolio-next-btn {
+  width: 96px;
+}
+
+#portfolio-next-btn:hover {
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: #eee !important;
+  color: inherit !important;
+}
+
+#portfolio-next-btn span:first-child {
+  color: rgba(151, 151, 151, 1);
+  font-weight: 400;
+}
+
+#portfolio-next-btn span:last-child {
+  color: #979797;
+  font-weight: 400;
 }
 
 .show-more-button {
@@ -334,8 +355,8 @@ a:hover {
 
 @media (max-width: 480px) {
   .footer-columns {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 24px !important;
   }
   footer {
     padding-top: 48px !important;
@@ -718,8 +739,8 @@ a:hover {
 .glossary-layout {
   display: flex;
   gap: 64px;
-  max-width: 1200px;
-  margin: 48px auto 0;
+  max-width: 655px;
+  margin: 24px auto 0;
   align-items: flex-start;
   padding: 0;
 }
@@ -754,19 +775,6 @@ a:hover {
   text-align: left;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
-  position: relative;
-}
-.glossary-sidebar-btn::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 0;
-  background: #0089FF;
-  border-radius: 0 2px 2px 0;
-  transition: height 0.2s ease;
 }
 .glossary-sidebar-btn:hover {
   background: linear-gradient(90deg, #f5f5f5 0%, #fafafa 100%);
@@ -1866,23 +1874,77 @@ a:hover {
 }
 @media (max-width: 1024px) {
   .glossary-layout {
-    flex-direction: column;
+    margin-top: 32px;
     gap: 32px;
-    padding: 0 24px;
+  }
+}
+@media (max-width: 640px) {
+  .glossary-layout {
+    margin-top: 24px;
+    gap: 24px;
+    padding: 0;
+  }
+  .glossary-sidebar {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+  }
+  .glossary-sidebar-title {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .glossary-sidebar-menu {
+    gap: 6px;
+  }
+  .glossary-sidebar-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  .glossary-item {
+    margin-bottom: 64px;
+    scroll-margin-top: 96px;
+  }
+  .glossary-term-title {
+    font-size: 18px;
+  }
+  .glossary-term-description {
+    font-size: 13px;
+  }
+  .glossary-visualization {
+    padding: 20px;
+    min-height: 0;
+  }
+  #context-window .glossary-visualization {
+    max-height: 260px;
+    overflow: auto;
+  }
+  .glossary-visualization,
+  .tokenization-result-container,
+  .embedding-visualization,
+  .latent-space-grid,
+  .model-examples,
+  .rag-visualization {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 1024px) {
+  .glossary-layout {
+    flex-direction: column;
+    align-items: stretch;
   }
   .glossary-sidebar {
     position: sticky;
-    top: 80px;
     left: auto;
     width: 100%;
   }
   .glossary-sidebar-menu {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 8px;
   }
   .glossary-sidebar-btn {
-    padding: 6px 12px;
     border: 1px solid #eeeeee;
     border-radius: 6px;
   }

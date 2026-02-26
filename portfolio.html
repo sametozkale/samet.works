@@ -260,6 +260,17 @@
             <img src="/assets/portfolio/D-15.png" alt="Design work 15"  loading="lazy" decoding="async" />
           </div>
         </div>
+        <div class="portfolio-next-wrapper" style="margin-top: 48px; display: flex; justify-content: center; align-items: center;">
+          <button
+            id="portfolio-next-btn"
+            type="button"
+            class="portfolio-button"
+            style="margin-left: 0;"
+          >
+            <span>Next</span>
+            <span style="display: inline-flex; margin-left: 4px; font-size: 14px;">→</span>
+          </button>
+        </div>
       </div>
 
       <!-- Footer -->
@@ -453,6 +464,24 @@
             });
           });
         });
+        
+        const nextBtn = document.getElementById('portfolio-next-btn');
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            const btnArray = Array.from(categoryBtns);
+            const currentIndex = btnArray.findIndex(b => b.classList.contains('active'));
+            const nextIndex = currentIndex === -1 ? 0 : (currentIndex + 1) % btnArray.length;
+            const nextCategoryBtn = btnArray[nextIndex];
+            
+            if (nextCategoryBtn) {
+              nextCategoryBtn.click();
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
+            }
+          });
+        }
       })();
 
       // Set active page based on current URL and update icons

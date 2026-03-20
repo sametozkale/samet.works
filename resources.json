@@ -374,5 +374,21 @@
     "description": "A step-by-step guide to designing and shipping with Claude Code and Get Shit Done. For designers who want to build without fighting the stack.",
     "category": "design",
     "favicon": "https://www.google.com/s2/favicons?domain=substack.com&sz=32"
+  },
+  {
+    "id": 54,
+    "url": "https://impeccable.style/",
+    "title": "Impeccable",
+    "description": "Design fluency upgrade for AI harnesses with practical design commands, anti-pattern guidance, and an enhanced frontend-design skill.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=impeccable.style&sz=32"
+  },
+  {
+    "id": 55,
+    "url": "https://desengs.com/",
+    "title": "DesEngs",
+    "description": "A curated hub of resources for design engineers, including tools, references, articles, and practical inspiration.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=32"
   }
 ]

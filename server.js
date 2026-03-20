@@ -134,75 +134,6 @@ app.get("/api/resources", async (req, res) => {
   }
 });
 
-// Resources API - POST new resource
-app.post("/api/resources", async (req, res) => {
-  try {
-    const { url, category } = req.body;
-
-    // Validate inputs
-    if (!url || !category) {
-      return res.status(400).json({ error: "URL and category are required" });
-    }
-
-    if (!["design", "development", "vibe-coding", "reading"].includes(category)) {
-      return res.status(400).json({ error: "Category must be design, development, vibe-coding, or reading" });
-    }
-
-    // Validate URL format
-    try {
-      new URL(url);
-    } catch (e) {
-      return res.status(400).json({ error: "Invalid URL format" });
-    }
-
-    // Read existing resources using helper function
-    let resources = await readResourcesFile();
-    // Ensure resources is an array
-    if (!Array.isArray(resources)) {
-      console.warn("Resources file does not contain an array, resetting to empty array");
-      resources = [];
-    }
-
-    // Extract domain from URL for favicon and title
-    const urlObj = new URL(url);
-    const domain = urlObj.hostname.replace(/^www\./, '');
-    // Use Google's favicon service for reliable favicon fetching
-    const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
-    
-    // Generate title from domain (remove www. and capitalize)
-    let title = domain.split(".")[0];
-    title = title.charAt(0).toUpperCase() + title.slice(1);
-
-    // Create new resource
-    const newResource = {
-      id: resources.length > 0 ? Math.max(...resources.map(r => r.id)) + 1 : 1,
-      url: url,
-      title: title,
-      description: `A resource from ${domain}`,
-      category: category,
-      favicon: favicon
-    };
-
-    // Add to resources array
-    resources.push(newResource);
-
-    // Write back to file
-    try {
-      await fs.writeFile(RESOURCES_FILE, JSON.stringify(resources, null, 2), "utf8");
-      console.log("Resource added successfully:", newResource.id);
-    } catch (writeError) {
-      console.error("Error writing resources file:", writeError);
-      throw new Error(`Failed to write file: ${writeError.message}`);
-    }
-
-    res.json({ success: true, resource: newResource });
-  } catch (error) {
-    console.error("Error adding resource:", error.message);
-    console.error("Error stack:", error.stack);
-    res.status(500).json({ error: `Failed to add resource: ${error.message}` });
-  }
-});
-
 // Last location API
 app.get("/api/last-location", async (req, res) => {
   try {
@@ -359,10 +290,6 @@ app.get("/ai-glossary", (req, res) => {
 
 app.get("/portfolio", (req, res) => {
   res.sendFile(path.join(__dirname, "portfolio.html"));
-});
-
-app.get("/cms", (req, res) => {
-  res.sendFile(path.join(__dirname, "cms.html"));
 });
 
 // Sitemap route

@@ -1,5 +1,62 @@
 /* Common Styles - Extracted from inline styles for better performance */
 
+/* Mues AI case study narrative blocks (between gallery images) */
+.mues-case-block {
+  width: min(100%, 655px);
+  max-width: 655px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mues-case-block h2 {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+@media (min-width: 640px) {
+  .mues-case-block h2 {
+    font-size: 1.25rem;
+  }
+}
+.mues-case-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.mues-case-block p,
+.mues-case-block li {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #777;
+}
+.mues-case-block ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+.mues-case-block .mues-bullet-list {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+.mues-case-block li + li {
+  margin-top: 0.5rem;
+}
+.mues-case-block ol {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+}
+.mues-case-block h2 + h3 {
+  margin-top: 0.75rem;
+}
+.mues-case-block .mues-case-lead {
+  margin-bottom: 1rem;
+}
+
 /* Project Styles */
 .project-image {
   transition: transform 0.3s ease;

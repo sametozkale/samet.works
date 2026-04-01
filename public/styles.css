@@ -32,6 +32,10 @@
   line-height: 1.625;
   color: #777;
 }
+.mues-case-block strong,
+.mues-case-block b {
+  font-weight: 600;
+}
 .mues-case-block ul {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;

@@ -115,26 +115,15 @@
           Samet Özkale
         </h1>
         <p class="text-base leading-relaxed" style="color: #777;">
-          I'm an AI product & design manager and entrepreneur with 9+ years of experience in building AI agents, SaaS products, and leading cross-functional teams. I exercise transparent leadership, empower others, and make data-informed decisions.
+          I'm an AI product & design manager, vibe coder, and entrepreneur with 9+ years of experience building AI agents, SaaS products, and leading cross-functional teams. I make data-informed decisions, lead with transparency, and bring both <span id="rn-strategic-clarity">strategic clarity</span> and hands-on execution to every product I touch.
         </p>
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
-          Currently exploring new opportunities, previously built something new at
-          <span class="link-with-logo">
-            <img src="https://mues.ai/favicon.ico" alt="Mues AI" class="link-logo"  loading="lazy" decoding="async" />
-            <a
-              href="https://mues.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline hover:text-slate-500"
-              >Mues AI</a
-            >
-          </span>
-          as Co-founder, AI & Design Lead, working on agentic AI cursor technology that transforms user interactions with software products.
+          I work with ambitious founders as a partner design lead, designing and refining core flows, setting direction, and raising the bar on product quality while helping teams <span id="rn-move-fast">move fast</span> without losing credibility.
         </p>
         <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
-          Also sharing insights through my newsletter
+          Through my newsletter
           <span class="link-with-logo">
-            <img src="https://substackcdn.com/image/fetch/$s_!C67Q!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa75a6a16-503b-442f-b0b1-3421007b8ccc_600x600.png" alt="AI for Product Power" class="link-logo"  loading="lazy" decoding="async" />
+            <img src="https://substackcdn.com/image/fetch/$s_!C67Q!,w_80,h_80,c_fill,f_webp,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa75a6a16-503b-442f-b0b1-3421007b8ccc_600x600.png" alt="AI for Product Power" class="link-logo" loading="lazy" decoding="async" />
             <a
               href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720"
               target="_blank"
@@ -142,7 +131,11 @@
               class="underline hover:text-slate-500"
               >AI for Product Power,</a
             >
-          </span> helping over 3300 product managers and executives.
+          </span>
+          I share the latest in AI, practical product and design guides, and emerging technology insights with <span id="rn-subscribers">3,350+</span> subscribers.
+        </p>
+        <p class="text-base leading-relaxed" style="color: #777; margin-top: 24px;">
+          I <em>care deeply</em> about <span id="rn-craft-quality" style="display: inline-block; line-height: 1;">craft & quality</span>, and I aim to create work people can feel and remember.
         </p>
         <div style="margin-top: 24px;">
           <a 
@@ -151,7 +144,7 @@
             rel="noopener noreferrer"
             class="book-call-button"
           >
-            Work with me
+            Let's talk
           </a>
           <a 
             href="/portfolio" 
@@ -1151,6 +1144,50 @@
         // Initialize
         loadWritings();
       })();
+    </script>
+    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js" defer></script>
+    <script>
+      window.addEventListener('load', () => {
+        if (!window.RoughNotation || typeof window.RoughNotation.annotate !== 'function') return;
+
+        const { annotate, annotationGroup } = window.RoughNotation;
+        const targets = {
+          strategicClarity: document.getElementById('rn-strategic-clarity'),
+          moveFast: document.getElementById('rn-move-fast'),
+          subscribers: document.getElementById('rn-subscribers'),
+          craftQuality: document.getElementById('rn-craft-quality')
+        };
+
+        const annotations = [];
+        if (targets.strategicClarity) {
+          annotations.push(annotate(targets.strategicClarity, { type: 'circle', color: '#FF874C', strokeWidth: 2 }));
+        }
+        if (targets.moveFast) {
+          annotations.push(annotate(targets.moveFast, { type: 'underline', color: '#F6B51E', strokeWidth: 2 }));
+        }
+        if (targets.subscribers) {
+          annotations.push(
+            annotate(targets.subscribers, {
+              type: 'bracket',
+              brackets: ['bottom'],
+              color: '#9772FF',
+              strokeWidth: 2
+            })
+          );
+        }
+        if (targets.craftQuality) {
+          annotations.push(
+            annotate(targets.craftQuality, {
+              type: 'box',
+              color: '#1FC16B',
+              strokeWidth: 2
+            })
+          );
+        }
+        if (annotations.length > 0) {
+          annotationGroup(annotations).show();
+        }
+      });
     </script>
     <script src="/hyper-text.js" defer></script>
     <script src="/typing-animation.js" defer></script>

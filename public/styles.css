@@ -180,7 +180,7 @@ a:hover {
 #portfolio-next-btn:hover {
   background-color: rgba(255, 255, 255, 1) !important;
   border-color: #eee !important;
-  color: inherit !important;
+  color: #777 !important;
 }
 
 #portfolio-next-btn span:first-child {
@@ -189,6 +189,58 @@ a:hover {
 }
 
 #portfolio-next-btn span:last-child {
+  color: #979797;
+  font-weight: 400;
+}
+
+#portfolio-next-btn:hover span {
+  color: #777 !important;
+}
+
+/* Project detail previous/next navigation */
+.project-case-nav {
+  width: min(100%, 655px);
+  margin: 48px auto 0 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Keep total distance to previous block exactly 48px */
+.prose > *:has(+ .project-case-nav) {
+  margin-bottom: 0 !important;
+}
+
+.prose.mx-auto.max-w-4xl.flex.flex-col.gap-8:has(+ .project-case-nav) {
+  margin-bottom: 0 !important;
+}
+
+.project-case-nav .portfolio-button {
+  margin-left: 0;
+  font-size: 13px;
+}
+
+.project-case-nav .portfolio-button:hover {
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: #eee !important;
+  color: #777 !important;
+}
+
+.project-case-nav .portfolio-button span {
+  font-size: 13px !important;
+}
+
+.project-case-nav .portfolio-button:hover span {
+  color: #777 !important;
+}
+
+.project-case-nav .portfolio-button span:first-child {
+  color: rgba(151, 151, 151, 1);
+  font-weight: 400;
+}
+
+.project-case-nav .portfolio-button span:last-child {
   color: #979797;
   font-weight: 400;
 }

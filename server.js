@@ -327,6 +327,11 @@ app.get("/personal", (req, res) => {
   res.sendFile(path.join(__dirname, "heybooster.html"));
 });
 
+// 404 page route
+app.get("/404", (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
+});
+
 // ============================================
 // STATIC FILES - Serve from public directory ONLY
 // ============================================
@@ -363,7 +368,7 @@ app.use(express.static(path.join(__dirname, "public"), {
 // ============================================
 
 app.use((req, res) => {
-  res.status(404).json({ error: "Not found", path: req.path });
+  res.redirect("/404");
 });
 
 // ============================================

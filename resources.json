@@ -390,5 +390,37 @@
     "description": "A curated hub of resources for design engineers, including tools, references, articles, and practical inspiration.",
     "category": "design",
     "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=32"
+  },
+  {
+    "id": 56,
+    "url": "https://ui.land/",
+    "title": "UI Land",
+    "description": "A curated collection of UI inspiration, references, and visual ideas for modern interface design.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.land&sz=32"
+  },
+  {
+    "id": 57,
+    "url": "https://mesurer.ibelick.com/",
+    "title": "Mesurer",
+    "description": "A vibe-coding tool to inspect layout spacing and dimensions quickly while building UI.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=mesurer.ibelick.com&sz=32"
+  },
+  {
+    "id": 58,
+    "url": "https://github.com/joshpuckett/dialkit",
+    "title": "Dialkit",
+    "description": "A toolkit for building polished dial-style interactions and controls in modern web interfaces.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
+  },
+  {
+    "id": 59,
+    "url": "https://companies.sh/",
+    "title": "companies.sh",
+    "description": "The Open Company Directory for discovering and researching companies in one searchable place.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=companies.sh&sz=32"
   }
 ]

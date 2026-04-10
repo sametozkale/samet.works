@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="The page you are looking for could not be found." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="/fonts.css" as="style" />
+    <link rel="preload" href="/styles.css" as="style" />
+    <link href="/fonts.css" rel="stylesheet" />
+    <link href="/styles.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        color: #1e293b;
+      }
+
+      .not-found-wrap {
+        width: 100%;
+        max-width: 560px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .not-found-code {
+        margin: 0 0 12px;
+        font-family: "Chivo Mono", monospace;
+        font-size: 12px;
+        color: #777;
+      }
+
+      .not-found-title {
+        margin: 0;
+        font-family: "Open Runde", sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      .not-found-description {
+        margin: 12px 0 24px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found-wrap">
+      <p class="not-found-code">ERROR 404</p>
+      <h1 class="not-found-title">Page not found</h1>
+      <p class="not-found-description">
+        The page you are trying to visit<br />
+        does not exist or may have moved.
+      </p>
+      <a href="/" class="book-call-button" style="gap: 8px;">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="display: block; flex-shrink: 0;">
+          <path d="M6.25 3.5L2.75 7M2.75 7L6.25 10.5M2.75 7H11.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Back to home</span>
+      </a>
+    </main>
+  </body>
+</html>

@@ -2168,6 +2168,89 @@ a:hover {
   transform: translateY(8px);
   transition: opacity 250ms ease-out, transform 250ms ease-out;
 }
+
+/* Global click haptics + cursor microinteraction */
+.haptic-burst-line {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1200;
+  transform: translate(-50%, -50%);
+  width: 1.5px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 137, 255, 0.85);
+  transform-origin: center center;
+  animation: haptic-line-burst 420ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+@keyframes haptic-line-burst {
+  0% {
+    opacity: 0.95;
+    transform: translate(-50%, -50%) rotate(var(--haptic-line-angle)) translateY(0) scaleY(0.35);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(var(--haptic-line-angle))
+      translateY(calc(-1 * var(--haptic-line-travel))) scaleY(1);
+  }
+}
+
+.haptic-toggle {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(151, 151, 151, 0.92);
+  cursor: pointer;
+  z-index: 1150;
+  transition: color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.82;
+  padding: 0;
+}
+
+.haptic-toggle:hover {
+  color: #777;
+  opacity: 1;
+}
+
+.haptic-toggle:focus-visible {
+  outline: 2px solid rgba(0, 137, 255, 0.28);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.haptic-toggle .haptic-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.haptic-toggle .haptic-wave {
+  opacity: 1;
+  transition: opacity 0.18s ease;
+}
+
+.haptic-toggle.is-muted .haptic-wave {
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .haptic-toggle {
+    left: 16px;
+    bottom: 16px;
+  }
+}
 .conversion-modal:hover {
   border-color: #eee;
 }

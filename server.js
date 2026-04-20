@@ -246,50 +246,71 @@ app.post("/api/submit-email", async (req, res) => {
 // PAGE ROUTES - HTML pages
 // ============================================
 
+async function sendHtmlPage(res, fileName, statusCode = 200) {
+  try {
+    const filePath = path.join(__dirname, fileName);
+    let html = await fs.readFile(filePath, "utf8");
+    const hapticScriptTag = '<script src="/haptic-feedback.js" defer></script>';
+
+    if (!html.includes('/haptic-feedback.js')) {
+      if (html.includes("</body>")) {
+        html = html.replace("</body>", `    ${hapticScriptTag}\n  </body>`);
+      } else {
+        html = `${html}\n${hapticScriptTag}\n`;
+      }
+    }
+
+    res.status(statusCode).type("html").send(html);
+  } catch (error) {
+    console.error(`Error serving ${fileName}:`, error.message);
+    res.status(500).send("Internal Server Error");
+  }
+}
+
 // Root route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  sendHtmlPage(res, "index.html");
 });
 
 // Main page routes
 app.get("/mues-ai", (req, res) => {
-  res.sendFile(path.join(__dirname, "mues-ai.html"));
+  sendHtmlPage(res, "mues-ai.html");
 });
 
 app.get("/roadmape", (req, res) => {
-  res.sendFile(path.join(__dirname, "roadmape.html"));
+  sendHtmlPage(res, "roadmape.html");
 });
 
 app.get("/producter", (req, res) => {
-  res.sendFile(path.join(__dirname, "producter.html"));
+  sendHtmlPage(res, "producter.html");
 });
 
 app.get("/heybooster", (req, res) => {
-  res.sendFile(path.join(__dirname, "heybooster.html"));
+  sendHtmlPage(res, "heybooster.html");
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "about.html"));
+  sendHtmlPage(res, "about.html");
 });
 
 app.get("/photos", (req, res) => {
-  res.sendFile(path.join(__dirname, "photos.html"));
+  sendHtmlPage(res, "photos.html");
 });
 
 app.get("/resources", (req, res) => {
-  res.sendFile(path.join(__dirname, "resources.html"));
+  sendHtmlPage(res, "resources.html");
 });
 
 app.get("/books", (req, res) => {
-  res.sendFile(path.join(__dirname, "books.html"));
+  sendHtmlPage(res, "books.html");
 });
 
 app.get("/ai-glossary", (req, res) => {
-  res.sendFile(path.join(__dirname, "ai-glossary.html"));
+  sendHtmlPage(res, "ai-glossary.html");
 });
 
 app.get("/portfolio", (req, res) => {
-  res.sendFile(path.join(__dirname, "portfolio.html"));
+  sendHtmlPage(res, "portfolio.html");
 });
 
 // Sitemap route
@@ -312,24 +333,24 @@ app.get("/llms.txt", (req, res) => {
 
 // Legacy routes for backward compatibility
 app.get("/paradox", (req, res) => {
-  res.sendFile(path.join(__dirname, "mues-ai.html"));
+  sendHtmlPage(res, "mues-ai.html");
 });
 
 app.get("/dump", (req, res) => {
-  res.sendFile(path.join(__dirname, "roadmape.html"));
+  sendHtmlPage(res, "roadmape.html");
 });
 
 app.get("/hause", (req, res) => {
-  res.sendFile(path.join(__dirname, "producter.html"));
+  sendHtmlPage(res, "producter.html");
 });
 
 app.get("/personal", (req, res) => {
-  res.sendFile(path.join(__dirname, "heybooster.html"));
+  sendHtmlPage(res, "heybooster.html");
 });
 
 // 404 page route
 app.get("/404", (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "404.html"));
+  sendHtmlPage(res, "404.html", 404);
 });
 
 // ============================================

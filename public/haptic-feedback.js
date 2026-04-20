@@ -170,15 +170,14 @@
     if (event.target instanceof Element && event.target.closest(`#${BUTTON_ID}`)) return;
     const interactiveTarget = isInteractiveElement(event.target);
 
+    if (interactiveTarget) return;
+
     unlockAudio();
     if (isMuted) return;
 
-    if (!interactiveTarget) {
-      const x = event.clientX;
-      const y = event.clientY;
-      spawnConfettiBurst(x, y);
-    }
-
+    const x = event.clientX;
+    const y = event.clientY;
+    spawnConfettiBurst(x, y);
     playHapticClick();
   }
 

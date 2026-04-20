@@ -88,6 +88,10 @@
   opacity: 1;
 }
 
+.ai-product-power-section:hover .project-badge {
+  opacity: 1;
+}
+
 /* Link Styles */
 a:hover {
   color: #0089FF !important;
@@ -122,6 +126,35 @@ a:hover {
 
 .link-with-logo:hover a {
   padding-left: 20px;
+}
+
+.newsletter-link-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-hover-label {
+  opacity: 0;
+  transform: translateX(-4px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #fff;
+  border: 1px solid #f4f4f4;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #979797;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+
+.newsletter-link-group:hover .newsletter-hover-label {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Button Styles */
@@ -257,8 +290,8 @@ a:hover {
   font-weight: 500;
   font-family: 'Open Runde', sans-serif;
   color: rgba(119, 119, 119, 1);
-  background-color: rgba(238, 238, 238, 1);
-  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
   border-radius: 24px;
   corner-shape: squircle;
   cursor: pointer;
@@ -269,8 +302,8 @@ a:hover {
 
 .show-more-button:hover {
   color: #333 !important;
-  background-color: rgba(238, 238, 238, 1) !important;
-  border-color: rgba(238, 238, 238, 1) !important;
+  background-color: #f5f5f5 !important;
+  border-color: #f5f5f5 !important;
 }
 
 .glossary-button:hover {

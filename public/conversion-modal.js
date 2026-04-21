@@ -67,13 +67,13 @@
     wrap.className = 'conversion-modal';
     wrap.style.display = 'none';
     wrap.setAttribute('role', 'complementary');
-    wrap.setAttribute('aria-label', 'Conversion: If you\'re a passionate founder');
+    wrap.setAttribute('aria-label', 'Conversion: Turn product quality into pipeline');
     wrap.innerHTML =
       '<button type="button" class="conversion-modal-close" aria-label="Close conversion modal">\n  <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>\n</button>\n' +
-      '<div class="conversion-modal-eyebrow">If you\'re a passionate founder</div>\n' +
-      '<h2 class="conversion-modal-headline">Discover my 3T Formula</h2>\n' +
-      '<p class="conversion-modal-subtext">Build <span class="conversion-modal-keyword">trust</span> with your audience, refine your <span class="conversion-modal-keyword">taste</span> in product and positioning, and lead as a <span class="conversion-modal-keyword">trendsetter</span>.</p>\n' +
-      '<a href="' + PRIMARY_LINK + '" class="book-call-button conversion-modal-cta" target="_blank" rel="noopener noreferrer">Book a free intro call →</a>\n';
+      '<div class="conversion-modal-eyebrow">For founders who want faster, better conversions</div>\n' +
+      '<h2 class="conversion-modal-headline">Discover the 3T Growth Formula</h2>\n' +
+      '<p class="conversion-modal-subtext">I help you turn product decisions into revenue by building <span class="conversion-modal-keyword">trust</span>, sharpening your <span class="conversion-modal-keyword">taste</span>, and positioning you as a <span class="conversion-modal-keyword">trendsetter</span> in your category.</p>\n' +
+      '<a href="' + PRIMARY_LINK + '" class="book-call-button conversion-modal-cta" target="_blank" rel="noopener noreferrer">Book intro call →</a>\n';
     return wrap;
   }
 

@@ -128,35 +128,6 @@ a:hover {
   padding-left: 20px;
 }
 
-.newsletter-link-group {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.newsletter-hover-label {
-  opacity: 0;
-  transform: translateX(-4px);
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  display: inline-block;
-  padding: 2px 8px;
-  background-color: #fff;
-  border: 1px solid #f4f4f4;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 400;
-  color: #979797;
-  font-family: 'Inter', sans-serif;
-  white-space: nowrap;
-}
-
-.newsletter-link-group:hover .newsletter-hover-label {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* Button Styles */
 .book-call-button {
   display: inline-flex;

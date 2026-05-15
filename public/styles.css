@@ -749,6 +749,15 @@ a:hover {
   position: relative;
 }
 
+.photo-item img[data-reveal="fade"] {
+  opacity: 0;
+  background: #f5f5f5;
+}
+
+.photo-item img[data-reveal="fade"].is-revealed {
+  opacity: 1;
+}
+
 .pixel-image-wrapper {
   border-radius: 8px;
 }
@@ -2251,8 +2260,7 @@ a:hover {
 
 @media (max-width: 640px) {
   .haptic-toggle {
-    left: 16px;
-    bottom: 16px;
+    display: none;
   }
 }
 .conversion-modal:hover {

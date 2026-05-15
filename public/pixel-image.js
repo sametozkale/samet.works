@@ -1,6 +1,40 @@
 // Pixel Image Animation - Inspired by Magic UI
 // A component that displays images with a pixelated reveal effect
 
+function simpleFadeReveal(img) {
+  const duration = parseInt(img.getAttribute("data-fade-duration"), 10) || 400;
+  const easing = "cubic-bezier(0.4, 0, 0.2, 1)";
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const reveal = () => {
+    img.classList.add("is-revealed");
+    if (prefersReducedMotion) {
+      img.style.opacity = "1";
+      return;
+    }
+    img.style.transition = `opacity ${duration}ms ${easing}`;
+    img.style.opacity = "1";
+  };
+
+  img.style.opacity = "0";
+
+  if (img.complete && img.naturalWidth > 0) {
+    requestAnimationFrame(reveal);
+  } else {
+    img.addEventListener("load", reveal, { once: true });
+    img.addEventListener(
+      "error",
+      () => {
+        img.classList.add("is-revealed");
+        img.style.opacity = "1";
+      },
+      { once: true }
+    );
+  }
+}
+
 class PixelImage {
   constructor(imgElement, options = {}) {
     this.imgElement = imgElement;
@@ -251,6 +285,12 @@ function initPixelImages() {
           return;
         }
         img.dataset.pixelInitialized = 'true';
+
+        if (img.getAttribute('data-reveal') === 'fade') {
+          simpleFadeReveal(img);
+          observer.unobserve(img);
+          return;
+        }
         
         const gridRows = parseInt(img.getAttribute('data-grid-rows')) || 8;
         const gridCols = parseInt(img.getAttribute('data-grid-cols')) || 8;

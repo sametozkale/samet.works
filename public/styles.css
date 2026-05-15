@@ -97,34 +97,55 @@ a:hover {
   color: #0089FF !important;
 }
 
+/* Inline links with optional left icon on hover — keeps anchor baseline with body text */
 .link-with-logo {
   position: relative;
   display: inline;
+  vertical-align: baseline;
+  line-height: inherit;
 }
 
-.link-logo {
+.about-find-me {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2em 0.35em;
+  max-width: 100%;
+}
+
+.about-find-me .link-with-logo {
+  vertical-align: baseline;
+}
+
+.link-with-logo .link-logo {
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
+  object-fit: contain;
   opacity: 0;
-  transition: opacity 0.2s ease;
   pointer-events: none;
   border-radius: 2px;
+  transition: opacity 0.2s ease;
 }
 
-.link-with-logo:hover .link-logo {
+.link-with-logo:hover .link-logo,
+.link-with-logo:focus-within .link-logo {
   opacity: 1;
 }
 
 .link-with-logo a {
-  transition: padding-left 0.2s ease;
+  display: inline;
+  line-height: inherit;
+  vertical-align: baseline;
   padding-left: 0;
+  transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
-.link-with-logo:hover a {
+.link-with-logo:hover a,
+.link-with-logo:focus-within a {
   padding-left: 20px;
 }
 
@@ -606,6 +627,826 @@ a:hover {
   }
   .timeline-date {
     min-width: auto;
+  }
+}
+
+/* About2 — square favorite cards (pixel-perfect grid) */
+.a2cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  padding: 0;
+  list-style: none;
+}
+
+.a2card-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+}
+
+.a2card-wrap:hover,
+.a2card-wrap:focus-within {
+  z-index: 2;
+}
+
+.a2card-wrap .a2card {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.a2card {
+  position: relative;
+  border: 1px solid #f4f4f4;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.a2card:focus-visible {
+  outline: 2px solid #0089ff;
+  outline-offset: 3px;
+}
+
+.a2card__tip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 5px);
+  bottom: auto;
+  transform: translateX(-50%) translateY(-4px);
+  z-index: 5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #323232;
+  color: #fff;
+  font-family: "Open Runde", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+}
+
+.a2card-wrap:hover .a2card__tip,
+.a2card-wrap:focus-within .a2card__tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* -- Card 1: GitHub heatmap ------------------------------------------- */
+.a2card--gh {
+  background: #e6f9f0;
+  padding: 0;
+}
+
+.a2card--gh::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top right,
+    rgba(230, 249, 240, 0.92) 0%,
+    rgba(230, 249, 240, 0.62) 22%,
+    rgba(230, 249, 240, 0.28) 42%,
+    transparent 58%
+  );
+}
+
+.a2card__gh-grid {
+  --gh-cols: 12;
+  --gh-rows: 10;
+  --gh-cell: max(
+    calc(100% / var(--gh-cols)),
+    calc(100% / var(--gh-rows))
+  );
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(var(--gh-cols), var(--gh-cell));
+  grid-template-rows: repeat(var(--gh-rows), var(--gh-cell));
+  gap: 0;
+  padding: 0;
+  place-content: center;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to bottom left,
+    #000 0%,
+    #000 24%,
+    rgba(0, 0, 0, 0.45) 44%,
+    rgba(0, 0, 0, 0.18) 58%,
+    rgba(0, 0, 0, 0.06) 70%,
+    transparent 82%
+  );
+  mask-image: linear-gradient(
+    to bottom left,
+    #000 0%,
+    #000 24%,
+    rgba(0, 0, 0, 0.45) 44%,
+    rgba(0, 0, 0, 0.18) 58%,
+    rgba(0, 0, 0, 0.06) 70%,
+    transparent 82%
+  );
+}
+
+.a2gh {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.a2gh.l0 { background: #e6f9f0; }
+.a2gh.l1 { background: #c8ead8; }
+.a2gh.l2 { background: #9fd9b8; }
+.a2gh.l3 { background: #5cb888; }
+
+.a2card__gh-pill {
+  position: absolute;
+  z-index: 2;
+  top: 22%;
+  right: 16%;
+  background: #ffffff;
+  border-radius: 7px;
+  padding: 3px 7px 3px 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Open Runde", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: #064e3b;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.a2card__gh-pill-ico {
+  width: 10px;
+  height: 10px;
+  color: #064e3b;
+  flex-shrink: 0;
+}
+
+.a2card__gh-stat {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  bottom: 12px;
+  right: 14px;
+  pointer-events: none;
+}
+
+.a2card__gh-num {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 2px;
+  font-family: "Open Runde", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #064e3b;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.a2card__gh-arrow {
+  width: 12px;
+  height: 12px;
+  color: #064e3b;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.a2card__gh-label {
+  font-size: 11px;
+  color: #0f5c40;
+  margin-top: 4px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* -- Card 2: Music ---------------------------------------------------- */
+.a2card--music {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 40%, #d6e7f5 100%);
+  padding: 0;
+  align-items: stretch;
+  text-align: left;
+}
+
+.a2card__music-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+  padding: 16px 16px 0;
+  box-sizing: border-box;
+}
+
+.a2card__music-head {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.a2card__music-title {
+  font-family: "Open Runde", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #323232;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.a2card__music-artist {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.a2card__music-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 4px;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  border-radius: 6px;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.a2card__music-btn:hover {
+  opacity: 0.7;
+}
+
+.a2card__music-btn:active {
+  transform: scale(0.92);
+}
+
+.a2card__music-btn:focus-visible {
+  outline: 2px solid #0089ff;
+  outline-offset: 2px;
+}
+
+.a2card__music-btn .a2card__music-btn-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.a2card__music-btn--play {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  color: #0089ff;
+}
+
+.a2card__music-btn--play:hover {
+  color: #0077e6;
+  opacity: 1;
+}
+
+.a2card__music-vinyl {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 2px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.a2card__music-vinyl-disc {
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #3a3a3a 0%, #323232 24%, #2a2a2a 100%);
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 8px 14px rgba(50, 50, 50, 0.14);
+  position: relative;
+  transform: translateY(calc(34% - 8px));
+  animation: a2cardVinyl 16s linear infinite;
+  animation-play-state: paused;
+  overflow: hidden;
+}
+
+.a2card__music-vinyl-disc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 2.6px,
+    rgba(0, 0, 0, 0.16) 2.6px,
+    rgba(0, 0, 0, 0.16) 3.1px,
+    rgba(255, 255, 255, 0.035) 3.1px,
+    rgba(255, 255, 255, 0.035) 3.4px,
+    transparent 3.4px,
+    transparent 6.2px
+  );
+  -webkit-mask-image: radial-gradient(circle, transparent 0 28%, #000 29% 100%);
+  mask-image: radial-gradient(circle, transparent 0 28%, #000 29% 100%);
+}
+
+.a2card.is-playing .a2card__music-vinyl-disc {
+  animation-play-state: running;
+}
+
+@keyframes a2cardVinyl {
+  from { transform: translateY(calc(34% - 8px)) rotate(0deg); }
+  to { transform: translateY(calc(34% - 8px)) rotate(360deg); }
+}
+
+.a2card__music-vinyl-eye {
+  position: absolute;
+  inset: 26%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0f172a;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22) inset;
+}
+
+.a2card__music-vinyl-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .a2card__music-vinyl-disc { animation: none; }
+}
+
+/* -- Card 3: Tallinn weather ------------------------------------------- */
+.a2card--weather {
+  background-color: #121212;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.09) 0.55px,
+    transparent 0.55px
+  );
+  background-size: 6px 6px;
+  padding: 0;
+  color: #ffffff;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.a2card--weather:hover,
+.a2card--weather:focus-visible,
+.a2card--weather:hover .a2card__weather-condition,
+.a2card--weather:hover .a2card__weather-hilo,
+.a2card--weather:hover .a2card__weather-city,
+.a2card--weather:hover .a2card__weather-temp,
+.a2card--weather:focus-visible .a2card__weather-condition,
+.a2card--weather:focus-visible .a2card__weather-hilo,
+.a2card--weather:focus-visible .a2card__weather-city,
+.a2card--weather:focus-visible .a2card__weather-temp {
+  color: #ffffff !important;
+}
+
+.a2card__weather-radar {
+  position: absolute;
+  top: 0;
+  right: -2%;
+  bottom: 16px;
+  width: 74%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.a2card__weather-map {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: right bottom;
+  transform: translateY(8px);
+}
+
+.a2card__weather-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 16px;
+  max-width: 56%;
+  gap: 0;
+}
+
+.a2card__weather-meta {
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.a2card__weather-row {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.a2card__weather-condition {
+  font-family: "Open Runde", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.a2card__weather-slashes {
+  font-family: "Chivo Mono", monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: -0.1em;
+  opacity: 0.85;
+}
+
+.a2card__weather-slashes.is-hidden {
+  display: none;
+}
+
+.a2card__weather-hilo {
+  margin-top: 3px;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+.a2card__weather-city {
+  margin-top: 0;
+  font-family: "Open Runde", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.a2card__weather-temp {
+  margin-top: auto;
+  padding-top: 8px;
+  font-family: "Open Runde", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* -- Card 4: Favorite Stocks (wallet-style, light) ------------------- */
+.a2card--stock {
+  background-color: #ffffff;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(15, 23, 42, 0.07) 0.65px,
+    transparent 0.65px
+  );
+  background-size: 7px 7px;
+  padding: 14px 14px 0;
+  text-align: left;
+  align-items: stretch;
+}
+
+.a2card__stock-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.a2card__stock-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.a2card__stock-logo svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.a2card__stock-tick {
+  font-family: "Open Runde", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #323232;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.a2card__stock-value {
+  display: flex;
+  align-items: flex-start;
+  gap: 1px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.a2card__stock-currency {
+  font-family: "Open Runde", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #323232;
+  line-height: 1;
+  margin-top: 5px;
+  letter-spacing: -0.02em;
+}
+
+.a2card__stock-whole {
+  font-family: "Open Runde", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #323232;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.a2card__stock-delta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.a2card__stock-arrow {
+  width: 12px;
+  height: 12px;
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.a2card__stock-change {
+  font-family: "Open Runde", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #22c55e;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.a2card__stock-period {
+  font-size: 12px;
+  font-weight: 400;
+  color: #94a3b8;
+  letter-spacing: -0.01em;
+}
+
+.a2card__stock-chart {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 54px;
+  margin: 10px -14px 0;
+  width: calc(100% + 28px);
+  align-self: stretch;
+}
+
+.a2card__stock-chart-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 54px;
+}
+
+.a2card--stock.is-down .a2card__stock-arrow,
+.a2card--stock.is-down .a2card__stock-change {
+  color: #ef4444;
+}
+
+/* Cards responsive (kept here so they stay grouped) */
+@media (max-width: 768px) {
+  .a2cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .a2cards {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .a2card { transition: none; }
+  .a2card__tip { transition: none; }
+}
+
+/* About2 — horizontal bar timeline (hover / tap) */
+.history-bars-section {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.history-bars-section__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.history-bars-section__hint {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.history-bars-scroller {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  margin-left: -2px;
+  margin-right: -2px;
+}
+
+.history-bars {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 4px;
+  height: 72px;
+  width: max-content;
+  padding: 0 2px;
+}
+
+.history-bars__bar {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 12px;
+  min-width: 12px;
+  max-width: 12px;
+  height: 52%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  background: #eee;
+  cursor: pointer;
+  color: inherit;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    min-width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    max-width 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.2s ease,
+    height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: flex-end;
+}
+
+.history-bars__bar:nth-child(4n + 1) {
+  height: 44%;
+}
+.history-bars__bar:nth-child(4n + 3) {
+  height: 60%;
+}
+
+.history-bars__bar:hover,
+.history-bars__bar:focus-visible {
+  outline: none;
+}
+
+.history-bars__bar:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 137, 255, 0.25);
+  z-index: 1;
+}
+
+.history-bars__bar.history-bars__bar--active {
+  width: 16px;
+  min-width: 16px;
+  max-width: 16px;
+  height: 70%;
+  background: #0089ff;
+  border-radius: 4px;
+}
+
+.history-bars__bar.history-bars__bar--active:hover {
+  background: #0077e6;
+}
+
+.history-bars__bar--future {
+  position: relative;
+  background: transparent !important;
+  border: none;
+  color: #eee;
+  height: 56%;
+  cursor: pointer;
+}
+
+.history-bars__bar--future .history-bars__bar-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.history-bars__bar--future.history-bars__bar--active {
+  width: 16px;
+  min-width: 16px;
+  max-width: 16px;
+  height: 70%;
+  background: #0089ff !important;
+  border-radius: 4px;
+}
+
+.history-bars__bar--future.history-bars__bar--active .history-bars__bar-frame {
+  opacity: 0;
+}
+
+.history-bars__bar--future.history-bars__bar--active:hover {
+  background: #0077e6 !important;
+}
+
+.history-bars-detail {
+  margin-top: 20px;
+  padding: 20px 0 4px 0;
+  border-top: 1px solid #f9f9f9;
+  min-height: 112px;
+}
+
+.history-bars-detail__inner {
+  will-change: opacity, transform;
+}
+
+.history-bars-detail__date {
+  font-family: "Open Runde", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0089ff;
+  margin-bottom: 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-bars-detail__body {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #777;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .history-bars__bar {
+    transition: none;
   }
 }
 

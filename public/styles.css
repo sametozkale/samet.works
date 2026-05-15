@@ -872,7 +872,7 @@ a:hover {
 .a2card__music-title {
   font-family: "Open Runde", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #323232;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -1472,15 +1472,6 @@ a:hover {
     border-radius: 16px !important;
   }
 
-  /* Timeline bars: keep square bottom flush with track (override global button radius) */
-  .history-bars__bar {
-    border-radius: 3px 3px 0 0 !important;
-  }
-
-  .history-bars__bar.history-bars__bar--active,
-  .history-bars__bar--future.history-bars__bar--active {
-    border-radius: 4px 4px 0 0 !important;
-  }
   .w-full.border,
   video.border {
     border-radius: 12px !important;

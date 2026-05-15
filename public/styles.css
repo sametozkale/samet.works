@@ -1276,10 +1276,8 @@ a:hover {
 
 @media (max-width: 480px) {
   .a2cards {
-    grid-template-columns: minmax(0, 1fr);
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 }
 
@@ -1469,9 +1467,19 @@ a:hover {
   .bottom-nav-item.active .nav-text {
     font-size: 12px;
   }
-  button,
+  button:not(.history-bars__bar),
   .book-call-button {
     border-radius: 16px !important;
+  }
+
+  /* Timeline bars: keep square bottom flush with track (override global button radius) */
+  .history-bars__bar {
+    border-radius: 3px 3px 0 0 !important;
+  }
+
+  .history-bars__bar.history-bars__bar--active,
+  .history-bars__bar--future.history-bars__bar--active {
+    border-radius: 4px 4px 0 0 !important;
   }
   .w-full.border,
   video.border {

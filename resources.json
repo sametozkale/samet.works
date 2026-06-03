@@ -438,5 +438,61 @@
     "description": "Technical essays and engineering insights on building software and thoughtful developer workflows.",
     "category": "vibe-coding",
     "favicon": "https://www.google.com/s2/favicons?domain=ctate.dev&sz=32"
+  },
+  {
+    "id": 62,
+    "url": "https://stateofaidesign.com/",
+    "title": "AI in Design Report 2026",
+    "description": "The second annual report by Designer Fund and Foundation Capital on how design teams are adapting to AI across tooling, craft, and org.",
+    "category": "reading",
+    "favicon": "https://www.google.com/s2/favicons?domain=stateofaidesign.com&sz=32"
+  },
+  {
+    "id": 63,
+    "url": "https://productdesignpsychology.com/",
+    "title": "Product Design Psychology",
+    "description": "Understand the minds you design for and the mind you design with — by Wouter de Bres.",
+    "category": "reading",
+    "favicon": "https://www.google.com/s2/favicons?domain=productdesignpsychology.com&sz=32"
+  },
+  {
+    "id": 64,
+    "url": "https://www.usehallmark.com/",
+    "title": "Hallmark",
+    "description": "A design skill that refuses to look AI-generated — for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=usehallmark.com&sz=32"
+  },
+  {
+    "id": 65,
+    "url": "https://image.jakubantalik.com/",
+    "title": "img-fx",
+    "description": "WebGL shader image loader and reveal component for React — animated cards that reveal images on loop.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=image.jakubantalik.com&sz=32"
+  },
+  {
+    "id": 66,
+    "url": "https://glimm.dev/",
+    "title": "glimm",
+    "description": "Shader-driven page transitions for React and Next.js — sub-10kb, GPU-composited, drop-in.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=glimm.dev&sz=32"
+  },
+  {
+    "id": 67,
+    "url": "https://www.ascii-magic.com/",
+    "title": "ASCII Magic",
+    "description": "Free browser tool to turn photos and videos into ASCII, pixel art, voxel, mosaic, halftone, glitch, or LEGO — no signup, runs locally.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=ascii-magic.com&sz=32"
+  },
+  {
+    "id": 68,
+    "url": "https://imagetool.paulsoulhiard.com/",
+    "title": "Image Tool",
+    "description": "Generative motion from the canvas — upload, finetune presets, and export seamless MP4 loops. By Paul Soulhiard.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=imagetool.paulsoulhiard.com&sz=32"
   }
 ]

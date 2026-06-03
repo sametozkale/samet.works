@@ -35,3 +35,20 @@ Samet Özkale is a product designer and entrepreneur with 9+ years of experience
 - [X / Twitter](https://x.com/sametozkale): Follow Samet Özkale on Twitter for updates.
 - [Email](mailto:ozkalesamet@gmail.com): Contact Samet Özkale via email.
 - [Home](https://www.samet.works/): Return to the homepage for more information.
+
+## Expertise
+- AI Product Management: Building and scaling AI agents and SaaS products
+- UI/UX Design: Design systems, mobile app design, brand design, product design
+- AI Strategy: Applied AI for product teams, LLM-based product development
+- Entrepreneurship: Co-founded multiple SaaS products, raised pre-seed funding
+
+## Writings and Newsletter
+- [AI for Product Power Newsletter](https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7001170854449438720): Weekly AI insights for 3400+ product managers and executives.
+
+## Resources
+- [AI Glossary](https://www.samet.works/ai-glossary): AI terminology reference curated for product teams.
+- [Resources](https://www.samet.works/resources): Curated tools and resources for product designers and managers.
+
+## Contact Preference
+- Preferred contact: ozkalesamet@gmail.com
+- Book a call: https://cal.com/sametozkale/meetwithme

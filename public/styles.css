@@ -1,5 +1,39 @@
 /* Common Styles - Extracted from inline styles for better performance */
 
+/* Skip link: hidden for sighted users, visible on keyboard focus (Tailwind sr-only not in output.css) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only:focus,
+.sr-only:focus-visible {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background-color: #ffffff;
+  color: #0f172a;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 3px rgba(0, 137, 255, 0.1);
+  outline: 2px solid #0089ff;
+  outline-offset: 2px;
+}
+
 /* Mues AI case study narrative blocks (between gallery images) */
 .mues-case-block {
   width: min(100%, 655px);

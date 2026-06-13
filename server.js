@@ -35,6 +35,9 @@ const isLambda = __dirname.startsWith('/var/task') || process.env.LAMBDA_TASK_RO
 const RESOURCES_FILE = isLambda 
   ? path.join('/tmp', 'resources.json') 
   : path.join(__dirname, "resources.json");
+const DESIGN_ENGINEER_TOOLS_FILE = isLambda 
+  ? path.join('/tmp', 'design-engineer-tools.json') 
+  : path.join(__dirname, "design-engineer-tools.json");
 const WRITINGS_FILE = isLambda 
   ? path.join('/tmp', 'writings.json') 
   : path.join(__dirname, "writings.json");
@@ -74,6 +77,38 @@ async function readResourcesFile() {
     // Normal environment, read from __dirname
     try {
       const data = await fs.readFile(RESOURCES_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      return [];
+    }
+  }
+  return [];
+}
+
+async function readDesignEngineerToolsFile() {
+  const sourceFile = path.join(__dirname, "design-engineer-tools.json");
+
+  if (isLambda) {
+    try {
+      const data = await fs.readFile(DESIGN_ENGINEER_TOOLS_FILE, "utf8");
+      if (data && data.trim()) {
+        return JSON.parse(data);
+      }
+    } catch (err) {
+      try {
+        const sourceData = await fs.readFile(sourceFile, "utf8");
+        await fs.writeFile(DESIGN_ENGINEER_TOOLS_FILE, sourceData, "utf8");
+        return JSON.parse(sourceData);
+      } catch (copyErr) {
+        console.log("Could not read or copy design engineer tools file, using empty array");
+        return [];
+      }
+    }
+  } else {
+    try {
+      const data = await fs.readFile(DESIGN_ENGINEER_TOOLS_FILE, "utf8");
       if (data && data.trim()) {
         return JSON.parse(data);
       }
@@ -131,6 +166,18 @@ app.get("/api/resources", async (req, res) => {
   } catch (err) {
     console.error("Error reading resources:", err.message);
     res.status(500).json({ error: "Failed to load resources" });
+  }
+});
+
+// Design Engineer Tools API
+app.get("/api/design-engineer-tools", async (req, res) => {
+  try {
+    res.setHeader("Cache-Control", "public, max-age=300");
+    const tools = await readDesignEngineerToolsFile();
+    res.json(tools);
+  } catch (err) {
+    console.error("Error reading design engineer tools:", err.message);
+    res.status(500).json({ error: "Failed to load design engineer tools" });
   }
 });
 
@@ -439,7 +486,12 @@ app.get("/api/track-preview", async (req, res) => {
   }
 
   try {
-    const r = await fetch(`https://itunes.apple.com/lookup?id=${id}`);
+    const r = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=us`, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "Mozilla/5.0 (compatible; samet.works/1.0)",
+      },
+    });
     if (!r.ok) throw new Error(`Upstream ${r.status}`);
     const payload = await r.json();
     const item = payload && Array.isArray(payload.results) ? payload.results[0] : null;
@@ -451,7 +503,9 @@ app.get("/api/track-preview", async (req, res) => {
           artworkUrl: item.artworkUrl100 || null,
         }
       : { previewUrl: null };
-    iTunesCache.set(id, { ts: Date.now(), data });
+    if (data.previewUrl) {
+      iTunesCache.set(id, { ts: Date.now(), data });
+    }
     res.json(data);
   } catch (err) {
     console.error("Error in /api/track-preview:", err.message);
@@ -556,6 +610,10 @@ app.get("/photos", (req, res) => {
 
 app.get("/resources", (req, res) => {
   res.sendFile(path.join(__dirname, "resources.html"));
+});
+
+app.get("/design-engineer-tools", (req, res) => {
+  res.sendFile(path.join(__dirname, "design-engineer-tools.html"));
 });
 
 app.get("/books", (req, res) => {

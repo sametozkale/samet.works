@@ -65,6 +65,14 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Design Engineer Tools -->
+  <url>
+    <loc>https://www.samet.works/design-engineer-tools</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <!-- Books -->
   <url>
     <loc>https://samet.works/books</loc>

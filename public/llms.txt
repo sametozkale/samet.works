@@ -48,6 +48,7 @@ Samet Özkale is a product designer and entrepreneur with 9+ years of experience
 ## Resources
 - [AI Glossary](https://www.samet.works/ai-glossary): AI terminology reference curated for product teams.
 - [Resources](https://www.samet.works/resources): Curated tools and resources for product designers and managers.
+- [Design Engineer Tools](https://www.samet.works/design-engineer-tools): Curated tools for web-focused design engineers.
 
 ## Contact Preference
 - Preferred contact: ozkalesamet@gmail.com

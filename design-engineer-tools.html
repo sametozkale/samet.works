@@ -42,7 +42,7 @@
     <link href="/styles.css" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
     
-    <title>Resources - Samet Özkale</title>
+    <title>Design Engineer Tools - Samet Özkale</title>
     <link
       rel="icon"
       href="/assets/favicon.png"
@@ -50,25 +50,25 @@
     />
     <meta
       name="description"
-      content="A selection of websites, tools, engineers and designers to inspire, learn, and create."
+      content="A curated directory of design engineer tools for inspiration, AI code, components, motion, 3D, fonts, and more — sourced from designengineer.tools."
     />
     <meta
       property="og:title"
-      content="Resources - Samet Özkale"
+      content="Design Engineer Tools - Samet Özkale"
     />
     <meta
       property="og:description"
-      content="A selection of websites, tools, engineers and designers to inspire, learn, and create."
+      content="A curated directory of design engineer tools for inspiration, AI code, components, motion, 3D, fonts, and more — sourced from designengineer.tools."
     />
     <meta
       property="og:image"
       content="https://samet.works/assets/og.jpg"
     />
-    <meta property="og:url" content="https://www.samet.works/resources" />
+    <meta property="og:url" content="https://www.samet.works/design-engineer-tools" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Samet Özkale" />
-    <link rel="canonical" href="https://www.samet.works/resources" />
+    <link rel="canonical" href="https://www.samet.works/design-engineer-tools" />
       <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <script type="application/ld+json">
       {
@@ -79,15 +79,27 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://samet.works/"
+            "item": "https://www.samet.works/"
           },
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Resources",
-            "item": "https://samet.works/resources"
+            "name": "Design Engineer Tools",
+            "item": "https://www.samet.works/design-engineer-tools"
           }
         ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Design Engineer Tools",
+        "description": "A curated directory of useful tools for web-focused design engineers.",
+        "url": "https://www.samet.works/design-engineer-tools",
+        "isPartOf": {
+          "@id": "https://www.samet.works/#website"
+        }
       }
     </script>
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
@@ -99,24 +111,58 @@
       <!-- Header Section -->
       <div class="prose mx-auto max-w-prose" style="margin-top: 96px;">
         <h1 class="text-2xl sm:text-3xl text-slate-900 font-medium mb-8" style="font-size: 20px;" data-typing-animation data-start-on-view="true">
-          Resources
+          Design Engineer Tools
         </h1>
         <p class="text-base leading-relaxed" style="color: #777;">
-          A curated collection of resources, tools, and inspiration for designers and developers.
+          A curated list of useful tools for web-focused design engineers.
         </p>
 
         <!-- Category Filter -->
-        <div class="category-filter">
-          <button class="category-btn active" data-category="all">All</button>
-          <button class="category-btn" data-category="design">Design</button>
-          <button class="category-btn" data-category="development">Development</button>
-          <button class="category-btn" data-category="vibe-coding">Vibe Coding</button>
-          <button class="category-btn" data-category="reading">Reading</button>
+        <div class="category-filter category-filter--select">
+          <div class="category-dropdown" id="det-category-dropdown">
+            <button
+              type="button"
+              class="category-dropdown__trigger"
+              id="det-category-trigger"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="det-category-menu"
+            >
+              <span class="category-dropdown__value" id="det-category-value">All</span>
+              <svg class="category-dropdown__chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="category-dropdown__menu" id="det-category-menu" role="listbox" aria-label="Filter by category" hidden>
+              <li class="category-dropdown__option category-dropdown__option--active" role="option" data-value="all" aria-selected="true" tabindex="-1">All</li>
+              <li class="category-dropdown__option" role="option" data-value="inspiration" aria-selected="false" tabindex="-1">Inspiration</li>
+              <li class="category-dropdown__option" role="option" data-value="ai-code" aria-selected="false" tabindex="-1">AI Code</li>
+              <li class="category-dropdown__option" role="option" data-value="components" aria-selected="false" tabindex="-1">Components</li>
+              <li class="category-dropdown__option" role="option" data-value="web-utility" aria-selected="false" tabindex="-1">Web Utility</li>
+              <li class="category-dropdown__option" role="option" data-value="desktop-utility" aria-selected="false" tabindex="-1">Desktop Utility</li>
+              <li class="category-dropdown__option" role="option" data-value="video-capture" aria-selected="false" tabindex="-1">Video &amp; Capture</li>
+              <li class="category-dropdown__option" role="option" data-value="whiteboard" aria-selected="false" tabindex="-1">Whiteboard</li>
+              <li class="category-dropdown__option" role="option" data-value="organization" aria-selected="false" tabindex="-1">Organization</li>
+              <li class="category-dropdown__option" role="option" data-value="fonts" aria-selected="false" tabindex="-1">Fonts</li>
+              <li class="category-dropdown__option" role="option" data-value="visual" aria-selected="false" tabindex="-1">Visual</li>
+              <li class="category-dropdown__option" role="option" data-value="interface" aria-selected="false" tabindex="-1">Interface</li>
+              <li class="category-dropdown__option" role="option" data-value="motion" aria-selected="false" tabindex="-1">Motion</li>
+              <li class="category-dropdown__option" role="option" data-value="audio" aria-selected="false" tabindex="-1">Audio</li>
+              <li class="category-dropdown__option" role="option" data-value="volumetric" aria-selected="false" tabindex="-1">Volumetric</li>
+              <li class="category-dropdown__option" role="option" data-value="3d" aria-selected="false" tabindex="-1">3D</li>
+              <li class="category-dropdown__option" role="option" data-value="gltf" aria-selected="false" tabindex="-1">glTF</li>
+              <li class="category-dropdown__option" role="option" data-value="digital-fashion" aria-selected="false" tabindex="-1">Digital Fashion</li>
+              <li class="category-dropdown__option" role="option" data-value="research" aria-selected="false" tabindex="-1">Research</li>
+              <li class="category-dropdown__option" role="option" data-value="browser" aria-selected="false" tabindex="-1">Browser</li>
+              <li class="category-dropdown__option" role="option" data-value="emoji" aria-selected="false" tabindex="-1">Emoji</li>
+            </ul>
+          </div>
+          <span id="det-category-measurer" class="category-select-measurer" aria-hidden="true"></span>
         </div>
 
-        <!-- Resources Grid -->
-        <div class="resources-grid" id="resources-grid">
-          <!-- Resources will be loaded dynamically here -->
+        <!-- Tools Grid -->
+        <div class="resources-grid resources-grid--compact" id="design-engineer-tools-grid">
+          <!-- Tools will be loaded dynamically here -->
         </div>
       </div>
 
@@ -255,7 +301,7 @@
         </span>
         <span class="nav-text">Portfolio</span>
       </a>
-      <a href="/resources" class="bottom-nav-item active" data-page="resources">
+      <a href="/resources" class="bottom-nav-item" data-page="resources">
         <span class="bottom-nav-icon">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="7" cy="7" r="7" fill="currentColor"/>
@@ -280,13 +326,6 @@
         <span class="nav-text">Photos</span>
       </a>
     </nav>
-
-    <a href="/design-engineer-tools" class="resources-promo-banner">
-      <span class="resources-promo-banner__text">Explore Design Engineer Tools</span>
-      <svg class="resources-promo-banner__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </a>
 
     <script>
       // Remove resources with broken favicons (but allow multiple fallback attempts)
@@ -317,38 +356,37 @@
         });
       })();
 
-      // Load resources dynamically
+      // Load design engineer tools dynamically
       (function() {
-        const resourcesGrid = document.getElementById('resources-grid');
+        const toolsGrid = document.getElementById('design-engineer-tools-grid');
+        let applyCategoryFilter = function() {};
         
-        async function loadResources() {
+        async function loadTools() {
           try {
-            const response = await fetch('/api/resources');
+            const response = await fetch('/api/design-engineer-tools');
             
             if (!response.ok) {
               throw new Error(`HTTP error! status: ${response.status}`);
             }
             
-            const resources = await response.json();
+            const tools = await response.json();
             
-            if (!Array.isArray(resources)) {
+            if (!Array.isArray(tools)) {
               throw new Error('Invalid response format: expected an array');
             }
             
-            // Clear existing content
-            resourcesGrid.innerHTML = '';
+            toolsGrid.innerHTML = '';
             
-            // Render resources
-            resources.forEach(resource => {
+            tools.forEach(tool => {
               const resourceItem = document.createElement('a');
-              resourceItem.href = resource.url;
+              resourceItem.href = tool.url;
               resourceItem.target = '_blank';
               resourceItem.rel = 'noopener noreferrer';
               resourceItem.className = 'resource-item';
-              resourceItem.setAttribute('data-category', resource.category);
+              resourceItem.setAttribute('data-category', tool.category);
               
               const faviconImg = document.createElement('img');
-              faviconImg.alt = resource.title;
+              faviconImg.alt = tool.title;
               faviconImg.className = 'resource-favicon';
               
               // Function to get domain from URL
@@ -361,7 +399,7 @@
               };
               
               // Try multiple favicon sources with fallbacks
-              const domain = getDomain(resource.url);
+              const domain = getDomain(tool.url);
               let attempts = 0;
               const maxAttempts = 3;
               
@@ -371,7 +409,7 @@
               
               faviconImg.onerror = function() {
                 attempts++;
-                const urlObj = new URL(resource.url);
+                const urlObj = new URL(tool.url);
                 
                 if (attempts === 1) {
                   // Try favicon.png
@@ -387,61 +425,156 @@
               };
               
               // Start with the stored favicon
-              tryFavicon(resource.favicon);
+              tryFavicon(tool.favicon);
               
               const resourceContent = document.createElement('div');
               resourceContent.className = 'resource-content';
               
               const title = document.createElement('div');
               title.className = 'resource-title';
-              title.textContent = resource.title;
-              
-              const description = document.createElement('div');
-              description.className = 'resource-description';
-              description.textContent = resource.description;
+              title.textContent = tool.title;
               
               resourceContent.appendChild(title);
-              resourceContent.appendChild(description);
               
               resourceItem.appendChild(faviconImg);
               resourceItem.appendChild(resourceContent);
               
-              resourcesGrid.appendChild(resourceItem);
+              toolsGrid.appendChild(resourceItem);
             });
             
-            // Initialize category filter after resources are loaded
-            initCategoryFilter();
+            applyCategoryFilter();
           } catch (error) {
-            console.error('Error loading resources:', error);
-            resourcesGrid.innerHTML = '<p style="color: #777; padding: 16px;">Failed to load resources. Please try again later.</p>';
+            console.error('Error loading design engineer tools:', error);
+            toolsGrid.innerHTML = '<p style="color: #777; padding: 16px;">Failed to load tools. Please try again later.</p>';
           }
         }
-        
-        function initCategoryFilter() {
-        const categoryBtns = document.querySelectorAll('.category-btn');
-        const resourceItems = document.querySelectorAll('.resource-item');
 
-        categoryBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-            // Update active button
-            categoryBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        function initCategoryDropdown() {
+          const dropdown = document.getElementById('det-category-dropdown');
+          const trigger = document.getElementById('det-category-trigger');
+          const menu = document.getElementById('det-category-menu');
+          const valueEl = document.getElementById('det-category-value');
+          const measurer = document.getElementById('det-category-measurer');
+          if (!dropdown || !trigger || !menu || !valueEl || !measurer) return;
 
-            // Filter resources
-            const category = btn.getAttribute('data-category');
-            resourceItems.forEach(item => {
-              if (category === 'all' || item.getAttribute('data-category') === category) {
-                item.style.display = 'flex';
-              } else {
-                item.style.display = 'none';
-              }
+          const options = Array.from(menu.querySelectorAll('[role="option"]'));
+          let isOpen = false;
+          let focusedIndex = 0;
+
+          function resizeTrigger() {
+            measurer.textContent = valueEl.textContent;
+            trigger.style.width = `${measurer.offsetWidth + 48}px`;
+          }
+
+          function filterTools(category) {
+            document.querySelectorAll('.resource-item').forEach(item => {
+              item.style.display = (category === 'all' || item.getAttribute('data-category') === category) ? 'flex' : 'none';
+            });
+          }
+
+          function getSelectedOption() {
+            return options.find(option => option.classList.contains('category-dropdown__option--active')) || options[0];
+          }
+
+          function setFocusedOption(index) {
+            focusedIndex = index;
+            options.forEach((option, i) => {
+              option.tabIndex = i === focusedIndex ? 0 : -1;
+            });
+            options[focusedIndex].focus();
+          }
+
+          function selectOption(option) {
+            options.forEach(item => {
+              const isActive = item === option;
+              item.classList.toggle('category-dropdown__option--active', isActive);
+              item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+            valueEl.textContent = option.textContent.trim();
+            filterTools(option.dataset.value);
+            resizeTrigger();
+            focusedIndex = options.indexOf(option);
+            closeMenu();
+            trigger.focus();
+          }
+
+          function openMenu() {
+            isOpen = true;
+            dropdown.classList.add('is-open');
+            trigger.setAttribute('aria-expanded', 'true');
+            menu.hidden = false;
+            focusedIndex = options.indexOf(getSelectedOption());
+            setFocusedOption(focusedIndex);
+          }
+
+          function closeMenu() {
+            isOpen = false;
+            dropdown.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+            menu.hidden = true;
+            options.forEach(option => { option.tabIndex = -1; });
+          }
+
+          trigger.addEventListener('click', () => {
+            if (isOpen) closeMenu();
+            else openMenu();
+          });
+
+          trigger.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              if (!isOpen) openMenu();
+            } else if (event.key === 'Escape' && isOpen) {
+              event.preventDefault();
+              closeMenu();
+            }
+          });
+
+          menu.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+              event.preventDefault();
+              closeMenu();
+              trigger.focus();
+              return;
+            }
+            if (event.key === 'ArrowDown') {
+              event.preventDefault();
+              setFocusedOption((focusedIndex + 1) % options.length);
+              return;
+            }
+            if (event.key === 'ArrowUp') {
+              event.preventDefault();
+              setFocusedOption((focusedIndex - 1 + options.length) % options.length);
+              return;
+            }
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              selectOption(options[focusedIndex]);
+            }
+          });
+
+          options.forEach((option, index) => {
+            option.addEventListener('click', () => selectOption(option));
+            option.addEventListener('mousemove', () => {
+              if (!isOpen) return;
+              setFocusedOption(index);
             });
           });
-        });
+
+          document.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target)) closeMenu();
+          });
+
+          applyCategoryFilter = function() {
+            filterTools(getSelectedOption().dataset.value);
+          };
+
+          resizeTrigger();
+          window.addEventListener('resize', resizeTrigger);
         }
         
-        // Load resources on page load
-        loadResources();
+        initCategoryDropdown();
+        loadTools();
       })();
 
       // Set active page based on current URL and update icons

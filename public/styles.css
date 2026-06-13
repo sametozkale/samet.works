@@ -1893,9 +1893,11 @@ a:hover {
 
 @media (max-width: 640px) {
   .resources-promo-banner {
-    right: 24px;
-    bottom: 88px;
-    max-width: calc(100vw - 48px);
+    position: static;
+    z-index: auto;
+    width: 100%;
+    max-width: none;
+    margin-top: 32px;
   }
 }
 

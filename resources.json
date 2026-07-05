@@ -494,5 +494,29 @@
     "description": "Generative motion from the canvas — upload, finetune presets, and export seamless MP4 loops. By Paul Soulhiard.",
     "category": "design",
     "favicon": "https://www.google.com/s2/favicons?domain=imagetool.paulsoulhiard.com&sz=32"
+  },
+  {
+    "id": 69,
+    "url": "https://dotmatrix.zzzzshawn.cloud/",
+    "title": "Dot Matrix",
+    "description": "55+ free and open-source loaders, built with React, TypeScript, Tailwind CSS, and shadcn. Install one, copy the code, and make it yours.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=dotmatrix.zzzzshawn.cloud&sz=32"
+  },
+  {
+    "id": 70,
+    "url": "https://www.reshaped.so/",
+    "title": "Reshaped",
+    "description": "Modern design system with accessible React and Figma components — aligned design-to-code, semantic tokens, Tailwind integration, and Storybook MCP for agents.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=reshaped.so&sz=32"
+  },
+  {
+    "id": 71,
+    "url": "https://heroui.com/",
+    "title": "HeroUI",
+    "description": "Beautiful, accessible React UI components built on React Aria and Tailwind CSS v4 — with MCP servers and agent skills for modern app development.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=heroui.com&sz=32"
   }
 ]

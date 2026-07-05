@@ -7,7 +7,7 @@
   var STORAGE_KEY = 'conversionModalDismissed';
   var VISIT_START_KEY = 'conversionModalVisitStart';
   var DELAY_MS = 10000;
-  var PRIMARY_LINK = 'https://cal.com/sametozkale/meetwithme';
+  var PRIMARY_LINK = 'https://yalp.work/';
 
   function getVisitStartTime() {
     try {
@@ -67,13 +67,13 @@
     wrap.className = 'conversion-modal';
     wrap.style.display = 'none';
     wrap.setAttribute('role', 'complementary');
-    wrap.setAttribute('aria-label', 'Conversion: Turn product quality into pipeline');
+    wrap.setAttribute('aria-label', 'Product launch: Yalp — todos, notes, and MCP in the browser');
     wrap.innerHTML =
       '<button type="button" class="conversion-modal-close" aria-label="Close conversion modal">\n  <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>\n</button>\n' +
-      '<div class="conversion-modal-eyebrow">For founders who want more conversions</div>\n' +
-      '<h2 class="conversion-modal-headline">Discover the 3T Growth Formula</h2>\n' +
-      '<p class="conversion-modal-subtext">I help you turn product decisions into revenue by building <span class="conversion-modal-keyword">trust</span>, sharpening your <span class="conversion-modal-keyword">taste</span>, and positioning you as a <span class="conversion-modal-keyword">trendsetter</span> in your category.</p>\n' +
-      '<a href="' + PRIMARY_LINK + '" class="book-call-button conversion-modal-cta" target="_blank" rel="noopener noreferrer">Book intro call →</a>\n';
+      '<div class="conversion-modal-eyebrow">My first fully vibe-coded launch</div>\n' +
+      '<h2 class="conversion-modal-headline">Meet Yalp</h2>\n' +
+      '<p class="conversion-modal-subtext">Manage <span class="conversion-modal-keyword">todos</span> and <span class="conversion-modal-keyword">notes</span> in the browser, with <span class="conversion-modal-keyword">MCP</span> for Cursor, Claude, and more.</p>\n' +
+      '<a href="' + PRIMARY_LINK + '" class="book-call-button conversion-modal-cta" target="_blank" rel="noopener noreferrer">Try Yalp →</a>\n';
     return wrap;
   }
 

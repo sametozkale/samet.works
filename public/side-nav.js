@@ -13,9 +13,9 @@
   const DOT_FLIGHT_MS = 350;
   const DOT_IMPACT = 0.8;
   const DOT_IMPACT_MS = DOT_FLIGHT_MS * DOT_IMPACT;
-  const DOT_ARC_MIN = 10;
-  const DOT_ARC_MAX = 36;
-  const DOT_ARC_PER_ROW = 3;
+  const DOT_ARC_MIN = 8;
+  const DOT_ARC_MAX = 16;
+  const DOT_ARC_PER_ROW = 2;
   const DOT_TOUCH_OFFSET = -5;
   const ORIGIN_KEY = "side-nav-origin";
   const MUTE_KEY = "side-nav-muted";
@@ -117,7 +117,12 @@
       if (index === activeIndex) return;
       event.preventDefault();
       playSound("tick");
-      travelTo(index, page.href);
+      try {
+        sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
+      } catch (error) {
+        /* storage blocked — still navigate */
+      }
+      window.location.href = page.href;
     });
   });
 
@@ -130,7 +135,11 @@
 
   const stored = Number(sessionStorage.getItem(ORIGIN_KEY));
   const fromIndex = Number.isInteger(stored) ? stored : activeIndex;
-  if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
+  try {
+    if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
+  } catch (error) {
+    /* ignore */
+  }
 
   const travelled =
     !reduceMotion &&
@@ -198,24 +207,13 @@
     return -Math.min(DOT_ARC_MAX, DOT_ARC_MIN + (rows - 1) * DOT_ARC_PER_ROW);
   }
 
-  let currentIndex = activeIndex;
-  let navigating = false;
-
-  function setActive(index) {
-    list.querySelectorAll(".side-nav__link").forEach(function (el, i) {
-      const on = i === index;
-      el.classList.toggle("is-active", on);
-      if (on) el.setAttribute("aria-current", "page");
-      else el.removeAttribute("aria-current");
-    });
-  }
-
   function flyDot(from, to) {
     dot.hidden = false;
     const startY = rowY(from);
     const targetY = rowY(to);
     const rows = Math.abs(to - from);
     const offset = arcOffset(rows);
+    dot.style.transform = "translate(0px, " + startY + "px)";
     if (reduceMotion || rows === 0) {
       dot.style.transform = "translate(0px, " + targetY + "px)";
       return;
@@ -226,52 +224,23 @@
     let velocity = 0;
     let last = started;
     function fly(now) {
-      const dt = Math.min(0.032, (now - last) / 1000);
+      const dt = Math.min(0.016, (now - last) / 1000);
       last = now;
       const accel = -800 * (y - targetY) - 52 * velocity;
       velocity += accel * dt;
       y += velocity * dt;
       const t = Math.min(1, (now - started) / DOT_FLIGHT_MS);
       dot.style.transform = "translate(" + arcX(t, offset) + "px, " + y + "px)";
-      const settled = t >= 1 && Math.abs(targetY - y) < 0.25 && Math.abs(velocity) < 8;
+      const settled = t >= 1 && Math.abs(targetY - y) < 0.4 && Math.abs(velocity) < 12;
       if (!settled) requestAnimationFrame(fly);
       else dot.style.transform = "translate(0px, " + targetY + "px)";
     }
     requestAnimationFrame(fly);
   }
 
-  function travelTo(nextIndex, href) {
-    if (navigating) return;
-    navigating = true;
-    const from = currentIndex;
-    setActive(nextIndex);
-    if (from >= 0 && from !== nextIndex) {
-      springTo(10, 0, 900, 45, function (x) {
-        placeLabel(labels[from], x);
-      });
-    }
-    if (from >= 0 && from !== nextIndex && !reduceMotion) {
-      flyDot(from, nextIndex);
-      window.setTimeout(function () {
-        springTo(0, 10, 1000, 60, function (x) {
-          placeLabel(labels[nextIndex], x);
-        });
-      }, DOT_IMPACT_MS);
-    } else {
-      placeLabel(labels[nextIndex], 10);
-      if (nextIndex >= 0) {
-        dot.hidden = false;
-        dot.style.transform = "translate(0px, " + rowY(nextIndex) + "px)";
-      }
-    }
-    sessionStorage.setItem(ORIGIN_KEY, String(nextIndex));
-    window.setTimeout(function () {
-      window.location.href = href;
-    }, reduceMotion || from < 0 ? 0 : DOT_FLIGHT_MS + 90);
-  }
-
   labels.forEach(function (label, index) {
-    placeLabel(label, index === activeIndex && !travelled ? 10 : 0);
+    if (travelled && index === fromIndex) placeLabel(label, 10);
+    else placeLabel(label, index === activeIndex && !travelled ? 10 : 0);
   });
 
   if (activeIndex < 0) {
@@ -282,6 +251,12 @@
   if (!travelled) {
     dot.style.transform = "translate(0px, " + rowY(activeIndex) + "px)";
     return;
+  }
+
+  if (fromIndex >= 0 && fromIndex !== activeIndex) {
+    springTo(10, 0, 900, 45, function (x) {
+      placeLabel(labels[fromIndex], x);
+    });
   }
 
   flyDot(fromIndex, activeIndex);

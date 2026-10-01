@@ -723,6 +723,10 @@ a:hover {
   border-radius: 10px;
   overflow: hidden;
   pointer-events: none;
+  transition: none;
+}
+
+.opensource-card .so-track:not(.is-drag) .so-fill {
   transition: width 0.08s ease-out;
 }
 

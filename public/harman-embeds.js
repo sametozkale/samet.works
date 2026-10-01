@@ -79,11 +79,17 @@
     var min = Number(input.min);
     var max = Number(input.max);
 
+    var paintFrame = 0;
+    var lastValue = null;
+
     function paint() {
       var value = Number(input.value);
       var percent = max <= min ? 0 : ((value - min) / (max - min)) * 100;
       fill.style.width = percent + "%";
-      valueEl.textContent = String(value);
+      if (value !== lastValue) {
+        lastValue = value;
+        valueEl.textContent = String(value);
+      }
 
       var atEmpty = percent <= 0.5;
       var atFull = percent >= 99.5;
@@ -104,14 +110,23 @@
       if (dividerRight) dividerRight.style.opacity = fullHover ? "1" : "0";
     }
 
-    input.addEventListener("input", paint);
+    function schedulePaint() {
+      if (paintFrame) return;
+      paintFrame = requestAnimationFrame(function () {
+        paintFrame = 0;
+        paint();
+      });
+    }
+
+    input.addEventListener("input", schedulePaint);
     input.addEventListener("pointerdown", function () {
       track.classList.add("is-drag");
-      paint();
+      schedulePaint();
     });
     window.addEventListener("pointerup", function () {
+      if (!track.classList.contains("is-drag")) return;
       track.classList.remove("is-drag");
-      paint();
+      schedulePaint();
     });
     track.addEventListener("mouseenter", function () {
       track.classList.add("is-hover");

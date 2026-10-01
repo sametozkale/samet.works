@@ -32,10 +32,13 @@
     return audioCtx;
   }
 
-  async function unlockAudio() {
+  function unlockAudio() {
     try {
       const ctx = audioContext();
-      if (ctx.state === "suspended") await ctx.resume();
+      if (ctx.state === "suspended") {
+        const pending = ctx.resume();
+        if (pending && typeof pending.catch === "function") pending.catch(function () {});
+      }
       audioUnlocked = ctx.state === "running";
     } catch (error) {
       audioUnlocked = false;
@@ -59,23 +62,46 @@
     osc.stop(start + options.decay + options.release + 0.02);
   }
 
-  async function playSound(name) {
-    if (isMuted()) return;
-    if (!audioUnlocked) {
-      if (name === "hover") return;
-      await unlockAudio();
-      if (!audioUnlocked) return;
-    }
-    const ctx = audioContext();
-    if (name === "hover") {
-      tone(ctx, { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.01 });
-    } else if (name === "tick") {
-      tone(ctx, { frequency: 1200, decay: 0.012, release: 0.004, gain: 0.08 });
+  const TICK = { frequency: 1200, decay: 0.012, release: 0.004, gain: 0.08 };
+  const TICK_HOLD_MS = 48;
+
+  function playHover() {
+    if (isMuted() || !audioUnlocked) return;
+    try {
+      tone(audioContext(), { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.01 });
+    } catch (error) {
+      /* ignore */
     }
   }
 
-  window.addEventListener("pointerdown", unlockAudio, { once: true });
-  window.addEventListener("keydown", unlockAudio, { once: true });
+  function playTick() {
+    if (isMuted()) return Promise.resolve(false);
+    let ctx;
+    try {
+      ctx = audioContext();
+    } catch (error) {
+      return Promise.resolve(false);
+    }
+    function start() {
+      if (ctx.state !== "running") return false;
+      tone(ctx, TICK);
+      audioUnlocked = true;
+      return true;
+    }
+    if (ctx.state === "running") {
+      try {
+        return Promise.resolve(start());
+      } catch (error) {
+        return Promise.resolve(false);
+      }
+    }
+    return Promise.resolve(ctx.resume()).then(start).catch(function () {
+      return false;
+    });
+  }
+
+  window.addEventListener("pointerdown", unlockAudio, true);
+  window.addEventListener("keydown", unlockAudio);
 
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   const activeIndex = PAGES.findIndex((page) => page.match(path));
@@ -122,19 +148,24 @@
     labels.push(label);
 
     link.addEventListener("mouseenter", function () {
-      playSound("hover");
+      playHover();
     });
     link.addEventListener("click", function (event) {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
       if (index === activeIndex) return;
       event.preventDefault();
-      playSound("tick");
       try {
         sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
       } catch (error) {
         /* storage blocked — still navigate */
       }
-      window.location.href = page.href;
+      const go = function () {
+        window.location.href = page.href;
+      };
+      playTick().then(function (played) {
+        if (played) window.setTimeout(go, TICK_HOLD_MS);
+        else go();
+      });
     });
   });
 

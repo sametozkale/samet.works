@@ -1241,10 +1241,6 @@ a:hover {
   justify-content: center;
 }
 
-.bottom-nav {
-  display: none !important;
-}
-
 .side-nav {
   position: fixed;
   left: 8px;
@@ -1328,6 +1324,18 @@ a:hover {
 @keyframes side-nav-dot-crossfade {
   from { background-color: var(--dot-from); }
   to { background-color: var(--dot-to); }
+}
+
+@media (max-width: 640px) {
+  body:has(.bottom-nav) .side-nav {
+    display: none !important;
+  }
+}
+
+@media (min-width: 641px) {
+  .bottom-nav {
+    display: none !important;
+  }
 }
 
 @media (max-width: 860px) {

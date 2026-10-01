@@ -1,259 +1,19 @@
 [
   {
-    "id": 1,
-    "url": "https://60fps.design",
-    "title": "60fps",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=60fps.design&sz=32"
-  },
-  {
-    "id": 2,
-    "url": "https://www.awwwards.com",
-    "title": "Awwwards",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=awwwards.com&sz=32"
-  },
-  {
-    "id": 3,
-    "url": "https://www.cosmos.so",
-    "title": "Cosmos",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=cosmos.so&sz=32"
-  },
-  {
-    "id": 4,
-    "url": "https://www.curated.design",
-    "title": "Curated Design",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=curated.design&sz=32"
-  },
-  {
-    "id": 5,
-    "url": "https://www.designspells.com",
-    "title": "Design Spells",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=designspells.com&sz=32"
-  },
-  {
-    "id": 6,
-    "url": "https://www.gameuidatabase.com",
-    "title": "Game UI Database",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=gameuidatabase.com&sz=32"
-  },
-  {
-    "id": 7,
-    "url": "https://godly.website",
-    "title": "Godly",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=godly.website&sz=32"
-  },
-  {
-    "id": 8,
-    "url": "https://www.hudsandguis.com",
-    "title": "HUDS+GUIS",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=hudsandguis.com&sz=32"
-  },
-  {
-    "id": 9,
-    "url": "https://interfaceingame.com",
-    "title": "Interface In Game",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=interfaceingame.com&sz=32"
-  },
-  {
-    "id": 10,
-    "url": "https://layers.to/explore",
-    "title": "Layers",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=layers.to&sz=32"
-  },
-  {
-    "id": 11,
-    "url": "https://loadmo.re",
-    "title": "loadmo.re",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=loadmo.re&sz=32"
-  },
-  {
-    "id": 12,
-    "url": "https://minimal.gallery",
-    "title": "Minimal Gallery",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=32"
-  },
-  {
-    "id": 13,
-    "url": "https://mnmm.xyz",
-    "title": "Minimum",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=mnmm.xyz&sz=32"
-  },
-  {
-    "id": 14,
-    "url": "https://mobbin.com",
-    "title": "Mobbin",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=mobbin.com&sz=32"
-  },
-  {
-    "id": 15,
-    "url": "https://pinterest.com",
-    "title": "Pinterest",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=pinterest.com&sz=32"
-  },
-  {
-    "id": 16,
-    "url": "https://www.rebrand.gallery",
-    "title": "Rebrand",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=rebrand.gallery&sz=32"
-  },
-  {
-    "id": 17,
-    "url": "https://saaspo.com",
-    "title": "Saaspo",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=saaspo.com&sz=32"
-  },
-  {
-    "id": 18,
-    "url": "https://same.energy",
-    "title": "Same Energy",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=same.energy&sz=32"
-  },
-  {
-    "id": 19,
-    "url": "https://searchsystem.co",
-    "title": "SearchSystem",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=searchsystem.co&sz=32"
-  },
-  {
-    "id": 20,
-    "url": "https://www.seesaw.website",
-    "title": "SEESAW",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=seesaw.website&sz=32"
-  },
-  {
-    "id": 21,
-    "url": "https://spiral.soot.com/spiral",
-    "title": "SOOT SPIRAL",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=spiral.soot.com&sz=32"
-  },
-  {
-    "id": 22,
-    "url": "https://www.supahero.io",
-    "title": "Supahero",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=supahero.io&sz=32"
-  },
-  {
-    "id": 23,
-    "url": "https://bolt.new",
-    "title": "Bolt.new",
-    "description": "AI Code tool for design engineers.",
+    "id": 381,
+    "url": "https://audio.raphaelsalaja.com",
+    "title": "@web-kits/audio",
+    "description": "Declarative sound library for web apps.",
     "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=bolt.new&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=audio.raphaelsalaja.com&sz=32"
   },
   {
-    "id": 24,
-    "url": "https://claude.com/product/claude-code",
-    "title": "Claude Code",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=claude.com&sz=32"
-  },
-  {
-    "id": 25,
-    "url": "https://cline.bot",
-    "title": "Cline",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=cline.bot&sz=32"
-  },
-  {
-    "id": 26,
-    "url": "https://www.cursor.com",
-    "title": "Cursor",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=cursor.com&sz=32"
-  },
-  {
-    "id": 27,
-    "url": "https://antigravity.google",
-    "title": "Google Antigravity",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=antigravity.google&sz=32"
-  },
-  {
-    "id": 28,
-    "url": "https://openai.com/codex",
-    "title": "OpenAI Codex",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32"
-  },
-  {
-    "id": 29,
-    "url": "https://skills.sh",
-    "title": "Skills",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=skills.sh&sz=32"
-  },
-  {
-    "id": 30,
-    "url": "https://v0.dev",
-    "title": "v0 by Vercel",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=v0.dev&sz=32"
-  },
-  {
-    "id": 31,
-    "url": "https://codeium.com/windsurf",
-    "title": "Windsurf",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=codeium.com&sz=32"
-  },
-  {
-    "id": 32,
-    "url": "https://zed.dev/agentic",
-    "title": "Zed",
-    "description": "AI Code tool for design engineers.",
-    "category": "ai-code",
-    "favicon": "https://www.google.com/s2/favicons?domain=zed.dev&sz=32"
+    "id": 247,
+    "url": "https://1iad.com",
+    "title": "1iad - One Interaction a Day",
+    "description": "A growing collection of animated React components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=1iad.com&sz=32"
   },
   {
     "id": 33,
@@ -264,12 +24,812 @@
     "favicon": "https://www.google.com/s2/favicons?domain=21st.dev&sz=32"
   },
   {
+    "id": 190,
+    "url": "https://23rd.dev",
+    "title": "23rd",
+    "description": "shadcn components for React and Svelte.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=23rd.dev&sz=32"
+  },
+  {
+    "id": 1,
+    "url": "https://60fps.design",
+    "title": "60fps",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=60fps.design&sz=32"
+  },
+  {
+    "id": 150,
+    "url": "https://8bitcn.com",
+    "title": "8bitcn",
+    "description": "Retro 8-bit components for shadcn projects.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=8bitcn.com&sz=32"
+  },
+  {
+    "id": 358,
+    "url": "https://99designs.com/discover",
+    "title": "99designs Discover",
+    "description": "Design blog exploring creative branding insights.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=99designs.com&sz=32"
+  },
+  {
+    "id": 322,
+    "url": "https://www.a1.gallery",
+    "title": "A1",
+    "description": "Website design inspiration gallery.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=a1.gallery&sz=32"
+  },
+  {
+    "id": 349,
+    "url": "https://abduzeedo.com",
+    "title": "Abduzeedo",
+    "description": "Daily design blog sharing visual inspiration.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=abduzeedo.com&sz=32"
+  },
+  {
+    "id": 159,
+    "url": "https://ui.aceternity.com",
+    "title": "Aceternity UI",
+    "description": "Trendy animated components and hero sections.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.aceternity.com&sz=32"
+  },
+  {
+    "id": 68,
+    "url": "https://affine.pro",
+    "title": "AFFiNE",
+    "description": "Organization tool for design engineers.",
+    "category": "organization",
+    "favicon": "https://www.google.com/s2/favicons?domain=affine.pro&sz=32"
+  },
+  {
+    "id": 411,
+    "url": "https://www.agentation.com",
+    "title": "Agentation",
+    "description": "Converts on-screen UI annotations into context.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=agentation.com&sz=32"
+  },
+  {
+    "id": 404,
+    "url": "https://agentcn.run",
+    "title": "agentcn",
+    "description": "Customizable and production-ready AI agent recipes for React.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=agentcn.run&sz=32"
+  },
+  {
+    "id": 376,
+    "url": "https://alumnium.ai",
+    "title": "Alumnium",
+    "description": "Natural-language end-to-end testing via MCP.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=alumnium.ai&sz=32"
+  },
+  {
+    "id": 229,
+    "url": "https://amacro.vercel.app",
+    "title": "Amacro",
+    "description": "Drop-in page reveal animations for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=amacro.vercel.app&sz=32"
+  },
+  {
+    "id": 145,
+    "url": "https://amicro.vercel.app",
+    "title": "Amicro",
+    "description": "Lightweight drop-in React micro-animation primitives.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=amicro.vercel.app&sz=32"
+  },
+  {
+    "id": 488,
+    "url": "https://www.tryanim8.com",
+    "title": "Anim8",
+    "description": "Convert MP4 recordings into animated SVG graphics.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=tryanim8.com&sz=32"
+  },
+  {
+    "id": 243,
+    "url": "https://animata.design",
+    "title": "Animata",
+    "description": "Ship stunning UI faster with Ship stunning UI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=animata.design&sz=32"
+  },
+  {
+    "id": 160,
+    "url": "https://animate-ui.com",
+    "title": "Animate UI",
+    "description": "Accessible shadcn components animated with Motion.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=animate-ui.com&sz=32"
+  },
+  {
+    "id": 235,
+    "url": "https://shadcn-animated.vercel.app",
+    "title": "Animated shadcn/ui",
+    "description": "Motion-powered variants of shadcn/ui components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadcn-animated.vercel.app&sz=32"
+  },
+  {
+    "id": 364,
+    "url": "https://www.animations.dev",
+    "title": "Animations.dev",
+    "description": "Course on creating web animations that feel right.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=animations.dev&sz=32"
+  },
+  {
+    "id": 193,
+    "url": "https://annnimate.com",
+    "title": "Annnimate",
+    "description": "GSAP motion components ready for production.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=annnimate.com&sz=32"
+  },
+  {
+    "id": 286,
+    "url": "https://www.appinspo.com",
+    "title": "Appinspo",
+    "description": "Curated mobile application design gallery.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=appinspo.com&sz=32"
+  },
+  {
+    "id": 419,
+    "url": "https://www.arclabs.space",
+    "title": "Arc labs",
+    "description": "AI career suite simulating technical interviews.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=arclabs.space&sz=32"
+  },
+  {
+    "id": 69,
+    "url": "https://www.are.na",
+    "title": "Are.na",
+    "description": "Organization tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=are.na&sz=32"
+  },
+  {
+    "id": 495,
+    "url": "https://ascii.krackeddevs.com",
+    "title": "ASCII (Kracked Devs)",
+    "description": "Fast tool converting text into ASCII art.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ascii.krackeddevs.com&sz=32"
+  },
+  {
+    "id": 508,
+    "url": "https://www.asciistudio.space",
+    "title": "ASCII Studio",
+    "description": "Transforms images and videos into ASCII art.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=asciistudio.space&sz=32"
+  },
+  {
+    "id": 491,
+    "url": "https://asciinator.app",
+    "title": "ASCIInator",
+    "description": "Browser utility converting images into ASCII art.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=asciinator.app&sz=32"
+  },
+  {
+    "id": 437,
+    "url": "https://atmos.style",
+    "title": "Atmos",
+    "description": "A color palette generator built for UI designers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=atmos.style&sz=32"
+  },
+  {
+    "id": 396,
+    "url": "https://aura.build",
+    "title": "Aura",
+    "description": "Design system generator structuring AI guidelines.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=aura.build&sz=32"
+  },
+  {
+    "id": 2,
+    "url": "https://www.awwwards.com",
+    "title": "Awwwards",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=awwwards.com&sz=32"
+  },
+  {
+    "id": 262,
+    "url": "https://backgrounds.supply",
+    "title": "Backgrounds Supply",
+    "description": "Handcrafted website backgrounds ready to use.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=backgrounds.supply&sz=32"
+  },
+  {
+    "id": 170,
+    "url": "https://basecn.dev",
+    "title": "Base CN",
+    "description": "Base UI primitives adapted for shadcn.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=basecn.dev&sz=32"
+  },
+  {
+    "id": 141,
+    "url": "https://base-ui.com",
+    "title": "Base UI",
+    "description": "Unstyled component primitives from Radix and MUI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=base-ui.com&sz=32"
+  },
+  {
+    "id": 415,
+    "url": "https://getbb.app",
+    "title": "bb",
+    "description": "Open-source development environment for coding agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=getbb.app&sz=32"
+  },
+  {
+    "id": 200,
+    "url": "https://bearnie.dev",
+    "title": "Bearnie",
+    "description": "Astro and Tailwind component collection.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=bearnie.dev&sz=32"
+  },
+  {
+    "id": 175,
+    "url": "https://beautifului.dev",
+    "title": "Beautiful UI",
+    "description": "Polished copy-paste components for web applications.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=beautifului.dev&sz=32"
+  },
+  {
+    "id": 299,
+    "url": "https://before.click",
+    "title": "before.click",
+    "description": "Showcase of high-converting app screenshot concepts.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=before.click&sz=32"
+  },
+  {
+    "id": 267,
+    "url": "https://www.behance.net",
+    "title": "Behance",
+    "description": "Adobe showcase for creative portfolios.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=behance.net&sz=32"
+  },
+  {
+    "id": 147,
+    "url": "https://bencho.dev",
+    "title": "Bencho",
+    "description": "Interactive UI blocks with adjustable physics.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=bencho.dev&sz=32"
+  },
+  {
+    "id": 74,
+    "url": "https://bestfreefonts.com",
+    "title": "Best Free Fonts",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=bestfreefonts.com&sz=32"
+  },
+  {
+    "id": 321,
+    "url": "https://bestsaaswebdesigns.com",
+    "title": "Best SaaS Web Designs",
+    "description": "Curated inspiration gallery of SaaS website design.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=bestsaaswebdesigns.com&sz=32"
+  },
+  {
+    "id": 283,
+    "url": "https://bestwebsite.gallery",
+    "title": "Best Website Gallery",
+    "description": "Curated archive of exceptional websites.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=bestwebsite.gallery&sz=32"
+  },
+  {
+    "id": 375,
+    "url": "https://www.better-t-stack.dev",
+    "title": "Better T Stack",
+    "description": "CLI scaffolding modern full-stack TypeScript setups.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=better-t-stack.dev&sz=32"
+  },
+  {
+    "id": 534,
+    "url": "https://www.bettershot.site",
+    "title": "BetterShot",
+    "description": "Screen recorder featuring cursor zoom and captions.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=bettershot.site&sz=32"
+  },
+  {
+    "id": 319,
+    "url": "https://betwnstudios.com",
+    "title": "Betwn Studios",
+    "description": "Studio crafting modern SaaS web experiences.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=betwnstudios.com&sz=32"
+  },
+  {
+    "id": 154,
+    "url": "https://beui.dev",
+    "title": "beUI",
+    "description": "Animated React components with Tailwind CSS.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=beui.dev&sz=32"
+  },
+  {
+    "id": 259,
+    "url": "https://bezel-ui.vercel.app",
+    "title": "Bezel",
+    "description": "Bezel is a React component library for interface.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=bezel-ui.vercel.app&sz=32"
+  },
+  {
+    "id": 106,
+    "url": "https://www.bezi.com",
+    "title": "Bezi",
+    "description": "3D tool for design engineers.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=bezi.com&sz=32"
+  },
+  {
+    "id": 371,
+    "url": "https://biomejs.dev",
+    "title": "Biome",
+    "description": "Fast Rust-based formatter and code linter.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=biomejs.dev&sz=32"
+  },
+  {
+    "id": 79,
+    "url": "https://bitspace.sh",
+    "title": "Bitspace",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=bitspace.sh&sz=32"
+  },
+  {
+    "id": 107,
+    "url": "https://www.blender.org",
+    "title": "Blender",
+    "description": "3D tool for design engineers.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=blender.org&sz=32"
+  },
+  {
+    "id": 149,
+    "url": "https://blocks.so",
+    "title": "blocks.so",
+    "description": "Open-source website blocks installable via CLI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=blocks.so&sz=32"
+  },
+  {
+    "id": 245,
+    "url": "https://designsystem-generator-bbs.vercel.app",
+    "title": "Blueprint",
+    "description": "A starter design system kit from your brand.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=designsystem-generator-bbs.vercel.app&sz=32"
+  },
+  {
+    "id": 241,
+    "url": "https://www.boardui.com",
+    "title": "BoardUI",
+    "description": "Build agentic products and data-rich dashboards.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=boardui.com&sz=32"
+  },
+  {
+    "id": 23,
+    "url": "https://bolt.new",
+    "title": "Bolt.new",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=bolt.new&sz=32"
+  },
+  {
+    "id": 443,
+    "url": "https://thebookofshaders.com",
+    "title": "Book of Shaders",
+    "description": "Interactive guide to mastering fragment shaders.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=thebookofshaders.com&sz=32"
+  },
+  {
+    "id": 458,
+    "url": "https://icons.getbootstrap.com",
+    "title": "Bootstrap Icons",
+    "description": "Official icon library designed for Bootstrap.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=icons.getbootstrap.com&sz=32"
+  },
+  {
+    "id": 354,
+    "url": "https://boxesandarrows.com",
+    "title": "Boxes and Arrows",
+    "description": "Journal dedicated to information architecture craft.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=boxesandarrows.com&sz=32"
+  },
+  {
+    "id": 466,
+    "url": "https://boxicons.com",
+    "title": "Boxicons",
+    "description": "Vector icons crafted in three styles.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=boxicons.com&sz=32"
+  },
+  {
+    "id": 330,
+    "url": "https://brandcenter.gallery",
+    "title": "BrandCenter Gallery",
+    "description": "Brand guidelines and brand portal examples.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=brandcenter.gallery&sz=32"
+  },
+  {
+    "id": 121,
+    "url": "https://brave.com",
+    "title": "Brave",
+    "description": "Browser tool for design engineers.",
+    "category": "browser",
+    "favicon": "https://www.google.com/s2/favicons?domain=brave.com&sz=32"
+  },
+  {
+    "id": 310,
+    "url": "https://browse.cool",
+    "title": "Browse.cool",
+    "description": "Websites chosen for exceptional tactile feel.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=browse.cool&sz=32"
+  },
+  {
+    "id": 373,
+    "url": "https://www.buildertools.sh",
+    "title": "BuilderTools",
+    "description": "Focused developer tools for shipping software.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=buildertools.sh&sz=32"
+  },
+  {
+    "id": 155,
+    "url": "https://butter-nav.vercel.app",
+    "title": "Butter Nav",
+    "description": "Mega-menu featuring fluid layout morphing transitions.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=butter-nav.vercel.app&sz=32"
+  },
+  {
+    "id": 504,
+    "url": "https://www.butterfly.so",
+    "title": "Butterfly",
+    "description": "Minimalist landing page builder for validation.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=butterfly.so&sz=32"
+  },
+  {
+    "id": 80,
+    "url": "https://cables.gl",
+    "title": "cables",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=cables.gl&sz=32"
+  },
+  {
+    "id": 522,
+    "url": "https://rioterm.com/canario",
+    "title": "Canario",
+    "description": "Terminal organizing CLI sessions into panes.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=rioterm.com&sz=32"
+  },
+  {
+    "id": 221,
+    "url": "https://canvasui.dev",
+    "title": "Canvas UI",
+    "description": "GPU-accelerated liquid physics and canvas shaders.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=canvasui.dev&sz=32"
+  },
+  {
+    "id": 135,
+    "url": "https://cap.so",
+    "title": "Cap",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=cap.so&sz=32"
+  },
+  {
+    "id": 416,
+    "url": "https://capacity.so",
+    "title": "Capacity",
+    "description": "Natural language workspace generating full-stack apps.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=capacity.so&sz=32"
+  },
+  {
+    "id": 465,
+    "url": "https://carbondesignsystem.com",
+    "title": "Carbon Icons",
+    "description": "IBM official icon library for enterprise design.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=carbondesignsystem.com&sz=32"
+  },
+  {
+    "id": 422,
+    "url": "https://causal.so",
+    "title": "Causal",
+    "description": "AI canvas workspace for notes and plans.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=causal.so&sz=32"
+  },
+  {
+    "id": 92,
+    "url": "https://cavalry.scenegroup.co",
+    "title": "Cavalry",
+    "description": "Motion tool for design engineers.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=cavalry.scenegroup.co&sz=32"
+  },
+  {
+    "id": 117,
+    "url": "https://chatgpt.com",
+    "title": "ChatGPT",
+    "description": "Research tool for design engineers.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=32"
+  },
+  {
+    "id": 246,
+    "url": "https://chiraggadhvi.in",
+    "title": "Chirag Gadhvi",
+    "description": "Software and AI Engineer.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=chiraggadhvi.in&sz=32"
+  },
+  {
+    "id": 423,
+    "url": "https://ciele.app",
+    "title": "Ciele",
+    "description": "Build AI Teammates that answer from your knowledge.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=ciele.app&sz=32"
+  },
+  {
+    "id": 24,
+    "url": "https://claude.com/product/claude-code",
+    "title": "Claude Code",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=claude.com&sz=32"
+  },
+  {
+    "id": 50,
+    "url": "https://claude.com/product/cowork",
+    "title": "Claude Cowork",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=claude.com&sz=32"
+  },
+  {
+    "id": 521,
+    "url": "https://cleanshot.com",
+    "title": "CleanShot X",
+    "description": "Ultimate screen capture and recording utility.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=cleanshot.com&sz=32"
+  },
+  {
+    "id": 25,
+    "url": "https://cline.bot",
+    "title": "Cline",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=cline.bot&sz=32"
+  },
+  {
+    "id": 114,
+    "url": "https://www.clo3d.com",
+    "title": "CLO",
+    "description": "Digital Fashion tool for design engineers.",
+    "category": "digital-fashion",
+    "favicon": "https://www.google.com/s2/favicons?domain=clo3d.com&sz=32"
+  },
+  {
+    "id": 425,
+    "url": "https://developers.cloudflare.com/workers",
+    "title": "Cloudflare",
+    "description": "Global edge network running serverless Workers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=developers.cloudflare.com&sz=32"
+  },
+  {
+    "id": 352,
+    "url": "https://tympanus.net/codrops",
+    "title": "Codrops",
+    "description": "Blog publishing creative frontend experiments and tutorials.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=tympanus.net&sz=32"
+  },
+  {
+    "id": 271,
+    "url": "https://collectui.com",
+    "title": "Collect UI",
+    "description": "Daily UI inspiration tagged by component.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=collectui.com&sz=32"
+  },
+  {
+    "id": 42,
+    "url": "https://color.review",
+    "title": "Color.review",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=color.review&sz=32"
+  },
+  {
+    "id": 213,
+    "url": "https://text-effects.colorion.co",
+    "title": "Colorion Text Effects",
+    "description": "Animated text effects ready to copy.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=text-effects.colorion.co&sz=32"
+  },
+  {
     "id": 34,
     "url": "https://component.gallery",
     "title": "Component Gallery",
     "description": "Components tool for design engineers.",
     "category": "components",
     "favicon": "https://www.google.com/s2/favicons?domain=component.gallery&sz=32"
+  },
+  {
+    "id": 231,
+    "url": "https://componentry.dev",
+    "title": "Componentry",
+    "description": "Customizable React UI primitives and components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=componentry.dev&sz=32"
+  },
+  {
+    "id": 444,
+    "url": "https://compute.toys",
+    "title": "compute.toys",
+    "description": "Sandbox for authoring WGSL compute shaders.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=compute.toys&sz=32"
+  },
+  {
+    "id": 514,
+    "url": "https://convergence.suryansu.in",
+    "title": "Convergence UI",
+    "description": "Tweak colors, typography, borders and radius in.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=convergence.suryansu.in&sz=32"
+  },
+  {
+    "id": 523,
+    "url": "https://cooldock.app",
+    "title": "CoolDock",
+    "description": "Secondary dock supporting desktop monitoring widgets.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=cooldock.app&sz=32"
+  },
+  {
+    "id": 505,
+    "url": "https://corne.rs",
+    "title": "Corne",
+    "description": "Documentation for the Corne split keyboard.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=corne.rs&sz=32"
+  },
+  {
+    "id": 3,
+    "url": "https://www.cosmos.so",
+    "title": "Cosmos",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=cosmos.so&sz=32"
+  },
+  {
+    "id": 152,
+    "url": "https://coss.com/ui",
+    "title": "coss ui",
+    "description": "Copy-paste components built on Base UI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=coss.com&sz=32"
+  },
+  {
+    "id": 329,
+    "url": "https://crafio.app",
+    "title": "Crafio",
+    "description": "Build with AI. We handle backend. You create. 🌱.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=crafio.app&sz=32"
+  },
+  {
+    "id": 249,
+    "url": "https://createui.co",
+    "title": "Create UI",
+    "description": "AI Native Design System & React Component Library.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=createui.co&sz=32"
+  },
+  {
+    "id": 470,
+    "url": "https://css.gg",
+    "title": "css.gg",
+    "description": "700 lightweight icons rendered using pure CSS.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=css.gg&sz=32"
+  },
+  {
+    "id": 291,
+    "url": "https://cta.gallery",
+    "title": "cta.gallery",
+    "description": "Curated call-to-action button and banner designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=cta.gallery&sz=32"
+  },
+  {
+    "id": 220,
+    "url": "https://cuelume.dev",
+    "title": "cuelume",
+    "description": "Micro interface sounds generated with Web Audio.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=cuelume.dev&sz=32"
+  },
+  {
+    "id": 156,
+    "url": "https://www.cult-ui.com",
+    "title": "Cult UI",
+    "description": "Animated React components with Framer Motion.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=cult-ui.com&sz=32"
+  },
+  {
+    "id": 4,
+    "url": "https://www.curated.design",
+    "title": "Curated Design",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=curated.design&sz=32"
+  },
+  {
+    "id": 308,
+    "url": "https://curated.domains",
+    "title": "Curated Domains",
+    "description": "Brands using creative top-level domain names.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=curated.domains&sz=32"
+  },
+  {
+    "id": 296,
+    "url": "https://curations.supply",
+    "title": "Curations",
+    "description": "Library of curated digital design assets.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=curations.supply&sz=32"
   },
   {
     "id": 35,
@@ -280,68 +840,356 @@
     "favicon": "https://www.google.com/s2/favicons?domain=cursify.vercel.app&sz=32"
   },
   {
-    "id": 36,
-    "url": "https://www.fancycomponents.dev",
-    "title": "Fancy Components",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=fancycomponents.dev&sz=32"
+    "id": 26,
+    "url": "https://www.cursor.com",
+    "title": "Cursor",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=cursor.com&sz=32"
   },
   {
-    "id": 37,
-    "url": "https://framer.university/resources",
-    "title": "Framer University",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=framer.university&sz=32"
+    "id": 535,
+    "url": "https://cursorful.com",
+    "title": "Cursorful",
+    "description": "Screen recorder that automatically tracks cursor.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=cursorful.com&sz=32"
   },
   {
-    "id": 38,
-    "url": "https://motion-primitives.com",
-    "title": "Motion Primitives",
-    "description": "Components tool for design engineers.",
+    "id": 157,
+    "url": "https://daisyui.com",
+    "title": "daisyUI",
+    "description": "Component class library for Tailwind CSS.",
     "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=motion-primitives.com&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=daisyui.com&sz=32"
   },
   {
-    "id": 39,
-    "url": "https://number-flow.barvian.me",
-    "title": "NumberFlow",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=32"
+    "id": 287,
+    "url": "https://www.darkmodedesign.com",
+    "title": "Dark Mode Design",
+    "description": "Showcase celebrating dark-mode websites.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=darkmodedesign.com&sz=32"
   },
   {
-    "id": 40,
-    "url": "https://www.reactbits.dev",
-    "title": "React Bits",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=reactbits.dev&sz=32"
+    "id": 529,
+    "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "title": "DaVinci Resolve",
+    "description": "Professional video editing and color grading suite.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=blackmagicdesign.com&sz=32"
   },
   {
-    "id": 41,
-    "url": "https://ui.shadcn.com",
-    "title": "shadcn/ui",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=32"
+    "id": 129,
+    "url": "https://deck.gallery",
+    "title": "Deck Gallery",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=32"
   },
   {
-    "id": 128,
-    "url": "https://heroui.com",
-    "title": "HeroUI",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=heroui.com&sz=32"
+    "id": 362,
+    "url": "https://www.degreeless.design",
+    "title": "Degreeless Design",
+    "description": "Curated roadmap for mastering product design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=degreeless.design&sz=32"
   },
   {
-    "id": 42,
-    "url": "https://color.review",
-    "title": "Color.review",
-    "description": "Web Utility tool for design engineers.",
+    "id": 434,
+    "url": "https://departuremono.com",
+    "title": "Departure Mono",
+    "description": "Pixel monospace typeface designed for terminals.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=departuremono.com&sz=32"
+  },
+  {
+    "id": 100,
+    "url": "https://www.depthkit.tv",
+    "title": "Depthkit",
+    "description": "Volumetric tool for design engineers.",
+    "category": "volumetric",
+    "favicon": "https://www.google.com/s2/favicons?domain=depthkit.tv&sz=32"
+  },
+  {
+    "id": 530,
+    "url": "https://descript.com",
+    "title": "Descript",
+    "description": "AI video editor where you edit text.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=descript.com&sz=32"
+  },
+  {
+    "id": 292,
+    "url": "https://desengs.com",
+    "title": "desengs.com",
+    "description": "Directory of design engineering portfolios and lore.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=desengs.com&sz=32"
+  },
+  {
+    "id": 295,
+    "url": "https://designbookmark.com",
+    "title": "Design Bookmark",
+    "description": "Directory of design resources and links.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=designbookmark.com&sz=32"
+  },
+  {
+    "id": 344,
+    "url": "https://design-books.com",
+    "title": "Design Books",
+    "description": "Directory of essential design literature by discipline.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=design-books.com&sz=32"
+  },
+  {
+    "id": 494,
+    "url": "https://www.designminis.com",
+    "title": "Design Minis",
+    "description": "Suite of micro design tools and scales.",
     "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=color.review&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=designminis.com&sz=32"
+  },
+  {
+    "id": 5,
+    "url": "https://www.designspells.com",
+    "title": "Design Spells",
+    "description": "Inspiration tool for design engineers.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=designspells.com&sz=32"
+  },
+  {
+    "id": 346,
+    "url": "https://designsystemchecklist.com",
+    "title": "Design System Checklist",
+    "description": "Comprehensive checklist for production design systems.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=designsystemchecklist.com&sz=32"
+  },
+  {
+    "id": 337,
+    "url": "https://design.dev",
+    "title": "design.dev",
+    "description": "AI-assisted design token and system editor.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=design.dev&sz=32"
+  },
+  {
+    "id": 294,
+    "url": "https://designeng.tools",
+    "title": "designeng.tools",
+    "description": "Curated design engineering tools, resources, and inspiration.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=designeng.tools&sz=32"
+  },
+  {
+    "id": 302,
+    "url": "https://designengineer.tools",
+    "title": "designengineer.tools",
+    "description": "Essential tools tailored for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=designengineer.tools&sz=32"
+  },
+  {
+    "id": 355,
+    "url": "https://www.designernews.co",
+    "title": "Designer News",
+    "description": "Community-driven news feed highlighting design stories.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=designernews.co&sz=32"
+  },
+  {
+    "id": 391,
+    "url": "https://designmd.me",
+    "title": "designmd.me",
+    "description": "Generator creating machine-readable design specifications.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=designmd.me&sz=32"
+  },
+  {
+    "id": 393,
+    "url": "https://designmd.supply",
+    "title": "designmd.supply",
+    "description": "DESIGN.MD templates to guide AI assistants.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=designmd.supply&sz=32"
+  },
+  {
+    "id": 357,
+    "url": "https://designmodo.com",
+    "title": "Designmodo",
+    "description": "Articles and tools covering web design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=designmodo.com&sz=32"
+  },
+  {
+    "id": 282,
+    "url": "https://www.designspiration.com",
+    "title": "Designspiration",
+    "description": "Creative search platform for visual art.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=designspiration.com&sz=32"
+  },
+  {
+    "id": 318,
+    "url": "https://detail.design",
+    "title": "Detail Design",
+    "description": "Archive of thoughtful software micro-interactions.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=detail.design&sz=32"
+  },
+  {
+    "id": 264,
+    "url": "https://www.details.so",
+    "title": "Details",
+    "description": "Micro-interaction analysis of top digital products.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=details.so&sz=32"
+  },
+  {
+    "id": 324,
+    "url": "https://devchauhan.in",
+    "title": "Dev Chauhan",
+    "description": "Frontend developer from India building.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=devchauhan.in&sz=32"
+  },
+  {
+    "id": 250,
+    "url": "https://ui.devclubxnst.online",
+    "title": "DevClub UI",
+    "description": "Exceptional interfaces begin with the details.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.devclubxnst.online&sz=32"
+  },
+  {
+    "id": 469,
+    "url": "https://devicon.dev",
+    "title": "Devicon",
+    "description": "Developer-focused icon set for programming tools.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=devicon.dev&sz=32"
+  },
+  {
+    "id": 225,
+    "url": "https://www.devl.dev",
+    "title": "devl",
+    "description": "Minimalist experimental UI components for web.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=devl.dev&sz=32"
+  },
+  {
+    "id": 257,
+    "url": "https://devouringdetails.com",
+    "title": "Devouring Details",
+    "description": "Interactive book teaching micro-interaction design.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=devouringdetails.com&sz=32"
+  },
+  {
+    "id": 120,
+    "url": "https://www.diabrowser.com",
+    "title": "Dia Browser",
+    "description": "Browser tool for design engineers.",
+    "category": "browser",
+    "favicon": "https://www.google.com/s2/favicons?domain=diabrowser.com&sz=32"
+  },
+  {
+    "id": 138,
+    "url": "https://dialkit.dev",
+    "title": "Dialkit",
+    "description": "Components tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=dialkit.dev&sz=32"
+  },
+  {
+    "id": 410,
+    "url": "https://distill.id",
+    "title": "Distill",
+    "description": "Intelligent agent organizing scattered research notes.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=distill.id&sz=32"
+  },
+  {
+    "id": 197,
+    "url": "https://www.tripwire.sh/dither-kit",
+    "title": "Dither Kit",
+    "description": "Dithered chart components with retro aesthetic.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=tripwire.sh&sz=32"
+  },
+  {
+    "id": 496,
+    "url": "https://literate-enigma-snowy.vercel.app",
+    "title": "Dither Lab",
+    "description": "Applies vintage dithering filters to photographs.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=literate-enigma-snowy.vercel.app&sz=32"
+  },
+  {
+    "id": 214,
+    "url": "https://dotmatrix.zzzzshawn.cloud",
+    "title": "Dot Matrix",
+    "description": "Over fifty dot-matrix loaders for shadcn.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=dotmatrix.zzzzshawn.cloud&sz=32"
+  },
+  {
+    "id": 490,
+    "url": "https://dotforge.vercel.app",
+    "title": "DotForge",
+    "description": "Real-time dither effect generator for web.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=dotforge.vercel.app&sz=32"
+  },
+  {
+    "id": 501,
+    "url": "https://www.drawably.dev",
+    "title": "Drawably",
+    "description": "Sketching tool generating hand-drawn UI shapes.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=drawably.dev&sz=32"
+  },
+  {
+    "id": 389,
+    "url": "https://www.drayhq.com",
+    "title": "Dray",
+    "description": "Unified desktop workspace managing coding agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=drayhq.com&sz=32"
+  },
+  {
+    "id": 440,
+    "url": "https://drei.docs.pmnd.rs",
+    "title": "Drei",
+    "description": "Helper components for React Three Fiber.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=drei.docs.pmnd.rs&sz=32"
+  },
+  {
+    "id": 266,
+    "url": "https://dribbble.com",
+    "title": "Dribbble",
+    "description": "Global community sharing design concepts.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=dribbble.com&sz=32"
+  },
+  {
+    "id": 70,
+    "url": "https://en.eagle.cool",
+    "title": "Eagle",
+    "description": "Organization tool for design engineers.",
+    "category": "organization",
+    "favicon": "https://www.google.com/s2/favicons?domain=en.eagle.cool&sz=32"
+  },
+  {
+    "id": 313,
+    "url": "https://www.early.tools",
+    "title": "Early",
+    "description": "Discovery platform for early-stage software products.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=early.tools&sz=32"
   },
   {
     "id": 43,
@@ -368,140 +1216,100 @@
     "favicon": "https://www.google.com/s2/favicons?domain=larsenwork.com&sz=32"
   },
   {
-    "id": 46,
-    "url": "https://oklch.com",
-    "title": "OKLCH Color Picker",
-    "description": "Web Utility tool for design engineers.",
+    "id": 253,
+    "url": "https://easingwizard.com",
+    "title": "Easing Wizard",
+    "description": "Visual generator for custom CSS springs.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=easingwizard.com&sz=32"
+  },
+  {
+    "id": 171,
+    "url": "https://easyui.pro",
+    "title": "Easy UI",
+    "description": "Copy-paste component library for rapid building.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=easyui.pro&sz=32"
+  },
+  {
+    "id": 207,
+    "url": "https://editorcn.vercel.app",
+    "title": "editorcn",
+    "description": "Rich text editor components for React, built on Tiptap.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=editorcn.vercel.app&sz=32"
+  },
+  {
+    "id": 418,
+    "url": "https://efecto.app",
+    "title": "Efecto",
+    "description": "Agent-first visual web canvas with MCP.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=efecto.app&sz=32"
+  },
+  {
+    "id": 172,
+    "url": "https://eldoraui.site",
+    "title": "Eldora UI",
+    "description": "Animated components tailored for web landings.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=eldoraui.site&sz=32"
+  },
+  {
+    "id": 97,
+    "url": "https://elevenlabs.io",
+    "title": "ElevenLabs",
+    "description": "Audio tool for design engineers.",
+    "category": "audio",
+    "favicon": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=32"
+  },
+  {
+    "id": 204,
+    "url": "https://emailcn.run",
+    "title": "emailcn",
+    "description": "Responsive email components for React Email, MJML, and JSX Email.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=emailcn.run&sz=32"
+  },
+  {
+    "id": 468,
+    "url": "https://akveo.github.io/eva-icons",
+    "title": "Eva Icons",
+    "description": "Pack of 400 icons in outline and fill.",
     "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=oklch.com&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=akveo.github.io&sz=32"
   },
   {
-    "id": 47,
-    "url": "https://ray.so",
-    "title": "Ray.so",
-    "description": "Web Utility tool for design engineers.",
-    "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=ray.so&sz=32"
+    "id": 315,
+    "url": "https://everywhere.tools",
+    "title": "Everywhere Tools",
+    "description": "Open-source creative tools for design craft.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=everywhere.tools&sz=32"
   },
   {
-    "id": 48,
-    "url": "https://regexr.com",
-    "title": "RegExr",
-    "description": "Web Utility tool for design engineers.",
-    "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=regexr.com&sz=32"
+    "id": 230,
+    "url": "https://www.evilbuttons.com",
+    "title": "Evil Buttons",
+    "description": "Interactive and tactile button components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=evilbuttons.com&sz=32"
   },
   {
-    "id": 49,
-    "url": "https://jakearchibald.github.io/svgomg",
-    "title": "SVGOMG",
-    "description": "Web Utility tool for design engineers.",
-    "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=jakearchibald.github.io&sz=32"
+    "id": 151,
+    "url": "https://evilcharts.com",
+    "title": "Evil Charts",
+    "description": "Animated SVG charts designed for shadcn/ui.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=evilcharts.com&sz=32"
   },
   {
-    "id": 50,
-    "url": "https://claude.com/product/cowork",
-    "title": "Claude Cowork",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=claude.com&sz=32"
-  },
-  {
-    "id": 51,
-    "url": "https://www.granola.ai",
-    "title": "Granola",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=granola.ai&sz=32"
-  },
-  {
-    "id": 52,
-    "url": "https://localsend.org",
-    "title": "LocalSend",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=localsend.org&sz=32"
-  },
-  {
-    "id": 53,
-    "url": "https://www.raycast.com",
-    "title": "Raycast",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=raycast.com&sz=32"
-  },
-  {
-    "id": 54,
-    "url": "https://www.warp.dev",
-    "title": "Warp",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=warp.dev&sz=32"
-  },
-  {
-    "id": 55,
-    "url": "https://wisprflow.ai",
-    "title": "Wispr Flow",
-    "description": "Desktop Utility tool for design engineers.",
-    "category": "desktop-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=wisprflow.ai&sz=32"
-  },
-  {
-    "id": 56,
-    "url": "https://mifi.no/losslesscut",
-    "title": "LosslessCut",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=mifi.no&sz=32"
-  },
-  {
-    "id": 57,
-    "url": "https://www.nvidia.com/en-us/software/nvidia-app/#shadowplay",
-    "title": "NVIDIA ShadowPlay",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=32"
-  },
-  {
-    "id": 58,
-    "url": "https://obsproject.com",
-    "title": "OBS Studio",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=obsproject.com&sz=32"
-  },
-  {
-    "id": 59,
-    "url": "https://parsec.app",
-    "title": "Parsec",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=parsec.app&sz=32"
-  },
-  {
-    "id": 60,
-    "url": "https://recordly.dev",
-    "title": "Recordly",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=recordly.dev&sz=32"
-  },
-  {
-    "id": 61,
-    "url": "https://screen.studio",
-    "title": "Screen Studio",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=screen.studio&sz=32"
-  },
-  {
-    "id": 62,
-    "url": "https://getsharex.com",
-    "title": "ShareX",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=getsharex.com&sz=32"
+    "id": 380,
+    "url": "https://www.evlog.dev",
+    "title": "evlog",
+    "description": "Structured logging framework for web applications.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=evlog.dev&sz=32"
   },
   {
     "id": 63,
@@ -512,180 +1320,44 @@
     "favicon": "https://www.google.com/s2/favicons?domain=excalidraw.com&sz=32"
   },
   {
+    "id": 36,
+    "url": "https://www.fancycomponents.dev",
+    "title": "Fancy Components",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=fancycomponents.dev&sz=32"
+  },
+  {
+    "id": 464,
+    "url": "https://feathericons.com",
+    "title": "Feather",
+    "description": "Minimalist open-source icon set on 24px grid.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=feathericons.com&sz=32"
+  },
+  {
+    "id": 387,
+    "url": "https://fetchrly.co.in",
+    "title": "FetchrLy",
+    "description": "Your personal AI Agent for job hunting ;).",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=fetchrly.co.in&sz=32"
+  },
+  {
+    "id": 484,
+    "url": "https://fffuel.co",
+    "title": "Fffuel",
+    "description": "Generative SVG textures, gradients, and patterns.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=fffuel.co&sz=32"
+  },
+  {
     "id": 64,
     "url": "https://www.figma.com/figjam",
     "title": "FigJam",
     "description": "Whiteboard tool for design engineers.",
     "category": "whiteboard",
     "favicon": "https://www.google.com/s2/favicons?domain=figma.com&sz=32"
-  },
-  {
-    "id": 65,
-    "url": "https://miro.com",
-    "title": "Miro",
-    "description": "Whiteboard tool for design engineers.",
-    "category": "whiteboard",
-    "favicon": "https://www.google.com/s2/favicons?domain=miro.com&sz=32"
-  },
-  {
-    "id": 66,
-    "url": "https://museapp.com",
-    "title": "Muse",
-    "description": "Whiteboard tool for design engineers.",
-    "category": "whiteboard",
-    "favicon": "https://www.google.com/s2/favicons?domain=museapp.com&sz=32"
-  },
-  {
-    "id": 67,
-    "url": "https://www.tldraw.com",
-    "title": "tldraw",
-    "description": "Whiteboard tool for design engineers.",
-    "category": "whiteboard",
-    "favicon": "https://www.google.com/s2/favicons?domain=tldraw.com&sz=32"
-  },
-  {
-    "id": 68,
-    "url": "https://affine.pro",
-    "title": "AFFiNE",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=affine.pro&sz=32"
-  },
-  {
-    "id": 69,
-    "url": "https://www.are.na",
-    "title": "Are.na",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=are.na&sz=32"
-  },
-  {
-    "id": 70,
-    "url": "https://en.eagle.cool",
-    "title": "Eagle",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=en.eagle.cool&sz=32"
-  },
-  {
-    "id": 71,
-    "url": "https://linear.app",
-    "title": "Linear",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=linear.app&sz=32"
-  },
-  {
-    "id": 72,
-    "url": "https://obsidian.md",
-    "title": "Obsidian",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=obsidian.md&sz=32"
-  },
-  {
-    "id": 73,
-    "url": "https://trello.com",
-    "title": "Trello",
-    "description": "Organization tool for design engineers.",
-    "category": "organization",
-    "favicon": "https://www.google.com/s2/favicons?domain=trello.com&sz=32"
-  },
-  {
-    "id": 74,
-    "url": "https://bestfreefonts.com",
-    "title": "Best Free Fonts",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=bestfreefonts.com&sz=32"
-  },
-  {
-    "id": 75,
-    "url": "https://fontsinuse.com",
-    "title": "Fonts In Use",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=fontsinuse.com&sz=32"
-  },
-  {
-    "id": 76,
-    "url": "https://www.fontshare.com",
-    "title": "Fontshare",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=fontshare.com&sz=32"
-  },
-  {
-    "id": 77,
-    "url": "https://www.freefaces.gallery",
-    "title": "Free Faces",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=freefaces.gallery&sz=32"
-  },
-  {
-    "id": 78,
-    "url": "https://uncut.wtf",
-    "title": "UNCUT",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=uncut.wtf&sz=32"
-  },
-  {
-    "id": 79,
-    "url": "https://bitspace.sh",
-    "title": "Bitspace",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=bitspace.sh&sz=32"
-  },
-  {
-    "id": 80,
-    "url": "https://cables.gl",
-    "title": "cables",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=cables.gl&sz=32"
-  },
-  {
-    "id": 81,
-    "url": "https://nodes.io",
-    "title": "Nodes",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=nodes.io&sz=32"
-  },
-  {
-    "id": 82,
-    "url": "https://nodetoy.co",
-    "title": "NodeToy",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=nodetoy.co&sz=32"
-  },
-  {
-    "id": 83,
-    "url": "https://www.shadertoy.com",
-    "title": "ShaderToy",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=shadertoy.com&sz=32"
-  },
-  {
-    "id": 84,
-    "url": "https://derivative.ca",
-    "title": "TouchDesigner",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=derivative.ca&sz=32"
-  },
-  {
-    "id": 85,
-    "url": "https://www.unicorn.studio",
-    "title": "Unicorn.studio",
-    "description": "Visual tool for design engineers.",
-    "category": "visual",
-    "favicon": "https://www.google.com/s2/favicons?domain=unicorn.studio&sz=32"
   },
   {
     "id": 86,
@@ -696,6 +1368,158 @@
     "favicon": "https://www.google.com/s2/favicons?domain=figma.com&sz=32"
   },
   {
+    "id": 126,
+    "url": "https://find.design",
+    "title": "Find Design",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=find.design&sz=32"
+  },
+  {
+    "id": 122,
+    "url": "https://www.mozilla.org/firefox/new",
+    "title": "Firefox",
+    "description": "Browser tool for design engineers.",
+    "category": "browser",
+    "favicon": "https://www.google.com/s2/favicons?domain=mozilla.org&sz=32"
+  },
+  {
+    "id": 166,
+    "url": "https://floatui.com",
+    "title": "Float UI",
+    "description": "Tailwind components crafted for marketing websites.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=floatui.com&sz=32"
+  },
+  {
+    "id": 276,
+    "url": "https://www.flowbase.co",
+    "title": "Flowbase",
+    "description": "Premium UI components and interaction patterns.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=flowbase.co&sz=32"
+  },
+  {
+    "id": 163,
+    "url": "https://flowbite.com",
+    "title": "Flowbite",
+    "description": "Extensive component library for Tailwind CSS.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=flowbite.com&sz=32"
+  },
+  {
+    "id": 248,
+    "url": "https://flowcub.com",
+    "title": "Flowcub - Free & Premium Website Templates",
+    "description": "Ready-to-Customize Webflow & Framer Templates.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=flowcub.com&sz=32"
+  },
+  {
+    "id": 201,
+    "url": "https://www.fluidfunctionalism.com",
+    "title": "Fluid Functionalism",
+    "description": "Components designed with purposeful physical animation.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=fluidfunctionalism.com&sz=32"
+  },
+  {
+    "id": 428,
+    "url": "https://fly.io",
+    "title": "Fly.io",
+    "description": "Runs Docker containers close to users.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=fly.io&sz=32"
+  },
+  {
+    "id": 161,
+    "url": "https://flyonui.com",
+    "title": "FlyonUI",
+    "description": "Semantic Tailwind CSS components ready for v4.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=flyonui.com&sz=32"
+  },
+  {
+    "id": 98,
+    "url": "https://www.fmod.com",
+    "title": "FMOD",
+    "description": "Audio tool for design engineers.",
+    "category": "audio",
+    "favicon": "https://www.google.com/s2/favicons?domain=fmod.com&sz=32"
+  },
+  {
+    "id": 409,
+    "url": "https://www.foglamp.dev",
+    "title": "Foglamp",
+    "description": "Observability tool monitoring latency and costs.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=foglamp.dev&sz=32"
+  },
+  {
+    "id": 311,
+    "url": "https://folios.gallery",
+    "title": "Folios Gallery",
+    "description": "Selective directory of outstanding designer portfolios.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=folios.gallery&sz=32"
+  },
+  {
+    "id": 75,
+    "url": "https://fontsinuse.com",
+    "title": "Fonts In Use",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=fontsinuse.com&sz=32"
+  },
+  {
+    "id": 127,
+    "url": "https://www.fonts.xyz",
+    "title": "Fonts.xyz",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=fonts.xyz&sz=32"
+  },
+  {
+    "id": 76,
+    "url": "https://www.fontshare.com",
+    "title": "Fontshare",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=fontshare.com&sz=32"
+  },
+  {
+    "id": 430,
+    "url": "https://fontsource.org",
+    "title": "Fontsource",
+    "description": "Self-host open-source fonts via npm packages.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=fontsource.org&sz=32"
+  },
+  {
+    "id": 269,
+    "url": "https://footer.design",
+    "title": "footer.design",
+    "description": "Curated gallery of creative website footers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=footer.design&sz=32"
+  },
+  {
+    "id": 139,
+    "url": "https://forgeui.in",
+    "title": "ForgeUI",
+    "description": "Animated React and Tailwind components and templates.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=forgeui.in&sz=32"
+  },
+  {
+    "id": 203,
+    "url": "https://framecn.dev",
+    "title": "framecn",
+    "description": "Video rendering components for React, built on Editframe.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=framecn.dev&sz=32"
+  },
+  {
     "id": 87,
     "url": "https://www.framer.com",
     "title": "Framer",
@@ -704,44 +1528,548 @@
     "favicon": "https://www.google.com/s2/favicons?domain=framer.com&sz=32"
   },
   {
-    "id": 88,
-    "url": "https://paper.design",
-    "title": "Paper",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=paper.design&sz=32"
+    "id": 37,
+    "url": "https://framer.university/resources",
+    "title": "Framer University",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=framer.university&sz=32"
   },
   {
-    "id": 89,
-    "url": "https://penpot.app",
-    "title": "Penpot",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=penpot.app&sz=32"
+    "id": 77,
+    "url": "https://www.freefaces.gallery",
+    "title": "Free Faces",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=freefaces.gallery&sz=32"
   },
   {
-    "id": 90,
-    "url": "https://rive.app",
-    "title": "Rive",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=rive.app&sz=32"
+    "id": 130,
+    "url": "https://frimousse.liveblocks.io",
+    "title": "Frimousse",
+    "description": "Emoji tool for design engineers.",
+    "category": "emoji",
+    "favicon": "https://www.google.com/s2/favicons?domain=frimousse.liveblocks.io&sz=32"
   },
   {
-    "id": 91,
-    "url": "https://stitch.withgoogle.com",
-    "title": "Stitch by Google Labs",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=stitch.withgoogle.com&sz=32"
+    "id": 407,
+    "url": "https://fx.sh",
+    "title": "fx",
+    "description": "High-performance coding agent CLI in Zig.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=fx.sh&sz=32"
   },
   {
-    "id": 92,
-    "url": "https://cavalry.scenegroup.co",
-    "title": "Cavalry",
-    "description": "Motion tool for design engineers.",
+    "id": 6,
+    "url": "https://www.gameuidatabase.com",
+    "title": "Game UI Database",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=gameuidatabase.com&sz=32"
+  },
+  {
+    "id": 538,
+    "url": "https://genmotion.dev",
+    "title": "GenMotion",
+    "description": "AI launch videos and motion graphics editor.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=genmotion.dev&sz=32"
+  },
+  {
+    "id": 394,
+    "url": "https://getdesign.md",
+    "title": "getdesign.md",
+    "description": "Interactive generator producing AI design rules.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=getdesign.md&sz=32"
+  },
+  {
+    "id": 194,
+    "url": "https://getlayers.ai",
+    "title": "GetLayers",
+    "description": "AI prompts for cinematic page sections.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=getlayers.ai&sz=32"
+  },
+  {
+    "id": 400,
+    "url": "https://ghostex.dev",
+    "title": "Ghostex",
+    "description": "Orchestrates multiple background coding agent sessions.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=ghostex.dev&sz=32"
+  },
+  {
+    "id": 520,
+    "url": "https://ghostty.org",
+    "title": "Ghostty",
+    "description": "Fast GPU-accelerated terminal emulator for developers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ghostty.org&sz=32"
+  },
+  {
+    "id": 531,
+    "url": "https://gif.ski",
+    "title": "Gifski",
+    "description": "High-quality video-to-GIF converter preserving framerates.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=gif.ski&sz=32"
+  },
+  {
+    "id": 256,
+    "url": "https://glimm.dev",
+    "title": "glimm",
+    "description": "Shader-driven page transitions for Next.js.",
     "category": "motion",
-    "favicon": "https://www.google.com/s2/favicons?domain=cavalry.scenegroup.co&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=glimm.dev&sz=32"
+  },
+  {
+    "id": 441,
+    "url": "https://gltf.report",
+    "title": "gltf.report",
+    "description": "Web-based optimizer for 3D glTF files.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=gltf.report&sz=32"
+  },
+  {
+    "id": 111,
+    "url": "https://github.com/pmndrs/gltfjsx",
+    "title": "gltfjsx",
+    "description": "glTF tool for design engineers.",
+    "category": "gltf",
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
+  },
+  {
+    "id": 112,
+    "url": "https://github.com/zeux/meshoptimizer/blob/master/gltf/README.md",
+    "title": "gltfpack",
+    "description": "glTF tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
+  },
+  {
+    "id": 7,
+    "url": "https://godly.website",
+    "title": "Godly",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=godly.website&sz=32"
+  },
+  {
+    "id": 325,
+    "url": "https://godly.design",
+    "title": "Godly",
+    "description": "Godly is a curated gallery of the best designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=godly.design&sz=32"
+  },
+  {
+    "id": 348,
+    "url": "https://goodui.org",
+    "title": "Good UI",
+    "description": "Evidence-based UI design patterns and data.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=goodui.org&sz=32"
+  },
+  {
+    "id": 27,
+    "url": "https://antigravity.google",
+    "title": "Google Antigravity",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=antigravity.google&sz=32"
+  },
+  {
+    "id": 118,
+    "url": "https://gemini.google.com",
+    "title": "Google Gemini",
+    "description": "Research tool for design engineers.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=32"
+  },
+  {
+    "id": 210,
+    "url": "https://gradient-spin.vercel.app",
+    "title": "Gradient Spin",
+    "description": "Spinning gradient loading indicator for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=gradient-spin.vercel.app&sz=32"
+  },
+  {
+    "id": 51,
+    "url": "https://www.granola.ai",
+    "title": "Granola",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=granola.ai&sz=32"
+  },
+  {
+    "id": 307,
+    "url": "https://greatapps.fyi",
+    "title": "Great Apps",
+    "description": "Weekly gallery highlighting exceptional iOS apps.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=greatapps.fyi&sz=32"
+  },
+  {
+    "id": 232,
+    "url": "https://www.great-ui.com",
+    "title": "Great UI",
+    "description": "Copy-paste React and Tailwind CSS components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=great-ui.com&sz=32"
+  },
+  {
+    "id": 306,
+    "url": "https://greatstuff.fyi",
+    "title": "GreatStuff",
+    "description": "Carefully vetted archive of creative tools.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=greatstuff.fyi&sz=32"
+  },
+  {
+    "id": 252,
+    "url": "https://gsap.com",
+    "title": "GSAP",
+    "description": "Industry-standard JavaScript timeline animation engine.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=gsap.com&sz=32"
+  },
+  {
+    "id": 497,
+    "url": "https://www.usehallmark.com",
+    "title": "Hallmark",
+    "description": "Landing page builder producing handcrafted designs.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=usehallmark.com&sz=32"
+  },
+  {
+    "id": 169,
+    "url": "https://headlessui.com",
+    "title": "Headless UI",
+    "description": "Unstyled accessible components from Tailwind Labs.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=headlessui.com&sz=32"
+  },
+  {
+    "id": 402,
+    "url": "https://herdr.dev",
+    "title": "Herdr",
+    "description": "Distributed runner managing coding agent jobs.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=herdr.dev&sz=32"
+  },
+  {
+    "id": 326,
+    "url": "https://herogrids.com",
+    "title": "Herogrids",
+    "description": "Curated Collection of Hero Section Designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=herogrids.com&sz=32"
+  },
+  {
+    "id": 456,
+    "url": "https://heroicons.com",
+    "title": "Heroicons",
+    "description": "Handcrafted SVG icons from Tailwind creators.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=heroicons.com&sz=32"
+  },
+  {
+    "id": 475,
+    "url": "https://heroicons-animated.com",
+    "title": "Heroicons Animated",
+    "description": "Heroicons enhanced with reactive hover animations.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=heroicons-animated.com&sz=32"
+  },
+  {
+    "id": 128,
+    "url": "https://heroui.com",
+    "title": "HeroUI",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=heroui.com&sz=32"
+  },
+  {
+    "id": 176,
+    "url": "https://hexter-ui.com",
+    "title": "Hexter UI",
+    "description": "Clean component collection for shadcn projects.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=hexter-ui.com&sz=32"
+  },
+  {
+    "id": 518,
+    "url": "https://prepora.xyz",
+    "title": "Home / Prepora",
+    "description": "Practice IELTS reading, listening, and writing.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=prepora.xyz&sz=32"
+  },
+  {
+    "id": 108,
+    "url": "https://www.sidefx.com",
+    "title": "Houdini",
+    "description": "3D tool for design engineers.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=sidefx.com&sz=32"
+  },
+  {
+    "id": 277,
+    "url": "https://hoverstat.es",
+    "title": "Hover States",
+    "description": "Showcase of innovative interactive web design.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=hoverstat.es&sz=32"
+  },
+  {
+    "id": 8,
+    "url": "https://www.hudsandguis.com",
+    "title": "HUDS+GUIS",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=hudsandguis.com&sz=32"
+  },
+  {
+    "id": 435,
+    "url": "https://huetone.ardov.me",
+    "title": "Huetone",
+    "description": "Accessible palette generator balancing contrast ratios.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=huetone.ardov.me&sz=32"
+  },
+  {
+    "id": 471,
+    "url": "https://hugeicons.com",
+    "title": "HugeIcons",
+    "description": "Comprehensive library of stroke and solid icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=hugeicons.com&sz=32"
+  },
+  {
+    "id": 395,
+    "url": "https://design-md.hyperbrowser.ai",
+    "title": "Hyperbrowser Design.md",
+    "description": "DESIGN.MD generator extracting rules from websites.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=design-md.hyperbrowser.ai&sz=32"
+  },
+  {
+    "id": 408,
+    "url": "https://www.hyperframes.dev",
+    "title": "HyperFrames",
+    "description": "Headless HTML-to-MP4 video rendering engine.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=hyperframes.dev&sz=32"
+  },
+  {
+    "id": 164,
+    "url": "https://www.hyperui.dev",
+    "title": "HyperUI",
+    "description": "Free open-source Tailwind CSS UI components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=hyperui.dev&sz=32"
+  },
+  {
+    "id": 478,
+    "url": "https://iconfoundry.store",
+    "title": "Icon Foundry",
+    "description": "Searchable collection of icons from many families.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=iconfoundry.store&sz=32"
+  },
+  {
+    "id": 454,
+    "url": "https://icon.museum",
+    "title": "Icon Museum",
+    "description": "Archive celebrating mobile app icon craftsmanship.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=icon.museum&sz=32"
+  },
+  {
+    "id": 452,
+    "url": "https://iconify.design",
+    "title": "Iconify",
+    "description": "Unified framework providing instant icon access.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=iconify.design&sz=32"
+  },
+  {
+    "id": 460,
+    "url": "https://iconoir.com",
+    "title": "Iconoir",
+    "description": "Open-source SVG icons with consistent strokes.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=iconoir.com&sz=32"
+  },
+  {
+    "id": 476,
+    "url": "https://icons.download",
+    "title": "Icons.download",
+    "description": "Curated icon library in sixteen aesthetic styles.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=icons.download&sz=32"
+  },
+  {
+    "id": 474,
+    "url": "https://icons0.dev",
+    "title": "icons0",
+    "description": "Search engine covering over 200k icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=icons0.dev&sz=32"
+  },
+  {
+    "id": 473,
+    "url": "https://app.iconsax.io",
+    "title": "Iconsax",
+    "description": "Versatile icon set with six visual styles.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=app.iconsax.io&sz=32"
+  },
+  {
+    "id": 481,
+    "url": "https://iconsdb.app",
+    "title": "IconsDB",
+    "description": "Instant, semantic search across 200K+ icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=iconsdb.app&sz=32"
+  },
+  {
+    "id": 493,
+    "url": "https://icoon.co",
+    "title": "Icoon",
+    "description": "AI tool generating custom 3D icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=icoon.co&sz=32"
+  },
+  {
+    "id": 261,
+    "url": "https://www.imageory.in",
+    "title": "Imageory",
+    "description": "Visual gallery pairing images with prompts.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=imageory.in&sz=32"
+  },
+  {
+    "id": 413,
+    "url": "https://impeccable.style",
+    "title": "Impeccable",
+    "description": "Design intelligence skill for AI agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=impeccable.style&sz=32"
+  },
+  {
+    "id": 342,
+    "url": "https://inclusive-components.design",
+    "title": "Inclusive Components",
+    "description": "Pattern library teaching accessible component design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=inclusive-components.design&sz=32"
+  },
+  {
+    "id": 479,
+    "url": "https://inkword.app",
+    "title": "Inkword",
+    "description": "Turns a single word into a matching illustration.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=inkword.app&sz=32"
+  },
+  {
+    "id": 284,
+    "url": "https://theinspirationgrid.com",
+    "title": "Inspiration Grid",
+    "description": "Online magazine celebrating creative visual design.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=theinspirationgrid.com&sz=32"
+  },
+  {
+    "id": 290,
+    "url": "https://www.inspora.design",
+    "title": "inspora.design",
+    "description": "Archive of contemporary visual web design.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=inspora.design&sz=32"
+  },
+  {
+    "id": 303,
+    "url": "https://www.insposite.com",
+    "title": "Insposite",
+    "description": "Directory of design references and tools.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=insposite.com&sz=32"
+  },
+  {
+    "id": 406,
+    "url": "https://integrations.sh",
+    "title": "integrations.sh",
+    "description": "Repository of API integration specifications for agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=integrations.sh&sz=32"
+  },
+  {
+    "id": 333,
+    "url": "https://www.interfacecraft.dev",
+    "title": "Interface Craft",
+    "description": "Articles exploring modern digital interface craftsmanship.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=interfacecraft.dev&sz=32"
+  },
+  {
+    "id": 9,
+    "url": "https://interfaceingame.com",
+    "title": "Interface In Game",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=interfaceingame.com&sz=32"
+  },
+  {
+    "id": 359,
+    "url": "https://interfaces.dev",
+    "title": "Interfaces",
+    "description": "Monthly digital publication exploring digital interfaces.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=interfaces.dev&sz=32"
+  },
+  {
+    "id": 218,
+    "url": "https://www.interior.dev",
+    "title": "interior.dev",
+    "description": "Micro-interactions finely tuned for click responsiveness.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=interior.dev&sz=32"
+  },
+  {
+    "id": 461,
+    "url": "https://ionic.io/ionicons",
+    "title": "Ionicons",
+    "description": "Premium icon pack for web and mobile.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ionic.io&sz=32"
+  },
+  {
+    "id": 401,
+    "url": "https://is-agentic.com",
+    "title": "is-agentic.com",
+    "description": "Scores how effectively websites support crawlers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=is-agentic.com&sz=32"
+  },
+  {
+    "id": 293,
+    "url": "https://isthereanytool.app",
+    "title": "isthereanytool",
+    "description": "Directory of lesser-known design, craft, and AI tools.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=isthereanytool.app&sz=32"
+  },
+  {
+    "id": 316,
+    "url": "https://gallery.jessyin.world",
+    "title": "Jessy In's Gallery",
+    "description": "Collaborative moodboard of unique visual finds.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=gallery.jessyin.world&sz=32"
   },
   {
     "id": 93,
@@ -750,6 +2078,214 @@
     "description": "Motion tool for design engineers.",
     "category": "motion",
     "favicon": "https://www.google.com/s2/favicons?domain=jitter.video&sz=32"
+  },
+  {
+    "id": 343,
+    "url": "https://joshwcomeau.com",
+    "title": "Josh Comeau",
+    "description": "Interactive tutorials breaking down CSS mechanics.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=joshwcomeau.com&sz=32"
+  },
+  {
+    "id": 158,
+    "url": "https://www.kibo-ui.com",
+    "title": "Kibo UI",
+    "description": "Component registry tailored for AI interfaces.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=kibo-ui.com&sz=32"
+  },
+  {
+    "id": 101,
+    "url": "https://www.kiriengine.app",
+    "title": "KIRI Engine",
+    "description": "Volumetric tool for design engineers.",
+    "category": "volumetric",
+    "favicon": "https://www.google.com/s2/favicons?domain=kiriengine.app&sz=32"
+  },
+  {
+    "id": 429,
+    "url": "https://klim.co.nz",
+    "title": "Klim",
+    "description": "Type foundry creating contemporary web typefaces.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=klim.co.nz&sz=32"
+  },
+  {
+    "id": 182,
+    "url": "https://kokonutui.com",
+    "title": "Kokonut UI",
+    "description": "Creative interactive components for shadcn format.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=kokonutui.com&sz=32"
+  },
+  {
+    "id": 421,
+    "url": "https://kombai.com",
+    "title": "Kombai",
+    "description": "AI design engineer that codes UI from context.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=kombai.com&sz=32"
+  },
+  {
+    "id": 336,
+    "url": "https://lab01.dev",
+    "title": "Lab01",
+    "description": "Refined UI experiments from a studio.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=lab01.dev&sz=32"
+  },
+  {
+    "id": 417,
+    "url": "https://lafys.com",
+    "title": "Lafys",
+    "description": "Prompt-driven UI component generator for builders.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=lafys.com&sz=32"
+  },
+  {
+    "id": 270,
+    "url": "https://land-book.com",
+    "title": "Land-book",
+    "description": "Landing pages organized by industry.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=land-book.com&sz=32"
+  },
+  {
+    "id": 301,
+    "url": "https://landdding.com",
+    "title": "Landdding",
+    "description": "Daily catalogue of creative landing pages.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=landdding.com&sz=32"
+  },
+  {
+    "id": 297,
+    "url": "https://landing.love",
+    "title": "Landing Love",
+    "description": "Delightful landing pages organized by animation.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=landing.love&sz=32"
+  },
+  {
+    "id": 279,
+    "url": "https://www.landingfolio.com",
+    "title": "Landingfolio",
+    "description": "Extensive library of landing page designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=landingfolio.com&sz=32"
+  },
+  {
+    "id": 273,
+    "url": "https://www.lapa.ninja",
+    "title": "Lapa Ninja",
+    "description": "Curated gallery of responsive landing pages.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=lapa.ninja&sz=32"
+  },
+  {
+    "id": 388,
+    "url": "https://launchshots.com",
+    "title": "Launch Shots",
+    "description": "The App Store screenshots & ASO.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=launchshots.com&sz=32"
+  },
+  {
+    "id": 10,
+    "url": "https://layers.to/explore",
+    "title": "Layers",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=layers.to&sz=32"
+  },
+  {
+    "id": 345,
+    "url": "https://learn-kernels.com",
+    "title": "Learn Kernels",
+    "description": "Interactive guide exploring GPU kernel programming.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=learn-kernels.com&sz=32"
+  },
+  {
+    "id": 347,
+    "url": "https://learn-ui.com",
+    "title": "Learn UI",
+    "description": "Video course teaching practical user interface design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=learn-ui.com&sz=32"
+  },
+  {
+    "id": 211,
+    "url": "https://libraries.dev",
+    "title": "Libraries.dev",
+    "description": "UI effects and components for agents.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=libraries.dev&sz=32"
+  },
+  {
+    "id": 177,
+    "url": "https://lightswind.com",
+    "title": "Lightswind",
+    "description": "Tailwind components featuring lighting and glows.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=lightswind.com&sz=32"
+  },
+  {
+    "id": 71,
+    "url": "https://linear.app",
+    "title": "Linear",
+    "description": "Organization tool for design engineers.",
+    "category": "organization",
+    "favicon": "https://www.google.com/s2/favicons?domain=linear.app&sz=32"
+  },
+  {
+    "id": 304,
+    "url": "https://loader-buttons.appllama.io",
+    "title": "Loader Buttons",
+    "description": "Gallery of 25 loading button animations.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=loader-buttons.appllama.io&sz=32"
+  },
+  {
+    "id": 237,
+    "url": "https://loading.dev",
+    "title": "loading.dev",
+    "description": "Lightweight library of loading indicators for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=loading.dev&sz=32"
+  },
+  {
+    "id": 11,
+    "url": "https://loadmo.re",
+    "title": "loadmo.re",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=loadmo.re&sz=32"
+  },
+  {
+    "id": 52,
+    "url": "https://localsend.org",
+    "title": "LocalSend",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=localsend.org&sz=32"
+  },
+  {
+    "id": 56,
+    "url": "https://mifi.no/losslesscut",
+    "title": "LosslessCut",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=mifi.no&sz=32"
+  },
+  {
+    "id": 260,
+    "url": "https://lotiqlab.com",
+    "title": "Lotiqlab",
+    "description": "Free online Lottie editor and motion tool.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=lotiqlab.com&sz=32"
   },
   {
     "id": 94,
@@ -768,52 +2304,20 @@
     "favicon": "https://www.google.com/s2/favicons?domain=lottielab.com&sz=32"
   },
   {
-    "id": 96,
-    "url": "https://www.theatrejs.com",
-    "title": "Theatre.js",
-    "description": "Motion tool for design engineers.",
-    "category": "motion",
-    "favicon": "https://www.google.com/s2/favicons?domain=theatrejs.com&sz=32"
+    "id": 450,
+    "url": "https://lucide.dev",
+    "title": "Lucide",
+    "description": "Community-maintained Feather Icons fork with thousands of glyphs.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=lucide.dev&sz=32"
   },
   {
-    "id": 97,
-    "url": "https://elevenlabs.io",
-    "title": "ElevenLabs",
-    "description": "Audio tool for design engineers.",
-    "category": "audio",
-    "favicon": "https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=32"
-  },
-  {
-    "id": 98,
-    "url": "https://www.fmod.com",
-    "title": "FMOD",
-    "description": "Audio tool for design engineers.",
-    "category": "audio",
-    "favicon": "https://www.google.com/s2/favicons?domain=fmod.com&sz=32"
-  },
-  {
-    "id": 99,
-    "url": "https://splice.com/features/sounds",
-    "title": "Splice",
-    "description": "Audio tool for design engineers.",
-    "category": "audio",
-    "favicon": "https://www.google.com/s2/favicons?domain=splice.com&sz=32"
-  },
-  {
-    "id": 100,
-    "url": "https://www.depthkit.tv",
-    "title": "Depthkit",
-    "description": "Volumetric tool for design engineers.",
-    "category": "volumetric",
-    "favicon": "https://www.google.com/s2/favicons?domain=depthkit.tv&sz=32"
-  },
-  {
-    "id": 101,
-    "url": "https://www.kiriengine.app",
-    "title": "KIRI Engine",
-    "description": "Volumetric tool for design engineers.",
-    "category": "volumetric",
-    "favicon": "https://www.google.com/s2/favicons?domain=kiriengine.app&sz=32"
+    "id": 477,
+    "url": "https://lucide-animated.com",
+    "title": "Lucide Animated",
+    "description": "Lucide icons enhanced with micro-animations.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=lucide-animated.com&sz=32"
   },
   {
     "id": 102,
@@ -824,172 +2328,20 @@
     "favicon": "https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=32"
   },
   {
-    "id": 103,
-    "url": "https://poly.cam",
-    "title": "Polycam",
-    "description": "Volumetric tool for design engineers.",
-    "category": "volumetric",
-    "favicon": "https://www.google.com/s2/favicons?domain=poly.cam&sz=32"
+    "id": 131,
+    "url": "https://magicui.design",
+    "title": "Magic UI",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=magicui.design&sz=32"
   },
   {
-    "id": 104,
-    "url": "https://www.unrealengine.com/en-US/realityscan",
-    "title": "RealityScan",
-    "description": "Volumetric tool for design engineers.",
-    "category": "volumetric",
-    "favicon": "https://www.google.com/s2/favicons?domain=unrealengine.com&sz=32"
-  },
-  {
-    "id": 105,
-    "url": "https://superspl.at/editor",
-    "title": "SuperSplat Editor",
-    "description": "Volumetric tool for design engineers.",
-    "category": "volumetric",
-    "favicon": "https://www.google.com/s2/favicons?domain=superspl.at&sz=32"
-  },
-  {
-    "id": 106,
-    "url": "https://www.bezi.com",
-    "title": "Bezi",
-    "description": "3D tool for design engineers.",
-    "category": "3d",
-    "favicon": "https://www.google.com/s2/favicons?domain=bezi.com&sz=32"
-  },
-  {
-    "id": 107,
-    "url": "https://www.blender.org",
-    "title": "Blender",
-    "description": "3D tool for design engineers.",
-    "category": "3d",
-    "favicon": "https://www.google.com/s2/favicons?domain=blender.org&sz=32"
-  },
-  {
-    "id": 108,
-    "url": "https://www.sidefx.com",
-    "title": "Houdini",
-    "description": "3D tool for design engineers.",
-    "category": "3d",
-    "favicon": "https://www.google.com/s2/favicons?domain=sidefx.com&sz=32"
-  },
-  {
-    "id": 109,
-    "url": "https://spline.design",
-    "title": "Spline",
-    "description": "3D tool for design engineers.",
-    "category": "3d",
-    "favicon": "https://www.google.com/s2/favicons?domain=spline.design&sz=32"
-  },
-  {
-    "id": 110,
-    "url": "https://womp.com",
-    "title": "Womp",
-    "description": "3D tool for design engineers.",
-    "category": "3d",
-    "favicon": "https://www.google.com/s2/favicons?domain=womp.com&sz=32"
-  },
-  {
-    "id": 111,
-    "url": "https://github.com/pmndrs/gltfjsx",
-    "title": "gltfjsx",
-    "description": "glTF tool for design engineers.",
-    "category": "gltf",
-    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
-  },
-  {
-    "id": 112,
-    "url": "https://github.com/zeux/meshoptimizer/blob/master/gltf/README.md",
-    "title": "gltfpack",
-    "description": "glTF tool for design engineers.",
-    "category": "gltf",
-    "favicon": "https://www.google.com/s2/favicons?domain=github.com&sz=32"
-  },
-  {
-    "id": 113,
-    "url": "https://viewer.needle.tools",
-    "title": "Needle Viewer",
-    "description": "glTF tool for design engineers.",
-    "category": "gltf",
-    "favicon": "https://www.google.com/s2/favicons?domain=viewer.needle.tools&sz=32"
-  },
-  {
-    "id": 114,
-    "url": "https://www.clo3d.com",
-    "title": "CLO",
-    "description": "Digital Fashion tool for design engineers.",
-    "category": "digital-fashion",
-    "favicon": "https://www.google.com/s2/favicons?domain=clo3d.com&sz=32"
-  },
-  {
-    "id": 115,
-    "url": "https://www.marvelousdesigner.com",
-    "title": "Marvelous Designer",
-    "description": "Digital Fashion tool for design engineers.",
-    "category": "digital-fashion",
-    "favicon": "https://www.google.com/s2/favicons?domain=marvelousdesigner.com&sz=32"
-  },
-  {
-    "id": 116,
-    "url": "https://www.linctex.com",
-    "title": "Style3D",
-    "description": "Digital Fashion tool for design engineers.",
-    "category": "digital-fashion",
-    "favicon": "https://www.google.com/s2/favicons?domain=linctex.com&sz=32"
-  },
-  {
-    "id": 117,
-    "url": "https://chatgpt.com",
-    "title": "ChatGPT",
-    "description": "Research tool for design engineers.",
-    "category": "research",
-    "favicon": "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=32"
-  },
-  {
-    "id": 118,
-    "url": "https://gemini.google.com",
-    "title": "Google Gemini",
-    "description": "Research tool for design engineers.",
-    "category": "research",
-    "favicon": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=32"
-  },
-  {
-    "id": 119,
-    "url": "https://notebooklm.google",
-    "title": "NotebookLM",
-    "description": "Research tool for design engineers.",
-    "category": "research",
-    "favicon": "https://www.google.com/s2/favicons?domain=notebooklm.google&sz=32"
-  },
-  {
-    "id": 120,
-    "url": "https://www.diabrowser.com",
-    "title": "Dia Browser",
-    "description": "Browser tool for design engineers.",
-    "category": "browser",
-    "favicon": "https://www.google.com/s2/favicons?domain=diabrowser.com&sz=32"
-  },
-  {
-    "id": 121,
-    "url": "https://brave.com",
-    "title": "Brave",
-    "description": "Browser tool for design engineers.",
-    "category": "browser",
-    "favicon": "https://www.google.com/s2/favicons?domain=brave.com&sz=32"
-  },
-  {
-    "id": 122,
-    "url": "https://www.mozilla.org/firefox/new",
-    "title": "Firefox",
-    "description": "Browser tool for design engineers.",
-    "category": "browser",
-    "favicon": "https://www.google.com/s2/favicons?domain=mozilla.org&sz=32"
-  },
-  {
-    "id": 123,
-    "url": "https://zen-browser.app",
-    "title": "Zen",
-    "description": "Browser tool for design engineers.",
-    "category": "browser",
-    "favicon": "https://www.google.com/s2/favicons?domain=zen-browser.app&sz=32"
+    "id": 332,
+    "url": "https://make.design",
+    "title": "make.design",
+    "description": "AI generator turning prompts into polished designs.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=make.design&sz=32"
   },
   {
     "id": 124,
@@ -1000,84 +2352,60 @@
     "favicon": "https://www.google.com/s2/favicons?domain=makeemoji.com&sz=32"
   },
   {
-    "id": 130,
-    "url": "https://frimousse.liveblocks.io",
-    "title": "Frimousse",
-    "description": "Emoji tool for design engineers.",
-    "category": "emoji",
-    "favicon": "https://www.google.com/s2/favicons?domain=frimousse.liveblocks.io&sz=32"
+    "id": 360,
+    "url": "https://www.makingsoftware.com",
+    "title": "Making Software",
+    "description": "Essays examining how tools shape design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=makingsoftware.com&sz=32"
   },
   {
-    "id": 125,
-    "url": "https://recent.design",
-    "title": "Recent Design",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=recent.design&sz=32"
+    "id": 115,
+    "url": "https://www.marvelousdesigner.com",
+    "title": "Marvelous Designer",
+    "description": "Digital Fashion tool for design engineers.",
+    "category": "digital-fashion",
+    "favicon": "https://www.google.com/s2/favicons?domain=marvelousdesigner.com&sz=32"
   },
   {
-    "id": 126,
-    "url": "https://find.design",
-    "title": "Find Design",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=find.design&sz=32"
-  },
-  {
-    "id": 129,
-    "url": "https://deck.gallery",
-    "title": "Deck Gallery",
-    "description": "Inspiration tool for design engineers.",
-    "category": "inspiration",
-    "favicon": "https://www.google.com/s2/favicons?domain=deck.gallery&sz=32"
-  },
-  {
-    "id": 127,
-    "url": "https://www.fonts.xyz",
-    "title": "Fonts.xyz",
-    "description": "Fonts tool for design engineers.",
-    "category": "fonts",
-    "favicon": "https://www.google.com/s2/favicons?domain=fonts.xyz&sz=32"
-  },
-  {
-    "id": 131,
-    "url": "https://magicui.design",
-    "title": "Magic UI",
-    "description": "Components tool for design engineers.",
-    "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=magicui.design&sz=32"
-  },
-  {
-    "id": 132,
-    "url": "https://www.onlook.com",
-    "title": "Onlook",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=onlook.com&sz=32"
-  },
-  {
-    "id": 133,
-    "url": "https://openpencil.dev",
-    "title": "OpenPencil",
-    "description": "Interface tool for design engineers.",
-    "category": "interface",
-    "favicon": "https://www.google.com/s2/favicons?domain=openpencil.dev&sz=32"
-  },
-  {
-    "id": 134,
-    "url": "https://svgl.app",
-    "title": "SVGL",
-    "description": "Web Utility tool for design engineers.",
+    "id": 511,
+    "url": "https://mascofast.com",
+    "title": "Mascofast",
+    "description": "AI tool generating animated transparent 3D mascots.",
     "category": "web-utility",
-    "favicon": "https://www.google.com/s2/favicons?domain=svgl.app&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=mascofast.com&sz=32"
   },
   {
-    "id": 135,
-    "url": "https://cap.so",
-    "title": "Cap",
-    "description": "Video & Capture tool for design engineers.",
-    "category": "video-capture",
-    "favicon": "https://www.google.com/s2/favicons?domain=cap.so&sz=32"
+    "id": 457,
+    "url": "https://fonts.google.com/icons",
+    "title": "Material Symbols",
+    "description": "Google variable icon font spanning three styles.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=fonts.google.com&sz=32"
+  },
+  {
+    "id": 327,
+    "url": "https://maxibestof.one",
+    "title": "MaxiBestOf",
+    "description": "Websites, sections and fonts inspiration.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=maxibestof.one&sz=32"
+  },
+  {
+    "id": 405,
+    "url": "https://mcpcn.dev",
+    "title": "mcpcn",
+    "description": "ChatGPT, Claude, and MCP app UI components for React.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=mcpcn.dev&sz=32"
+  },
+  {
+    "id": 167,
+    "url": "https://merakiui.com",
+    "title": "Meraki UI",
+    "description": "Tailwind components with right-to-left language support.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=merakiui.com&sz=32"
   },
   {
     "id": 136,
@@ -1088,6 +2416,822 @@
     "favicon": "https://www.google.com/s2/favicons?domain=mesurer.ibelick.com&sz=32"
   },
   {
+    "id": 502,
+    "url": "https://mesurer.dev",
+    "title": "Mesurer",
+    "description": "On-screen tool checking website pixel spacing.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=mesurer.dev&sz=32"
+  },
+  {
+    "id": 12,
+    "url": "https://minimal.gallery",
+    "title": "Minimal Gallery",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=minimal.gallery&sz=32"
+  },
+  {
+    "id": 13,
+    "url": "https://mnmm.xyz",
+    "title": "Minimum",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=mnmm.xyz&sz=32"
+  },
+  {
+    "id": 65,
+    "url": "https://miro.com",
+    "title": "Miro",
+    "description": "Whiteboard tool for design engineers.",
+    "category": "whiteboard",
+    "favicon": "https://www.google.com/s2/favicons?domain=miro.com&sz=32"
+  },
+  {
+    "id": 14,
+    "url": "https://mobbin.com",
+    "title": "Mobbin",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=mobbin.com&sz=32"
+  },
+  {
+    "id": 255,
+    "url": "https://www.morphicons.com",
+    "title": "morphicons",
+    "description": "Spring-physics icon morphing animation library.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=morphicons.com&sz=32"
+  },
+  {
+    "id": 331,
+    "url": "https://morphin.dev",
+    "title": "Morphin.dev",
+    "description": "Studying motion across great digital products.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=morphin.dev&sz=32"
+  },
+  {
+    "id": 254,
+    "url": "https://morphrig.dev",
+    "title": "Morphrig",
+    "description": "Interactive manual on how icon morphing works.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=morphrig.dev&sz=32"
+  },
+  {
+    "id": 251,
+    "url": "https://motion.dev",
+    "title": "Motion",
+    "description": "Production-ready animation library for React applications.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=motion.dev&sz=32"
+  },
+  {
+    "id": 38,
+    "url": "https://motion-primitives.com",
+    "title": "Motion Primitives",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=motion-primitives.com&sz=32"
+  },
+  {
+    "id": 298,
+    "url": "https://motionimo.xyz",
+    "title": "Motionimo",
+    "description": "Extensive library of motion design clips.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=motionimo.xyz&sz=32"
+  },
+  {
+    "id": 66,
+    "url": "https://museapp.com",
+    "title": "Muse",
+    "description": "Whiteboard tool for design engineers.",
+    "category": "whiteboard",
+    "favicon": "https://www.google.com/s2/favicons?domain=museapp.com&sz=32"
+  },
+  {
+    "id": 353,
+    "url": "https://muz.li",
+    "title": "Muzli",
+    "description": "Daily digest curating latest design trends.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=muz.li&sz=32"
+  },
+  {
+    "id": 467,
+    "url": "https://mx-icons.vercel.app",
+    "title": "MX Icons",
+    "description": "Large collection of customizable React icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=mx-icons.vercel.app&sz=32"
+  },
+  {
+    "id": 268,
+    "url": "https://navbar.design",
+    "title": "navbar.design",
+    "description": "Curated gallery of navigation bar patterns.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=navbar.design&sz=32"
+  },
+  {
+    "id": 288,
+    "url": "https://navbar.gallery",
+    "title": "navbar.gallery",
+    "description": "Focused collection of modern navigation bars.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=navbar.gallery&sz=32"
+  },
+  {
+    "id": 113,
+    "url": "https://viewer.needle.tools",
+    "title": "Needle Viewer",
+    "description": "glTF tool for design engineers.",
+    "category": "gltf",
+    "favicon": "https://www.google.com/s2/favicons?domain=viewer.needle.tools&sz=32"
+  },
+  {
+    "id": 426,
+    "url": "https://netlify.com",
+    "title": "Netlify",
+    "description": "Web platform providing continuous deployment pipelines.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=netlify.com&sz=32"
+  },
+  {
+    "id": 397,
+    "url": "https://neuform.ai",
+    "title": "Neuform",
+    "description": "AI-assisted interface design producing clean code.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=neuform.ai&sz=32"
+  },
+  {
+    "id": 183,
+    "url": "https://nexui.dev",
+    "title": "Nex UI",
+    "description": "Extensible component library for modern startups.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=nexui.dev&sz=32"
+  },
+  {
+    "id": 209,
+    "url": "https://ui.nexvyn.dev",
+    "title": "Nexvyn UI",
+    "description": "Polished drop-in components for digital interfaces.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.nexvyn.dev&sz=32"
+  },
+  {
+    "id": 328,
+    "url": "https://nicelydone.club",
+    "title": "Nicelydone",
+    "description": "The largest SaaS design inspiration library.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=nicelydone.club&sz=32"
+  },
+  {
+    "id": 184,
+    "url": "https://ninna-ui.dev",
+    "title": "Ninja UI",
+    "description": "Lightweight UI components for fast websites.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ninna-ui.dev&sz=32"
+  },
+  {
+    "id": 81,
+    "url": "https://nodes.io",
+    "title": "Nodes",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=nodes.io&sz=32"
+  },
+  {
+    "id": 82,
+    "url": "https://nodetoy.co",
+    "title": "NodeToy",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=nodetoy.co&sz=32"
+  },
+  {
+    "id": 244,
+    "url": "https://noicess.fun",
+    "title": "NoiceSS",
+    "description": "Create stunning, beautiful screenshot mockups.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=noicess.fun&sz=32"
+  },
+  {
+    "id": 119,
+    "url": "https://notebooklm.google",
+    "title": "NotebookLM",
+    "description": "Research tool for design engineers.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=notebooklm.google&sz=32"
+  },
+  {
+    "id": 480,
+    "url": "https://nucleoapp.com",
+    "title": "Nucleo – The Ultimate Icon Bundle",
+    "description": "Explore the Nucleo icons, 40,000+ premium SVG icon.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=nucleoapp.com&sz=32"
+  },
+  {
+    "id": 382,
+    "url": "https://nuejs.org",
+    "title": "Nue",
+    "description": "Lightweight web framework alternative to React.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=nuejs.org&sz=32"
+  },
+  {
+    "id": 39,
+    "url": "https://number-flow.barvian.me",
+    "title": "NumberFlow",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=number-flow.barvian.me&sz=32"
+  },
+  {
+    "id": 374,
+    "url": "https://nuqs.47ng.com",
+    "title": "nuqs",
+    "description": "Type-safe URL search params for React.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=nuqs.47ng.com&sz=32"
+  },
+  {
+    "id": 516,
+    "url": "https://nute.app",
+    "title": "Nute",
+    "description": "No nonsense notes.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=nute.app&sz=32"
+  },
+  {
+    "id": 57,
+    "url": "https://www.nvidia.com/en-us/software/nvidia-app/#shadowplay",
+    "title": "NVIDIA ShadowPlay",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=32"
+  },
+  {
+    "id": 58,
+    "url": "https://obsproject.com",
+    "title": "OBS Studio",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=obsproject.com&sz=32"
+  },
+  {
+    "id": 72,
+    "url": "https://obsidian.md",
+    "title": "Obsidian",
+    "description": "Organization tool for design engineers.",
+    "category": "organization",
+    "favicon": "https://www.google.com/s2/favicons?domain=obsidian.md&sz=32"
+  },
+  {
+    "id": 222,
+    "url": "https://www.odysseyui.com",
+    "title": "Odyssey UI",
+    "description": "Animated React components built on shadcn.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=odysseyui.com&sz=32"
+  },
+  {
+    "id": 489,
+    "url": "https://www.ogfolio.com",
+    "title": "OGFolio",
+    "description": "Inspect and preview Open Graph social cards.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ogfolio.com&sz=32"
+  },
+  {
+    "id": 196,
+    "url": "https://www.ogimagecn.com",
+    "title": "ogimagecn",
+    "description": "Open Graph image components using Satori.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ogimagecn.com&sz=32"
+  },
+  {
+    "id": 46,
+    "url": "https://oklch.com",
+    "title": "OKLCH Color Picker",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=oklch.com&sz=32"
+  },
+  {
+    "id": 281,
+    "url": "https://onepagelove.com",
+    "title": "One Page Love",
+    "description": "Showcase of single-page website designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=onepagelove.com&sz=32"
+  },
+  {
+    "id": 191,
+    "url": "https://oneko.dhrv.pw",
+    "title": "Oneko",
+    "description": "Pixel cat companion that chases cursor.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=oneko.dhrv.pw&sz=32"
+  },
+  {
+    "id": 132,
+    "url": "https://www.onlook.com",
+    "title": "Onlook",
+    "description": "Interface tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=onlook.com&sz=32"
+  },
+  {
+    "id": 392,
+    "url": "https://open-design.ai",
+    "title": "Open Design",
+    "description": "Standardized design systems formatted for agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=open-design.ai&sz=32"
+  },
+  {
+    "id": 507,
+    "url": "https://opensource-together.com",
+    "title": "Open Source Together",
+    "description": "Platform matching developers with open-source projects.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=opensource-together.com&sz=32"
+  },
+  {
+    "id": 28,
+    "url": "https://openai.com/codex",
+    "title": "OpenAI Codex",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=openai.com&sz=32"
+  },
+  {
+    "id": 314,
+    "url": "https://openalternative.co",
+    "title": "OpenAlternative",
+    "description": "Open-source alternatives to popular SaaS tools.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=openalternative.co&sz=32"
+  },
+  {
+    "id": 412,
+    "url": "https://opencode.ai",
+    "title": "OpenCode",
+    "description": "Open-source terminal AI coding agent.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=opencode.ai&sz=32"
+  },
+  {
+    "id": 133,
+    "url": "https://openpencil.dev",
+    "title": "OpenPencil",
+    "description": "Interface tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=openpencil.dev&sz=32"
+  },
+  {
+    "id": 448,
+    "url": "https://openshaders.com",
+    "title": "OpenShaders",
+    "description": "Open-source shader collection for web projects.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=openshaders.com&sz=32"
+  },
+  {
+    "id": 143,
+    "url": "https://opensourceui.in",
+    "title": "Opensource UI",
+    "description": "Copy-paste React UI and device mockups.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=opensourceui.in&sz=32"
+  },
+  {
+    "id": 449,
+    "url": "https://orbkit.zzzzshawn.cloud",
+    "title": "Orbkit",
+    "description": "WebGL shader renderer for orb animations.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=orbkit.zzzzshawn.cloud&sz=32"
+  },
+  {
+    "id": 378,
+    "url": "https://ossperks.com",
+    "title": "OSS Perks",
+    "description": "Free cloud credits for open-source maintainers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=ossperks.com&sz=32"
+  },
+  {
+    "id": 240,
+    "url": "https://paceui.com",
+    "title": "PaceUI",
+    "description": "Production-ready React UI for React Apps.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=paceui.com&sz=32"
+  },
+  {
+    "id": 146,
+    "url": "https://painterly.design-tools.workers.dev",
+    "title": "Painterly",
+    "description": "Artistic canvas loader components for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=painterly.design-tools.workers.dev&sz=32"
+  },
+  {
+    "id": 88,
+    "url": "https://paper.design",
+    "title": "Paper",
+    "description": "Interface tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=paper.design&sz=32"
+  },
+  {
+    "id": 447,
+    "url": "https://shaders.paper.design",
+    "title": "Paper Shaders",
+    "description": "Zero-dependency shaders ready to import.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=shaders.paper.design&sz=32"
+  },
+  {
+    "id": 59,
+    "url": "https://parsec.app",
+    "title": "Parsec",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=parsec.app&sz=32"
+  },
+  {
+    "id": 206,
+    "url": "https://pdfcn.dev",
+    "title": "pdfcn",
+    "description": "PDF components for React, built on Takumi and Forme.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=pdfcn.dev&sz=32"
+  },
+  {
+    "id": 89,
+    "url": "https://penpot.app",
+    "title": "Penpot",
+    "description": "Interface tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=penpot.app&sz=32"
+  },
+  {
+    "id": 451,
+    "url": "https://phosphoricons.com",
+    "title": "Phosphor",
+    "description": "Icon family providing six consistent weights.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=phosphoricons.com&sz=32"
+  },
+  {
+    "id": 236,
+    "url": "https://www.pinui.xyz",
+    "title": "Pin UI",
+    "description": "Distinctive copy-paste React and Tailwind components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=pinui.xyz&sz=32"
+  },
+  {
+    "id": 15,
+    "url": "https://pinterest.com",
+    "title": "Pinterest",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=pinterest.com&sz=32"
+  },
+  {
+    "id": 487,
+    "url": "https://www.playgrnd.tools",
+    "title": "Playgrnd",
+    "description": "Suite of browser-based offline creative tools.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=playgrnd.tools&sz=32"
+  },
+  {
+    "id": 372,
+    "url": "https://playwright.dev",
+    "title": "Playwright",
+    "description": "Reliable browser automation and end-to-end testing.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=playwright.dev&sz=32"
+  },
+  {
+    "id": 442,
+    "url": "https://polyhaven.com",
+    "title": "Poly Haven",
+    "description": "Public asset library offering CC0 textures.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=polyhaven.com&sz=32"
+  },
+  {
+    "id": 103,
+    "url": "https://poly.cam",
+    "title": "Polycam",
+    "description": "Volumetric tool for design engineers.",
+    "category": "volumetric",
+    "favicon": "https://www.google.com/s2/favicons?domain=poly.cam&sz=32"
+  },
+  {
+    "id": 519,
+    "url": "https://posthog.com",
+    "title": "PostHog – We make your product self-driving",
+    "description": "PostHog automatically diagnoses problems, fixes.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=posthog.com&sz=32"
+  },
+  {
+    "id": 289,
+    "url": "https://posts.design",
+    "title": "posts.design",
+    "description": "Curated social media graphic design archive.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=posts.design&sz=32"
+  },
+  {
+    "id": 500,
+    "url": "https://postspark.app",
+    "title": "PostSpark",
+    "description": "Format screenshots with clean social backgrounds.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=postspark.app&sz=32"
+  },
+  {
+    "id": 340,
+    "url": "https://practicaltypography.com",
+    "title": "Practical Typography",
+    "description": "Essential book covering typographic rules and layout.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=practicaltypography.com&sz=32"
+  },
+  {
+    "id": 165,
+    "url": "https://preline.co",
+    "title": "Preline UI",
+    "description": "Tailwind CSS components for complex dashboards.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=preline.co&sz=32"
+  },
+  {
+    "id": 537,
+    "url": "https://prequel.sh",
+    "title": "Prequel",
+    "description": "Cinematic screen recorder for mac.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=prequel.sh&sz=32"
+  },
+  {
+    "id": 216,
+    "url": "https://www.prompt-kit.com",
+    "title": "Prompt Kit",
+    "description": "Chat and AI interface component primitives.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=prompt-kit.com&sz=32"
+  },
+  {
+    "id": 280,
+    "url": "https://pttrns.com",
+    "title": "Pttrns",
+    "description": "Directory of mobile user interface patterns.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=pttrns.com&sz=32"
+  },
+  {
+    "id": 142,
+    "url": "https://www.radix-ui.com",
+    "title": "Radix",
+    "description": "Accessible unstyled UI primitives for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=radix-ui.com&sz=32"
+  },
+  {
+    "id": 427,
+    "url": "https://railway.app",
+    "title": "Railway",
+    "description": "Simplified infrastructure platform for deploying databases.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=railway.app&sz=32"
+  },
+  {
+    "id": 436,
+    "url": "https://www.ramps.studio",
+    "title": "Ramps",
+    "description": "Design token tool generating OKLCH ramps.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ramps.studio&sz=32"
+  },
+  {
+    "id": 153,
+    "url": "https://rareui.com",
+    "title": "Rare UI",
+    "description": "Unique animated UI components for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=rareui.com&sz=32"
+  },
+  {
+    "id": 47,
+    "url": "https://ray.so",
+    "title": "Ray.so",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ray.so&sz=32"
+  },
+  {
+    "id": 53,
+    "url": "https://www.raycast.com",
+    "title": "Raycast",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=raycast.com&sz=32"
+  },
+  {
+    "id": 186,
+    "url": "https://reui.io",
+    "title": "Re UI",
+    "description": "Accessible UI components using Base UI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=reui.io&sz=32"
+  },
+  {
+    "id": 40,
+    "url": "https://www.reactbits.dev",
+    "title": "React Bits",
+    "description": "Components tool for design engineers.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=reactbits.dev&sz=32"
+  },
+  {
+    "id": 439,
+    "url": "https://r3f.docs.pmnd.rs",
+    "title": "React Three Fiber",
+    "description": "Declarative React renderer for Three.js scenes.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=r3f.docs.pmnd.rs&sz=32"
+  },
+  {
+    "id": 104,
+    "url": "https://www.unrealengine.com/en-US/realityscan",
+    "title": "RealityScan",
+    "description": "Volumetric tool for design engineers.",
+    "category": "volumetric",
+    "favicon": "https://www.google.com/s2/favicons?domain=unrealengine.com&sz=32"
+  },
+  {
+    "id": 16,
+    "url": "https://www.rebrand.gallery",
+    "title": "Rebrand",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=rebrand.gallery&sz=32"
+  },
+  {
+    "id": 125,
+    "url": "https://recent.design",
+    "title": "Recent Design",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=recent.design&sz=32"
+  },
+  {
+    "id": 60,
+    "url": "https://recordly.dev",
+    "title": "Recordly",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=recordly.dev&sz=32"
+  },
+  {
+    "id": 339,
+    "url": "https://refactoringui.com",
+    "title": "Refactoring UI",
+    "description": "Practical design guide for building interfaces.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=refactoringui.com&sz=32"
+  },
+  {
+    "id": 390,
+    "url": "https://styles.refero.design",
+    "title": "Refero",
+    "description": "Structured DESIGN.MD specifications for AI agents.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=styles.refero.design&sz=32"
+  },
+  {
+    "id": 48,
+    "url": "https://regexr.com",
+    "title": "RegExr",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=regexr.com&sz=32"
+  },
+  {
+    "id": 472,
+    "url": "https://reicon.dev",
+    "title": "Reicon",
+    "description": "Tree-shakeable React icon library with dual weights.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=reicon.dev&sz=32"
+  },
+  {
+    "id": 459,
+    "url": "https://remixicon.com",
+    "title": "Remix Icon",
+    "description": "Neutral icon library in outline and fill.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=remixicon.com&sz=32"
+  },
+  {
+    "id": 533,
+    "url": "https://www.remocn.dev",
+    "title": "Remocn",
+    "description": "Remotion animation components for video production.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=remocn.dev&sz=32"
+  },
+  {
+    "id": 528,
+    "url": "https://remotion.dev",
+    "title": "Remotion",
+    "description": "Render high-definition videos programmatically with React.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=remotion.dev&sz=32"
+  },
+  {
+    "id": 503,
+    "url": "https://render-labs.evlog.cloud",
+    "title": "Render Labs",
+    "description": "Image rendering tool from evlog team.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=render-labs.evlog.cloud&sz=32"
+  },
+  {
+    "id": 513,
+    "url": "https://letsreplay.co",
+    "title": "Replay",
+    "description": "Session replay and visitor recording for websites.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=letsreplay.co&sz=32"
+  },
+  {
+    "id": 178,
+    "url": "https://reverseui.com",
+    "title": "Reverse UI",
+    "description": "Tailwind and React component library.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=reverseui.com&sz=32"
+  },
+  {
+    "id": 526,
+    "url": "https://revone.app",
+    "title": "Revone",
+    "description": "Unified revenue dashboard aggregating payment metrics.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=revone.app&sz=32"
+  },
+  {
+    "id": 140,
+    "url": "https://www.rewampui.com",
+    "title": "RewampUI",
+    "description": "Component showcase dashboard of ready-made UI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=rewampui.com&sz=32"
+  },
+  {
+    "id": 527,
+    "url": "https://rexadb.app",
+    "title": "Rexa DB",
+    "description": "Modern database client for developers who ship.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=rexadb.app&sz=32"
+  },
+  {
+    "id": 90,
+    "url": "https://rive.app",
+    "title": "Rive",
+    "description": "Interface tool for design engineers.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=rive.app&sz=32"
+  },
+  {
+    "id": 192,
+    "url": "https://rolling.kitlangton.dev",
+    "title": "Rolling Number",
+    "description": "Smooth digit-rolling number counter for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=rolling.kitlangton.dev&sz=32"
+  },
+  {
     "id": 137,
     "url": "https://roughnotation.com",
     "title": "Rough Notation",
@@ -1096,11 +3240,1067 @@
     "favicon": "https://www.google.com/s2/favicons?domain=roughnotation.com&sz=32"
   },
   {
-    "id": 138,
-    "url": "https://dialkit.dev",
-    "title": "Dialkit",
+    "id": 453,
+    "url": "https://www.runeicons.com",
+    "title": "Rune Icons",
+    "description": "Minimalist icon set offering five styles.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=runeicons.com&sz=32"
+  },
+  {
+    "id": 525,
+    "url": "https://runey.app",
+    "title": "Runey",
+    "description": "Invoicing and client tracking app for freelancers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=runey.app&sz=32"
+  },
+  {
+    "id": 233,
+    "url": "https://ui.ruru.build",
+    "title": "Ruru UI",
+    "description": "Accessible customizable UI components for React.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.ruru.build&sz=32"
+  },
+  {
+    "id": 510,
+    "url": "https://studio.rynix.in/edit",
+    "title": "Rynix Studio",
+    "description": "Playground for real-time video visual effects.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=studio.rynix.in&sz=32"
+  },
+  {
+    "id": 320,
+    "url": "https://saaslandingpage.com",
+    "title": "SaaS Landing Page",
+    "description": "Showcase of top SaaS landing pages.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=saaslandingpage.com&sz=32"
+  },
+  {
+    "id": 278,
+    "url": "https://www.saasframe.io",
+    "title": "SaaSFrame",
+    "description": "Hundreds of SaaS marketing page screenshots.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=saasframe.io&sz=32"
+  },
+  {
+    "id": 17,
+    "url": "https://saaspo.com",
+    "title": "Saaspo",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=saaspo.com&sz=32"
+  },
+  {
+    "id": 18,
+    "url": "https://same.energy",
+    "title": "Same Energy",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=same.energy&sz=32"
+  },
+  {
+    "id": 517,
+    "url": "https://schedual.app",
+    "title": "Schedual",
+    "description": "No nonsense tasks.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=schedual.app&sz=32"
+  },
+  {
+    "id": 420,
+    "url": "https://scira.ai",
+    "title": "Scira",
+    "description": "Minimalist open-source AI search engine.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=scira.ai&sz=32"
+  },
+  {
+    "id": 499,
+    "url": "https://screan.app",
+    "title": "Screan",
+    "description": "Create promotional App Store screenshot mockups.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=screan.app&sz=32"
+  },
+  {
+    "id": 61,
+    "url": "https://screen.studio",
+    "title": "Screen Studio",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=screen.studio&sz=32"
+  },
+  {
+    "id": 275,
+    "url": "https://screenlane.com",
+    "title": "Screenlane",
+    "description": "Searchable gallery of interface screens.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=screenlane.com&sz=32"
+  },
+  {
+    "id": 512,
+    "url": "https://www.screenshot-studio.com",
+    "title": "Screenshot Studio",
+    "description": "Frames screenshots inside realistic 3D mockups.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=screenshot-studio.com&sz=32"
+  },
+  {
+    "id": 195,
+    "url": "https://scrit.to",
+    "title": "Scritto",
+    "description": "Rolling character text transition component library.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=scrit.to&sz=32"
+  },
+  {
+    "id": 285,
+    "url": "https://scrnshts.club",
+    "title": "Scrnshts",
+    "description": "Curated App Store screenshot designs.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=scrnshts.club&sz=32"
+  },
+  {
+    "id": 19,
+    "url": "https://searchsystem.co",
+    "title": "SearchSystem",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=searchsystem.co&sz=32"
+  },
+  {
+    "id": 309,
+    "url": "https://sections.wtf",
+    "title": "Sections.wtf",
+    "description": "Real-world website section and hero gallery.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=sections.wtf&sz=32"
+  },
+  {
+    "id": 20,
+    "url": "https://www.seesaw.website",
+    "title": "SEESAW",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=seesaw.website&sz=32"
+  },
+  {
+    "id": 228,
+    "url": "https://www.sensory-ui.com",
+    "title": "sensory-ui",
+    "description": "Sound design system for shadcn/ui components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=sensory-ui.com&sz=32"
+  },
+  {
+    "id": 185,
+    "url": "https://seraui.com",
+    "title": "Sera UI",
+    "description": "React components designed for shadcn CLI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=seraui.com&sz=32"
+  },
+  {
+    "id": 208,
+    "url": "https://www.shadcn-labs.com",
+    "title": "Shadcn Labs",
+    "description": "Open-source shadcn/ui component registries and tools ecosystem.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadcn-labs.com&sz=32"
+  },
+  {
+    "id": 234,
+    "url": "https://shadcnstudio.com",
+    "title": "Shadcn Studio",
+    "description": "shadcn/ui components, blocks, and templates.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadcnstudio.com&sz=32"
+  },
+  {
+    "id": 188,
+    "url": "https://www.shadcn-cssinjs.com",
+    "title": "shadcn-cssinjs",
+    "description": "shadcn components adapted for CSS-in-JS.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadcn-cssinjs.com&sz=32"
+  },
+  {
+    "id": 41,
+    "url": "https://ui.shadcn.com",
+    "title": "shadcn/ui",
     "description": "Components tool for design engineers.",
     "category": "components",
-    "favicon": "https://www.google.com/s2/favicons?domain=dialkit.dev&sz=32"
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.shadcn.com&sz=32"
+  },
+  {
+    "id": 148,
+    "url": "https://www.shadcnblocks.com",
+    "title": "shadcnblocks",
+    "description": "Thousands of clean shadcn website blocks.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadcnblocks.com&sz=32"
+  },
+  {
+    "id": 446,
+    "url": "https://shadercn.run",
+    "title": "shadercn",
+    "description": "Shader components for React, built on vgpu and TypeGPU.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadercn.run&sz=32"
+  },
+  {
+    "id": 445,
+    "url": "https://shaderfrog.com",
+    "title": "Shaderfrog",
+    "description": "Visual node-based editor for composing shaders.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=shaderfrog.com&sz=32"
+  },
+  {
+    "id": 83,
+    "url": "https://www.shadertoy.com",
+    "title": "ShaderToy",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=shadertoy.com&sz=32"
+  },
+  {
+    "id": 62,
+    "url": "https://getsharex.com",
+    "title": "ShareX",
+    "description": "Video & Capture tool for design engineers.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=getsharex.com&sz=32"
+  },
+  {
+    "id": 198,
+    "url": "https://shieldcn.dev",
+    "title": "shieldcn",
+    "description": "README badges styled with shadcn aesthetics.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shieldcn.dev&sz=32"
+  },
+  {
+    "id": 506,
+    "url": "https://www.shiori.sh",
+    "title": "Shiori",
+    "description": "Bookmark manager with CLI and Raycast support.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=shiori.sh&sz=32"
+  },
+  {
+    "id": 217,
+    "url": "https://shoogle.dev",
+    "title": "Shoogle",
+    "description": "Search engine spanning shadcn component registries.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=shoogle.dev&sz=32"
+  },
+  {
+    "id": 462,
+    "url": "https://simpleicons.org",
+    "title": "Simple Icons",
+    "description": "Over three thousand SVG brand logos.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=simpleicons.org&sz=32"
+  },
+  {
+    "id": 272,
+    "url": "https://www.siteinspire.com",
+    "title": "SiteInspire",
+    "description": "Showcase of fine web design craft.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=siteinspire.com&sz=32"
+  },
+  {
+    "id": 29,
+    "url": "https://skills.sh",
+    "title": "Skills",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=skills.sh&sz=32"
+  },
+  {
+    "id": 414,
+    "url": "https://skillsync.com",
+    "title": "SkillSync",
+    "description": "Synchronizes agent context across code editors.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=skillsync.com&sz=32"
+  },
+  {
+    "id": 224,
+    "url": "https://skiper-ui.com",
+    "title": "Skiper UI",
+    "description": "Animated UI primitives for Tailwind CSS.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=skiper-ui.com&sz=32"
+  },
+  {
+    "id": 532,
+    "url": "https://slantit.app",
+    "title": "Slant It",
+    "description": "Transforms flat captures into 3D mockups.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=slantit.app&sz=32"
+  },
+  {
+    "id": 351,
+    "url": "https://www.smashingmagazine.com",
+    "title": "Smashing Magazine",
+    "description": "Reliable resource for web designers and developers.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=smashingmagazine.com&sz=32"
+  },
+  {
+    "id": 179,
+    "url": "https://smoothui.dev",
+    "title": "Smooth UI",
+    "description": "Motion-heavy React components ready to copy.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=smoothui.dev&sz=32"
+  },
+  {
+    "id": 265,
+    "url": "https://sombra.design",
+    "title": "Sombra",
+    "description": "Showcase of dark-mode website interfaces.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=sombra.design&sz=32"
+  },
+  {
+    "id": 212,
+    "url": "https://www.sonaui.com",
+    "title": "Sona UI",
+    "description": "Animated React components you fully own.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=sonaui.com&sz=32"
+  },
+  {
+    "id": 21,
+    "url": "https://spiral.soot.com/spiral",
+    "title": "SOOT SPIRAL",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=spiral.soot.com&sz=32"
+  },
+  {
+    "id": 403,
+    "url": "https://soubi.vercel.app",
+    "title": "Soubi",
+    "description": "Compiler transforming agent skill definitions.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=soubi.vercel.app&sz=32"
+  },
+  {
+    "id": 219,
+    "url": "https://soundcn.xyz",
+    "title": "soundcn",
+    "description": "Collection of copy-paste UI sound effects.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=soundcn.xyz&sz=32"
+  },
+  {
+    "id": 239,
+    "url": "https://www.spaceui.one",
+    "title": "Space UI",
+    "description": "Ship your ideas faster with better UI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=spaceui.one&sz=32"
+  },
+  {
+    "id": 515,
+    "url": "https://space-bin.onrender.com",
+    "title": "Space-Bin",
+    "description": "Temporary encrypted space for secure file transfer.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=space-bin.onrender.com&sz=32"
+  },
+  {
+    "id": 144,
+    "url": "https://ui.spectrumhq.in",
+    "title": "Spectrum UI",
+    "description": "Polished components designed for SaaS websites.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.spectrumhq.in&sz=32"
+  },
+  {
+    "id": 223,
+    "url": "https://spell.sh",
+    "title": "Spell UI",
+    "description": "High-craft interactive components for modern apps.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=spell.sh&sz=32"
+  },
+  {
+    "id": 99,
+    "url": "https://splice.com/features/sounds",
+    "title": "Splice",
+    "description": "Audio tool for design engineers.",
+    "category": "audio",
+    "favicon": "https://www.google.com/s2/favicons?domain=splice.com&sz=32"
+  },
+  {
+    "id": 109,
+    "url": "https://spline.design",
+    "title": "Spline",
+    "description": "3D tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=spline.design&sz=32"
+  },
+  {
+    "id": 483,
+    "url": "https://squoosh.app",
+    "title": "Squoosh",
+    "description": "Browser image compression with visual comparisons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=squoosh.app&sz=32"
+  },
+  {
+    "id": 215,
+    "url": "https://www.sacred.computer",
+    "title": "SRCL",
+    "description": "Retro DOS-style terminal component kit.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=sacred.computer&sz=32"
+  },
+  {
+    "id": 205,
+    "url": "https://startercn.vercel.app",
+    "title": "startercn",
+    "description": "shadcn/ui registry template with docs, landing page, and agent support.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=startercn.vercel.app&sz=32"
+  },
+  {
+    "id": 91,
+    "url": "https://stitch.withgoogle.com",
+    "title": "Stitch by Google Labs",
+    "description": "Interface tool for design engineers.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=stitch.withgoogle.com&sz=32"
+  },
+  {
+    "id": 116,
+    "url": "https://www.linctex.com",
+    "title": "Style3D",
+    "description": "Digital Fashion tool for design engineers.",
+    "category": "digital-fashion",
+    "favicon": "https://www.google.com/s2/favicons?domain=linctex.com&sz=32"
+  },
+  {
+    "id": 22,
+    "url": "https://www.supahero.io",
+    "title": "Supahero",
+    "description": "Inspiration tool for design engineers.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=supahero.io&sz=32"
+  },
+  {
+    "id": 524,
+    "url": "https://supaste.com",
+    "title": "Supaste",
+    "description": "Clipboard manager and screenshot history for Mac.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=supaste.com&sz=32"
+  },
+  {
+    "id": 105,
+    "url": "https://superspl.at/editor",
+    "title": "SuperSplat Editor",
+    "description": "Volumetric tool for design engineers.",
+    "category": "volumetric",
+    "favicon": "https://www.google.com/s2/favicons?domain=superspl.at&sz=32"
+  },
+  {
+    "id": 363,
+    "url": "https://www.svg.guide",
+    "title": "SVG Guide",
+    "description": "Guide to mastering SVG markup and animations.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=svg.guide&sz=32"
+  },
+  {
+    "id": 134,
+    "url": "https://svgl.app",
+    "title": "SVGL",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=svgl.app&sz=32"
+  },
+  {
+    "id": 49,
+    "url": "https://jakearchibald.github.io/svgomg",
+    "title": "SVGOMG",
+    "description": "Web Utility tool for design engineers.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=jakearchibald.github.io&sz=32"
+  },
+  {
+    "id": 482,
+    "url": "https://svgomg.net",
+    "title": "SVGOMG",
+    "description": "Web GUI to optimize and clean SVG files.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=svgomg.net&sz=32"
+  },
+  {
+    "id": 300,
+    "url": "https://swiped.design",
+    "title": "Swiped",
+    "description": "Standout design posts from social platforms.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=swiped.design&sz=32"
+  },
+  {
+    "id": 187,
+    "url": "https://syntaxui.com",
+    "title": "Syntax UI",
+    "description": "Animated copy-paste components for landing pages.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=syntaxui.com&sz=32"
+  },
+  {
+    "id": 509,
+    "url": "https://tabbied.com",
+    "title": "Tabbied",
+    "description": "Generative geometric pattern creator for SVG.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=tabbied.com&sz=32"
+  },
+  {
+    "id": 455,
+    "url": "https://tabler.io/icons",
+    "title": "Tabler Icons",
+    "description": "Library of thousands of outline icons.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=tabler.io&sz=32"
+  },
+  {
+    "id": 180,
+    "url": "https://tailark.com",
+    "title": "Tailark",
+    "description": "Tailwind sections and components for marketing.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=tailark.com&sz=32"
+  },
+  {
+    "id": 162,
+    "url": "https://tailgrids.com",
+    "title": "TailGrids",
+    "description": "Responsive UI blocks designed for Tailwind.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=tailgrids.com&sz=32"
+  },
+  {
+    "id": 202,
+    "url": "https://termcn.dev",
+    "title": "termcn",
+    "description": "Terminal UI components for React, built on Ink and OpenTUI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=termcn.dev&sz=32"
+  },
+  {
+    "id": 258,
+    "url": "https://textmotion.dev",
+    "title": "textmotion",
+    "description": "Zero-dependency text roll animation primitive.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=textmotion.dev&sz=32"
+  },
+  {
+    "id": 368,
+    "url": "https://www.shapeof.ai",
+    "title": "The Shape of AI",
+    "description": "Pattern library highlighting AI interface design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=shapeof.ai&sz=32"
+  },
+  {
+    "id": 96,
+    "url": "https://www.theatrejs.com",
+    "title": "Theatre.js",
+    "description": "Motion tool for design engineers.",
+    "category": "motion",
+    "favicon": "https://www.google.com/s2/favicons?domain=theatrejs.com&sz=32"
+  },
+  {
+    "id": 463,
+    "url": "https://thesvg.org",
+    "title": "theSVG",
+    "description": "Curated collection of clean brand SVGs.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=thesvg.org&sz=32"
+  },
+  {
+    "id": 438,
+    "url": "https://threejs.org",
+    "title": "Three.js",
+    "description": "JavaScript 3D library rendering WebGL scenes.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=threejs.org&sz=32"
+  },
+  {
+    "id": 67,
+    "url": "https://www.tldraw.com",
+    "title": "tldraw",
+    "description": "Whiteboard tool for design engineers.",
+    "category": "whiteboard",
+    "favicon": "https://www.google.com/s2/favicons?domain=tldraw.com&sz=32"
+  },
+  {
+    "id": 536,
+    "url": "https://tokokino.com",
+    "title": "Tokokino",
+    "description": "In-browser editor for device framing and mockups.",
+    "category": "video-capture",
+    "favicon": "https://www.google.com/s2/favicons?domain=tokokino.com&sz=32"
+  },
+  {
+    "id": 242,
+    "url": "https://toolcraft.sh",
+    "title": "Toolcraft",
+    "description": "Build custom design apps with AI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=toolcraft.sh&sz=32"
+  },
+  {
+    "id": 498,
+    "url": "https://www.tooooools.app",
+    "title": "Tooooools",
+    "description": "In-browser utilities to dither and pixelate images.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=tooooools.app&sz=32"
+  },
+  {
+    "id": 384,
+    "url": "https://torph.lochie.me",
+    "title": "Torph",
+    "description": "Dependency-free text morphing animation library.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=torph.lochie.me&sz=32"
+  },
+  {
+    "id": 84,
+    "url": "https://derivative.ca",
+    "title": "TouchDesigner",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=derivative.ca&sz=32"
+  },
+  {
+    "id": 386,
+    "url": "https://tracwell.app",
+    "title": "Tracwell",
+    "description": "Focused analytics tracking visitors and conversions.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=tracwell.app&sz=32"
+  },
+  {
+    "id": 486,
+    "url": "https://transform.tools",
+    "title": "Transform",
+    "description": "Polyglot code converter for JSON and types.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=transform.tools&sz=32"
+  },
+  {
+    "id": 189,
+    "url": "https://transitions.dev",
+    "title": "Transitions",
+    "description": "Curated CSS transition recipes and easings.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=transitions.dev&sz=32"
+  },
+  {
+    "id": 73,
+    "url": "https://trello.com",
+    "title": "Trello",
+    "description": "Organization tool for design engineers.",
+    "category": "organization",
+    "favicon": "https://www.google.com/s2/favicons?domain=trello.com&sz=32"
+  },
+  {
+    "id": 168,
+    "url": "https://tremor.so",
+    "title": "Tremor",
+    "description": "Modular React library for building dashboards.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=tremor.so&sz=32"
+  },
+  {
+    "id": 398,
+    "url": "https://typeui.sh",
+    "title": "typeui.sh",
+    "description": "Command-line tool scaffolding typed UI components.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=typeui.sh&sz=32"
+  },
+  {
+    "id": 334,
+    "url": "https://www.uilabs.dev",
+    "title": "UI Labs",
+    "description": "Laboratory deconstructing animated UI components.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=uilabs.dev&sz=32"
+  },
+  {
+    "id": 366,
+    "url": "https://ui.land",
+    "title": "UI Land",
+    "description": "Interviews with leading design engineers on craft.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.land&sz=32"
+  },
+  {
+    "id": 181,
+    "url": "https://ui-layouts.com",
+    "title": "UI Layouts",
+    "description": "Full-page layouts and heroes for Tailwind.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui-layouts.com&sz=32"
+  },
+  {
+    "id": 338,
+    "url": "https://uiplaybook.dev",
+    "title": "UI Playbook",
+    "description": "Guide to common UI component states.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=uiplaybook.dev&sz=32"
+  },
+  {
+    "id": 365,
+    "url": "https://ui-skills.com",
+    "title": "UI Skills",
+    "description": "Course teaching techniques for designing with AI.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui-skills.com&sz=32"
+  },
+  {
+    "id": 485,
+    "url": "https://ui.camera",
+    "title": "ui.camera",
+    "description": "3D mockups and scene staging for software.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.camera&sz=32"
+  },
+  {
+    "id": 323,
+    "url": "https://uibook.art",
+    "title": "UIBook",
+    "description": "Real web pages and sections, curated with taste.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=uibook.art&sz=32"
+  },
+  {
+    "id": 238,
+    "url": "https://www.uicapsule.com",
+    "title": "UICapsule",
+    "description": "A curated collection of components that spark joy.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=uicapsule.com&sz=32"
+  },
+  {
+    "id": 226,
+    "url": "https://uiuno.com",
+    "title": "Uiuno",
+    "description": "AI workspace for organizing shadcn components.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=uiuno.com&sz=32"
+  },
+  {
+    "id": 335,
+    "url": "https://uiw.tf",
+    "title": "UIWTF",
+    "description": "Showcase of experimental web interface patterns.",
+    "category": "interface",
+    "favicon": "https://www.google.com/s2/favicons?domain=uiw.tf&sz=32"
+  },
+  {
+    "id": 383,
+    "url": "https://umami.is",
+    "title": "Umami",
+    "description": "Privacy-focused web analytics without cookie banners.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=umami.is&sz=32"
+  },
+  {
+    "id": 78,
+    "url": "https://uncut.wtf",
+    "title": "UNCUT",
+    "description": "Fonts tool for design engineers.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=uncut.wtf&sz=32"
+  },
+  {
+    "id": 85,
+    "url": "https://www.unicorn.studio",
+    "title": "Unicorn.studio",
+    "description": "Visual tool for design engineers.",
+    "category": "visual",
+    "favicon": "https://www.google.com/s2/favicons?domain=unicorn.studio&sz=32"
+  },
+  {
+    "id": 199,
+    "url": "https://ui.unlumen.com",
+    "title": "unlumen UI",
+    "description": "Minimalist React component library with CLI.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=ui.unlumen.com&sz=32"
+  },
+  {
+    "id": 367,
+    "url": "https://userinterface.wiki",
+    "title": "User Interface Wiki",
+    "description": "Knowledge base documenting interface guidelines and rules.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=userinterface.wiki&sz=32"
+  },
+  {
+    "id": 432,
+    "url": "https://utopia.fyi",
+    "title": "Utopia",
+    "description": "Fluid typography calculator generating CSS clamp.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=utopia.fyi&sz=32"
+  },
+  {
+    "id": 274,
+    "url": "https://uxarchive.com",
+    "title": "UX Archive",
+    "description": "Historical archive of mobile onboarding flows.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=uxarchive.com&sz=32"
+  },
+  {
+    "id": 350,
+    "url": "https://uxdesign.cc",
+    "title": "UX Collective",
+    "description": "Curated publication sharing critical UX essays.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=uxdesign.cc&sz=32"
+  },
+  {
+    "id": 369,
+    "url": "https://v0.app",
+    "title": "v0",
+    "description": "Generative AI translating prompts into shadcn code.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=v0.app&sz=32"
+  },
+  {
+    "id": 30,
+    "url": "https://v0.dev",
+    "title": "v0 by Vercel",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=v0.dev&sz=32"
+  },
+  {
+    "id": 173,
+    "url": "https://velora.colorlib.com",
+    "title": "Velora UI",
+    "description": "Free Tailwind CSS components and sections.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=velora.colorlib.com&sz=32"
+  },
+  {
+    "id": 433,
+    "url": "https://velvetyne.fr",
+    "title": "Velvetyne",
+    "description": "Open-source foundry distributing experimental typefaces.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=velvetyne.fr&sz=32"
+  },
+  {
+    "id": 227,
+    "url": "https://www.vengeanceui.com",
+    "title": "Vengeance UI",
+    "description": "Animated React components with scroll interactions.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=vengeanceui.com&sz=32"
+  },
+  {
+    "id": 263,
+    "url": "https://backgrounds.venust.ai",
+    "title": "Venust Backgrounds",
+    "description": "Free AI-generated backgrounds with original prompts.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=backgrounds.venust.ai&sz=32"
+  },
+  {
+    "id": 424,
+    "url": "https://vercel.com",
+    "title": "Vercel",
+    "description": "Cloud platform for deploying Next.js applications.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=vercel.com&sz=32"
+  },
+  {
+    "id": 377,
+    "url": "https://vercel-doctor.com",
+    "title": "Vercel Doctor",
+    "description": "Diagnostic tool identifying Next.js performance bottlenecks.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=vercel-doctor.com&sz=32"
+  },
+  {
+    "id": 492,
+    "url": "https://vessa.design",
+    "title": "Vessa",
+    "description": "Publish brand guidelines as live pages.",
+    "category": "web-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=vessa.design&sz=32"
+  },
+  {
+    "id": 379,
+    "url": "https://vinext.dev",
+    "title": "Vinext",
+    "description": "Vite plugin running Next.js on Cloudflare.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=vinext.dev&sz=32"
+  },
+  {
+    "id": 361,
+    "url": "https://visualrambling.space",
+    "title": "Visual Rambling",
+    "description": "Personal visual essays exploring interface design.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=visualrambling.space&sz=32"
+  },
+  {
+    "id": 370,
+    "url": "https://vite.dev",
+    "title": "Vite",
+    "description": "Blazing fast frontend build and dev tool.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=vite.dev&sz=32"
+  },
+  {
+    "id": 431,
+    "url": "https://wakamaifondue.com",
+    "title": "Wakamai Fondue",
+    "description": "Tool inspecting font files and features.",
+    "category": "fonts",
+    "favicon": "https://www.google.com/s2/favicons?domain=wakamaifondue.com&sz=32"
+  },
+  {
+    "id": 317,
+    "url": "https://www.wallofportfolios.in",
+    "title": "Wall of Portfolios",
+    "description": "Design engineering and product portfolio showcases.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=wallofportfolios.in&sz=32"
+  },
+  {
+    "id": 54,
+    "url": "https://www.warp.dev",
+    "title": "Warp",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=warp.dev&sz=32"
+  },
+  {
+    "id": 174,
+    "url": "https://watermelon.sh",
+    "title": "Watermelon UI",
+    "description": "React component library for shadcn ecosystem.",
+    "category": "components",
+    "favicon": "https://www.google.com/s2/favicons?domain=watermelon.sh&sz=32"
+  },
+  {
+    "id": 356,
+    "url": "https://www.webdesignerdepot.com",
+    "title": "Web Designer Depot",
+    "description": "Design publication covering web standards and tools.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=webdesignerdepot.com&sz=32"
+  },
+  {
+    "id": 341,
+    "url": "https://web.dev",
+    "title": "web.dev",
+    "description": "Guidance on web performance and modern standards.",
+    "category": "research",
+    "favicon": "https://www.google.com/s2/favicons?domain=web.dev&sz=32"
+  },
+  {
+    "id": 399,
+    "url": "https://webclaw.io",
+    "title": "Webclaw",
+    "description": "Converts any webpage into structured markdown.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=webclaw.io&sz=32"
+  },
+  {
+    "id": 305,
+    "url": "https://whatships.com",
+    "title": "What Ships",
+    "description": "Standout product launch demo videos on X.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=whatships.com&sz=32"
+  },
+  {
+    "id": 31,
+    "url": "https://codeium.com/windsurf",
+    "title": "Windsurf",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=codeium.com&sz=32"
+  },
+  {
+    "id": 55,
+    "url": "https://wisprflow.ai",
+    "title": "Wispr Flow",
+    "description": "Desktop Utility tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=wisprflow.ai&sz=32"
+  },
+  {
+    "id": 110,
+    "url": "https://womp.com",
+    "title": "Womp",
+    "description": "3D tool for design engineers.",
+    "category": "3d",
+    "favicon": "https://www.google.com/s2/favicons?domain=womp.com&sz=32"
+  },
+  {
+    "id": 312,
+    "url": "https://wwwtf.site",
+    "title": "wwwtf.site",
+    "description": "Quirky and experimental interactive web corners.",
+    "category": "inspiration",
+    "favicon": "https://www.google.com/s2/favicons?domain=wwwtf.site&sz=32"
+  },
+  {
+    "id": 385,
+    "url": "https://x.ai/bot",
+    "title": "x.ai/bot",
+    "description": "Documentation detailing xAI web crawler specifications.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=x.ai&sz=32"
+  },
+  {
+    "id": 32,
+    "url": "https://zed.dev/agentic",
+    "title": "Zed",
+    "description": "AI Code tool for design engineers.",
+    "category": "ai-code",
+    "favicon": "https://www.google.com/s2/favicons?domain=zed.dev&sz=32"
+  },
+  {
+    "id": 123,
+    "url": "https://zen-browser.app",
+    "title": "Zen",
+    "description": "Browser tool for design engineers.",
+    "category": "desktop-utility",
+    "favicon": "https://www.google.com/s2/favicons?domain=zen-browser.app&sz=32"
   }
 ]

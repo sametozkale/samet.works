@@ -518,5 +518,53 @@
     "description": "Beautiful, accessible React UI components built on React Aria and Tailwind CSS v4 — with MCP servers and agent skills for modern app development.",
     "category": "development",
     "favicon": "https://www.google.com/s2/favicons?domain=heroui.com&sz=32"
+  },
+  {
+    "id": 72,
+    "url": "https://inspomcp.dev/",
+    "title": "Inspo",
+    "description": "A reference layer for AI coding agents: real production sites with desktop and mobile captures, reference components, and a DESIGN.md per site, queryable from one MCP server.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=inspomcp.dev&sz=32"
+  },
+  {
+    "id": 73,
+    "url": "https://bencho.dev/",
+    "title": "Bencho",
+    "description": "A library of interactive UI blocks you can explore, tweak, and take straight into your projects. Everything is live, not mocked.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=bencho.dev&sz=32"
+  },
+  {
+    "id": 74,
+    "url": "https://libraries.dev/",
+    "title": "Libraries",
+    "description": "High-crafted UI effect libraries for AI agents — border beams, thinking orbs, liquid metal, gooey, and more, ready to use with coding agents.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=libraries.dev&sz=32"
+  },
+  {
+    "id": 75,
+    "url": "https://www.thinkingorbs.com/",
+    "title": "Thinking Orbs",
+    "description": "A React component library of animated orbs for AI status: thinking, searching, compacting, and more. Free and open source.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=thinkingorbs.com&sz=32"
+  },
+  {
+    "id": 76,
+    "url": "https://pixelpoint.io/skills/animate-text/",
+    "title": "Animate Text",
+    "description": "A skill for AI agents that specifies pacing, curves, transitions, and styling for text animations — usable with Remotion, Motion, GSAP, WAAPI, or any other library.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=pixelpoint.io&sz=32"
+  },
+  {
+    "id": 77,
+    "url": "https://www.designeer.xyz/",
+    "title": "Designeer",
+    "description": "A curated collection of interface craft, component libraries, AI tools, and resources for builders.",
+    "category": "design",
+    "favicon": "https://www.google.com/s2/favicons?domain=designeer.xyz&sz=32"
   }
 ]

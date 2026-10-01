@@ -37,9 +37,9 @@
     <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
     <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
 <link rel="preload" href="/fonts.css" as="style" />
-    <link rel="preload" href="/styles.css" as="style" />
+    <link rel="preload" href="/styles.css?v=det-nav-1" as="style" />
     <link href="/fonts.css" rel="stylesheet" />
-    <link href="/styles.css" rel="stylesheet" />
+    <link href="/styles.css?v=det-nav-1" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
     
     <title>Design Engineer Tools - Samet Özkale</title>
@@ -161,7 +161,7 @@
         </div>
 
         <!-- Tools Grid -->
-        <div class="resources-grid resources-grid--compact" id="design-engineer-tools-grid">
+        <div class="det-tools-layout" id="design-engineer-tools-grid">
           <!-- Tools will be loaded dynamically here -->
         </div>
       </div>
@@ -374,22 +374,47 @@
             if (!Array.isArray(tools)) {
               throw new Error('Invalid response format: expected an array');
             }
-            
+
+            const categoryMeta = Array.from(
+              document.querySelectorAll('#det-category-menu [role="option"]')
+            )
+              .filter((option) => option.dataset.value !== 'all')
+              .map((option) => ({
+                id: option.dataset.value,
+                label: option.textContent.trim(),
+              }));
+
+            const byCategory = new Map();
+            categoryMeta.forEach(({ id }) => byCategory.set(id, []));
+            const uncategorized = [];
+
+            tools.forEach((tool) => {
+              if (byCategory.has(tool.category)) {
+                byCategory.get(tool.category).push(tool);
+              } else {
+                uncategorized.push(tool);
+              }
+            });
+
+            byCategory.forEach((items) => {
+              items.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
+            });
+            uncategorized.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
+
             toolsGrid.innerHTML = '';
-            
-            tools.forEach(tool => {
+
+            function createResourceItem(tool) {
               const resourceItem = document.createElement('a');
               resourceItem.href = tool.url;
               resourceItem.target = '_blank';
               resourceItem.rel = 'noopener noreferrer';
               resourceItem.className = 'resource-item';
               resourceItem.setAttribute('data-category', tool.category);
-              
+
               const faviconImg = document.createElement('img');
               faviconImg.alt = tool.title;
               faviconImg.className = 'resource-favicon';
-              
-              // Function to get domain from URL
+
               const getDomain = (url) => {
                 try {
                   return new URL(url).hostname.replace(/^www\./, '');
@@ -397,50 +422,76 @@
                   return '';
                 }
               };
-              
-              // Try multiple favicon sources with fallbacks
+
               const domain = getDomain(tool.url);
               let attempts = 0;
-              const maxAttempts = 3;
-              
+
               const tryFavicon = (src) => {
                 faviconImg.src = src;
               };
-              
-              faviconImg.onerror = function() {
+
+              faviconImg.onerror = function () {
                 attempts++;
                 const urlObj = new URL(tool.url);
-                
+
                 if (attempts === 1) {
-                  // Try favicon.png
                   tryFavicon(`${urlObj.protocol}//${urlObj.hostname}/favicon.png`);
                 } else if (attempts === 2 && domain) {
-                  // Use Google's favicon service as fallback
                   tryFavicon(`https://www.google.com/s2/favicons?domain=${domain}&sz=32`);
                 } else {
-                  // Final fallback: use a data URI for a simple default icon
                   this.onerror = null;
-                  this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23979797"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+                  this.src =
+                    'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23979797"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
                 }
               };
-              
-              // Start with the stored favicon
+
               tryFavicon(tool.favicon);
-              
+
               const resourceContent = document.createElement('div');
               resourceContent.className = 'resource-content';
-              
+
               const title = document.createElement('div');
               title.className = 'resource-title';
               title.textContent = tool.title;
-              
+
               resourceContent.appendChild(title);
-              
               resourceItem.appendChild(faviconImg);
               resourceItem.appendChild(resourceContent);
-              
-              toolsGrid.appendChild(resourceItem);
+
+              return resourceItem;
+            }
+
+            function appendCategorySection(categoryId, label, items) {
+              if (!items.length) return;
+
+              const section = document.createElement('section');
+              section.className = 'det-category-group';
+              section.setAttribute('data-category', categoryId);
+
+              const headingRow = document.createElement('div');
+              headingRow.className = 'det-category-group__heading';
+
+              const heading = document.createElement('h2');
+              heading.className = 'det-category-group__title';
+              heading.textContent = label;
+              headingRow.appendChild(heading);
+
+              const grid = document.createElement('div');
+              grid.className = 'resources-grid resources-grid--compact det-category-group__grid';
+
+              items.forEach((tool) => grid.appendChild(createResourceItem(tool)));
+
+              section.append(headingRow, grid);
+              toolsGrid.appendChild(section);
+            }
+
+            categoryMeta.forEach(({ id, label }) => {
+              appendCategorySection(id, label, byCategory.get(id) || []);
             });
+
+            if (uncategorized.length) {
+              appendCategorySection('other', 'Other', uncategorized);
+            }
             
             applyCategoryFilter();
           } catch (error) {
@@ -467,8 +518,14 @@
           }
 
           function filterTools(category) {
-            document.querySelectorAll('.resource-item').forEach(item => {
-              item.style.display = (category === 'all' || item.getAttribute('data-category') === category) ? 'flex' : 'none';
+            const sections = document.querySelectorAll('.det-category-group');
+            const isAll = category === 'all';
+
+            sections.forEach((section) => {
+              const sectionCategory = section.getAttribute('data-category');
+              const visible = isAll || sectionCategory === category;
+              section.style.display = visible ? '' : 'none';
+              section.classList.toggle('det-category-group--solo', !isAll && visible);
             });
           }
 
@@ -627,6 +684,7 @@
     <script src="/typing-animation.js" defer></script>
     <script src="/conversion-modal.js" defer></script>
       <script src="/haptic-feedback.js" defer></script>
+      <script src="/side-nav.js?v=2"></script>
   </body>
 </html>
 

@@ -1,0 +1,2738 @@
+[
+  {
+    "href": "https://forgeui.in",
+    "title": "ForgeUI",
+    "description": "Animated React and Tailwind components and templates.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.rewampui.com",
+    "title": "RewampUI",
+    "description": "Component showcase dashboard of ready-made UI.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.shadcn.com",
+    "title": "shadcn/ui",
+    "description": "Components you copy directly into codebases.",
+    "category": "components"
+  },
+  {
+    "href": "https://base-ui.com",
+    "title": "Base UI",
+    "description": "Unstyled component primitives from Radix and MUI.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.radix-ui.com",
+    "title": "Radix",
+    "description": "Accessible unstyled UI primitives for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://21st.dev",
+    "title": "21st.dev",
+    "description": "Community shadcn registry with interactive previews.",
+    "category": "components"
+  },
+  {
+    "href": "https://motion-primitives.com",
+    "title": "Motion Primitives",
+    "description": "Animated React components powered by Motion.",
+    "category": "components"
+  },
+  {
+    "href": "https://reactbits.dev",
+    "title": "React Bits",
+    "description": "Animated and creative components for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://component.gallery",
+    "title": "Component Gallery",
+    "description": "Repository comparing design system components.",
+    "category": "components"
+  },
+  {
+    "href": "https://number-flow.barvian.me",
+    "title": "NumberFlow",
+    "description": "Smooth number transitions across modern frameworks.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.fancycomponents.dev",
+    "title": "Fancy Components",
+    "description": "Playful React components with physics effects.",
+    "category": "components"
+  },
+  {
+    "href": "https://opensourceui.in",
+    "title": "Opensource UI",
+    "description": "Copy-paste React UI and device mockups.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.spectrumhq.in",
+    "title": "Spectrum UI",
+    "description": "Polished components designed for SaaS websites.",
+    "category": "components"
+  },
+  {
+    "href": "https://amicro.vercel.app",
+    "title": "Amicro",
+    "description": "Lightweight drop-in React micro-animation primitives.",
+    "category": "components"
+  },
+  {
+    "href": "https://painterly.design-tools.workers.dev",
+    "title": "Painterly",
+    "description": "Artistic canvas loader components for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://bencho.dev",
+    "title": "Bencho",
+    "description": "Interactive UI blocks with adjustable physics.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.shadcnblocks.com",
+    "title": "shadcnblocks",
+    "description": "Thousands of clean shadcn website blocks.",
+    "category": "components"
+  },
+  {
+    "href": "https://blocks.so",
+    "title": "blocks.so",
+    "description": "Open-source website blocks installable via CLI.",
+    "category": "components"
+  },
+  {
+    "href": "https://8bitcn.com",
+    "title": "8bitcn",
+    "description": "Retro 8-bit components for shadcn projects.",
+    "category": "components"
+  },
+  {
+    "href": "https://evilcharts.com",
+    "title": "Evil Charts",
+    "description": "Animated SVG charts designed for shadcn/ui.",
+    "category": "components"
+  },
+  {
+    "href": "https://coss.com/ui",
+    "title": "coss ui",
+    "description": "Copy-paste components built on Base UI.",
+    "category": "components"
+  },
+  {
+    "href": "https://rareui.com",
+    "title": "Rare UI",
+    "description": "Unique animated UI components for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://beui.dev",
+    "title": "beUI",
+    "description": "Animated React components with Tailwind CSS.",
+    "category": "components"
+  },
+  {
+    "href": "https://butter-nav.vercel.app",
+    "title": "Butter Nav",
+    "description": "Mega-menu featuring fluid layout morphing transitions.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.cult-ui.com",
+    "title": "Cult UI",
+    "description": "Animated React components with Framer Motion.",
+    "category": "components"
+  },
+  {
+    "href": "https://daisyui.com",
+    "title": "daisyUI",
+    "description": "Component class library for Tailwind CSS.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.heroui.com",
+    "title": "HeroUI",
+    "description": "Modern React UI library, formerly NextUI.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.kibo-ui.com",
+    "title": "Kibo UI",
+    "description": "Component registry tailored for AI interfaces.",
+    "category": "components"
+  },
+  {
+    "href": "https://magicui.design",
+    "title": "Magic UI",
+    "description": "Animated components crafted for landing pages.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.aceternity.com",
+    "title": "Aceternity UI",
+    "description": "Trendy animated components and hero sections.",
+    "category": "components"
+  },
+  {
+    "href": "https://animate-ui.com",
+    "title": "Animate UI",
+    "description": "Accessible shadcn components animated with Motion.",
+    "category": "components"
+  },
+  {
+    "href": "https://flyonui.com",
+    "title": "FlyonUI",
+    "description": "Semantic Tailwind CSS components ready for v4.",
+    "category": "components"
+  },
+  {
+    "href": "https://tailgrids.com",
+    "title": "TailGrids",
+    "description": "Responsive UI blocks designed for Tailwind.",
+    "category": "components"
+  },
+  {
+    "href": "https://flowbite.com",
+    "title": "Flowbite",
+    "description": "Extensive component library for Tailwind CSS.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.hyperui.dev",
+    "title": "HyperUI",
+    "description": "Free open-source Tailwind CSS UI components.",
+    "category": "components"
+  },
+  {
+    "href": "https://preline.co",
+    "title": "Preline UI",
+    "description": "Tailwind CSS components for complex dashboards.",
+    "category": "components"
+  },
+  {
+    "href": "https://floatui.com",
+    "title": "Float UI",
+    "description": "Tailwind components crafted for marketing websites.",
+    "category": "components"
+  },
+  {
+    "href": "https://merakiui.com",
+    "title": "Meraki UI",
+    "description": "Tailwind components with right-to-left language support.",
+    "category": "components"
+  },
+  {
+    "href": "https://tremor.so",
+    "title": "Tremor",
+    "description": "Modular React library for building dashboards.",
+    "category": "components"
+  },
+  {
+    "href": "https://headlessui.com",
+    "title": "Headless UI",
+    "description": "Unstyled accessible components from Tailwind Labs.",
+    "category": "components"
+  },
+  {
+    "href": "https://basecn.dev",
+    "title": "Base CN",
+    "description": "Base UI primitives adapted for shadcn.",
+    "category": "components"
+  },
+  {
+    "href": "https://easyui.pro",
+    "title": "Easy UI",
+    "description": "Copy-paste component library for rapid building.",
+    "category": "components"
+  },
+  {
+    "href": "https://eldoraui.site",
+    "title": "Eldora UI",
+    "description": "Animated components tailored for web landings.",
+    "category": "components"
+  },
+  {
+    "href": "https://velora.colorlib.com",
+    "title": "Velora UI",
+    "description": "Free Tailwind CSS components and sections.",
+    "category": "components"
+  },
+  {
+    "href": "https://watermelon.sh",
+    "title": "Watermelon UI",
+    "description": "React component library for shadcn ecosystem.",
+    "category": "components"
+  },
+  {
+    "href": "https://beautifului.dev",
+    "title": "Beautiful UI",
+    "description": "Polished copy-paste components for web applications.",
+    "category": "components"
+  },
+  {
+    "href": "https://hexter-ui.com",
+    "title": "Hexter UI",
+    "description": "Clean component collection for shadcn projects.",
+    "category": "components"
+  },
+  {
+    "href": "https://lightswind.com",
+    "title": "Lightswind",
+    "description": "Tailwind components featuring lighting and glows.",
+    "category": "components"
+  },
+  {
+    "href": "https://reverseui.com",
+    "title": "Reverse UI",
+    "description": "Tailwind and React component library.",
+    "category": "components"
+  },
+  {
+    "href": "https://smoothui.dev",
+    "title": "Smooth UI",
+    "description": "Motion-heavy React components ready to copy.",
+    "category": "components"
+  },
+  {
+    "href": "https://tailark.com",
+    "title": "Tailark",
+    "description": "Tailwind sections and components for marketing.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui-layouts.com",
+    "title": "UI Layouts",
+    "description": "Full-page layouts and heroes for Tailwind.",
+    "category": "components"
+  },
+  {
+    "href": "https://kokonutui.com",
+    "title": "Kokonut UI",
+    "description": "Creative interactive components for shadcn format.",
+    "category": "components"
+  },
+  {
+    "href": "https://nexui.dev",
+    "title": "Nex UI",
+    "description": "Extensible component library for modern startups.",
+    "category": "components"
+  },
+  {
+    "href": "https://ninna-ui.dev",
+    "title": "Ninja UI",
+    "description": "Lightweight UI components for fast websites.",
+    "category": "components"
+  },
+  {
+    "href": "https://seraui.com",
+    "title": "Sera UI",
+    "description": "React components designed for shadcn CLI.",
+    "category": "components"
+  },
+  {
+    "href": "https://reui.io",
+    "title": "Re UI",
+    "description": "Accessible UI components using Base UI.",
+    "category": "components"
+  },
+  {
+    "href": "https://syntaxui.com",
+    "title": "Syntax UI",
+    "description": "Animated copy-paste components for landing pages.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.shadcn-cssinjs.com",
+    "title": "shadcn-cssinjs",
+    "description": "shadcn components adapted for CSS-in-JS.",
+    "category": "components"
+  },
+  {
+    "href": "https://transitions.dev",
+    "title": "Transitions",
+    "description": "Curated CSS transition recipes and easings.",
+    "category": "components"
+  },
+  {
+    "href": "https://23rd.dev",
+    "title": "23rd",
+    "description": "shadcn components for React and Svelte.",
+    "category": "components"
+  },
+  {
+    "href": "https://oneko.dhrv.pw",
+    "title": "Oneko",
+    "description": "Pixel cat companion that chases cursor.",
+    "category": "components"
+  },
+  {
+    "href": "https://rolling.kitlangton.dev",
+    "title": "Rolling Number",
+    "description": "Smooth digit-rolling number counter for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://annnimate.com",
+    "title": "Annnimate",
+    "description": "GSAP motion components ready for production.",
+    "category": "components"
+  },
+  {
+    "href": "https://getlayers.ai",
+    "title": "GetLayers",
+    "description": "AI prompts for cinematic page sections.",
+    "category": "components"
+  },
+  {
+    "href": "https://scrit.to",
+    "title": "Scritto",
+    "description": "Rolling character text transition component library.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.ogimagecn.com",
+    "title": "ogimagecn",
+    "description": "Open Graph image components using Satori.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.tripwire.sh/dither-kit",
+    "title": "Dither Kit",
+    "description": "Dithered chart components with retro aesthetic.",
+    "category": "components"
+  },
+  {
+    "href": "https://shieldcn.dev",
+    "title": "shieldcn",
+    "description": "README badges styled with shadcn aesthetics.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.unlumen.com",
+    "title": "unlumen UI",
+    "description": "Minimalist React component library with CLI.",
+    "category": "components"
+  },
+  {
+    "href": "https://bearnie.dev",
+    "title": "Bearnie",
+    "description": "Astro and Tailwind component collection.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.fluidfunctionalism.com",
+    "title": "Fluid Functionalism",
+    "description": "Components designed with purposeful physical animation.",
+    "category": "components"
+  },
+  {
+    "href": "https://termcn.dev",
+    "title": "termcn",
+    "description": "Terminal UI components for React, built on Ink and OpenTUI.",
+    "category": "components"
+  },
+  {
+    "href": "https://framecn.dev",
+    "title": "framecn",
+    "description": "Video rendering components for React, built on Editframe.",
+    "category": "components"
+  },
+  {
+    "href": "https://emailcn.run",
+    "title": "emailcn",
+    "description": "Responsive email components for React Email, MJML, and JSX Email.",
+    "category": "components"
+  },
+  {
+    "href": "https://startercn.vercel.app",
+    "title": "startercn",
+    "description": "shadcn/ui registry template with docs, landing page, and agent support.",
+    "category": "components"
+  },
+  {
+    "href": "https://pdfcn.dev",
+    "title": "pdfcn",
+    "description": "PDF components for React, built on Takumi and Forme.",
+    "category": "components"
+  },
+  {
+    "href": "https://editorcn.vercel.app",
+    "title": "editorcn",
+    "description": "Rich text editor components for React, built on Tiptap.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.shadcn-labs.com",
+    "title": "Shadcn Labs",
+    "description": "Open-source shadcn/ui component registries and tools ecosystem.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.nexvyn.dev",
+    "title": "Nexvyn UI",
+    "description": "Polished drop-in components for digital interfaces.",
+    "category": "components"
+  },
+  {
+    "href": "https://gradient-spin.vercel.app",
+    "title": "Gradient Spin",
+    "description": "Spinning gradient loading indicator for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://libraries.dev",
+    "title": "Libraries.dev",
+    "description": "UI effects and components for agents.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.sonaui.com",
+    "title": "Sona UI",
+    "description": "Animated React components you fully own.",
+    "category": "components"
+  },
+  {
+    "href": "https://text-effects.colorion.co",
+    "title": "Colorion Text Effects",
+    "description": "Animated text effects ready to copy.",
+    "category": "components"
+  },
+  {
+    "href": "https://dotmatrix.zzzzshawn.cloud",
+    "title": "Dot Matrix",
+    "description": "Over fifty dot-matrix loaders for shadcn.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.sacred.computer",
+    "title": "SRCL",
+    "description": "Retro DOS-style terminal component kit.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.prompt-kit.com",
+    "title": "Prompt Kit",
+    "description": "Chat and AI interface component primitives.",
+    "category": "components"
+  },
+  {
+    "href": "https://shoogle.dev",
+    "title": "Shoogle",
+    "description": "Search engine spanning shadcn component registries.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.interior.dev",
+    "title": "interior.dev",
+    "description": "Micro-interactions finely tuned for click responsiveness.",
+    "category": "components"
+  },
+  {
+    "href": "https://soundcn.xyz",
+    "title": "soundcn",
+    "description": "Collection of copy-paste UI sound effects.",
+    "category": "components"
+  },
+  {
+    "href": "https://cuelume.dev",
+    "title": "cuelume",
+    "description": "Micro interface sounds generated with Web Audio.",
+    "category": "components"
+  },
+  {
+    "href": "https://canvasui.dev",
+    "title": "Canvas UI",
+    "description": "GPU-accelerated liquid physics and canvas shaders.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.odysseyui.com",
+    "title": "Odyssey UI",
+    "description": "Animated React components built on shadcn.",
+    "category": "components"
+  },
+  {
+    "href": "https://spell.sh",
+    "title": "Spell UI",
+    "description": "High-craft interactive components for modern apps.",
+    "category": "components"
+  },
+  {
+    "href": "https://skiper-ui.com",
+    "title": "Skiper UI",
+    "description": "Animated UI primitives for Tailwind CSS.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.devl.dev",
+    "title": "devl",
+    "description": "Minimalist experimental UI components for web.",
+    "category": "components"
+  },
+  {
+    "href": "https://uiuno.com",
+    "title": "Uiuno",
+    "description": "AI workspace for organizing shadcn components.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.vengeanceui.com",
+    "title": "Vengeance UI",
+    "description": "Animated React components with scroll interactions.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.sensory-ui.com",
+    "title": "sensory-ui",
+    "description": "Sound design system for shadcn/ui components.",
+    "category": "components"
+  },
+  {
+    "href": "https://amacro.vercel.app",
+    "title": "Amacro",
+    "description": "Drop-in page reveal animations for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.evilbuttons.com",
+    "title": "Evil Buttons",
+    "description": "Interactive and tactile button components.",
+    "category": "components"
+  },
+  {
+    "href": "https://componentry.dev",
+    "title": "Componentry",
+    "description": "Customizable React UI primitives and components.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.great-ui.com",
+    "title": "Great UI",
+    "description": "Copy-paste React and Tailwind CSS components.",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.ruru.build",
+    "title": "Ruru UI",
+    "description": "Accessible customizable UI components for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://shadcnstudio.com",
+    "title": "Shadcn Studio",
+    "description": "shadcn/ui components, blocks, and templates.",
+    "category": "components"
+  },
+  {
+    "href": "https://shadcn-animated.vercel.app",
+    "title": "Animated shadcn/ui",
+    "description": "Motion-powered variants of shadcn/ui components.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.pinui.xyz",
+    "title": "Pin UI",
+    "description": "Distinctive copy-paste React and Tailwind components.",
+    "category": "components"
+  },
+  {
+    "href": "https://loading.dev",
+    "title": "loading.dev",
+    "description": "Lightweight library of loading indicators for React.",
+    "category": "components"
+  },
+  {
+    "href": "https://www.uicapsule.com",
+    "title": "UICapsule",
+    "description": "A curated collection of components that spark joy",
+    "category": "components"
+  },
+  {
+    "href": "https://www.spaceui.one",
+    "title": "Space UI",
+    "description": "Ship your ideas faster with better UI",
+    "category": "components"
+  },
+  {
+    "href": "https://paceui.com",
+    "title": "PaceUI",
+    "description": "Production-ready React UI for React Apps",
+    "category": "components"
+  },
+  {
+    "href": "https://www.boardui.com",
+    "title": "BoardUI",
+    "description": "Build agentic products and data-rich dashboards",
+    "category": "components"
+  },
+  {
+    "href": "https://toolcraft.sh",
+    "title": "Toolcraft",
+    "description": "Build custom design apps with AI.",
+    "category": "components"
+  },
+  {
+    "href": "https://animata.design",
+    "title": "Animata",
+    "description": "Ship stunning UI faster with Ship stunning UI",
+    "category": "components"
+  },
+  {
+    "href": "https://noicess.fun",
+    "title": "NoiceSS",
+    "description": "Create stunning, beautiful screenshot mockups",
+    "category": "components"
+  },
+  {
+    "href": "https://designsystem-generator-bbs.vercel.app",
+    "title": "Blueprint",
+    "description": "A starter design system kit from your brand",
+    "category": "components"
+  },
+  {
+    "href": "https://chiraggadhvi.in",
+    "title": "Chirag Gadhvi",
+    "description": "Software and AI Engineer",
+    "category": "components"
+  },
+  {
+    "href": "https://1iad.com",
+    "title": "1iad - One Interaction a Day",
+    "description": "A growing collection of animated React components.",
+    "category": "components"
+  },
+  {
+    "href": "https://flowcub.com",
+    "title": "Flowcub - Free & Premium Website Templates",
+    "description": "Ready-to-Customize Webflow & Framer Templates",
+    "category": "components"
+  },
+  {
+    "href": "https://createui.co",
+    "title": "Create UI",
+    "description": "AI Native Design System & React Component Library",
+    "category": "components"
+  },
+  {
+    "href": "https://ui.devclubxnst.online",
+    "title": "DevClub UI",
+    "description": "Exceptional interfaces begin with the details.",
+    "category": "components"
+  },
+  {
+    "href": "https://motion.dev",
+    "title": "Motion",
+    "description": "Production-ready animation library for React applications.",
+    "category": "motion"
+  },
+  {
+    "href": "https://gsap.com",
+    "title": "GSAP",
+    "description": "Industry-standard JavaScript timeline animation engine.",
+    "category": "motion"
+  },
+  {
+    "href": "https://rive.app",
+    "title": "Rive",
+    "description": "Interactive state-machine vector animation tool.",
+    "category": "motion"
+  },
+  {
+    "href": "https://lottiefiles.com",
+    "title": "Lottie",
+    "description": "Lightweight JSON-based vector animation format.",
+    "category": "motion"
+  },
+  {
+    "href": "https://easingwizard.com",
+    "title": "Easing Wizard",
+    "description": "Visual generator for custom CSS springs.",
+    "category": "motion"
+  },
+  {
+    "href": "https://morphrig.dev",
+    "title": "Morphrig",
+    "description": "Interactive manual on how icon morphing works.",
+    "category": "motion"
+  },
+  {
+    "href": "https://www.theatrejs.com",
+    "title": "Theatre.js",
+    "description": "Visual motion design sequencer for DOM.",
+    "category": "motion"
+  },
+  {
+    "href": "https://www.morphicons.com",
+    "title": "morphicons",
+    "description": "Spring-physics icon morphing animation library.",
+    "category": "motion"
+  },
+  {
+    "href": "https://glimm.dev",
+    "title": "glimm",
+    "description": "Shader-driven page transitions for Next.js.",
+    "category": "motion"
+  },
+  {
+    "href": "https://devouringdetails.com",
+    "title": "Devouring Details",
+    "description": "Interactive book teaching micro-interaction design.",
+    "category": "motion"
+  },
+  {
+    "href": "https://textmotion.dev",
+    "title": "textmotion",
+    "description": "Zero-dependency text roll animation primitive.",
+    "category": "motion"
+  },
+  {
+    "href": "https://bezel-ui.vercel.app",
+    "title": "Bezel",
+    "description": "Bezel is a React component library for interface",
+    "category": "motion"
+  },
+  {
+    "href": "https://lotiqlab.com",
+    "title": "Lotiqlab",
+    "description": "Free online Lottie editor and motion tool",
+    "category": "motion"
+  },
+  {
+    "href": "https://60fps.design",
+    "title": "60fps",
+    "description": "Recordings of interfaces that move well.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.awwwards.com",
+    "title": "Awwwards",
+    "description": "Awards celebrating exceptional digital web craft.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.cosmos.so",
+    "title": "Cosmos",
+    "description": "Visual moodboarding and creative inspiration engine.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.curated.design",
+    "title": "Curated Design",
+    "description": "Web design sorted by aesthetic style.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://layers.to",
+    "title": "Layers",
+    "description": "Platform for sharing design work publicly.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://minimal.gallery",
+    "title": "Minimal Gallery",
+    "description": "Showcase of minimal and restrained websites.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://mobbin.com",
+    "title": "Mobbin",
+    "description": "Real mobile and web product flows.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.saaspo.com",
+    "title": "Saaspo",
+    "description": "Curated SaaS landing page designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.seesaw.website",
+    "title": "SEESAW",
+    "description": "Design inspiration organized by page section.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://supahero.io",
+    "title": "Supahero",
+    "description": "Curated collection of website hero sections.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.imageory.in",
+    "title": "Imageory",
+    "description": "Visual gallery pairing images with prompts.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://backgrounds.supply",
+    "title": "Backgrounds Supply",
+    "description": "Handcrafted website backgrounds ready to use.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://backgrounds.venust.ai",
+    "title": "Venust Backgrounds",
+    "description": "Free AI-generated backgrounds with original prompts.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.details.so",
+    "title": "Details",
+    "description": "Micro-interaction analysis of top digital products.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://sombra.design",
+    "title": "Sombra",
+    "description": "Showcase of dark-mode website interfaces.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://dribbble.com",
+    "title": "Dribbble",
+    "description": "Global community sharing design concepts.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.behance.net",
+    "title": "Behance",
+    "description": "Adobe showcase for creative portfolios.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://recent.design",
+    "title": "Recent Design",
+    "description": "Weekly selection of award-worthy websites.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://navbar.design",
+    "title": "navbar.design",
+    "description": "Curated gallery of navigation bar patterns.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://footer.design",
+    "title": "footer.design",
+    "description": "Curated gallery of creative website footers.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://land-book.com",
+    "title": "Land-book",
+    "description": "Landing pages organized by industry.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://collectui.com",
+    "title": "Collect UI",
+    "description": "Daily UI inspiration tagged by component.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.siteinspire.com",
+    "title": "SiteInspire",
+    "description": "Showcase of fine web design craft.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.lapa.ninja",
+    "title": "Lapa Ninja",
+    "description": "Curated gallery of responsive landing pages.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://uxarchive.com",
+    "title": "UX Archive",
+    "description": "Historical archive of mobile onboarding flows.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://screenlane.com",
+    "title": "Screenlane",
+    "description": "Searchable gallery of interface screens.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.flowbase.co",
+    "title": "Flowbase",
+    "description": "Premium UI components and interaction patterns.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://hoverstat.es",
+    "title": "Hover States",
+    "description": "Showcase of innovative interactive web design.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.saasframe.io",
+    "title": "SaaSFrame",
+    "description": "Hundreds of SaaS marketing page screenshots.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.landingfolio.com",
+    "title": "Landingfolio",
+    "description": "Extensive library of landing page designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://pttrns.com",
+    "title": "Pttrns",
+    "description": "Directory of mobile user interface patterns.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://onepagelove.com",
+    "title": "One Page Love",
+    "description": "Showcase of single-page website designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.designspiration.com",
+    "title": "Designspiration",
+    "description": "Creative search platform for visual art.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://bestwebsite.gallery",
+    "title": "Best Website Gallery",
+    "description": "Curated archive of exceptional websites.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://theinspirationgrid.com",
+    "title": "Inspiration Grid",
+    "description": "Online magazine celebrating creative visual design.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://scrnshts.club",
+    "title": "Scrnshts",
+    "description": "Curated App Store screenshot designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.are.na",
+    "title": "Are.na",
+    "description": "Collaborative research and visual bookmarking platform.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.appinspo.com",
+    "title": "Appinspo",
+    "description": "Curated mobile application design gallery.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.darkmodedesign.com",
+    "title": "Dark Mode Design",
+    "description": "Showcase celebrating dark-mode websites.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.pinterest.com",
+    "title": "Pinterest",
+    "description": "Visual discovery engine for creative ideas.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://navbar.gallery",
+    "title": "navbar.gallery",
+    "description": "Focused collection of modern navigation bars.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://posts.design",
+    "title": "posts.design",
+    "description": "Curated social media graphic design archive.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://loadmo.re",
+    "title": "loadmo.re",
+    "description": "Gallery of experimental mobile website designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.inspora.design",
+    "title": "inspora.design",
+    "description": "Archive of contemporary visual web design.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://cta.gallery",
+    "title": "cta.gallery",
+    "description": "Curated call-to-action button and banner designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://desengs.com",
+    "title": "desengs.com",
+    "description": "Directory of design engineering portfolios and lore.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://isthereanytool.app",
+    "title": "isthereanytool",
+    "description": "Directory of lesser-known design, craft, and AI tools.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://designeng.tools",
+    "title": "designeng.tools",
+    "description": "Curated design engineering tools, resources, and inspiration.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://designbookmark.com",
+    "title": "Design Bookmark",
+    "description": "Directory of design resources and links.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://rebrand.gallery",
+    "title": "Rebrand Gallery",
+    "description": "Brand redesigns compared before and after.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://curations.supply",
+    "title": "Curations",
+    "description": "Library of curated digital design assets.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://landing.love",
+    "title": "Landing Love",
+    "description": "Delightful landing pages organized by animation.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://motionimo.xyz",
+    "title": "Motionimo",
+    "description": "Extensive library of motion design clips.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://before.click",
+    "title": "before.click",
+    "description": "Showcase of high-converting app screenshot concepts.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://swiped.design",
+    "title": "Swiped",
+    "description": "Standout design posts from social platforms.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://landdding.com",
+    "title": "Landdding",
+    "description": "Daily catalogue of creative landing pages.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://designengineer.tools",
+    "title": "designengineer.tools",
+    "description": "Essential tools tailored for design engineers.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.insposite.com",
+    "title": "Insposite",
+    "description": "Directory of design references and tools.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://loader-buttons.appllama.io",
+    "title": "Loader Buttons",
+    "description": "Gallery of 25 loading button animations.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://whatships.com",
+    "title": "What Ships",
+    "description": "Standout product launch demo videos on X.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://greatstuff.fyi",
+    "title": "GreatStuff",
+    "description": "Carefully vetted archive of creative tools.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://greatapps.fyi",
+    "title": "Great Apps",
+    "description": "Weekly gallery highlighting exceptional iOS apps.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://curated.domains",
+    "title": "Curated Domains",
+    "description": "Brands using creative top-level domain names.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://sections.wtf",
+    "title": "Sections.wtf",
+    "description": "Real-world website section and hero gallery.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://browse.cool",
+    "title": "Browse.cool",
+    "description": "Websites chosen for exceptional tactile feel.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://folios.gallery",
+    "title": "Folios Gallery",
+    "description": "Selective directory of outstanding designer portfolios.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://wwwtf.site",
+    "title": "wwwtf.site",
+    "description": "Quirky and experimental interactive web corners.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.early.tools",
+    "title": "Early",
+    "description": "Discovery platform for early-stage software products.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://openalternative.co",
+    "title": "OpenAlternative",
+    "description": "Open-source alternatives to popular SaaS tools.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://everywhere.tools",
+    "title": "Everywhere Tools",
+    "description": "Open-source creative tools for design craft.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://gallery.jessyin.world",
+    "title": "Jessy In's Gallery",
+    "description": "Collaborative moodboard of unique visual finds.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.wallofportfolios.in",
+    "title": "Wall of Portfolios",
+    "description": "Design engineering and product portfolio showcases.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://detail.design",
+    "title": "Detail Design",
+    "description": "Archive of thoughtful software micro-interactions.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://betwnstudios.com",
+    "title": "Betwn Studios",
+    "description": "Studio crafting modern SaaS web experiences.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://saaslandingpage.com",
+    "title": "SaaS Landing Page",
+    "description": "Showcase of top SaaS landing pages.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://bestsaaswebdesigns.com",
+    "title": "Best SaaS Web Designs",
+    "description": "Curated inspiration gallery of SaaS website design.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://www.a1.gallery",
+    "title": "A1",
+    "description": "Website design inspiration gallery.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://uibook.art",
+    "title": "UIBook",
+    "description": "Real web pages and sections, curated with taste.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://devchauhan.in",
+    "title": "Dev Chauhan",
+    "description": "Frontend developer from India building",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://godly.design",
+    "title": "Godly",
+    "description": "Godly is a curated gallery of the best designs.",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://herogrids.com",
+    "title": "Herogrids",
+    "description": "Curated Collection of Hero Section Designs",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://maxibestof.one",
+    "title": "MaxiBestOf",
+    "description": "Websites, sections and fonts inspiration",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://nicelydone.club",
+    "title": "Nicelydone",
+    "description": "The largest SaaS design inspiration library",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://crafio.app",
+    "title": "Crafio",
+    "description": "Build with AI. We handle backend. You create. 🌱",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://brandcenter.gallery",
+    "title": "BrandCenter Gallery",
+    "description": "Brand guidelines and brand portal examples",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://morphin.dev",
+    "title": "Morphin.dev",
+    "description": "Studying motion across great digital products",
+    "category": "inspiration"
+  },
+  {
+    "href": "https://figma.com",
+    "title": "Figma",
+    "description": "Collaborative interface design and prototyping platform.",
+    "category": "interface"
+  },
+  {
+    "href": "https://framer.com",
+    "title": "Framer",
+    "description": "Visual canvas designing and publishing websites.",
+    "category": "interface"
+  },
+  {
+    "href": "https://make.design",
+    "title": "make.design",
+    "description": "AI generator turning prompts into polished designs.",
+    "category": "interface"
+  },
+  {
+    "href": "https://penpot.app",
+    "title": "Penpot",
+    "description": "Open-source web design platform supporting SVG.",
+    "category": "interface"
+  },
+  {
+    "href": "https://spline.design",
+    "title": "Spline",
+    "description": "Browser-based 3D design software with physics.",
+    "category": "interface"
+  },
+  {
+    "href": "https://www.interfacecraft.dev",
+    "title": "Interface Craft",
+    "description": "Articles exploring modern digital interface craftsmanship.",
+    "category": "interface"
+  },
+  {
+    "href": "https://www.uilabs.dev",
+    "title": "UI Labs",
+    "description": "Laboratory deconstructing animated UI components.",
+    "category": "interface"
+  },
+  {
+    "href": "https://uiw.tf",
+    "title": "UIWTF",
+    "description": "Showcase of experimental web interface patterns.",
+    "category": "interface"
+  },
+  {
+    "href": "https://lab01.dev",
+    "title": "Lab01",
+    "description": "Refined UI experiments from a studio.",
+    "category": "interface"
+  },
+  {
+    "href": "https://design.dev",
+    "title": "design.dev",
+    "description": "AI-assisted design token and system editor.",
+    "category": "interface"
+  },
+  {
+    "href": "https://uiplaybook.dev",
+    "title": "UI Playbook",
+    "description": "Guide to common UI component states.",
+    "category": "interface"
+  },
+  {
+    "href": "https://refactoringui.com",
+    "title": "Refactoring UI",
+    "description": "Practical design guide for building interfaces.",
+    "category": "research"
+  },
+  {
+    "href": "https://practicaltypography.com",
+    "title": "Practical Typography",
+    "description": "Essential book covering typographic rules and layout.",
+    "category": "research"
+  },
+  {
+    "href": "https://web.dev",
+    "title": "web.dev",
+    "description": "Guidance on web performance and modern standards.",
+    "category": "research"
+  },
+  {
+    "href": "https://inclusive-components.design",
+    "title": "Inclusive Components",
+    "description": "Pattern library teaching accessible component design.",
+    "category": "research"
+  },
+  {
+    "href": "https://joshwcomeau.com",
+    "title": "Josh Comeau",
+    "description": "Interactive tutorials breaking down CSS mechanics.",
+    "category": "research"
+  },
+  {
+    "href": "https://design-books.com",
+    "title": "Design Books",
+    "description": "Directory of essential design literature by discipline.",
+    "category": "research"
+  },
+  {
+    "href": "https://learn-kernels.com",
+    "title": "Learn Kernels",
+    "description": "Interactive guide exploring GPU kernel programming.",
+    "category": "research"
+  },
+  {
+    "href": "https://designsystemchecklist.com",
+    "title": "Design System Checklist",
+    "description": "Comprehensive checklist for production design systems.",
+    "category": "research"
+  },
+  {
+    "href": "https://learn-ui.com",
+    "title": "Learn UI",
+    "description": "Video course teaching practical user interface design.",
+    "category": "research"
+  },
+  {
+    "href": "https://designspells.com",
+    "title": "Design Spells",
+    "description": "Dissecting subtle design details in software.",
+    "category": "research"
+  },
+  {
+    "href": "https://goodui.org",
+    "title": "Good UI",
+    "description": "Evidence-based UI design patterns and data.",
+    "category": "research"
+  },
+  {
+    "href": "https://abduzeedo.com",
+    "title": "Abduzeedo",
+    "description": "Daily design blog sharing visual inspiration.",
+    "category": "research"
+  },
+  {
+    "href": "https://uxdesign.cc",
+    "title": "UX Collective",
+    "description": "Curated publication sharing critical UX essays.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.smashingmagazine.com",
+    "title": "Smashing Magazine",
+    "description": "Reliable resource for web designers and developers.",
+    "category": "research"
+  },
+  {
+    "href": "https://tympanus.net/codrops",
+    "title": "Codrops",
+    "description": "Blog publishing creative frontend experiments and tutorials.",
+    "category": "research"
+  },
+  {
+    "href": "https://muz.li",
+    "title": "Muzli",
+    "description": "Daily digest curating latest design trends.",
+    "category": "research"
+  },
+  {
+    "href": "https://boxesandarrows.com",
+    "title": "Boxes and Arrows",
+    "description": "Journal dedicated to information architecture craft.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.designernews.co",
+    "title": "Designer News",
+    "description": "Community-driven news feed highlighting design stories.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.webdesignerdepot.com",
+    "title": "Web Designer Depot",
+    "description": "Design publication covering web standards and tools.",
+    "category": "research"
+  },
+  {
+    "href": "https://designmodo.com",
+    "title": "Designmodo",
+    "description": "Articles and tools covering web design.",
+    "category": "research"
+  },
+  {
+    "href": "https://99designs.com/discover",
+    "title": "99designs Discover",
+    "description": "Design blog exploring creative branding insights.",
+    "category": "research"
+  },
+  {
+    "href": "https://interfaces.dev",
+    "title": "Interfaces",
+    "description": "Monthly digital publication exploring digital interfaces.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.makingsoftware.com",
+    "title": "Making Software",
+    "description": "Essays examining how tools shape design.",
+    "category": "research"
+  },
+  {
+    "href": "https://visualrambling.space",
+    "title": "Visual Rambling",
+    "description": "Personal visual essays exploring interface design.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.degreeless.design",
+    "title": "Degreeless Design",
+    "description": "Curated roadmap for mastering product design.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.svg.guide",
+    "title": "SVG Guide",
+    "description": "Guide to mastering SVG markup and animations.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.animations.dev",
+    "title": "Animations.dev",
+    "description": "Course on creating web animations that feel right.",
+    "category": "research"
+  },
+  {
+    "href": "https://ui-skills.com",
+    "title": "UI Skills",
+    "description": "Course teaching techniques for designing with AI.",
+    "category": "research"
+  },
+  {
+    "href": "https://ui.land",
+    "title": "UI Land",
+    "description": "Interviews with leading design engineers on craft.",
+    "category": "research"
+  },
+  {
+    "href": "https://userinterface.wiki",
+    "title": "User Interface Wiki",
+    "description": "Knowledge base documenting interface guidelines and rules.",
+    "category": "research"
+  },
+  {
+    "href": "https://www.shapeof.ai",
+    "title": "The Shape of AI",
+    "description": "Pattern library highlighting AI interface design.",
+    "category": "research"
+  },
+  {
+    "href": "https://claude.com/claude-code",
+    "title": "Claude Code",
+    "description": "Agentic coding tool inside your terminal.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://cursor.com",
+    "title": "Cursor",
+    "description": "AI-first code editor for rapid development.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://zed.dev",
+    "title": "Zed",
+    "description": "High-performance code editor built for low latency.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://v0.app",
+    "title": "v0",
+    "description": "Generative AI translating prompts into shadcn code.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://bolt.new",
+    "title": "Bolt.new",
+    "description": "In-browser development sandbox for full-stack applications.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://vite.dev",
+    "title": "Vite",
+    "description": "Blazing fast frontend build and dev tool.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://biomejs.dev",
+    "title": "Biome",
+    "description": "Fast Rust-based formatter and code linter.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://playwright.dev",
+    "title": "Playwright",
+    "description": "Reliable browser automation and end-to-end testing.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.buildertools.sh",
+    "title": "BuilderTools",
+    "description": "Focused developer tools for shipping software.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://nuqs.47ng.com",
+    "title": "nuqs",
+    "description": "Type-safe URL search params for React.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.better-t-stack.dev",
+    "title": "Better T Stack",
+    "description": "CLI scaffolding modern full-stack TypeScript setups.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://github.com/alp82/aistack",
+    "title": "AI Stack",
+    "description": "Directory comparing modern AI tech stacks.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://alumnium.ai",
+    "title": "Alumnium",
+    "description": "Natural-language end-to-end testing via MCP.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://vercel-doctor.com",
+    "title": "Vercel Doctor",
+    "description": "Diagnostic tool identifying Next.js performance bottlenecks.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://ossperks.com",
+    "title": "OSS Perks",
+    "description": "Free cloud credits for open-source maintainers.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://vinext.dev",
+    "title": "Vinext",
+    "description": "Vite plugin running Next.js on Cloudflare.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.evlog.dev",
+    "title": "evlog",
+    "description": "Structured logging framework for web applications.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://audio.raphaelsalaja.com",
+    "title": "@web-kits/audio",
+    "description": "Declarative sound library for web apps.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://nuejs.org",
+    "title": "Nue",
+    "description": "Lightweight web framework alternative to React.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://umami.is",
+    "title": "Umami",
+    "description": "Privacy-focused web analytics without cookie banners.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://torph.lochie.me",
+    "title": "Torph",
+    "description": "Dependency-free text morphing animation library.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://x.ai/bot",
+    "title": "x.ai/bot",
+    "description": "Documentation detailing xAI web crawler specifications.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://tracwell.app",
+    "title": "Tracwell",
+    "description": "Focused analytics tracking visitors and conversions.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.dialkit.dev",
+    "title": "DialKit",
+    "description": "Floating interface toolbar for parameter tuning.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://fetchrly.co.in",
+    "title": "FetchrLy",
+    "description": "Your personal AI Agent for job hunting ;)",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://launchshots.com",
+    "title": "Launch Shots",
+    "description": "The App Store screenshots & ASO",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.drayhq.com",
+    "title": "Dray",
+    "description": "Unified desktop workspace managing coding agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://styles.refero.design",
+    "title": "Refero",
+    "description": "Structured DESIGN.MD specifications for AI agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://designmd.me",
+    "title": "designmd.me",
+    "description": "Generator creating machine-readable design specifications.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://open-design.ai",
+    "title": "Open Design",
+    "description": "Standardized design systems formatted for agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://designmd.supply",
+    "title": "designmd.supply",
+    "description": "DESIGN.MD templates to guide AI assistants.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://getdesign.md",
+    "title": "getdesign.md",
+    "description": "Interactive generator producing AI design rules.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://design-md.hyperbrowser.ai",
+    "title": "Hyperbrowser Design.md",
+    "description": "DESIGN.MD generator extracting rules from websites.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://aura.build",
+    "title": "Aura",
+    "description": "Design system generator structuring AI guidelines.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://neuform.ai",
+    "title": "Neuform",
+    "description": "AI-assisted interface design producing clean code.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://typeui.sh",
+    "title": "typeui.sh",
+    "description": "Command-line tool scaffolding typed UI components.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://webclaw.io",
+    "title": "Webclaw",
+    "description": "Converts any webpage into structured markdown.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://ghostex.dev",
+    "title": "Ghostex",
+    "description": "Orchestrates multiple background coding agent sessions.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://is-agentic.com",
+    "title": "is-agentic.com",
+    "description": "Scores how effectively websites support crawlers.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://herdr.dev",
+    "title": "Herdr",
+    "description": "Distributed runner managing coding agent jobs.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://soubi.vercel.app",
+    "title": "Soubi",
+    "description": "Compiler transforming agent skill definitions.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://agentcn.run",
+    "title": "agentcn",
+    "description": "Customizable and production-ready AI agent recipes for React.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.skills.sh/shadcn-labs/skills",
+    "title": "skills",
+    "description": "Agent skills for shadcn registries and developer workflows.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://mcpcn.dev",
+    "title": "mcpcn",
+    "description": "ChatGPT, Claude, and MCP app UI components for React.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://integrations.sh",
+    "title": "integrations.sh",
+    "description": "Repository of API integration specifications for agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://fx.sh",
+    "title": "fx",
+    "description": "High-performance coding agent CLI in Zig.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.hyperframes.dev",
+    "title": "HyperFrames",
+    "description": "Headless HTML-to-MP4 video rendering engine.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.foglamp.dev",
+    "title": "Foglamp",
+    "description": "Observability tool monitoring latency and costs.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://distill.id",
+    "title": "Distill",
+    "description": "Intelligent agent organizing scattered research notes.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.agentation.com",
+    "title": "Agentation",
+    "description": "Converts on-screen UI annotations into context.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://opencode.ai",
+    "title": "OpenCode",
+    "description": "Open-source terminal AI coding agent.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://impeccable.style",
+    "title": "Impeccable",
+    "description": "Design intelligence skill for AI agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://skillsync.com",
+    "title": "SkillSync",
+    "description": "Synchronizes agent context across code editors.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://getbb.app",
+    "title": "bb",
+    "description": "Open-source development environment for coding agents.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://capacity.so",
+    "title": "Capacity",
+    "description": "Natural language workspace generating full-stack apps.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://lafys.com",
+    "title": "Lafys",
+    "description": "Prompt-driven UI component generator for builders.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://efecto.app",
+    "title": "Efecto",
+    "description": "Agent-first visual web canvas with MCP.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://www.arclabs.space",
+    "title": "Arc labs",
+    "description": "AI career suite simulating technical interviews.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://scira.ai",
+    "title": "Scira",
+    "description": "Minimalist open-source AI search engine.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://kombai.com",
+    "title": "Kombai",
+    "description": "AI design engineer that codes UI from context.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://causal.so",
+    "title": "Causal",
+    "description": "AI canvas workspace for notes and plans.",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://ciele.app",
+    "title": "Ciele",
+    "description": "Build AI Teammates that answer from your knowledge",
+    "category": "ai-code"
+  },
+  {
+    "href": "https://vercel.com",
+    "title": "Vercel",
+    "description": "Cloud platform for deploying Next.js applications.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://developers.cloudflare.com/workers",
+    "title": "Cloudflare",
+    "description": "Global edge network running serverless Workers.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://netlify.com",
+    "title": "Netlify",
+    "description": "Web platform providing continuous deployment pipelines.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://railway.app",
+    "title": "Railway",
+    "description": "Simplified infrastructure platform for deploying databases.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://fly.io",
+    "title": "Fly.io",
+    "description": "Runs Docker containers close to users.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://fontshare.com",
+    "title": "Fontshare",
+    "description": "High-quality professional fonts free for commercial use.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://klim.co.nz",
+    "title": "Klim",
+    "description": "Type foundry creating contemporary web typefaces.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://fontsource.org",
+    "title": "Fontsource",
+    "description": "Self-host open-source fonts via npm packages.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://wakamaifondue.com",
+    "title": "Wakamai Fondue",
+    "description": "Tool inspecting font files and features.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://utopia.fyi",
+    "title": "Utopia",
+    "description": "Fluid typography calculator generating CSS clamp.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://velvetyne.fr",
+    "title": "Velvetyne",
+    "description": "Open-source foundry distributing experimental typefaces.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://departuremono.com",
+    "title": "Departure Mono",
+    "description": "Pixel monospace typeface designed for terminals.",
+    "category": "fonts"
+  },
+  {
+    "href": "https://oklch.com",
+    "title": "OKLCH",
+    "description": "Color picker using perceptually uniform space.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://color.review",
+    "title": "Color.review",
+    "description": "Contrast checker helping design accessible palettes.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://huetone.ardov.me",
+    "title": "Huetone",
+    "description": "Accessible palette generator balancing contrast ratios.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.ramps.studio",
+    "title": "Ramps",
+    "description": "Design token tool generating OKLCH ramps.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://atmos.style",
+    "title": "Atmos",
+    "description": "A color palette generator built for UI designers",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://threejs.org",
+    "title": "Three.js",
+    "description": "JavaScript 3D library rendering WebGL scenes.",
+    "category": "3d"
+  },
+  {
+    "href": "https://r3f.docs.pmnd.rs",
+    "title": "React Three Fiber",
+    "description": "Declarative React renderer for Three.js scenes.",
+    "category": "3d"
+  },
+  {
+    "href": "https://drei.docs.pmnd.rs",
+    "title": "Drei",
+    "description": "Helper components for React Three Fiber.",
+    "category": "3d"
+  },
+  {
+    "href": "https://blender.org",
+    "title": "Blender",
+    "description": "Open-source 3D modeling and animation suite.",
+    "category": "3d"
+  },
+  {
+    "href": "https://gltf.report",
+    "title": "gltf.report",
+    "description": "Web-based optimizer for 3D glTF files.",
+    "category": "3d"
+  },
+  {
+    "href": "https://polyhaven.com",
+    "title": "Poly Haven",
+    "description": "Public asset library offering CC0 textures.",
+    "category": "3d"
+  },
+  {
+    "href": "https://thebookofshaders.com",
+    "title": "Book of Shaders",
+    "description": "Interactive guide to mastering fragment shaders.",
+    "category": "visual"
+  },
+  {
+    "href": "https://compute.toys",
+    "title": "compute.toys",
+    "description": "Sandbox for authoring WGSL compute shaders.",
+    "category": "visual"
+  },
+  {
+    "href": "https://shaderfrog.com",
+    "title": "Shaderfrog",
+    "description": "Visual node-based editor for composing shaders.",
+    "category": "visual"
+  },
+  {
+    "href": "https://shadercn.run",
+    "title": "shadercn",
+    "description": "Shader components for React, built on vgpu and TypeGPU.",
+    "category": "visual"
+  },
+  {
+    "href": "https://shaders.paper.design",
+    "title": "Paper Shaders",
+    "description": "Zero-dependency shaders ready to import.",
+    "category": "visual"
+  },
+  {
+    "href": "https://openshaders.com",
+    "title": "OpenShaders",
+    "description": "Open-source shader collection for web projects.",
+    "category": "visual"
+  },
+  {
+    "href": "https://orbkit.zzzzshawn.cloud",
+    "title": "Orbkit",
+    "description": "WebGL shader renderer for orb animations.",
+    "category": "visual"
+  },
+  {
+    "href": "https://lucide.dev",
+    "title": "Lucide",
+    "description": "Community-maintained Feather Icons fork with thousands of glyphs.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://phosphoricons.com",
+    "title": "Phosphor",
+    "description": "Icon family providing six consistent weights.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://iconify.design",
+    "title": "Iconify",
+    "description": "Unified framework providing instant icon access.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.runeicons.com",
+    "title": "Rune Icons",
+    "description": "Minimalist icon set offering five styles.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://icon.museum",
+    "title": "Icon Museum",
+    "description": "Archive celebrating mobile app icon craftsmanship.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://tabler.io/icons",
+    "title": "Tabler Icons",
+    "description": "Library of thousands of outline icons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://heroicons.com",
+    "title": "Heroicons",
+    "description": "Handcrafted SVG icons from Tailwind creators.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://fonts.google.com/icons",
+    "title": "Material Symbols",
+    "description": "Google variable icon font spanning three styles.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://icons.getbootstrap.com",
+    "title": "Bootstrap Icons",
+    "description": "Official icon library designed for Bootstrap.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://remixicon.com",
+    "title": "Remix Icon",
+    "description": "Neutral icon library in outline and fill.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://iconoir.com",
+    "title": "Iconoir",
+    "description": "Open-source SVG icons with consistent strokes.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://ionic.io/ionicons",
+    "title": "Ionicons",
+    "description": "Premium icon pack for web and mobile.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://simpleicons.org",
+    "title": "Simple Icons",
+    "description": "Over three thousand SVG brand logos.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://thesvg.org",
+    "title": "theSVG",
+    "description": "Curated collection of clean brand SVGs.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://feathericons.com",
+    "title": "Feather",
+    "description": "Minimalist open-source icon set on 24px grid.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://carbondesignsystem.com",
+    "title": "Carbon Icons",
+    "description": "IBM official icon library for enterprise design.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://boxicons.com",
+    "title": "Boxicons",
+    "description": "Vector icons crafted in three styles.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://mx-icons.vercel.app",
+    "title": "MX Icons",
+    "description": "Large collection of customizable React icons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://akveo.github.io/eva-icons",
+    "title": "Eva Icons",
+    "description": "Pack of 400 icons in outline and fill.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://devicon.dev",
+    "title": "Devicon",
+    "description": "Developer-focused icon set for programming tools.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://css.gg",
+    "title": "css.gg",
+    "description": "700 lightweight icons rendered using pure CSS.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://hugeicons.com",
+    "title": "HugeIcons",
+    "description": "Comprehensive library of stroke and solid icons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://reicon.dev",
+    "title": "Reicon",
+    "description": "Tree-shakeable React icon library with dual weights.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://app.iconsax.io",
+    "title": "Iconsax",
+    "description": "Versatile icon set with six visual styles.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://icons0.dev",
+    "title": "icons0",
+    "description": "Search engine covering over 200k icons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://heroicons-animated.com",
+    "title": "Heroicons Animated",
+    "description": "Heroicons enhanced with reactive hover animations.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://icons.download",
+    "title": "Icons.download",
+    "description": "Curated icon library in sixteen aesthetic styles.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://lucide-animated.com",
+    "title": "Lucide Animated",
+    "description": "Lucide icons enhanced with micro-animations.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://iconfoundry.store",
+    "title": "Icon Foundry",
+    "description": "Searchable collection of icons from many families.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://inkword.app",
+    "title": "Inkword",
+    "description": "Turns a single word into a matching illustration.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://nucleoapp.com",
+    "title": "Nucleo – The Ultimate Icon Bundle",
+    "description": "Explore the Nucleo icons, 40,000+ premium SVG icon",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://iconsdb.app",
+    "title": "IconsDB",
+    "description": "Instant, semantic search across 200K+ icons",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://svgomg.net",
+    "title": "SVGOMG",
+    "description": "Web GUI to optimize and clean SVG files.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://regexr.com",
+    "title": "RegExr",
+    "description": "Interactive sandbox for testing regular expressions.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://squoosh.app",
+    "title": "Squoosh",
+    "description": "Browser image compression with visual comparisons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://fffuel.co",
+    "title": "Fffuel",
+    "description": "Generative SVG textures, gradients, and patterns.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://ui.camera",
+    "title": "ui.camera",
+    "description": "3D mockups and scene staging for software.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://ray.so",
+    "title": "Ray.so",
+    "description": "Turn code snippets into shareable screenshots.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://transform.tools",
+    "title": "Transform",
+    "description": "Polyglot code converter for JSON and types.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.playgrnd.tools",
+    "title": "Playgrnd",
+    "description": "Suite of browser-based offline creative tools.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.tryanim8.com",
+    "title": "Anim8",
+    "description": "Convert MP4 recordings into animated SVG graphics.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.ogfolio.com",
+    "title": "OGFolio",
+    "description": "Inspect and preview Open Graph social cards.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://dotforge.vercel.app",
+    "title": "DotForge",
+    "description": "Real-time dither effect generator for web.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://asciinator.app",
+    "title": "ASCIInator",
+    "description": "Browser utility converting images into ASCII art.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://vessa.design",
+    "title": "Vessa",
+    "description": "Publish brand guidelines as live pages.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://icoon.co",
+    "title": "Icoon",
+    "description": "AI tool generating custom 3D icons.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.designminis.com",
+    "title": "Design Minis",
+    "description": "Suite of micro design tools and scales.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://ascii.krackeddevs.com",
+    "title": "ASCII (Kracked Devs)",
+    "description": "Fast tool converting text into ASCII art.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://literate-enigma-snowy.vercel.app",
+    "title": "Dither Lab",
+    "description": "Applies vintage dithering filters to photographs.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.usehallmark.com",
+    "title": "Hallmark",
+    "description": "Landing page builder producing handcrafted designs.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.tooooools.app",
+    "title": "Tooooools",
+    "description": "In-browser utilities to dither and pixelate images.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://screan.app",
+    "title": "Screan",
+    "description": "Create promotional App Store screenshot mockups.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://postspark.app",
+    "title": "PostSpark",
+    "description": "Format screenshots with clean social backgrounds.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.drawably.dev",
+    "title": "Drawably",
+    "description": "Sketching tool generating hand-drawn UI shapes.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://mesurer.dev",
+    "title": "Mesurer",
+    "description": "On-screen tool checking website pixel spacing.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://render-labs.evlog.cloud",
+    "title": "Render Labs",
+    "description": "Image rendering tool from evlog team.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.butterfly.so",
+    "title": "Butterfly",
+    "description": "Minimalist landing page builder for validation.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://corne.rs",
+    "title": "Corne",
+    "description": "Documentation for the Corne split keyboard.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.shiori.sh",
+    "title": "Shiori",
+    "description": "Bookmark manager with CLI and Raycast support.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://opensource-together.com",
+    "title": "Open Source Together",
+    "description": "Platform matching developers with open-source projects.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.asciistudio.space",
+    "title": "ASCII Studio",
+    "description": "Transforms images and videos into ASCII art.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://tabbied.com",
+    "title": "Tabbied",
+    "description": "Generative geometric pattern creator for SVG.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://studio.rynix.in/edit",
+    "title": "Rynix Studio",
+    "description": "Playground for real-time video visual effects.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://mascofast.com",
+    "title": "Mascofast",
+    "description": "AI tool generating animated transparent 3D mascots.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://www.screenshot-studio.com",
+    "title": "Screenshot Studio",
+    "description": "Frames screenshots inside realistic 3D mockups.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://letsreplay.co",
+    "title": "Replay",
+    "description": "Session replay and visitor recording for websites.",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://convergence.suryansu.in",
+    "title": "Convergence UI",
+    "description": "Tweak colors, typography, borders and radius in",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://space-bin.onrender.com",
+    "title": "Space-Bin",
+    "description": "Temporary encrypted space for secure file transfer",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://nute.app",
+    "title": "Nute",
+    "description": "No nonsense notes",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://schedual.app",
+    "title": "Schedual",
+    "description": "No nonsense tasks",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://prepora.xyz",
+    "title": "Home / Prepora",
+    "description": "Practice IELTS reading, listening, and writing",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://posthog.com",
+    "title": "PostHog – We make your product self-driving",
+    "description": "PostHog automatically diagnoses problems, fixes",
+    "category": "web-utility"
+  },
+  {
+    "href": "https://raycast.com",
+    "title": "Raycast",
+    "description": "Extendable desktop launcher replacing Spotlight.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://ghostty.org",
+    "title": "Ghostty",
+    "description": "Fast GPU-accelerated terminal emulator for developers.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://warp.dev",
+    "title": "Warp",
+    "description": "Rust-based terminal with block outputs and AI.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://cleanshot.com",
+    "title": "CleanShot X",
+    "description": "Ultimate screen capture and recording utility.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://granola.ai",
+    "title": "Granola",
+    "description": "AI notepad generating meeting summaries without bots.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://localsend.org",
+    "title": "LocalSend",
+    "description": "Share files securely across local Wi-Fi networks.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://rioterm.com/canario",
+    "title": "Canario",
+    "description": "Terminal organizing CLI sessions into panes.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://cooldock.app",
+    "title": "CoolDock",
+    "description": "Secondary dock supporting desktop monitoring widgets.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://supaste.com",
+    "title": "Supaste",
+    "description": "Clipboard manager and screenshot history for Mac.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://runey.app",
+    "title": "Runey",
+    "description": "Invoicing and client tracking app for freelancers.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://revone.app",
+    "title": "Revone",
+    "description": "Unified revenue dashboard aggregating payment metrics.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://zen-browser.app",
+    "title": "Zen Browser",
+    "description": "Firefox fork with vertical tabs and focus.",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://rexadb.app",
+    "title": "Rexa DB",
+    "description": "Modern database client for developers who ship",
+    "category": "desktop-utility"
+  },
+  {
+    "href": "https://screen.studio",
+    "title": "Screen Studio",
+    "description": "Screen recorder adding camera zooms automatically.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://remotion.dev",
+    "title": "Remotion",
+    "description": "Render high-definition videos programmatically with React.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://www.blackmagicdesign.com/products/davinciresolve",
+    "title": "DaVinci Resolve",
+    "description": "Professional video editing and color grading suite.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://descript.com",
+    "title": "Descript",
+    "description": "AI video editor where you edit text.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://gif.ski",
+    "title": "Gifski",
+    "description": "High-quality video-to-GIF converter preserving framerates.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://slantit.app",
+    "title": "Slant It",
+    "description": "Transforms flat captures into 3D mockups.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://www.remocn.dev",
+    "title": "Remocn",
+    "description": "Remotion animation components for video production.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://www.bettershot.site",
+    "title": "BetterShot",
+    "description": "Screen recorder featuring cursor zoom and captions.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://recordly.dev",
+    "title": "Recordly",
+    "description": "Screen recording tool for polished developer demos.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://cursorful.com",
+    "title": "Cursorful",
+    "description": "Screen recorder that automatically tracks cursor.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://tokokino.com",
+    "title": "Tokokino",
+    "description": "In-browser editor for device framing and mockups.",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://prequel.sh",
+    "title": "Prequel",
+    "description": "Cinematic screen recorder for mac",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://genmotion.dev",
+    "title": "GenMotion",
+    "description": "AI launch videos and motion graphics editor",
+    "category": "video-capture"
+  },
+  {
+    "href": "https://tldraw.com",
+    "title": "tldraw",
+    "description": "Infinite whiteboard library offering React SDK.",
+    "category": "whiteboard"
+  },
+  {
+    "href": "https://excalidraw.com",
+    "title": "Excalidraw",
+    "description": "Collaborative whiteboard with hand-drawn sketch aesthetic.",
+    "category": "whiteboard"
+  },
+  {
+    "href": "https://obsidian.md",
+    "title": "Obsidian",
+    "description": "Local-first Markdown knowledge base with graphs.",
+    "category": "organization"
+  },
+  {
+    "href": "https://linear.app",
+    "title": "Linear",
+    "description": "Project management software setting speed standards.",
+    "category": "organization"
+  }
+]

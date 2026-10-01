@@ -157,16 +157,19 @@
     return item.offsetTop + item.offsetHeight / 2 - 2;
   }
 
-  function placeLabel(el, x) {
-    const next = Math.max(0, Math.min(12, x));
-    el.style.transform = "translateX(" + next + "px)";
+  const FRAME_MS = 1000 / 120;
+
+  function clampLabel(x) {
+    return Math.max(0, Math.min(12, x));
   }
 
-  // Fixed 8ms steps. A single 32ms step makes the 1000/60 spring explode and
-  // throws the active label off the row.
+  function placeLabel(el, x) {
+    el.style.transform = "translateX(" + clampLabel(x) + "px)";
+  }
+
+  // Fixed 8ms steps. A single 32ms step makes the 1000/60 spring explode.
   function stepSpring(state, target, stiffness, damping, dt) {
     let left = Math.min(Math.max(dt, 0), 0.05);
-    let used = 0;
     let steps = 0;
     while (left >= 0.001 && steps < 8) {
       const h = Math.min(1 / 120, left);
@@ -174,36 +177,77 @@
       state.v += a * h;
       state.x += state.v * h;
       left -= h;
-      used += h;
       steps += 1;
     }
-    return used;
   }
 
-  function springTo(from, to, stiffness, damping, onFrame) {
-    if (reduceMotion) {
-      onFrame(to);
+  function withOffsets(frames) {
+    const last = frames.length - 1;
+    frames.forEach(function (frame, index) {
+      frame.offset = last === 0 ? 0 : index / last;
+    });
+    return frames;
+  }
+
+  function sampleLabel(from, to, stiffness, damping) {
+    const state = { x: from, v: 0 };
+    const frames = [{ transform: "translateX(" + clampLabel(from) + "px)" }];
+    let guard = 0;
+    while (guard < 80) {
+      stepSpring(state, to, stiffness, damping, FRAME_MS / 1000);
+      frames.push({ transform: "translateX(" + clampLabel(state.x) + "px)" });
+      guard += 1;
+      if (Math.abs(to - state.x) < 0.15 && Math.abs(state.v) < 6) break;
+    }
+    frames[frames.length - 1].transform = "translateX(" + clampLabel(to) + "px)";
+    return { frames: withOffsets(frames), duration: Math.max(FRAME_MS, (frames.length - 1) * FRAME_MS) };
+  }
+
+  function sampleDot(startY, targetY, offset) {
+    const state = { x: startY, v: 0 };
+    const frames = [];
+    let elapsed = 0;
+    let guard = 0;
+    while (guard < 120) {
+      const t = Math.min(1, elapsed / DOT_FLIGHT_MS);
+      frames.push({
+        transform: "translate(" + arcX(t, offset).toFixed(2) + "px, " + state.x.toFixed(2) + "px)",
+      });
+      const settled = t >= 1 && Math.abs(targetY - state.x) < 0.4 && Math.abs(state.v) < 12;
+      if (settled) break;
+      stepSpring(state, targetY, 800, 52, FRAME_MS / 1000);
+      elapsed += FRAME_MS;
+      guard += 1;
+    }
+    frames[frames.length - 1].transform = "translate(0px, " + targetY.toFixed(2) + "px)";
+    return { frames: withOffsets(frames), duration: Math.max(FRAME_MS, (frames.length - 1) * FRAME_MS) };
+  }
+
+  function playMotion(el, frames, duration, delay, startTime, onDone) {
+    if (!frames.length || typeof el.animate !== "function") {
+      if (frames.length) el.style.transform = frames[frames.length - 1].transform;
+      if (onDone) onDone();
       return;
     }
-    const state = { x: from, v: 0 };
-    let last = 0;
-    function frame(now) {
-      if (!last) {
-        last = now;
-        requestAnimationFrame(frame);
-        return;
-      }
-      const dt = (now - last) / 1000;
-      last = now;
-      stepSpring(state, to, stiffness, damping, dt);
-      onFrame(state.x);
-      if (Math.abs(to - state.x) < 0.15 && Math.abs(state.v) < 6) {
-        onFrame(to);
-        return;
-      }
-      requestAnimationFrame(frame);
+    el.getAnimations().forEach(function (animation) {
+      animation.cancel();
+    });
+    const animation = el.animate(frames, {
+      duration: duration,
+      delay: delay || 0,
+      easing: "linear",
+      fill: "both",
+    });
+    try {
+      if (startTime != null) animation.startTime = startTime;
+    } catch (error) {
+      /* timeline not ready — play from the current time */
     }
-    requestAnimationFrame(frame);
+    animation.onfinish = function () {
+      el.style.transform = frames[frames.length - 1].transform;
+      animation.cancel();
+      if (onDone) onDone();
+    };
   }
 
   function easeOut(t) {
@@ -231,49 +275,6 @@
     return -Math.min(DOT_ARC_MAX, DOT_ARC_MIN + (rows - 1) * DOT_ARC_PER_ROW);
   }
 
-  function flyDot(from, to, onImpact) {
-    dot.hidden = false;
-    const startY = rowY(from);
-    const targetY = rowY(to);
-    const rows = Math.abs(to - from);
-    const offset = arcOffset(rows);
-    dot.style.transform = "translate(0px, " + startY + "px)";
-    if (reduceMotion || rows === 0) {
-      dot.style.transform = "translate(0px, " + targetY + "px)";
-      if (onImpact) onImpact();
-      return;
-    }
-    dot.classList.add("is-travelling");
-    const state = { x: startY, v: 0 };
-    let last = 0;
-    let elapsed = 0;
-    let impacted = false;
-    function fly(now) {
-      // Ignore time spent before the first paint. Later frames catch up in real time.
-      if (!last) {
-        last = now;
-        requestAnimationFrame(fly);
-        return;
-      }
-      const dt = (now - last) / 1000;
-      last = now;
-      elapsed += stepSpring(state, targetY, 800, 52, dt) * 1000;
-      const t = Math.min(1, elapsed / DOT_FLIGHT_MS);
-      if (!impacted && t >= DOT_IMPACT) {
-        impacted = true;
-        if (onImpact) onImpact();
-      }
-      dot.style.transform = "translate(" + arcX(t, offset) + "px, " + state.x + "px)";
-      const settled = t >= 1 && Math.abs(targetY - state.x) < 0.4 && Math.abs(state.v) < 12;
-      if (!settled) requestAnimationFrame(fly);
-      else {
-        dot.style.transform = "translate(0px, " + targetY + "px)";
-        dot.classList.remove("is-travelling");
-      }
-    }
-    requestAnimationFrame(fly);
-  }
-
   function playArrival(originIndex) {
     const travelled =
       !reduceMotion &&
@@ -297,13 +298,22 @@
       return;
     }
 
-    springTo(10, 0, 900, 45, function (x) {
-      placeLabel(labels[originIndex], x);
-    });
+    const startY = rowY(originIndex);
+    const targetY = rowY(activeIndex);
+    dot.hidden = false;
+    dot.style.willChange = "transform";
+    dot.style.transform = "translate(0px, " + startY + "px)";
 
-    flyDot(originIndex, activeIndex, function () {
-      springTo(0, 10, 1000, 60, function (x) {
-        placeLabel(labels[activeIndex], x);
+    const returning = sampleLabel(10, 0, 900, 45);
+    const arriving = sampleLabel(0, 10, 1000, 60);
+    const flight = sampleDot(startY, targetY, arcOffset(Math.abs(activeIndex - originIndex)));
+
+    requestAnimationFrame(function (now) {
+      dot.classList.add("is-travelling");
+      playMotion(labels[originIndex], returning.frames, returning.duration, 0, now);
+      playMotion(labels[activeIndex], arriving.frames, arriving.duration, DOT_IMPACT_MS, now);
+      playMotion(dot, flight.frames, flight.duration, 0, now, function () {
+        dot.classList.remove("is-travelling");
       });
     });
   }

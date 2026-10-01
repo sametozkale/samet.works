@@ -158,7 +158,26 @@
   }
 
   function placeLabel(el, x) {
-    el.style.transform = "translateX(" + x + "px)";
+    const next = Math.max(0, Math.min(12, x));
+    el.style.transform = "translateX(" + next + "px)";
+  }
+
+  // Fixed 8ms steps. A single 32ms step makes the 1000/60 spring explode and
+  // throws the active label off the row.
+  function stepSpring(state, target, stiffness, damping, dt) {
+    let left = Math.min(Math.max(dt, 0), 0.05);
+    let used = 0;
+    let steps = 0;
+    while (left >= 0.001 && steps < 8) {
+      const h = Math.min(1 / 120, left);
+      const a = -stiffness * (state.x - target) - damping * state.v;
+      state.v += a * h;
+      state.x += state.v * h;
+      left -= h;
+      used += h;
+      steps += 1;
+    }
+    return used;
   }
 
   function springTo(from, to, stiffness, damping, onFrame) {
@@ -166,8 +185,7 @@
       onFrame(to);
       return;
     }
-    let x = from;
-    let v = 0;
+    const state = { x: from, v: 0 };
     let last = 0;
     function frame(now) {
       if (!last) {
@@ -175,13 +193,11 @@
         requestAnimationFrame(frame);
         return;
       }
-      const dt = Math.min(0.032, (now - last) / 1000);
+      const dt = (now - last) / 1000;
       last = now;
-      const a = -stiffness * (x - to) - damping * v;
-      v += a * dt;
-      x += v * dt;
-      onFrame(x);
-      if (Math.abs(to - x) < 0.15 && Math.abs(v) < 6) {
+      stepSpring(state, to, stiffness, damping, dt);
+      onFrame(state.x);
+      if (Math.abs(to - state.x) < 0.15 && Math.abs(state.v) < 6) {
         onFrame(to);
         return;
       }
@@ -228,31 +244,27 @@
       return;
     }
     dot.classList.add("is-travelling");
-    let y = startY;
-    let velocity = 0;
+    const state = { x: startY, v: 0 };
     let last = 0;
     let elapsed = 0;
     let impacted = false;
     function fly(now) {
-      // Ignore time spent before the first paint. A late frame must not skip the arc.
+      // Ignore time spent before the first paint. Later frames catch up in real time.
       if (!last) {
         last = now;
         requestAnimationFrame(fly);
         return;
       }
-      const dt = Math.min(0.016, (now - last) / 1000);
+      const dt = (now - last) / 1000;
       last = now;
-      elapsed += dt * 1000;
-      const accel = -800 * (y - targetY) - 52 * velocity;
-      velocity += accel * dt;
-      y += velocity * dt;
+      elapsed += stepSpring(state, targetY, 800, 52, dt) * 1000;
       const t = Math.min(1, elapsed / DOT_FLIGHT_MS);
       if (!impacted && t >= DOT_IMPACT) {
         impacted = true;
         if (onImpact) onImpact();
       }
-      dot.style.transform = "translate(" + arcX(t, offset) + "px, " + y + "px)";
-      const settled = t >= 1 && Math.abs(targetY - y) < 0.4 && Math.abs(velocity) < 12;
+      dot.style.transform = "translate(" + arcX(t, offset) + "px, " + state.x + "px)";
+      const settled = t >= 1 && Math.abs(targetY - state.x) < 0.4 && Math.abs(state.v) < 12;
       if (!settled) requestAnimationFrame(fly);
       else {
         dot.style.transform = "translate(0px, " + targetY + "px)";

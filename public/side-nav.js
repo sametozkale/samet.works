@@ -81,6 +81,18 @@
   const activeIndex = PAGES.findIndex((page) => page.match(path));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  function readOrigin() {
+    try {
+      const raw = sessionStorage.getItem(ORIGIN_KEY);
+      if (raw == null || raw === "") return -1;
+      const n = Number(raw);
+      if (!Number.isInteger(n) || n < 0 || n >= PAGES.length) return -1;
+      return n;
+    } catch (error) {
+      return -1;
+    }
+  }
+
   const nav = document.createElement("nav");
   nav.className = "side-nav";
   nav.setAttribute("aria-label", "Site");
@@ -133,21 +145,12 @@
   nav.appendChild(list);
   document.body.appendChild(nav);
 
-  const stored = Number(sessionStorage.getItem(ORIGIN_KEY));
-  const fromIndex = Number.isInteger(stored) ? stored : activeIndex;
+  const fromIndex = readOrigin();
   try {
     if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
   } catch (error) {
     /* ignore */
   }
-
-  const travelled =
-    !reduceMotion &&
-    fromIndex >= 0 &&
-    activeIndex >= 0 &&
-    fromIndex !== activeIndex
-      ? Math.abs(activeIndex - fromIndex)
-      : 0;
 
   function rowY(index) {
     const item = list.children[index];
@@ -165,8 +168,13 @@
     }
     let x = from;
     let v = 0;
-    let last = performance.now();
+    let last = 0;
     function frame(now) {
+      if (!last) {
+        last = now;
+        requestAnimationFrame(frame);
+        return;
+      }
       const dt = Math.min(0.032, (now - last) / 1000);
       last = now;
       const a = -stiffness * (x - to) - damping * v;
@@ -207,7 +215,7 @@
     return -Math.min(DOT_ARC_MAX, DOT_ARC_MIN + (rows - 1) * DOT_ARC_PER_ROW);
   }
 
-  function flyDot(from, to) {
+  function flyDot(from, to, onImpact) {
     dot.hidden = false;
     const startY = rowY(from);
     const targetY = rowY(to);
@@ -216,53 +224,88 @@
     dot.style.transform = "translate(0px, " + startY + "px)";
     if (reduceMotion || rows === 0) {
       dot.style.transform = "translate(0px, " + targetY + "px)";
+      if (onImpact) onImpact();
       return;
     }
     dot.classList.add("is-travelling");
-    const started = performance.now();
     let y = startY;
     let velocity = 0;
-    let last = started;
+    let last = 0;
+    let elapsed = 0;
+    let impacted = false;
     function fly(now) {
+      // Ignore time spent before the first paint. A late frame must not skip the arc.
+      if (!last) {
+        last = now;
+        requestAnimationFrame(fly);
+        return;
+      }
       const dt = Math.min(0.016, (now - last) / 1000);
       last = now;
+      elapsed += dt * 1000;
       const accel = -800 * (y - targetY) - 52 * velocity;
       velocity += accel * dt;
       y += velocity * dt;
-      const t = Math.min(1, (now - started) / DOT_FLIGHT_MS);
+      const t = Math.min(1, elapsed / DOT_FLIGHT_MS);
+      if (!impacted && t >= DOT_IMPACT) {
+        impacted = true;
+        if (onImpact) onImpact();
+      }
       dot.style.transform = "translate(" + arcX(t, offset) + "px, " + y + "px)";
       const settled = t >= 1 && Math.abs(targetY - y) < 0.4 && Math.abs(velocity) < 12;
       if (!settled) requestAnimationFrame(fly);
-      else dot.style.transform = "translate(0px, " + targetY + "px)";
+      else {
+        dot.style.transform = "translate(0px, " + targetY + "px)";
+        dot.classList.remove("is-travelling");
+      }
     }
     requestAnimationFrame(fly);
   }
 
-  labels.forEach(function (label, index) {
-    if (travelled && index === fromIndex) placeLabel(label, 10);
-    else placeLabel(label, index === activeIndex && !travelled ? 10 : 0);
-  });
+  function playArrival(originIndex) {
+    const travelled =
+      !reduceMotion &&
+      originIndex >= 0 &&
+      activeIndex >= 0 &&
+      originIndex !== activeIndex;
 
-  if (activeIndex < 0) {
-    dot.hidden = true;
-    return;
-  }
+    labels.forEach(function (label, index) {
+      if (travelled && index === originIndex) placeLabel(label, 10);
+      else placeLabel(label, index === activeIndex && !travelled ? 10 : 0);
+    });
 
-  if (!travelled) {
-    dot.style.transform = "translate(0px, " + rowY(activeIndex) + "px)";
-    return;
-  }
+    if (activeIndex < 0) {
+      dot.hidden = true;
+      return;
+    }
 
-  if (fromIndex >= 0 && fromIndex !== activeIndex) {
+    if (!travelled) {
+      dot.hidden = false;
+      dot.style.transform = "translate(0px, " + rowY(activeIndex) + "px)";
+      return;
+    }
+
     springTo(10, 0, 900, 45, function (x) {
-      placeLabel(labels[fromIndex], x);
+      placeLabel(labels[originIndex], x);
+    });
+
+    flyDot(originIndex, activeIndex, function () {
+      springTo(0, 10, 1000, 60, function (x) {
+        placeLabel(labels[activeIndex], x);
+      });
     });
   }
 
-  flyDot(fromIndex, activeIndex);
-  window.setTimeout(function () {
-    springTo(0, 10, 1000, 60, function (x) {
-      placeLabel(labels[activeIndex], x);
-    });
-  }, DOT_IMPACT_MS);
+  playArrival(fromIndex);
+
+  window.addEventListener("pageshow", function (event) {
+    if (!event.persisted) return;
+    const again = readOrigin();
+    try {
+      if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
+    } catch (error) {
+      /* ignore */
+    }
+    playArrival(again);
+  });
 })();

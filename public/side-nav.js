@@ -162,10 +162,16 @@
       const go = function () {
         window.location.href = page.href;
       };
+      let left = false;
+      const goOnce = function () {
+        if (left) return;
+        left = true;
+        go();
+      };
       playTick().then(function (played) {
-        if (played) window.setTimeout(go, TICK_HOLD_MS);
-        else go();
+        if (!played) goOnce();
       });
+      window.setTimeout(goOnce, TICK_HOLD_MS);
     });
   });
 
@@ -176,11 +182,52 @@
   nav.appendChild(list);
   document.body.appendChild(nav);
 
-  const fromIndex = readOrigin();
-  try {
-    if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
-  } catch (error) {
-    /* ignore */
+  function warmNavTargets() {
+    if (document.prerendering) return;
+    if (!window.matchMedia("(min-width: 641px)").matches) return;
+    if (window.matchMedia("(prefers-reduced-data: reduce)").matches) return;
+    if (document.querySelector("[data-side-nav-warm]")) return;
+    const urls = [];
+    PAGES.forEach(function (page, index) {
+      if (index === activeIndex) return;
+      urls.push(new URL(page.href, window.location.origin).href);
+    });
+    if (!urls.length) return;
+    const supportsSpeculation =
+      window.HTMLScriptElement &&
+      typeof HTMLScriptElement.supports === "function" &&
+      HTMLScriptElement.supports("speculationrules");
+    if (supportsSpeculation) {
+      const rules = document.createElement("script");
+      rules.type = "speculationrules";
+      rules.setAttribute("data-side-nav-warm", "");
+      rules.textContent = JSON.stringify({
+        prefetch: [{ source: "list", urls: urls, eagerness: "immediate" }],
+        prerender: [
+          {
+            source: "document",
+            where: { selector_matches: ".side-nav__link:not(.is-active)" },
+            eagerness: "eager",
+          },
+        ],
+      });
+      document.head.appendChild(rules);
+      return;
+    }
+    urls.forEach(function (href) {
+      const link = document.createElement("link");
+      link.rel = "prefetch";
+      link.as = "document";
+      link.href = href;
+      link.setAttribute("data-side-nav-warm", "");
+      document.head.appendChild(link);
+    });
+  }
+
+  if (document.prerendering) {
+    document.addEventListener("prerenderingchange", warmNavTargets, { once: true });
+  } else {
+    warmNavTargets();
   }
 
   function rowY(index) {
@@ -349,16 +396,24 @@
     });
   }
 
-  playArrival(fromIndex);
-
-  window.addEventListener("pageshow", function (event) {
-    if (!event.persisted) return;
-    const again = readOrigin();
+  function boot() {
+    const origin = readOrigin();
     try {
       if (activeIndex >= 0) sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
     } catch (error) {
       /* ignore */
     }
-    playArrival(again);
+    playArrival(origin);
+  }
+
+  if (document.prerendering) {
+    document.addEventListener("prerenderingchange", boot, { once: true });
+  } else {
+    boot();
+  }
+
+  window.addEventListener("pageshow", function (event) {
+    if (!event.persisted) return;
+    boot();
   });
 })();

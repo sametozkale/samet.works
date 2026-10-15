@@ -106,6 +106,19 @@
   const path = window.location.pathname.replace(/\/$/, "") || "/";
   const activeIndex = PAGES.findIndex((page) => page.match(path));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isPortfolio = path.startsWith("/portfolio");
+  const SVG_NS = "http://www.w3.org/2000/svg";
+
+  function menuGlyph() {
+    return (
+      '<svg class="side-nav__trigger-icon" viewBox="0 0 24 24" aria-hidden="true">' +
+      '<rect x="3.25" y="3.25" width="7" height="7" rx="1.6"/>' +
+      '<rect x="13.75" y="3.25" width="7" height="7" rx="1.6"/>' +
+      '<rect x="3.25" y="13.75" width="7" height="7" rx="1.6"/>' +
+      '<rect x="13.75" y="13.75" width="7" height="7" rx="1.6"/>' +
+      "</svg>"
+    );
+  }
 
   function readOrigin() {
     try {
@@ -129,6 +142,31 @@
   list.className = "side-nav__list";
 
   const labels = [];
+  const dockItems = [];
+  const dockBubbles = [];
+  let dockLiquid = null;
+  let dockTrigger = null;
+
+  function setDock(open) {
+    if (nav.classList.contains("is-open") === open) return;
+    const count = dockItems.length;
+    dockItems.forEach(function (item, index) {
+      const delay = (open ? count - 1 - index : index) * 40;
+      const value = delay + "ms";
+      item.style.transitionDelay = value;
+      dockBubbles[index].style.transitionDelay = value;
+      labels[index].style.transitionDelay = value;
+    });
+    nav.classList.toggle("is-open", open);
+    if (dockTrigger) {
+      dockTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+      dockTrigger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    nav.querySelectorAll(".side-nav__link").forEach(function (link) {
+      link.tabIndex = open ? 0 : -1;
+    });
+  }
+
   PAGES.forEach((page, index) => {
     const item = document.createElement("li");
     item.className = "side-nav__item";
@@ -142,6 +180,15 @@
     const label = document.createElement("span");
     label.className = "side-nav__label";
     label.textContent = page.label;
+    if (isPortfolio) {
+      link.tabIndex = -1;
+      const bubble = document.createElementNS(SVG_NS, "rect");
+      bubble.setAttribute("class", "side-nav__bubble");
+      bubble.setAttribute("height", "22");
+      bubble.setAttribute("rx", "11");
+      dockItems.push(item);
+      dockBubbles.push(bubble);
+    }
     link.appendChild(label);
     item.appendChild(link);
     list.appendChild(item);
@@ -152,6 +199,11 @@
     });
     link.addEventListener("click", function (event) {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      if (isPortfolio && !nav.classList.contains("is-open") && window.matchMedia("(hover: none)").matches) {
+        event.preventDefault();
+        setDock(true);
+        return;
+      }
       if (index === activeIndex) return;
       event.preventDefault();
       try {
@@ -179,8 +231,105 @@
   dot.className = "side-nav__dot";
   dot.setAttribute("aria-hidden", "true");
   list.appendChild(dot);
+  if (isPortfolio) {
+    nav.classList.add("side-nav--dock");
+    dot.hidden = true;
+    dockLiquid = document.createElementNS(SVG_NS, "svg");
+    dockLiquid.setAttribute("class", "side-nav__liquid");
+    dockLiquid.setAttribute("aria-hidden", "true");
+    dockLiquid.setAttribute("focusable", "false");
+    const defs = document.createElementNS(SVG_NS, "defs");
+    const filter = document.createElementNS(SVG_NS, "filter");
+    filter.setAttribute("id", "side-nav-goo");
+    filter.setAttribute("x", "-50%");
+    filter.setAttribute("y", "-50%");
+    filter.setAttribute("width", "200%");
+    filter.setAttribute("height", "200%");
+    filter.setAttribute("color-interpolation-filters", "sRGB");
+    const blur = document.createElementNS(SVG_NS, "feGaussianBlur");
+    blur.setAttribute("in", "SourceGraphic");
+    blur.setAttribute("stdDeviation", "6");
+    blur.setAttribute("result", "blur");
+    const matrix = document.createElementNS(SVG_NS, "feColorMatrix");
+    matrix.setAttribute("in", "blur");
+    matrix.setAttribute("mode", "matrix");
+    matrix.setAttribute("values", "1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7");
+    filter.appendChild(blur);
+    filter.appendChild(matrix);
+    defs.appendChild(filter);
+    const goo = document.createElementNS(SVG_NS, "g");
+    goo.setAttribute("filter", "url(#side-nav-goo)");
+    const core = document.createElementNS(SVG_NS, "circle");
+    core.setAttribute("class", "side-nav__core");
+    core.setAttribute("r", "11");
+    goo.appendChild(core);
+    dockBubbles.forEach(function (bubble) {
+      goo.appendChild(bubble);
+    });
+    dockLiquid.appendChild(defs);
+    dockLiquid.appendChild(goo);
+    nav.appendChild(dockLiquid);
+    dockTrigger = document.createElement("button");
+    dockTrigger.type = "button";
+    dockTrigger.className = "side-nav__trigger";
+    dockTrigger.setAttribute("aria-expanded", "false");
+    dockTrigger.setAttribute("aria-label", "Open menu");
+    dockTrigger.innerHTML = menuGlyph();
+    nav.appendChild(dockTrigger);
+  }
   nav.appendChild(list);
   document.body.appendChild(nav);
+
+  function measureDock() {
+    const pitch = 34;
+    const closest = 34;
+    let widest = 22;
+    labels.forEach(function (label, index) {
+      if (!dockItems[index]) return;
+      const width = Math.max(22, Math.ceil(label.scrollWidth) + 20);
+      const rise = closest + (labels.length - 1 - index) * pitch;
+      widest = Math.max(widest, width);
+      const widthValue = width + "px";
+      const riseValue = rise + "px";
+      dockItems[index].style.setProperty("--label-w", widthValue);
+      dockItems[index].style.setProperty("--rise", riseValue);
+      dockBubbles[index].style.setProperty("--label-w", widthValue);
+      dockBubbles[index].style.setProperty("--rise", riseValue);
+    });
+    const menuHeight = closest + (labels.length - 1) * pitch + 22 + 16;
+    nav.style.setProperty("--menu-w", widest + "px");
+    nav.style.setProperty("--menu-h", menuHeight + "px");
+  }
+
+  if (isPortfolio) {
+    measureDock();
+    nav.addEventListener("pointerover", function () {
+      setDock(true);
+    });
+    nav.addEventListener("pointerout", function (event) {
+      if (!nav.contains(event.relatedTarget)) setDock(false);
+    });
+    nav.addEventListener("focusin", function () {
+      setDock(true);
+    });
+    nav.addEventListener("focusout", function (event) {
+      if (!nav.contains(event.relatedTarget)) setDock(false);
+    });
+    nav.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") return;
+      setDock(false);
+      if (dockTrigger) dockTrigger.focus();
+    });
+    if (dockTrigger) {
+      dockTrigger.addEventListener("click", function (event) {
+        event.stopPropagation();
+        if (window.matchMedia("(hover: hover)").matches) return;
+        setDock(!nav.classList.contains("is-open"));
+      });
+    }
+    window.addEventListener("resize", measureDock);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureDock);
+  }
 
   function warmNavTargets() {
     if (document.prerendering) return;
@@ -308,6 +457,7 @@
       return;
     }
     el.getAnimations().forEach(function (animation) {
+      if (animation.id === "side-nav-shimmer") return;
       animation.cancel();
     });
     const animation = el.animate(frames, {
@@ -353,6 +503,46 @@
     return -Math.min(DOT_ARC_MAX, DOT_ARC_MIN + (rows - 1) * DOT_ARC_PER_ROW);
   }
 
+  function clearShimmer(label) {
+    label.style.backgroundImage = "";
+    label.style.backgroundSize = "";
+    label.style.backgroundRepeat = "";
+    label.style.backgroundPosition = "";
+    label.style.webkitBackgroundClip = "";
+    label.style.backgroundClip = "";
+    label.style.webkitTextFillColor = "";
+    label.style.color = "";
+  }
+
+  function shimmerActive(delay) {
+    const label = labels[activeIndex];
+    if (!label || reduceMotion || typeof label.animate !== "function") return;
+    clearShimmer(label);
+    label.style.backgroundImage =
+      "linear-gradient(90deg, #0089FF 0%, #0089FF 40%, #7ec4ff 48%, #eaf5ff 50%, #7ec4ff 52%, #737373 60%, #737373 100%)";
+    label.style.backgroundSize = "200% 100%";
+    label.style.backgroundRepeat = "no-repeat";
+    label.style.backgroundPosition = "100% 0";
+    label.style.webkitBackgroundClip = "text";
+    label.style.backgroundClip = "text";
+    label.style.webkitTextFillColor = "transparent";
+    label.style.color = "transparent";
+    const animation = label.animate(
+      [{ backgroundPosition: "100% 0" }, { backgroundPosition: "0% 0" }],
+      {
+        duration: 640,
+        delay: delay || 0,
+        easing: "cubic-bezier(0.22, 0.8, 0.28, 1)",
+        fill: "both",
+      }
+    );
+    animation.id = "side-nav-shimmer";
+    animation.onfinish = function () {
+      clearShimmer(label);
+      animation.cancel();
+    };
+  }
+
   function playArrival(originIndex) {
     const travelled =
       !reduceMotion &&
@@ -390,6 +580,7 @@
       dot.classList.add("is-travelling");
       playMotion(labels[originIndex], returning.frames, returning.duration, 0, now);
       playMotion(labels[activeIndex], arriving.frames, arriving.duration, DOT_IMPACT_MS, now);
+      shimmerActive(DOT_IMPACT_MS);
       playMotion(dot, flight.frames, flight.duration, 0, now, function () {
         dot.classList.remove("is-travelling");
       });
@@ -403,6 +594,7 @@
     } catch (error) {
       /* ignore */
     }
+    if (isPortfolio) return;
     playArrival(origin);
   }
 

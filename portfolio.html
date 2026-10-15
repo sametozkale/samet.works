@@ -37,9 +37,9 @@
     <link rel="preload" href="/assets/fonts/OpenRunde-Semibold.otf" as="font" type="font/otf" crossorigin />
     <link rel="preload" href="/assets/fonts/OpenRunde-Bold.otf" as="font" type="font/otf" crossorigin />
 <link rel="preload" href="/fonts.css" as="style" />
-    <link rel="preload" href="/styles.css?v=nav-6" as="style" />
+    <link rel="preload" href="/styles.css?v=portfolio-view-tip" as="style" />
     <link href="/fonts.css" rel="stylesheet" />
-    <link href="/styles.css?v=nav-6" rel="stylesheet" />
+    <link href="/styles.css?v=portfolio-view-tip" rel="stylesheet" />
     <link href="/output.css" rel="stylesheet" />
     
     <title>Portfolio - Samet Özkale</title>
@@ -95,12 +95,32 @@
     <meta name="theme-color" content="#ffffff" />
 </head>
   <body>
-    <div id="scroll-container" class="bg-white" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
+    <div id="scroll-container" class="bg-white" data-portfolio-view="slider" style="padding-top: 0; padding-bottom: 96px; padding-left: 24px; padding-right: 24px;">
       <!-- Header Section -->
       <div class="prose mx-auto max-w-prose" style="margin-top: 96px;">
-        <h1 class="text-2xl sm:text-3xl text-slate-900 font-medium mb-8" style="font-size: 20px;" data-typing-animation data-start-on-view="true">
-          Portfolio
-        </h1>
+        <div class="portfolio-heading-row">
+          <h1 class="text-2xl sm:text-3xl text-slate-900 font-medium" style="font-size: 20px; margin-bottom: 0;" data-typing-animation data-start-on-view="true">
+            Portfolio
+          </h1>
+          <div class="portfolio-view-switch" role="group" aria-label="Portfolio view">
+            <button type="button" class="portfolio-view-btn is-active" data-view="slider" aria-pressed="true" aria-label="Slider view">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <rect x="-2.4" y="5" width="6.2" height="10" rx="1.7" fill="currentColor" opacity="0.32"/>
+                <rect x="16.2" y="5" width="6.2" height="10" rx="1.7" fill="currentColor" opacity="0.32"/>
+                <rect x="4.7" y="2.6" width="10.6" height="14.8" rx="2.2" fill="currentColor"/>
+              </svg>
+              <span class="portfolio-view-tip" role="tooltip">Slider</span>
+            </button>
+            <button type="button" class="portfolio-view-btn" data-view="list" aria-pressed="false" aria-label="Scroll view">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" style="transform: rotate(90deg); transform-origin: center;">
+                <rect x="-2.4" y="5" width="6.2" height="10" rx="1.7" fill="currentColor" opacity="0.32"/>
+                <rect x="16.2" y="5" width="6.2" height="10" rx="1.7" fill="currentColor" opacity="0.32"/>
+                <rect x="4.7" y="2.6" width="10.6" height="14.8" rx="2.2" fill="currentColor"/>
+              </svg>
+              <span class="portfolio-view-tip" role="tooltip">Scroll</span>
+            </button>
+          </div>
+        </div>
         <p class="text-base leading-relaxed" style="color: #777;">
           A collection of design and product work showcasing innovative solutions and creative projects.
         </p>
@@ -115,7 +135,7 @@
       </div>
 
       <!-- Portfolio Images -->
-      <div class="prose mx-auto max-w-prose">
+      <div class="prose mx-auto max-w-prose portfolio-list-view">
         <div class="portfolio-images">
           <div class="portfolio-item" data-category="logo">
             <img src="/assets/portfolio/Mues AI Logo.png" alt="Mues AI Logo"  loading="lazy" decoding="async" />
@@ -299,13 +319,25 @@
         </div>
       </div>
 
+      <svg class="portfolio-eye-defs" aria-hidden="true" focusable="false">
+        <filter id="portfolio-fan" filterUnits="userSpaceOnUse" x="0" y="0" width="0" height="0" color-interpolation-filters="sRGB">
+          <feImage id="portfolio-fan-map" result="map" preserveAspectRatio="none"/>
+          <feDisplacementMap id="portfolio-fan-disp" in="SourceGraphic" in2="map" scale="1" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </svg>
+      <div class="portfolio-slider">
+        <div class="portfolio-slider-viewport" tabindex="0" role="region" aria-label="Portfolio slider">
+          <div class="portfolio-slider-track"></div>
+        </div>
+      </div>
+
       <!-- Footer -->
       <footer class="mx-auto max-w-prose py-16" style="margin-top: 96px;">
         <div class="footer-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px; margin-bottom: 48px;">
           <div>
             <h3 class="text-lg font-medium text-slate-900 mb-3">Samet Özkale</h3>
             <p class="text-sm leading-relaxed" style="color: #777;">
-              AI Product & Design Manager
+              Product Builder & Design Engineer
             </p>
             <p class="text-sm leading-relaxed mt-2" style="color: #777;">
               Crafting visionary, user-focused solutions and inspire change.
@@ -559,11 +591,300 @@
         });
       })();
     </script>
+    <script>
+      (function() {
+        const root = document.getElementById('scroll-container');
+        const slider = document.querySelector('.portfolio-slider');
+        const viewport = document.querySelector('.portfolio-slider-viewport');
+        const track = document.querySelector('.portfolio-slider-track');
+        const viewButtons = document.querySelectorAll('.portfolio-view-btn');
+        const fanFilter = document.getElementById('portfolio-fan');
+        const fanMap = document.getElementById('portfolio-fan-map');
+        const fanDisp = document.getElementById('portfolio-fan-disp');
+        const fanCanvas = document.createElement('canvas');
+        const fanCtx = fanCanvas.getContext('2d', { willReadFrequently: true });
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let fanKey = '';
+
+        if (!root || !slider || !viewport || !track) return;
+
+        let x = 0;
+        let vx = 0;
+        let dragging = false;
+        let pending = null;
+        let lastX = 0;
+        let raf = 0;
+
+        function alignStart() {
+          const filter = document.querySelector('.category-filter');
+          if (!filter) return;
+          const left = filter.getBoundingClientRect().left - viewport.getBoundingClientRect().left;
+          track.style.paddingLeft = Math.max(0, left) + 'px';
+        }
+
+        function bounds() {
+          const min = Math.min(0, viewport.clientWidth - track.scrollWidth);
+          return { min: min, max: 0 };
+        }
+
+        function clamp() {
+          const limit = bounds();
+          if (x > limit.max) x = limit.max;
+          if (x < limit.min) x = limit.min;
+        }
+
+        function paintFan(w, h, leftGate, rightGate) {
+          const fan = 0.6;
+          const zone = 0.1;
+          const power = 2.6;
+          const pad = Math.round(h * 0.42);
+          const scaleParam = Math.round((pad + h * 0.5) * 0.375 * 2 + 8);
+          const mw = Math.max(2, w);
+          const mh = Math.max(2, h + pad * 2);
+          fanCanvas.width = mw;
+          fanCanvas.height = mh;
+          const image = fanCtx.createImageData(mw, mh);
+          const data = image.data;
+          const center = h * 0.5;
+          for (let py = 0; py < mh; py++) {
+            const screenY = (py + 0.5) / mh * (h + pad * 2) - pad;
+            for (let px = 0; px < mw; px++) {
+              const sx = (px + 0.5) / mw;
+              const dist = Math.min(sx, 1 - sx);
+              let edge = 0;
+              if (dist < zone) {
+                const t = (zone - dist) / zone;
+                const smooth = t * t * (3 - 2 * t);
+                edge = Math.pow(smooth, power);
+              }
+              edge *= sx < 0.5 ? leftGate : rightGate;
+              const scaleY = 1 + fan * edge;
+              const dy = (screenY - center) * (1 / scaleY - 1);
+              const g = Math.max(0, Math.min(255, Math.round((0.5 + dy / scaleParam) * 255)));
+              const i = (py * mw + px) * 4;
+              data[i] = 128;
+              data[i + 1] = g;
+              data[i + 2] = 128;
+              data[i + 3] = 255;
+            }
+          }
+          fanCtx.putImageData(image, 0, 0);
+          const regionY = String(-pad);
+          const regionH = String(h + pad * 2);
+          fanMap.setAttribute('href', fanCanvas.toDataURL());
+          fanMap.setAttributeNS('http://www.w3.org/1999/xlink', 'href', fanCanvas.toDataURL());
+          fanMap.setAttribute('x', '0');
+          fanMap.setAttribute('y', regionY);
+          fanMap.setAttribute('width', String(w));
+          fanMap.setAttribute('height', regionH);
+          fanDisp.setAttribute('scale', String(scaleParam));
+          [fanDisp, fanFilter].forEach(function(node) {
+            node.setAttribute('x', '0');
+            node.setAttribute('y', regionY);
+            node.setAttribute('width', String(w));
+            node.setAttribute('height', regionH);
+          });
+          viewport.style.filter = 'none';
+          void viewport.offsetWidth;
+          if (!reduceMotion) viewport.style.filter = 'url("#portfolio-fan")';
+        }
+
+        function syncFan() {
+          if (reduceMotion || !fanFilter) return;
+          const w = viewport.clientWidth;
+          const h = viewport.clientHeight;
+          if (w < 2 || h < 2) return;
+          const limit = bounds();
+          const leftGate = x < -8 ? 1 : 0;
+          const rightGate = x > limit.min + 8 ? 1 : 0;
+          const key = w + 'x' + h + ':' + leftGate + rightGate;
+          if (key === fanKey) return;
+          fanKey = key;
+          paintFan(w, h, leftGate, rightGate);
+        }
+
+        function apply() {
+          track.style.transform = 'translate3d(' + x + 'px,0,0)';
+          syncFan();
+        }
+
+        function stopInertia() {
+          if (raf) {
+            cancelAnimationFrame(raf);
+            raf = 0;
+          }
+        }
+
+        function kick() {
+          if (reduceMotion || raf) return;
+          const step = function() {
+            if (dragging) {
+              raf = 0;
+              return;
+            }
+            if (Math.abs(vx) < 0.2) {
+              vx = 0;
+              apply();
+              raf = 0;
+              return;
+            }
+            const before = x;
+            x += vx;
+            clamp();
+            if (x === before) vx = 0;
+            vx *= 0.94;
+            apply();
+            raf = requestAnimationFrame(step);
+          };
+          raf = requestAnimationFrame(step);
+        }
+
+        function activeCategory() {
+          const btn = document.querySelector('.category-btn.active');
+          return btn ? btn.getAttribute('data-category') : 'design';
+        }
+
+        function rebuild() {
+          alignStart();
+          const category = activeCategory();
+          track.innerHTML = '';
+          document.querySelectorAll('.portfolio-item').forEach(function(item) {
+            if (item.getAttribute('data-category') !== category) return;
+            const source = item.querySelector('img');
+            if (!source) return;
+            const panel = document.createElement('figure');
+            panel.className = 'portfolio-slider-panel';
+            const img = document.createElement('img');
+            img.src = source.getAttribute('src');
+            img.alt = source.alt || '';
+            img.draggable = false;
+            img.decoding = 'async';
+            panel.appendChild(img);
+            track.appendChild(panel);
+          });
+          x = 0;
+          vx = 0;
+          stopInertia();
+          apply();
+        }
+
+        function setView(view, persist) {
+          const next = view === 'slider' ? 'slider' : 'list';
+          root.dataset.portfolioView = next;
+          viewButtons.forEach(function(btn) {
+            const on = btn.getAttribute('data-view') === next;
+            btn.classList.toggle('is-active', on);
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          });
+          if (next === 'slider') {
+            slider.hidden = false;
+            rebuild();
+            if (persist) viewport.focus({ preventScroll: true });
+          } else {
+            slider.hidden = true;
+            vx = 0;
+            stopInertia();
+          }
+        }
+
+        viewButtons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            setView(btn.getAttribute('data-view'), true);
+          });
+        });
+
+        document.querySelectorAll('.category-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            if (root.dataset.portfolioView === 'slider') rebuild();
+          });
+        });
+
+        viewport.addEventListener('pointerdown', function(e) {
+          if (e.button !== 0) return;
+          stopInertia();
+          pending = { id: e.pointerId, x: e.clientX, y: e.clientY };
+          lastX = e.clientX;
+          vx = 0;
+        });
+
+        viewport.addEventListener('pointermove', function(e) {
+          if (!pending || e.pointerId !== pending.id) return;
+          if (!dragging) {
+            const dx = e.clientX - pending.x;
+            const dy = e.clientY - pending.y;
+            if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+            if (Math.abs(dy) > Math.abs(dx)) {
+              pending = null;
+              return;
+            }
+            dragging = true;
+            try { viewport.setPointerCapture(e.pointerId); } catch (err) {}
+            viewport.classList.add('is-dragging');
+            lastX = e.clientX;
+          }
+          const dx = e.clientX - lastX;
+          lastX = e.clientX;
+          x += dx;
+          clamp();
+          vx = Math.max(-42, Math.min(42, dx));
+          apply();
+        });
+
+        function endDrag(e) {
+          if (pending && e.pointerId !== pending.id) return;
+          const wasDragging = dragging;
+          dragging = false;
+          pending = null;
+          viewport.classList.remove('is-dragging');
+          if (wasDragging && !reduceMotion) kick();
+        }
+
+        viewport.addEventListener('pointerup', endDrag);
+        viewport.addEventListener('pointercancel', endDrag);
+
+        viewport.addEventListener('wheel', function(e) {
+          if (slider.hidden) return;
+          const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+          if (!delta) return;
+          const before = x;
+          x -= delta;
+          clamp();
+          if (x === before && Math.abs(e.deltaY) >= Math.abs(e.deltaX)) return;
+          e.preventDefault();
+          vx = reduceMotion ? 0 : Math.max(-18, Math.min(18, -delta * 0.25));
+          apply();
+          stopInertia();
+          if (!reduceMotion) kick();
+        }, { passive: false });
+
+        viewport.addEventListener('keydown', function(e) {
+          if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+          e.preventDefault();
+          const step = e.key === 'ArrowRight' ? -140 : 140;
+          x += step;
+          clamp();
+          vx = reduceMotion ? 0 : step * 0.08;
+          apply();
+          stopInertia();
+          if (!reduceMotion) kick();
+        });
+
+        window.addEventListener('resize', function() {
+          if (root.dataset.portfolioView !== 'slider') return;
+          alignStart();
+          clamp();
+          apply();
+        });
+
+        try { sessionStorage.removeItem('portfolio-view'); } catch (err) {}
+        setView('slider', false);
+      })();
+    </script>
     <script src="/hyper-text.js" defer></script>
     <script src="/typing-animation.js" defer></script>
     <script src="/conversion-modal.js" defer></script>
       <script src="/haptic-feedback.js" defer></script>
-      <script src="/side-nav.js?v=8"></script>
+      <script src="/side-nav.js?v=13"></script>
   </body>
 </html>
 

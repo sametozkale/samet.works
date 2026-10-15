@@ -1,5 +1,105 @@
 [
   {
+    "title": "The Best AI Memory Knows What to Forget",
+    "url": "https://www.linkedin.com/pulse/best-ai-memory-knows-what-forget-samet-ozkale-o9g5f",
+    "date": "2026-10-06"
+  },
+  {
+    "title": "Jev Turns AI Into Product Logic",
+    "url": "https://www.linkedin.com/pulse/jev-turns-ai-product-logic-samet-ozkale-nu2qf",
+    "date": "2026-09-22"
+  },
+  {
+    "title": "The Infinite Minus AI Is Still Infinite",
+    "url": "https://www.linkedin.com/pulse/infinite-minus-ai-still-samet-ozkale-fbwqf",
+    "date": "2026-09-09"
+  },
+  {
+    "title": "How Harness Startups Are Rewriting the AI Playbook",
+    "url": "https://www.linkedin.com/pulse/how-harness-startups-rewriting-ai-playbook-samet-ozkale-2dapf",
+    "date": "2026-08-25"
+  },
+  {
+    "title": "Not every AI model needs to be a 747 plane",
+    "url": "https://www.linkedin.com/pulse/every-ai-model-needs-747-plane-samet-ozkale-lbkpf",
+    "date": "2026-08-21"
+  },
+  {
+    "title": "Generative Media Beyond the Model Race",
+    "url": "https://www.linkedin.com/pulse/generative-media-beyond-model-race-samet-ozkale-liduc",
+    "date": "2026-08-11"
+  },
+  {
+    "title": "Multiplayer AI: When Agents Join the Team",
+    "url": "https://www.linkedin.com/pulse/multiplayer-ai-when-agents-join-team-samet-ozkale-s1xif",
+    "date": "2026-08-05"
+  },
+  {
+    "title": "The End of \"One App to Rule Them All\"?",
+    "url": "https://www.linkedin.com/pulse/end-one-app-rule-them-all-samet-ozkale-tqadf",
+    "date": "2026-07-28"
+  },
+  {
+    "title": "Efficiencymaxxing",
+    "url": "https://www.linkedin.com/pulse/efficiencymaxxing-samet-ozkale-4agff",
+    "date": "2026-07-21"
+  },
+  {
+    "title": "The Farabi’s Guide to Building Products That Matter",
+    "url": "https://www.linkedin.com/pulse/farabis-guide-building-products-matter-samet-ozkale-pz5pf",
+    "date": "2026-07-16"
+  },
+  {
+    "title": "Your Product Can Be Cloned in One Prompt. Now What?",
+    "url": "https://www.linkedin.com/pulse/your-product-can-cloned-one-prompt-now-what-samet-ozkale-drhlf",
+    "date": "2026-07-07"
+  },
+  {
+    "title": "The Moat Question Is a Trap",
+    "url": "https://productpower.substack.com/p/the-moat-question-is-a-trap",
+    "date": "2026-06-30"
+  },
+  {
+    "title": "Product Manager Is the Old Title",
+    "url": "https://productpower.substack.com/p/product-manager-is-the-old-title",
+    "date": "2026-06-25"
+  },
+  {
+    "title": "How to Find the Right Product Idea Without Fighting the Giants",
+    "url": "https://productpower.substack.com/p/how-to-find-the-right-product-idea",
+    "date": "2026-06-17"
+  },
+  {
+    "title": "LLM Evaluation & Benchmarking",
+    "url": "https://www.linkedin.com/pulse/llm-evaluation-benchmarking-samet-ozkale-xeujf",
+    "date": "2026-06-11"
+  },
+  {
+    "title": "Continual Learning & Catastrophic Forgetting",
+    "url": "https://productpower.substack.com/p/your-ai-just-forgot-everything-it",
+    "date": "2026-06-03"
+  },
+  {
+    "title": "The AI SDK Landscape for Product Builders",
+    "url": "https://productpower.substack.com/p/the-ai-sdk-landscape-for-product",
+    "date": "2026-05-30"
+  },
+  {
+    "title": "Why Real-Time Inference Is the New Product Battleground",
+    "url": "https://productpower.substack.com/p/why-real-time-inference-is-the-new",
+    "date": "2026-05-19"
+  },
+  {
+    "title": "OpenAI Symphony - From Prompts to Plays",
+    "url": "https://productpower.substack.com/p/openai-symphony-from-prompts-to-plays",
+    "date": "2026-05-14"
+  },
+  {
+    "title": "Cursor vs. Claude Code vs. Codex",
+    "url": "https://productpower.substack.com/p/cursor-vs-claude-code-vs-codex",
+    "date": "2026-05-05"
+  },
+  {
     "title": "Small Language Models (SLM) and Edge AI",
     "url": "https://www.linkedin.com/pulse/small-language-models-slm-edge-ai-samet-ozkale-jjfwf",
     "date": "2026-04-20"

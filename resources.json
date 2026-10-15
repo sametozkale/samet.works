@@ -566,5 +566,45 @@
     "description": "A curated collection of interface craft, component libraries, AI tools, and resources for builders.",
     "category": "design",
     "favicon": "https://www.google.com/s2/favicons?domain=designeer.xyz&sz=32"
+  },
+  {
+    "id": 78,
+    "url": "https://designmanifestos.org/",
+    "title": "Design Manifestos",
+    "description": "An ever-growing archive of design, architecture, and craft manifestos — from Dieter Rams and Ken Garland to Bruce Mau and beyond, browsable A–Z.",
+    "category": "reading",
+    "favicon": "https://www.google.com/s2/favicons?domain=designmanifestos.org&sz=32"
+  },
+  {
+    "id": 79,
+    "url": "https://torph.lochie.me/",
+    "title": "Torph",
+    "description": "Dependency-free text morphing for the web — smooth character transitions for labels, buttons, and status copy, with a React component.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=torph.lochie.me&sz=32"
+  },
+  {
+    "id": 80,
+    "url": "https://cuelume.dev/",
+    "title": "Cuelume",
+    "description": "Fourteen curated interaction sounds for the web, synthesized live with Web Audio — declarative data attributes and no audio files to ship.",
+    "category": "development",
+    "favicon": "https://www.google.com/s2/favicons?domain=cuelume.dev&sz=32"
+  },
+  {
+    "id": 81,
+    "url": "https://www.aicss.dev/",
+    "title": "AICSS",
+    "description": "Copy-paste UI blocks for AI agent interfaces — thinking states, tool calls, streaming text, tables, approvals, and more.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=aicss.dev&sz=32"
+  },
+  {
+    "id": 82,
+    "url": "https://skills.wheresryan.sh/anatomy",
+    "title": "Anatomy",
+    "description": "A Claude Code skill that turns a one-line idea into a live isometric machine you can turn, press, and read — objects instead of boxes and arrows.",
+    "category": "vibe-coding",
+    "favicon": "https://www.google.com/s2/favicons?domain=skills.wheresryan.sh&sz=32"
   }
 ]

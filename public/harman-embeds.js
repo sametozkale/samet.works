@@ -121,11 +121,13 @@
     input.addEventListener("input", schedulePaint);
     input.addEventListener("pointerdown", function () {
       track.classList.add("is-drag");
+      document.documentElement.classList.add("so-dragging");
       schedulePaint();
     });
     window.addEventListener("pointerup", function () {
       if (!track.classList.contains("is-drag")) return;
       track.classList.remove("is-drag");
+      document.documentElement.classList.remove("so-dragging");
       schedulePaint();
     });
     track.addEventListener("mouseenter", function () {
@@ -175,12 +177,21 @@
         "aria-label",
         recording ? "Stop voice input" : hasText() ? "Send prompt" : "Start voice input"
       );
-      var agentBtn = pi.querySelector('[data-pop-toggle="agent"] .pi-tool-label');
-      var modelBtn = pi.querySelector('[data-pop-toggle="model"] .pi-tool-label');
+      var agentToggle = pi.querySelector('[data-pop-toggle="agent"]');
+      var modelToggle = pi.querySelector('[data-pop-toggle="model"]');
+      var sourcesToggle = pi.querySelector('[data-pop-toggle="sources"]');
+      var agentBtn = agentToggle && agentToggle.querySelector(".pi-tool-label");
+      var modelBtn = modelToggle && modelToggle.querySelector(".pi-tool-label");
+      var sourcesBtn = sourcesToggle && sourcesToggle.querySelector(".pi-tool-label");
       var currentAgent = agents.filter(function (item) { return item.id === agent; })[0];
       var currentModel = models.filter(function (item) { return item.id === model; })[0];
       if (agentBtn && currentAgent) agentBtn.textContent = currentAgent.label;
+      if (agentToggle) agentToggle.classList.toggle("is-task", agent === "task");
       if (modelBtn && currentModel) modelBtn.textContent = currentModel.label;
+      if (modelToggle) modelToggle.classList.toggle("is-deep", model === "deep-research");
+      var sourceCount = (sourcesOn ? 1 : 0) + (connectors["social-media"] ? 1 : 0) + (connectors.academic ? 1 : 0);
+      if (sourcesBtn) sourcesBtn.textContent = sourceCount > 0 ? sourceCount + " Sources" : "Sources";
+      if (sourcesToggle) sourcesToggle.classList.toggle("is-on", sourceCount > 0);
       if (document.activeElement !== textarea) {
         textarea.placeholder = currentAgent ? currentAgent.placeholder : textarea.placeholder;
       }
@@ -196,6 +207,9 @@
       openPop = null;
       pi.querySelectorAll(".pi-pop").forEach(function (pop) {
         pop.classList.remove("is-open");
+      });
+      pi.querySelectorAll("[data-pop-toggle]").forEach(function (button) {
+        button.setAttribute("aria-expanded", "false");
       });
       sync();
     }
@@ -222,15 +236,39 @@
       });
     }
 
+    var checkSvg = '<svg class="pi-option-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+    var boxSvg = '<span class="pi-box"><svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>';
+    var sourceIcons = {
+      web: '<svg class="pi-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
+      "social-media": '<svg class="pi-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.59 13.51 6.83 3.98"/><path d="m15.41 6.51-6.82 3.98"/></svg>',
+      academic: '<svg class="pi-source-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>'
+    };
+
+    function selectOption(label, selected) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "pi-option" + (selected ? " is-selected" : "");
+      button.innerHTML = '<span class="pi-option-label"></span>' + checkSvg;
+      button.querySelector(".pi-option-label").textContent = label;
+      return button;
+    }
+
+    function sourceOption(id, label, checked) {
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "pi-option pi-source" + (checked ? " is-selected" : "");
+      button.innerHTML = sourceIcons[id] + '<span class="pi-option-label"></span>' + boxSvg;
+      button.querySelector(".pi-option-label").textContent = label;
+      if (checked) button.querySelector(".pi-box").classList.add("is-on");
+      return button;
+    }
+
     function fillMenu(name) {
       var pop = pi.querySelector('[data-pop="' + name + '"]');
       pop.innerHTML = "";
       if (name === "agent") {
         agents.forEach(function (item) {
-          var button = document.createElement("button");
-          button.type = "button";
-          button.className = "pi-option" + (item.id === agent ? " is-selected" : "");
-          button.textContent = item.label;
+          var button = selectOption(item.label, item.id === agent);
           button.addEventListener("click", function () {
             agent = item.id;
             textarea.placeholder = item.placeholder;
@@ -240,10 +278,7 @@
         });
       } else if (name === "model") {
         models.forEach(function (item) {
-          var button = document.createElement("button");
-          button.type = "button";
-          button.className = "pi-option" + (item.id === model ? " is-selected" : "");
-          button.textContent = item.label;
+          var button = selectOption(item.label, item.id === model);
           button.addEventListener("click", function () {
             model = item.id;
             closePops();
@@ -251,35 +286,41 @@
           pop.appendChild(button);
         });
       } else if (name === "sources") {
-        var row = document.createElement("div");
-        row.className = "pi-switch";
-        var label = document.createElement("span");
-        label.textContent = "Use sources";
-        var toggle = document.createElement("button");
-        toggle.type = "button";
-        toggle.setAttribute("aria-pressed", sourcesOn ? "true" : "false");
-        toggle.setAttribute("aria-label", "Use sources");
-        toggle.addEventListener("click", function () {
+        var web = sourceOption("web", "Web", sourcesOn);
+        web.addEventListener("click", function (event) {
+          event.stopPropagation();
           sourcesOn = !sourcesOn;
-          toggle.setAttribute("aria-pressed", sourcesOn ? "true" : "false");
+          fillMenu("sources");
+          sync();
         });
-        row.append(label, toggle);
-        pop.appendChild(row);
+        pop.appendChild(web);
         [
           ["social-media", "Social media"],
           ["academic", "Academic"],
         ].forEach(function (entry) {
-          var button = document.createElement("button");
-          button.type = "button";
-          button.className = "pi-check" + (connectors[entry[0]] ? " is-selected" : "");
-          button.textContent = (connectors[entry[0]] ? "✓ " : "") + entry[1];
-          button.addEventListener("click", function () {
+          var button = sourceOption(entry[0], entry[1], connectors[entry[0]]);
+          button.addEventListener("click", function (event) {
+            event.stopPropagation();
             connectors[entry[0]] = !connectors[entry[0]];
-            if (connectors[entry[0]]) sourcesOn = true;
             fillMenu("sources");
+            sync();
           });
           pop.appendChild(button);
         });
+      }
+    }
+
+    function placePop(name, button) {
+      var pop = pi.querySelector('[data-pop="' + name + '"]');
+      var piRect = pi.getBoundingClientRect();
+      var btnRect = button.getBoundingClientRect();
+      pop.style.top = (btnRect.bottom - piRect.top + 8) + "px";
+      if (name === "model") {
+        pop.style.left = "auto";
+        pop.style.right = Math.max(0, piRect.right - btnRect.right - 4) + "px";
+      } else {
+        pop.style.right = "auto";
+        pop.style.left = Math.max(0, btnRect.left - piRect.left - 4) + "px";
       }
     }
 
@@ -337,13 +378,15 @@
         closePops();
         openPop = name;
         fillMenu(name);
+        placePop(name, button);
+        button.setAttribute("aria-expanded", "true");
         pi.querySelector('[data-pop="' + name + '"]').classList.add("is-open");
         pi.classList.add("is-active");
       });
     });
 
     document.addEventListener("click", function (event) {
-      if (!pi.contains(event.target)) closePops();
+      if (event.composedPath().indexOf(pi) === -1) closePops();
     });
 
     sync();

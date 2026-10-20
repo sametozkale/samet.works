@@ -429,9 +429,20 @@ a:hover {
   gap: 12px;
 }
 
+.opensource-card:has(.pi) {
+  grid-column: 1 / -1;
+  order: 1;
+  aspect-ratio: 8 / 3;
+}
+
 @media (max-width: 640px) {
   .opensource-projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .opensource-card:has(.pi) {
+    grid-column: auto;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -474,7 +485,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   overflow: visible;
-  padding: 14px 10px;
+  padding: 14px 56px;
 }
 
 .opensource-card:has(.pi) {
@@ -516,11 +527,22 @@ a:hover {
 }
 
 .opensource-card-name {
+  pointer-events: auto;
   font-family: 'Open Runde', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
   color: #1e293b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.opensource-card-name:hover {
+  color: #1e293b !important;
+}
+
+.opensource-card-open:hover {
+  color: #17181A !important;
 }
 
 .opensource-card-open {
@@ -536,10 +558,6 @@ a:hover {
   color: #17181A;
   text-decoration: none;
   line-height: 0;
-}
-
-.opensource-card-open:hover {
-  color: #0089FF !important;
 }
 
 /* Slider Nav Button */
@@ -673,8 +691,14 @@ a:hover {
   cursor: pointer;
 }
 
-.opensource-card .so-track.is-drag {
+.opensource-card .so-track.is-drag,
+.opensource-card .so-track.is-drag input[type="range"] {
   cursor: grabbing;
+}
+
+html.so-dragging,
+html.so-dragging * {
+  cursor: grabbing !important;
 }
 
 .opensource-card .so-track-bg {
@@ -802,7 +826,7 @@ a:hover {
 
 .opensource-card .pi-stack {
   width: 100%;
-  max-width: 300px;
+  max-width: 640px;
 }
 
 .opensource-card .pi-files {
@@ -882,12 +906,9 @@ a:hover {
   align-items: center;
 }
 
-.opensource-card .pi:hover .pi-input,
-.opensource-card .pi:focus-within .pi-input,
-.opensource-card .pi.is-active .pi-input {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-color: #F6F6F6;
+.opensource-card .pi-voice .pi-icon-mic {
+  width: 24px;
+  height: 24px;
 }
 
 .opensource-card .pi-input textarea {
@@ -950,14 +971,14 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
+  gap: 6px;
+  width: calc(100% - 32px);
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
   height: 0;
   opacity: 0;
   overflow: hidden;
-  padding: 0 12px;
+  padding: 0 16px;
   border-radius: 0 0 16px 16px;
   border: 0 solid #F6F6F6;
   background: #FBFBFB;
@@ -986,20 +1007,19 @@ a:hover {
   align-items: center;
   gap: 16px;
   min-width: 0;
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .opensource-card .pi-toolbar > .pi-tool {
   flex-shrink: 0;
-  max-width: 42%;
 }
 
 .opensource-card .pi-tool {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
   height: 16px;
-  min-width: 0;
+  flex-shrink: 0;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -1008,17 +1028,67 @@ a:hover {
   cursor: pointer;
   font-family: Inter, system-ui, sans-serif;
   font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
   letter-spacing: -0.48px;
   white-space: nowrap;
 }
 
-.opensource-card .pi-tool-label {
+.opensource-card .pi-tool-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.opensource-card .pi-tool-icon svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.opensource-card .pi-tool-agent { color: #585BEF; }
+.opensource-card .pi-tool-agent .pi-icon-task { display: none; }
+.opensource-card .pi-tool-agent.is-task { color: #FFC135; }
+.opensource-card .pi-tool-agent.is-task .pi-icon-agent { display: none; }
+.opensource-card .pi-tool-agent.is-task .pi-icon-task { display: inline-flex; }
+
+.opensource-card .pi-tool-sources:hover,
+.opensource-card .pi-attach:hover { color: #979797; }
+.opensource-card .pi-tool-sources.is-on { color: #777; }
+.opensource-card .pi-tool-sources[aria-expanded="true"] { color: #585BEF; }
+
+.opensource-card .pi-tool-model.is-deep { color: #777; }
+.opensource-card .pi-tool-model.is-deep .pi-tool-icon { color: #FDCB59; }
+.opensource-card .pi-tool-model:not(.is-deep) .pi-tool-icon { color: #AAAAAA; }
+
+.opensource-card .pi-caret {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  min-width: 0;
+  height: 10px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  opacity: 0;
+  color: #AAAAAA;
+  transition: width 0.15s ease, min-width 0.15s ease, opacity 0.15s ease;
+}
+
+.opensource-card .pi:hover .pi-caret,
+.opensource-card .pi-tool[aria-expanded="true"] .pi-caret {
+  width: 10px;
+  min-width: 10px;
+  opacity: 1;
+}
+
+.opensource-card .pi-tool-label {
   white-space: nowrap;
 }
 
-.opensource-card .pi-tool:hover { background: transparent; color: #17181A; }
+.opensource-card .pi-tool:hover { background: transparent; }
 
 .opensource-card .pi-attach { padding: 0; color: #AAAAAA; }
 
@@ -1026,8 +1096,10 @@ a:hover {
   display: none;
   position: absolute;
   z-index: 6;
-  top: calc(100% + 6px);
-  min-width: 148px;
+  top: calc(100% + 8px);
+  flex-direction: column;
+  gap: 2px;
+  min-width: 180px;
   padding: 4px;
   background: #ffffff;
   border: 1px solid #F4F4F4;
@@ -1035,70 +1107,68 @@ a:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.opensource-card .pi-pop.is-open { display: block; }
-.opensource-card .pi-pop[data-pop="agent"] { left: 0; }
-.opensource-card .pi-pop[data-pop="sources"] { left: 56px; }
-.opensource-card .pi-pop[data-pop="model"] { right: 0; left: auto; }
+.opensource-card .pi-pop.is-open { display: flex; }
+.opensource-card .pi-pop[data-pop="sources"] { min-width: 220px; }
 
-.opensource-card .pi-option,
-.opensource-card .pi-check {
+.opensource-card .pi-option {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 8px;
-  padding: 7px 8px;
+  gap: 4px;
+  padding: 4px 8px;
   border: 0;
   border-radius: 8px;
   background: transparent;
-  color: #1f1f1f;
+  color: #777;
   cursor: pointer;
   text-align: left;
   font-family: Inter, system-ui, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.opensource-card .pi-option:hover,
-.opensource-card .pi-check:hover { background: #FBFBFB; }
+.opensource-card .pi-option:hover { background: #F5F5F5; color: #17181A; }
+.opensource-card .pi-option.is-selected { color: #17181A; }
+.opensource-card .pi-option-label { flex: 1; min-width: 0; font-weight: 400; }
 
-.opensource-card .pi-option.is-selected { color: #17181a; font-weight: 600; }
+.opensource-card .pi-option-check {
+  display: none;
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
 
-.opensource-card .pi-switch {
+.opensource-card .pi-option.is-selected .pi-option-check { display: block; }
+
+.opensource-card .pi-source-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.opensource-card .pi-box {
+  margin-left: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px;
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 12px;
-  color: #1f1f1f;
-}
-
-.opensource-card .pi-switch button {
-  width: 28px;
+  justify-content: center;
+  width: 16px;
   height: 16px;
-  border: 0;
-  border-radius: 999px;
-  background: #e5e5e5;
-  position: relative;
-  cursor: pointer;
-  padding: 0;
-}
-
-.opensource-card .pi-switch button[aria-pressed="true"] { background: #17181a; }
-
-.opensource-card .pi-switch button::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
+  flex-shrink: 0;
+  border: 1px solid #E5E5E5;
+  border-radius: 6px;
   background: #fff;
-  transition: transform 0.15s ease;
+  color: transparent;
 }
 
-.opensource-card .pi-switch button[aria-pressed="true"]::after { transform: translateX(12px); }
+.opensource-card .pi-box svg { display: block; }
+.opensource-card .pi-box.is-on {
+  border-color: #17181A;
+  background: #17181A;
+  color: #fff;
+}
 
 /* Selections Slider Styles */
 .selections-slider-container:hover .selections-slider-btn {

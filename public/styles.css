@@ -163,6 +163,23 @@ a:hover {
   color: #0089FF !important;
 }
 
+.case-back {
+  display: inline-block;
+  margin: -4px 0 20px -8px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #979797;
+  line-height: 24px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.case-back:hover {
+  background-color: #f4f4f4;
+  color: #777 !important;
+  text-decoration: none;
+}
+
 /* Inline links with optional left icon on hover — keeps anchor baseline with body text */
 .link-with-logo {
   position: relative;
@@ -249,7 +266,7 @@ a:hover {
   font-family: 'Open Runde', sans-serif;
   color: #333;
   background-color: rgba(255, 255, 255, 1);
-  border: 1px solid #F4F4F4;
+  border: 1px solid #E4E4E4;
   border-radius: 24px;
   corner-shape: squircle;
   cursor: pointer;
@@ -2874,6 +2891,10 @@ html.so-dragging * {
   }
 }
 
+picture {
+  display: contents;
+}
+
 /* Portfolio Images Styles */
 .portfolio-images {
   display: flex;
@@ -4465,6 +4486,7 @@ html.so-dragging * {
   display: inline-flex;
   margin-bottom: 0px;
 }
+
 @media (max-width: 639px) {
   .conversion-modal {
     left: 24px;

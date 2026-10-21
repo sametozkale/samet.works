@@ -1,0 +1,152 @@
+/**
+ * Conversion modal: appears after 10s total visit time (cumulative across page navigations).
+ * Dismissed state stored in localStorage; once closed, returning users do not see it again.
+ * Non-blocking, no overlay. Accessible (Escape, aria).
+ */
+(function () {
+  var STORAGE_KEY = 'conversionModalDismissed';
+  var VISIT_START_KEY = 'conversionModalVisitStart';
+  var DELAY_MS = 10000;
+  var PRIMARY_LINK = 'https://yalp.work/';
+
+  function getVisitStartTime() {
+    try {
+      var raw = sessionStorage.getItem(VISIT_START_KEY);
+      if (raw) {
+        var t = parseInt(raw, 10);
+        if (!isNaN(t)) return t;
+      }
+      var now = Date.now();
+      sessionStorage.setItem(VISIT_START_KEY, String(now));
+      return now;
+    } catch (e) {
+      return Date.now();
+    }
+  }
+
+  function getRemainingDelayMs(useShortDelay) {
+    if (useShortDelay) return 2000;
+    var start = getVisitStartTime();
+    var elapsed = Date.now() - start;
+    return Math.max(0, DELAY_MS - elapsed);
+  }
+
+  function isForceShowRequested() {
+    try {
+      return /[?&]showConversionModal=1/i.test(window.location.search);
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function shouldShow() {
+    try {
+      if (isForceShowRequested()) return true;
+      if (localStorage.getItem(STORAGE_KEY) === 'true') return false;
+      // Migrate from old timestamp-based key so previous dismissals still count
+      var oldKey = 'conversionModalDismissedAt';
+      if (localStorage.getItem(oldKey)) {
+        localStorage.setItem(STORAGE_KEY, 'true');
+        return false;
+      }
+      return true;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  function markDismissed() {
+    try {
+      localStorage.setItem(STORAGE_KEY, 'true');
+    } catch (e) {}
+  }
+
+  function createModal() {
+    var wrap = document.createElement('div');
+    wrap.id = 'conversion-modal-root';
+    wrap.className = 'conversion-modal';
+    wrap.style.display = 'none';
+    wrap.setAttribute('role', 'complementary');
+    wrap.setAttribute('aria-label', 'Product launch: Yalp — todos, notes, and MCP in the browser');
+    wrap.innerHTML =
+      '<button type="button" class="conversion-modal-close" aria-label="Close conversion modal">\n  <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>\n</button>\n' +
+      '<div class="conversion-modal-eyebrow">My first fully vibe-coded launch</div>\n' +
+      '<h2 class="conversion-modal-headline">Meet Yalp</h2>\n' +
+      '<p class="conversion-modal-subtext">Manage <span class="conversion-modal-keyword">todos</span> and <span class="conversion-modal-keyword">notes</span> in the browser, with <span class="conversion-modal-keyword">MCP</span> for Cursor, Claude, and more.</p>\n' +
+      '<a href="' + PRIMARY_LINK + '" class="book-call-button conversion-modal-cta" target="_blank" rel="noopener noreferrer">Try Yalp →</a>\n';
+    return wrap;
+  }
+
+  function loadMynerve() {
+    if (document.querySelector('link[data-mynerve]')) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=Mynerve&display=swap';
+    link.setAttribute('data-mynerve', '');
+    document.head.appendChild(link);
+  }
+
+  function showModal(el) {
+    loadMynerve();
+    el.style.display = 'block';
+    el.classList.add('conversion-modal-visible');
+  }
+
+  function hideModal(el) {
+    el.classList.remove('conversion-modal-visible');
+    el.style.display = 'none';
+    markDismissed();
+  }
+
+  function run() {
+    if (!shouldShow()) return;
+
+    var modal = createModal();
+    document.body.appendChild(modal);
+    var showTimeoutId = null;
+    var dismissed = false;
+
+    var closeBtn = modal.querySelector('.conversion-modal-close');
+    function dismiss() {
+      dismissed = true;
+      if (showTimeoutId != null) {
+        clearTimeout(showTimeoutId);
+        showTimeoutId = null;
+      }
+      hideModal(modal);
+      document.removeEventListener('keydown', onKeydown);
+      document.removeEventListener('beforeunload', clearOnUnload);
+    }
+
+    function clearOnUnload() {
+      if (showTimeoutId != null) {
+        clearTimeout(showTimeoutId);
+        showTimeoutId = null;
+      }
+    }
+
+    closeBtn.addEventListener('click', dismiss);
+
+    function onKeydown(e) {
+      if (e.key === 'Escape' && modal.classList.contains('conversion-modal-visible')) {
+        dismiss();
+      }
+    }
+    document.addEventListener('keydown', onKeydown);
+    document.addEventListener('beforeunload', clearOnUnload);
+
+    var useShortDelay = isForceShowRequested();
+    var remainingMs = getRemainingDelayMs(useShortDelay);
+    showTimeoutId = setTimeout(function () {
+      showTimeoutId = null;
+      if (dismissed || !document.body.contains(modal)) return;
+      showModal(modal);
+    }, remainingMs);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();

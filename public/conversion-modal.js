@@ -77,7 +77,17 @@
     return wrap;
   }
 
+  function loadMynerve() {
+    if (document.querySelector('link[data-mynerve]')) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=Mynerve&display=swap';
+    link.setAttribute('data-mynerve', '');
+    document.head.appendChild(link);
+  }
+
   function showModal(el) {
+    loadMynerve();
     el.style.display = 'block';
     el.classList.add('conversion-modal-visible');
   }

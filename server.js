@@ -10,6 +10,8 @@ require("dotenv").config();
 const express = require("express");
 const compression = require("compression");
 const fs = require("fs").promises;
+const fsSync = require("fs");
+const crypto = require("crypto");
 const path = require("path");
 const { google } = require("googleapis");
 // Node.js 18+ has built-in fetch, no need for node-fetch
@@ -574,30 +576,56 @@ app.post("/api/submit-email", async (req, res) => {
 // PAGE ROUTES - HTML pages
 // ============================================
 
+function etagMatches(header, etag) {
+  if (!header) return false;
+  if (header.trim() === "*") return true;
+  return header.split(",").some(function (part) {
+    return part.trim().replace(/^W\//, "") === etag;
+  });
+}
+
+function sendHtml(req, res, filePath, statusCode) {
+  const body = fsSync.readFileSync(filePath);
+  const etag = '"' + crypto.createHash("sha1").update(body).digest("hex") + '"';
+  res.setHeader("Cache-Control", "public, max-age=0, must-revalidate");
+  res.setHeader("ETag", etag);
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  if (etagMatches(req.headers["if-none-match"], etag)) {
+    res.status(304).end();
+    return;
+  }
+  if (statusCode) res.status(statusCode);
+  res.send(body);
+}
+
 // Root route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  sendHtml(req, res, path.join(__dirname, "index.html"));
 });
 
 // Main page routes
 app.get("/mues-ai", (req, res) => {
-  res.sendFile(path.join(__dirname, "mues-ai.html"));
+  sendHtml(req, res, path.join(__dirname, "mues-ai.html"));
+});
+
+app.get("/zero", (req, res) => {
+  sendHtml(req, res, path.join(__dirname, "zero.html"));
 });
 
 app.get("/roadmape", (req, res) => {
-  res.sendFile(path.join(__dirname, "roadmape.html"));
+  sendHtml(req, res, path.join(__dirname, "roadmape.html"));
 });
 
 app.get("/producter", (req, res) => {
-  res.sendFile(path.join(__dirname, "producter.html"));
+  sendHtml(req, res, path.join(__dirname, "producter.html"));
 });
 
 app.get("/heybooster", (req, res) => {
-  res.sendFile(path.join(__dirname, "heybooster.html"));
+  sendHtml(req, res, path.join(__dirname, "heybooster.html"));
 });
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "about.html"));
+  sendHtml(req, res, path.join(__dirname, "about.html"));
 });
 
 app.get("/about2", (req, res) => {
@@ -605,27 +633,27 @@ app.get("/about2", (req, res) => {
 });
 
 app.get("/photos", (req, res) => {
-  res.sendFile(path.join(__dirname, "photos.html"));
+  sendHtml(req, res, path.join(__dirname, "photos.html"));
 });
 
 app.get("/resources", (req, res) => {
-  res.sendFile(path.join(__dirname, "resources.html"));
+  sendHtml(req, res, path.join(__dirname, "resources.html"));
 });
 
 app.get("/design-engineer-tools", (req, res) => {
-  res.sendFile(path.join(__dirname, "design-engineer-tools.html"));
+  sendHtml(req, res, path.join(__dirname, "design-engineer-tools.html"));
 });
 
 app.get("/books", (req, res) => {
-  res.sendFile(path.join(__dirname, "books.html"));
+  sendHtml(req, res, path.join(__dirname, "books.html"));
 });
 
 app.get("/ai-glossary", (req, res) => {
-  res.sendFile(path.join(__dirname, "ai-glossary.html"));
+  sendHtml(req, res, path.join(__dirname, "ai-glossary.html"));
 });
 
 app.get("/portfolio", (req, res) => {
-  res.sendFile(path.join(__dirname, "portfolio.html"));
+  sendHtml(req, res, path.join(__dirname, "portfolio.html"));
 });
 
 // Sitemap route
@@ -648,24 +676,24 @@ app.get("/llms.txt", (req, res) => {
 
 // Legacy routes for backward compatibility
 app.get("/paradox", (req, res) => {
-  res.sendFile(path.join(__dirname, "mues-ai.html"));
+  sendHtml(req, res, path.join(__dirname, "mues-ai.html"));
 });
 
 app.get("/dump", (req, res) => {
-  res.sendFile(path.join(__dirname, "roadmape.html"));
+  sendHtml(req, res, path.join(__dirname, "roadmape.html"));
 });
 
 app.get("/hause", (req, res) => {
-  res.sendFile(path.join(__dirname, "producter.html"));
+  sendHtml(req, res, path.join(__dirname, "producter.html"));
 });
 
 app.get("/personal", (req, res) => {
-  res.sendFile(path.join(__dirname, "heybooster.html"));
+  sendHtml(req, res, path.join(__dirname, "heybooster.html"));
 });
 
 // 404 page route
 app.get("/404", (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "404.html"));
+  sendHtml(req, res, path.join(__dirname, "404.html"), 404);
 });
 
 // ============================================
@@ -682,8 +710,8 @@ app.use(express.static(path.join(__dirname, "public"), {
     if (filePath.endsWith('.html')) {
       // HTML files should not be cached aggressively
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
-    } else if (filePath.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/)) {
-      // Images can be cached for a long time
+    } else if (filePath.match(/\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$/)) {
+      if (filePath.endsWith(".avif")) res.setHeader("Content-Type", "image/avif");
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     } else if (filePath.match(/\.(css|js)$/)) {
       // CSS and JS files can be cached

@@ -25,11 +25,28 @@
     }
   }
 
+  function bindDefaultOutput(ctx) {
+    if (!ctx || typeof ctx.setSinkId !== "function") return;
+    ctx.setSinkId("").catch(() => {});
+  }
+
+  function dropAudioContext() {
+    if (!audioContext) return;
+    const old = audioContext;
+    audioContext = null;
+    old.close().catch(() => {});
+  }
+
   function ensureAudioContext() {
-    if (!audioContext) {
+    if (!audioContext || audioContext.state === "closed") {
       const AudioCtor = window.AudioContext || window.webkitAudioContext;
       if (!AudioCtor) return null;
-      audioContext = new AudioCtor();
+      try {
+        audioContext = new AudioCtor({ latencyHint: "interactive" });
+      } catch (_error) {
+        audioContext = new AudioCtor();
+      }
+      bindDefaultOutput(audioContext);
     }
     return audioContext;
   }
@@ -37,9 +54,13 @@
   function unlockAudio() {
     const ctx = ensureAudioContext();
     if (!ctx) return;
-    if (ctx.state === "suspended") {
+    if (ctx.state === "suspended" || ctx.state === "interrupted") {
       ctx.resume().catch(() => {});
     }
+  }
+
+  if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+    navigator.mediaDevices.addEventListener("devicechange", dropAudioContext);
   }
 
   function playHapticClick() {
@@ -48,10 +69,16 @@
     const ctx = ensureAudioContext();
     if (!ctx) return;
 
-    if (ctx.state === "suspended") {
-      ctx.resume().catch(() => {});
-    }
+    const resume = ctx.state === "running" ? null : ctx.resume();
+    Promise.resolve(resume)
+      .then(() => {
+        if (!ctx || ctx.state !== "running" || isMuted) return;
+        startHapticClick(ctx);
+      })
+      .catch(() => {});
+  }
 
+  function startHapticClick(ctx) {
     const now = ctx.currentTime + 0.005;
 
     const oscillator = ctx.createOscillator();

@@ -4,6 +4,10 @@ Samet Özkale is a product designer and entrepreneur with 9+ years of experience
 
 ## Projects and Experience
 
+### Zero
+[link_0](https://www.samet.works/zero): Design Engineer at Zero, an AI CRM and revenue platform. Designed the prompt-led way revenue teams find, win, and grow customers in one place, from a plain-language brief to buying signals, outreach, deals, and customer context.  
+**Duration:** July 2026 – Oct 2026
+
 ### Mues AI
 [link_1](https://mues.ai/): Developed the first agentic AI cursor for human software interaction, leading product strategy and design. This technology transforms user interaction with software applications and includes the creation of domain-specific AI agents capable of performing complex user actions.  
 **Duration:** Jan 2025 – Oct 2025

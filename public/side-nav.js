@@ -27,15 +27,36 @@
     return window.localStorage.getItem(MUTE_KEY) === "true";
   }
 
+  function bindDefaultOutput(ctx) {
+    if (!ctx || typeof ctx.setSinkId !== "function") return;
+    ctx.setSinkId("").catch(function () {});
+  }
+
+  function dropAudio() {
+    audioUnlocked = false;
+    if (!audioCtx) return;
+    const old = audioCtx;
+    audioCtx = null;
+    old.close().catch(function () {});
+  }
+
   function audioContext() {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (!audioCtx || audioCtx.state === "closed") {
+      const AudioCtor = window.AudioContext || window.webkitAudioContext;
+      try {
+        audioCtx = new AudioCtor({ latencyHint: "interactive" });
+      } catch (error) {
+        audioCtx = new AudioCtor();
+      }
+      bindDefaultOutput(audioCtx);
+    }
     return audioCtx;
   }
 
   function unlockAudio() {
     try {
       const ctx = audioContext();
-      if (ctx.state === "suspended") {
+      if (ctx.state === "suspended" || ctx.state === "interrupted") {
         const pending = ctx.resume();
         if (pending && typeof pending.catch === "function") pending.catch(function () {});
       }
@@ -43,6 +64,10 @@
     } catch (error) {
       audioUnlocked = false;
     }
+  }
+
+  if (navigator.mediaDevices && navigator.mediaDevices.addEventListener) {
+    navigator.mediaDevices.addEventListener("devicechange", dropAudio);
   }
 
   function tone(ctx, options) {
@@ -63,12 +88,14 @@
   }
 
   const TICK = { frequency: 1200, decay: 0.012, release: 0.004, gain: 0.08 };
-  const TICK_HOLD_MS = 48;
+  const TICK_HOLD_MS = 180;
 
   function playHover() {
     if (isMuted() || !audioUnlocked) return;
     try {
-      tone(audioContext(), { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.01 });
+      const ctx = audioContext();
+      if (ctx.state !== "running") return;
+      tone(ctx, { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.01 });
     } catch (error) {
       /* ignore */
     }
@@ -82,22 +109,38 @@
     } catch (error) {
       return Promise.resolve(false);
     }
-    function start() {
-      if (ctx.state !== "running") return false;
-      tone(ctx, TICK);
-      audioUnlocked = true;
-      return true;
-    }
-    if (ctx.state === "running") {
-      try {
-        return Promise.resolve(start());
-      } catch (error) {
-        return Promise.resolve(false);
-      }
-    }
-    return Promise.resolve(ctx.resume()).then(start).catch(function () {
-      return false;
-    });
+    const resume = ctx.state === "running" ? null : ctx.resume();
+    return Promise.resolve(resume)
+      .then(function () {
+        if (!ctx || ctx.state !== "running") return false;
+        const start = ctx.currentTime + 0.005;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(TICK.frequency, start);
+        gain.gain.setValueAtTime(TICK.gain, start);
+        gain.gain.exponentialRampToValueAtTime(0.0001, start + TICK.decay + TICK.release);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(start);
+        osc.stop(start + TICK.decay + TICK.release + 0.02);
+        audioUnlocked = true;
+        return new Promise(function (resolve) {
+          let settled = false;
+          const finish = function () {
+            if (settled) return;
+            settled = true;
+            resolve(true);
+          };
+          osc.onended = function () {
+            window.setTimeout(finish, 30);
+          };
+          window.setTimeout(finish, TICK_HOLD_MS);
+        });
+      })
+      .catch(function () {
+        return false;
+      });
   }
 
   window.addEventListener("pointerdown", unlockAudio, true);
@@ -153,7 +196,11 @@
     });
     link.addEventListener("click", function (event) {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
-      if (index === activeIndex) return;
+      if (index === activeIndex) {
+        event.preventDefault();
+        playTick();
+        return;
+      }
       event.preventDefault();
       try {
         sessionStorage.setItem(ORIGIN_KEY, String(activeIndex));
@@ -169,9 +216,7 @@
         left = true;
         go();
       };
-      playTick().then(function (played) {
-        if (!played) goOnce();
-      });
+      playTick().then(goOnce);
       window.setTimeout(goOnce, TICK_HOLD_MS);
     });
   });
@@ -183,10 +228,52 @@
   nav.appendChild(list);
   document.body.appendChild(nav);
 
+  function connectionAllowsPrefetch() {
+    if (window.matchMedia("(prefers-reduced-data: reduce)").matches) return false;
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (!connection) return true;
+    if (connection.saveData) return false;
+    return connection.effectiveType !== "slow-2g" && connection.effectiveType !== "2g";
+  }
+
+  const prefetchedDocs = new Set();
+  function prefetchDocument(href) {
+    if (!connectionAllowsPrefetch()) return;
+    let url;
+    try {
+      url = new URL(href, window.location.origin);
+    } catch (error) {
+      return;
+    }
+    if (prefetchedDocs.has(url.href) || url.pathname === window.location.pathname) return;
+    prefetchedDocs.add(url.href);
+    const link = document.createElement("link");
+    link.rel = "prefetch";
+    link.as = "document";
+    link.href = url.href;
+    document.head.appendChild(link);
+  }
+
+  const PROJECT_PATHS = ["/zero", "/mues-ai", "/roadmape", "/producter", "/heybooster"];
+
+  document.addEventListener("pointerover", function (event) {
+    const anchor = event.target.closest && event.target.closest("a[href]");
+    if (!anchor) return;
+    let pathname = "";
+    try {
+      pathname = new URL(anchor.getAttribute("href"), window.location.origin).pathname;
+    } catch (error) {
+      return;
+    }
+    const sideNav = anchor.classList.contains("side-nav__link");
+    if (!sideNav && PROJECT_PATHS.indexOf(pathname) === -1) return;
+    prefetchDocument(pathname);
+  }, true);
+
   function warmNavTargets() {
     if (document.prerendering) return;
     if (!window.matchMedia("(min-width: 641px)").matches) return;
-    if (window.matchMedia("(prefers-reduced-data: reduce)").matches) return;
+    if (!connectionAllowsPrefetch()) return;
     if (document.querySelector("[data-side-nav-warm]")) return;
     const urls = [];
     PAGES.forEach(function (page, index) {
@@ -203,26 +290,10 @@
       rules.type = "speculationrules";
       rules.setAttribute("data-side-nav-warm", "");
       rules.textContent = JSON.stringify({
-        prefetch: [{ source: "list", urls: urls, eagerness: "immediate" }],
-        prerender: [
-          {
-            source: "document",
-            where: { selector_matches: ".side-nav__link:not(.is-active)" },
-            eagerness: "eager",
-          },
-        ],
+        prefetch: [{ source: "list", urls: urls, eagerness: "moderate" }],
       });
       document.head.appendChild(rules);
-      return;
     }
-    urls.forEach(function (href) {
-      const link = document.createElement("link");
-      link.rel = "prefetch";
-      link.as = "document";
-      link.href = href;
-      link.setAttribute("data-side-nav-warm", "");
-      document.head.appendChild(link);
-    });
   }
 
   if (document.prerendering) {

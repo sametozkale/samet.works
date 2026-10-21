@@ -1,6 +1,3 @@
-/* Display font for conversion modal keywords */
-@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
-
 /* Open Runde Font Faces with font-display: swap for performance */
 @font-face {
   font-family: 'Open Runde';
@@ -12,7 +9,8 @@
 
 @font-face {
   font-family: 'Open Runde';
-  src: url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
+  src: url('/assets/fonts/OpenRunde-Medium.woff2') format('woff2'),
+    url('/assets/fonts/OpenRunde-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;

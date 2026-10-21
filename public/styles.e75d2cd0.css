@@ -2456,6 +2456,29 @@ html.so-dragging * {
   }
 }
 
+.case-video {
+  margin: 0;
+  border: 1px solid #F4F4F4;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  line-height: 0;
+}
+
+.case-video__media {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+@media (max-width: 640px) {
+  .case-video {
+    border-radius: 12px;
+  }
+}
+
 /* Photo Grid Styles */
 .photo-grid {
   display: grid;
@@ -2474,7 +2497,7 @@ html.so-dragging * {
 .photo-item img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
   object-fit: cover;
   display: block;
   aspect-ratio: 2/3;
@@ -2491,7 +2514,7 @@ html.so-dragging * {
 }
 
 .pixel-image-wrapper {
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .photo-info {
@@ -2523,6 +2546,7 @@ html.so-dragging * {
 /* Category Filter Styles */
 .prose .category-filter,
 .category-filter {
+  position: relative !important;
   display: flex !important;
   flex-direction: row !important;
   flex-wrap: wrap !important;
@@ -2530,6 +2554,30 @@ html.so-dragging * {
   margin-top: 32px !important;
   margin-bottom: 32px !important;
   align-items: center !important;
+}
+
+.sliding-pill {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  background: #f7f7f7;
+  pointer-events: none;
+  transition: none;
+}
+
+.is-pill-ready > .sliding-pill {
+  transition:
+    transform 0.34s cubic-bezier(0.22, 0.8, 0.28, 1),
+    width 0.34s cubic-bezier(0.22, 0.8, 0.28, 1),
+    height 0.34s cubic-bezier(0.22, 0.8, 0.28, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-pill-ready > .sliding-pill {
+    transition: none;
+  }
 }
 
 .prose .category-filter .category-btn,
@@ -2541,8 +2589,10 @@ html.so-dragging * {
   padding: 6px 12px !important;
   font-size: 14px !important;
   color: #777 !important;
+  position: relative !important;
+  z-index: 1 !important;
   cursor: pointer !important;
-  transition: all 0.2s ease !important;
+  transition: color 0.2s ease, font-weight 0.2s ease !important;
   font-family: 'Open Runde', sans-serif !important;
   border-radius: 999px !important;
   white-space: nowrap !important;
@@ -2556,7 +2606,7 @@ html.so-dragging * {
 
 .prose .category-btn:hover,
 .category-btn:hover {
-  background: #f7f7f7 !important;
+  background: transparent !important;
   color: #000 !important;
 }
 
@@ -2565,7 +2615,7 @@ html.so-dragging * {
 .category-btn.active {
   color: #0089FF !important;
   font-weight: 500 !important;
-  background: #f7f7f7 !important;
+  background: transparent !important;
   display: inline-block !important;
   border: none !important;
   padding: 6px 12px !important;
@@ -2938,6 +2988,7 @@ picture {
 }
 
 .portfolio-view-switch {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -2956,8 +3007,9 @@ picture {
   border-radius: 999px;
   background: transparent;
   color: #777;
+  z-index: 1;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .portfolio-view-tip {
@@ -2997,12 +3049,12 @@ picture {
 }
 
 .portfolio-view-btn:hover {
-  background: #f7f7f7;
   color: #000;
 }
 
-.portfolio-view-btn.is-active {
-  background: #f7f7f7;
+.portfolio-view-btn.is-active,
+.portfolio-view-btn.is-active:hover {
+  background: transparent;
   color: #0089FF;
 }
 

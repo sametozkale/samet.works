@@ -713,6 +713,10 @@ app.use(express.static(path.join(__dirname, "public"), {
     } else if (filePath.match(/\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$/)) {
       if (filePath.endsWith(".avif")) res.setHeader("Content-Type", "image/avif");
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (filePath.match(/\.(mp4|webm)$/i)) {
+      res.setHeader("Content-Type", filePath.toLowerCase().endsWith(".webm") ? "video/webm" : "video/mp4");
+      res.setHeader("Accept-Ranges", "bytes");
+      res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
     } else if (filePath.match(/\.(css|js)$/)) {
       // CSS and JS files can be cached
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');

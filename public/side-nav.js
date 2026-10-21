@@ -87,7 +87,7 @@
     osc.stop(start + options.decay + options.release + 0.02);
   }
 
-  const TICK = { frequency: 1200, decay: 0.012, release: 0.004, gain: 0.08 };
+  const TICK = { frequency: 1200, decay: 0.012, release: 0.004, gain: 0.12 };
   const TICK_HOLD_MS = 180;
 
   function playHover() {
@@ -95,7 +95,7 @@
     try {
       const ctx = audioContext();
       if (ctx.state !== "running") return;
-      tone(ctx, { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.01 });
+      tone(ctx, { frequency: 1300, decay: 0.01, release: 0.004, gain: 0.016 });
     } catch (error) {
       /* ignore */
     }
@@ -530,4 +530,134 @@
     if (!event.persisted) return;
     boot();
   });
+
+  function mountSlidingPills() {
+    const groups = [
+      [".category-filter", ".category-btn"],
+      [".portfolio-view-switch", ".portfolio-view-btn"],
+    ];
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    groups.forEach(function (pair) {
+      document.querySelectorAll(pair[0]).forEach(function (root) {
+        const items = root.querySelectorAll(pair[1]);
+        if (!items.length || root.querySelector(":scope > .sliding-pill")) return;
+
+        const pill = document.createElement("span");
+        pill.className = "sliding-pill";
+        pill.setAttribute("aria-hidden", "true");
+        root.prepend(pill);
+
+        let frame = 0;
+        function place(animate) {
+          const active = root.querySelector(pair[1] + ".active, " + pair[1] + ".is-active");
+          if (!active) return;
+          const rootRect = root.getBoundingClientRect();
+          const rect = active.getBoundingClientRect();
+          if (!animate || reduce) pill.style.transition = "none";
+          pill.style.width = rect.width + "px";
+          pill.style.height = rect.height + "px";
+          pill.style.transform =
+            "translate(" + (rect.left - rootRect.left) + "px, " + (rect.top - rootRect.top) + "px)";
+          if (!animate || reduce) {
+            pill.getBoundingClientRect();
+            pill.style.transition = "";
+          }
+        }
+
+        function schedule(animate) {
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(function () {
+            place(animate);
+          });
+        }
+
+        place(false);
+        requestAnimationFrame(function () {
+          root.classList.add("is-pill-ready");
+        });
+
+        const observer = new MutationObserver(function () {
+          schedule(true);
+        });
+        items.forEach(function (item) {
+          observer.observe(item, { attributes: true, attributeFilter: ["class"] });
+        });
+
+        window.addEventListener("resize", function () {
+          schedule(false);
+        });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(function () {
+            schedule(false);
+          });
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", mountSlidingPills, { once: true });
+  } else {
+    mountSlidingPills();
+  }
+
+  function mountCaseVideos() {
+    const videos = document.querySelectorAll("video.case-video__media");
+    if (!videos.length) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const saveData = !!(connection && (connection.saveData || connection.effectiveType === "2g" || connection.effectiveType === "slow-2g"));
+
+    function attach(video) {
+      if (video.dataset.loaded === "1") return;
+      const source = video.querySelector("source[data-src]");
+      if (!source) return;
+      source.src = source.getAttribute("data-src");
+      video.dataset.loaded = "1";
+      video.load();
+    }
+
+    function play(video) {
+      attach(video);
+      const pending = video.play();
+      if (pending && typeof pending.catch === "function") pending.catch(function () {});
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const video = entry.target;
+        if (!entry.isIntersecting) {
+          if (video.dataset.loaded === "1") video.pause();
+          return;
+        }
+        play(video);
+      });
+    }, { rootMargin: saveData ? "0px" : "240px 0px 720px 0px", threshold: 0.01 });
+
+    videos.forEach(function (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "none";
+      if (!reduce && !saveData) return;
+      video.addEventListener("click", function () {
+        play(video);
+      });
+    });
+
+    if (reduce || saveData) return;
+    requestAnimationFrame(function () {
+      videos.forEach(function (video) {
+        observer.observe(video);
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", mountCaseVideos, { once: true });
+  } else {
+    mountCaseVideos();
+  }
 })();

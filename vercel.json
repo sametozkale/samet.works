@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "server.js": {
+      "excludeFiles": "public/**"
+    }
+  },
   "headers": [
     {
       "source": "/assets/:path*",
